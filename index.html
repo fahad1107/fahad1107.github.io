@@ -2,124 +2,111 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Scale With Fahad – eBay Dropshipping</title>
+<title>Scale With Fahad</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 body {
-    margin:0;
-    font-family: 'Poppins', Arial, sans-serif;
-    background:#000;
-    color:#fff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
 }
 
-/* HEADER */
 header {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
-    border-bottom:1px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #222;
 }
 
 .logo {
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
 }
 .logo img {
-    height:60px;
-    margin-right:15px;
+    height: 55px;
+    margin-right: 12px;
 }
 
-.lang-btn button {
-    background:#222;
-    color:white;
-    border:1px solid #333;
-    padding:6px 14px;
-    margin-left:5px;
-    cursor:pointer;
-    border-radius:6px;
+.lang button {
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 6px 12px;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
-/* HERO */
 .hero {
-    text-align:center;
-    padding:80px 20px;
+    text-align: center;
+    padding: 70px 20px;
 }
+
 .hero h1 {
-    font-size:42px;
-    margin-bottom:15px;
+    font-size: 38px;
+    margin-bottom: 10px;
 }
+
 .hero p {
-    font-size:18px;
-    color:#ccc;
+    font-size: 18px;
+    color: #ccc;
 }
 
-/* BUTTONS */
 .btn {
-    display:inline-block;
-    margin:10px;
-    background:#f5b700;
-    color:#000;
-    padding:14px 30px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
-}
-.btn:hover {
-    background:#ffcc00;
+    display: inline-block;
+    margin: 10px;
+    padding: 14px 30px;
+    background: #f5b700;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
-/* SECTIONS */
-.cards {
-    max-width:1100px;
-    margin:auto;
-    padding:40px 20px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
 }
 
 .card {
-    background:#111;
-    border:1px solid #222;
-    border-radius:15px;
-    padding:30px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
 }
 
-.card h3 {
-    margin-bottom:15px;
-    color:#f5b700;
+.card h2 {
+    color: #f5b700;
 }
 
-/* SOCIAL */
-.social a {
-    color:#fff;
-    text-decoration:none;
-    margin-right:12px;
-    font-weight:500;
-}
-
-/* FOOTER */
 footer {
-    text-align:center;
-    padding:25px;
-    border-top:1px solid #222;
-    color:#aaa;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #222;
+    color: #aaa;
 }
 
-/* WHATSAPP FLOAT */
-.whatsapp-float {
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    background:#25D366;
-    color:black;
-    padding:14px 20px;
-    border-radius:40px;
-    font-weight:bold;
-    text-decoration:none;
+.social a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: #000;
+    padding: 14px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    text-decoration: none;
 }
 </style>
 </head>
@@ -128,10 +115,10 @@ footer {
 
 <header>
     <div class="logo">
-        <img src="604302487_122101249323178351_3935497007922687978_n.jpg">
+        <img src="./604302487_122101249323178351_3935497007922687978_n.jpg" alt="Scale With Fahad Logo">
         <strong>Scale With Fahad</strong>
     </div>
-    <div class="lang-btn">
+    <div class="lang">
         <button onclick="setLang('en')">EN</button>
         <button onclick="setLang('de')">DE</button>
     </div>
@@ -139,39 +126,39 @@ footer {
 
 <section class="hero">
     <h1 id="title">Scale Your eBay Business With Confidence</h1>
-    <p id="subtitle">Luxury-level eBay dropshipping management. No upfront fees.</p>
-    <a href="mailto:fahad786sultan@gmail.com" class="btn">Email Us</a>
-    <a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" class="btn">Join WhatsApp Channel</a>
+    <p id="subtitle">Premium eBay dropshipping management. No upfront fees.</p>
+    <a class="btn" href="mailto:fahad786sultan@gmail.com">Email Us</a>
+    <a class="btn" href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" target="_blank">
+        Join WhatsApp Channel
+    </a>
 </section>
 
-<section class="cards">
+<section class="section">
     <div class="card">
-        <h3 id="serviceTitle">Our Services</h3>
+        <h2 id="servicesTitle">Our Services</h2>
         <ul id="services">
-            <li>Advanced Product Research</li>
-            <li>Order Fulfillment Automation</li>
-            <li>Customer Support Management</li>
-            <li>Account Health Optimization</li>
-            <li>Transparent Profit Reports</li>
+            <li>Product Research</li>
+            <li>Order Fulfillment</li>
+            <li>Customer Support</li>
+            <li>Account Health Management</li>
+            <li>Profit Reporting</li>
         </ul>
     </div>
 
     <div class="card">
-        <h3>⭐ Client Reviews</h3>
-        <p>
-            <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfFu2oG5tJ2heYC8Bo2CS2qWeAzP9XUueSk3axUJKJHOH4aJQ/viewform?usp=header" target="_blank">
-                Submit a Review
-            </a>
-        </p>
+        <h2>⭐ Client Reviews</h2>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfFu2oG5tJ2heYC8Bo2CS2qWeAzP9XUueSk3axUJKJHOH4aJQ/viewform?usp=header" target="_blank">
+            Submit a Review
+        </a>
     </div>
 
     <div class="card">
-        <h3>🌐 Follow Us</h3>
-        <p class="social">
-            <a href="https://www.facebook.com/profile.php?id=61585717853843" target="_blank">Facebook</a><br><br>
-            <a href="https://www.instagram.com/scalewith.fahad/" target="_blank">Instagram</a><br><br>
+        <h2>🌐 Follow Us</h2>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=61585717853843" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/scalewith.fahad/" target="_blank">Instagram</a>
             <a href="https://www.tiktok.com/@scalewithfahad" target="_blank">TikTok</a>
-        </p>
+        </div>
     </div>
 </section>
 
@@ -179,25 +166,25 @@ footer {
     © 2026 Scale With Fahad • fahad786sultan@gmail.com
 </footer>
 
-<a class="whatsapp-float" href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" target="_blank">
+<a class="whatsapp" href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" target="_blank">
 WhatsApp
 </a>
 
 <script>
 function setLang(lang) {
-    if(lang === 'de') {
+    if (lang === 'de') {
         document.getElementById("title").innerText =
-        "Skalieren Sie Ihr eBay-Geschäft mit Vertrauen";
+            "Skalieren Sie Ihr eBay-Geschäft mit Vertrauen";
         document.getElementById("subtitle").innerText =
-        "Premium eBay-Dropshipping-Verwaltung. Keine Vorauszahlungen.";
-        document.getElementById("serviceTitle").innerText =
-        "Unsere Dienstleistungen";
+            "Premium eBay-Dropshipping-Verwaltung. Keine Vorauszahlungen.";
+        document.getElementById("servicesTitle").innerText =
+            "Unsere Dienstleistungen";
         document.getElementById("services").innerHTML = `
-            <li>Produktrecherche auf Expertenniveau</li>
-            <li>Automatisierte Bestellabwicklung</li>
-            <li>Kundensupport-Management</li>
-            <li>Konto- & Performance-Optimierung</li>
-            <li>Transparente Gewinnberichte</li>
+            <li>Produktrecherche</li>
+            <li>Bestellabwicklung</li>
+            <li>Kundensupport</li>
+            <li>Kontoüberwachung</li>
+            <li>Gewinnberichte</li>
         `;
     } else {
         location.reload();
@@ -207,5 +194,3 @@ function setLang(lang) {
 
 </body>
 </html>
-
-
