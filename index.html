@@ -32,9 +32,9 @@ header{
   position:sticky;
   top:0;
   z-index:100;
-  background:rgba(0,0,0,.9);
+  background:rgba(0,0,0,.92);
   border-bottom:1px solid #1f1f1f;
-  padding:14px 20px;
+  padding:14px 18px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -43,14 +43,31 @@ header{
 .logo{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:10px;
 }
 .logo img{
-  height:48px;
+  height:46px;
 }
 .logo span{
   font-weight:600;
   font-size:17px;
+}
+
+/* HEADER RIGHT */
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.header-right a{
+  color:#fff;
+  font-size:20px;
+  text-decoration:none;
+  transition:.3s;
+}
+.header-right a:hover{
+  color:var(--gold);
 }
 
 /* LANGUAGE */
@@ -58,16 +75,16 @@ header{
   background:#111;
   border:1px solid #333;
   color:#fff;
-  padding:6px 12px;
+  padding:5px 10px;
   border-radius:6px;
-  margin-left:5px;
+  margin-left:4px;
   cursor:pointer;
 }
 
 /* HERO */
 .hero{
   text-align:center;
-  padding:80px 15px 60px;
+  padding:80px 16px 60px;
   max-width:1200px;
   margin:auto;
   animation:fadeUp 1.2s ease;
@@ -87,7 +104,7 @@ header{
 .btn{
   background:var(--gold);
   color:#000;
-  padding:12px 28px;
+  padding:12px 26px;
   border-radius:40px;
   text-decoration:none;
   font-weight:600;
@@ -100,9 +117,9 @@ header{
   box-shadow:0 12px 24px rgba(245,183,0,.25);
 }
 
-/* LIVE COUNTER */
+/* COUNTER */
 .counter{
-  margin-top:30px;
+  margin-top:28px;
   font-size:clamp(22px,5vw,34px);
   color:var(--gold);
   font-weight:700;
@@ -112,7 +129,7 @@ header{
 .section{
   max-width:1200px;
   margin:auto;
-  padding:60px 15px;
+  padding:60px 16px;
 }
 
 .grid{
@@ -158,43 +175,37 @@ header{
   font-size:14px;
 }
 
-/* SOCIAL ICONS */
-.social{
+/* SOCIAL FOOTER */
+.social-footer{
   display:flex;
   justify-content:center;
-  gap:25px;
+  gap:28px;
   margin-top:20px;
 }
 
-.social a{
+.social-footer a{
   color:#fff;
   font-size:22px;
   text-decoration:none;
-  transition:.3s;
 }
-.social a:hover{
+.social-footer a:hover{
   color:var(--gold);
 }
 
 /* FOOTER */
 footer{
   border-top:1px solid #1f1f1f;
-  padding:35px 15px;
+  padding:35px 16px;
   text-align:center;
   color:#9a9a9a;
   font-size:14px;
 }
 
-footer a{
-  color:var(--gold);
-  text-decoration:none;
-}
-
 /* FLOATING BUTTONS */
 .whatsapp{
   position:fixed;
-  right:18px;
-  bottom:18px;
+  right:16px;
+  bottom:16px;
   background:#25D366;
   color:#000;
   padding:12px 18px;
@@ -206,8 +217,8 @@ footer a{
 
 .review-float{
   position:fixed;
-  left:18px;
-  bottom:18px;
+  left:16px;
+  bottom:16px;
   background:var(--gold);
   color:#000;
   padding:12px 18px;
@@ -232,9 +243,16 @@ footer a{
     <img src="./604302487_122101249323178351_3935497007922687978_n.jpg" alt="Scale With Fahad Logo">
     <span>Scale With Fahad</span>
   </div>
-  <div class="lang">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('de')">DE</button>
+
+  <div class="header-right">
+    <a href="https://www.facebook.com/profile.php?id=61585717853843" target="_blank">📘</a>
+    <a href="https://www.instagram.com/scalewith.fahad/" target="_blank">📸</a>
+    <a href="https://www.tiktok.com/@scalewithfahad" target="_blank">🎵</a>
+
+    <div class="lang">
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('de')">DE</button>
+    </div>
   </div>
 </header>
 
@@ -268,7 +286,7 @@ footer a{
     <div class="card">
       <h2>Who Can Join</h2>
       ✔ Full-time job holders<br>
-      ✔ Germany, UK, USA clients<br>
+      ✔ Germany · UK · USA<br>
       ✔ Side business allowed<br>
       ✔ No upfront or hidden fees
     </div>
@@ -293,19 +311,16 @@ footer a{
   </div>
 </section>
 
-<section class="section">
-  <h2 style="text-align:center;color:var(--gold);">Follow Us</h2>
-  <div class="social">
-    <a href="https://www.facebook.com/profile.php?id=61585717853843" target="_blank">📘</a>
-    <a href="https://www.instagram.com/scalewith.fahad/" target="_blank">📸</a>
-    <a href="https://www.tiktok.com/@scalewithfahad" target="_blank">🎵</a>
-  </div>
-</section>
-
 <footer>
 © 2026 Scale With Fahad · Germany<br><br>
-<a href="impressum.html">Impressum</a> |
-<a href="datenschutz.html">Datenschutz</a>
+<a href="impressum.html" style="color:var(--gold)">Impressum</a> |
+<a href="datenschutz.html" style="color:var(--gold)">Datenschutz</a>
+
+<div class="social-footer">
+  <a href="https://www.facebook.com/profile.php?id=61585717853843" target="_blank">📘</a>
+  <a href="https://www.instagram.com/scalewith.fahad/" target="_blank">📸</a>
+  <a href="https://www.tiktok.com/@scalewithfahad" target="_blank">🎵</a>
+</div>
 </footer>
 
 <a class="whatsapp" target="_blank" href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">
