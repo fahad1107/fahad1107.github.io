@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Scale With Fahad | eBay Dropshipping Management Germany</title>
+<title>Scale With Fahad | eBay Dropshipping Germany</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="Scale With Fahad offers premium eBay dropshipping management in Germany. No upfront fees. Transparent profit sharing.">
-<meta name="keywords" content="eBay Dropshipping Germany, eBay Automation Service, eBay Account Management">
+<meta name="description" content="Premium eBay dropshipping management in Germany. Transparent profit sharing. No upfront fees.">
 <meta name="author" content="Scale With Fahad">
 
 <style>
@@ -14,32 +13,29 @@
   --gold:#f5b700;
   --black:#000;
   --dark:#0f0f0f;
-  --text:#ffffff;
+  --text:#fff;
   --muted:#bdbdbd;
 }
 
-*{box-sizing:border-box;}
-
 body{
   margin:0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family:Segoe UI, Arial, sans-serif;
   background:var(--black);
   color:var(--text);
-  line-height:1.6;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
   position:sticky;
   top:0;
   z-index:100;
-  background:rgba(0,0,0,0.85);
-  backdrop-filter: blur(6px);
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(6px);
   border-bottom:1px solid #1f1f1f;
   padding:18px 30px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
@@ -47,63 +43,79 @@ header{
   align-items:center;
   gap:12px;
 }
-.logo img{
-  height:52px;
-}
-.logo span{
-  font-size:18px;
-  font-weight:600;
-}
+.logo img{height:50px;}
+.logo span{font-weight:600;}
 
 .lang button{
   background:#111;
   border:1px solid #333;
   color:#fff;
   padding:6px 14px;
-  margin-left:6px;
   border-radius:6px;
   cursor:pointer;
+  margin-left:6px;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
   text-align:center;
-  padding:100px 20px 80px;
+  padding:90px 20px 70px;
   max-width:1100px;
   margin:auto;
   animation:fadeUp 1.2s ease;
 }
 
-.hero h1{
-  font-size:42px;
-  margin-bottom:15px;
-}
-
+.hero h1{font-size:42px;}
 .hero p{
-  font-size:18px;
   color:var(--muted);
   max-width:720px;
-  margin:0 auto 35px;
+  margin:15px auto 35px;
 }
 
 .btn{
-  display:inline-block;
   background:var(--gold);
   color:#000;
   padding:14px 34px;
   border-radius:40px;
-  font-weight:600;
   text-decoration:none;
+  font-weight:600;
   margin:8px;
-  transition:all .3s ease;
+  display:inline-block;
+  transition:.3s;
 }
-
 .btn:hover{
   transform:translateY(-3px);
-  box-shadow:0 12px 25px rgba(245,183,0,0.25);
+  box-shadow:0 12px 25px rgba(245,183,0,.25);
 }
 
-/* ===== SECTIONS ===== */
+/* SALES GRAPH */
+.graph{
+  margin:50px auto 0;
+  max-width:500px;
+  height:180px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+}
+
+.bar{
+  width:18%;
+  background:linear-gradient(180deg,#f5b700,#ffda5a);
+  border-radius:10px 10px 0 0;
+  animation:grow 2s ease forwards;
+}
+.bar:nth-child(1){height:30%;}
+.bar:nth-child(2){height:45%;}
+.bar:nth-child(3){height:60%;}
+.bar:nth-child(4){height:80%;}
+.bar:nth-child(5){height:100%;}
+
+@keyframes grow{
+  from{height:0;}
+  to{opacity:1;}
+}
+
+/* SECTIONS */
 .section{
   max-width:1100px;
   margin:auto;
@@ -124,44 +136,26 @@ header{
   animation:fadeUp 1.2s ease;
 }
 
-.card h2{
-  color:var(--gold);
-  margin-bottom:15px;
-  font-size:22px;
-}
+.card h2{color:var(--gold);}
 
-.card ul{
-  padding-left:18px;
-}
-
-.card ul li{
-  margin-bottom:8px;
-  color:#e0e0e0;
-}
-
-/* ===== REVIEWS ===== */
-.review-note{
-  font-size:14px;
-  color:var(--muted);
-  margin-top:10px;
-}
-
-/* ===== FOOTER ===== */
-footer{
-  border-top:1px solid #1f1f1f;
-  padding:35px 20px;
-  text-align:center;
-  color:#9a9a9a;
+/* POPUP NOTIFICATION */
+.popup{
+  position:fixed;
+  bottom:90px;
+  left:20px;
+  background:#111;
+  border:1px solid #222;
+  padding:14px 18px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.5);
+  animation:slideIn 1s ease;
+  display:none;
   font-size:14px;
 }
 
-footer a{
-  color:var(--gold);
-  text-decoration:none;
-  margin:0 8px;
-}
+.popup span{color:var(--gold);}
 
-/* ===== WHATSAPP FLOAT ===== */
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   right:22px;
@@ -172,17 +166,27 @@ footer a{
   border-radius:50px;
   font-weight:600;
   text-decoration:none;
-  box-shadow:0 10px 20px rgba(0,0,0,0.4);
-  transition:.3s;
-}
-.whatsapp:hover{
-  transform:scale(1.05);
 }
 
-/* ===== ANIMATIONS ===== */
+/* FOOTER */
+footer{
+  border-top:1px solid #1f1f1f;
+  text-align:center;
+  padding:35px 20px;
+  color:#9a9a9a;
+  font-size:14px;
+}
+
+footer a{color:var(--gold); text-decoration:none;}
+
+/* ANIMATIONS */
 @keyframes fadeUp{
   from{opacity:0; transform:translateY(25px);}
   to{opacity:1; transform:translateY(0);}
+}
+@keyframes slideIn{
+  from{opacity:0; transform:translateX(-30px);}
+  to{opacity:1; transform:translateX(0);}
 }
 </style>
 </head>
@@ -191,7 +195,7 @@ footer a{
 
 <header>
   <div class="logo">
-    <img src="./604302487_122101249323178351_3935497007922687978_n.jpg" alt="Scale With Fahad Logo">
+    <img src="./604302487_122101249323178351_3935497007922687978_n.jpg">
     <span>Scale With Fahad</span>
   </div>
   <div class="lang">
@@ -201,15 +205,25 @@ footer a{
 </header>
 
 <section class="hero">
-  <h1 id="title">Premium eBay Dropshipping Management</h1>
+  <h1 id="title">Scale Your eBay Business Profitably</h1>
   <p id="subtitle">
-    We manage your eBay business from A to Z with full transparency.  
-    No upfront fees — you only pay from real profit.
+    Professional eBay dropshipping management with transparent profit sharing.
+    No upfront fees.
   </p>
-  <a href="mailto:fahad786sultan@gmail.com" class="btn">Contact via Email</a>
+
+  <a href="mailto:fahad786sultan@gmail.com" class="btn">Contact Us</a>
   <a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" target="_blank" class="btn">
-    Join WhatsApp Channel
+    WhatsApp Channel
   </a>
+
+  <!-- SALES GRAPH -->
+  <div class="graph">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
 </section>
 
 <section class="section">
@@ -218,10 +232,10 @@ footer a{
       <h2 id="servicesTitle">Our Services</h2>
       <ul id="services">
         <li>Product research & listing optimization</li>
-        <li>Order processing & supplier coordination</li>
+        <li>Order fulfillment & supplier coordination</li>
         <li>Customer support management</li>
-        <li>Account health & policy monitoring</li>
-        <li>Monthly transparent profit reporting</li>
+        <li>Account health monitoring</li>
+        <li>Monthly profit reports</li>
       </ul>
     </div>
 
@@ -230,18 +244,6 @@ footer a{
       <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfFu2oG5tJ2heYC8Bo2CS2qWeAzP9XUueSk3axUJKJHOH4aJQ/viewform" target="_blank">
         Submit a Review
       </a>
-      <p class="review-note">
-        Reviews are collected transparently via Google Forms.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Follow Us</h2>
-      <p>
-        <a href="https://www.facebook.com/profile.php?id=61585717853843" target="_blank">Facebook</a><br><br>
-        <a href="https://www.instagram.com/scalewith.fahad/" target="_blank">Instagram</a><br><br>
-        <a href="https://www.tiktok.com/@scalewithfahad" target="_blank">TikTok</a>
-      </p>
     </div>
   </div>
 </section>
@@ -256,28 +258,39 @@ footer a{
 WhatsApp
 </a>
 
+<!-- POPUP -->
+<div class="popup" id="popup">
+  💰 <span>New Sale</span> recorded in an active client store
+</div>
+
 <script>
 function setLang(lang){
   if(lang === "de"){
     document.getElementById("title").innerText =
-      "Premium eBay-Dropshipping-Verwaltung";
+      "Skalieren Sie Ihr eBay-Geschäft profitabel";
     document.getElementById("subtitle").innerText =
-      "Wir verwalten Ihr eBay-Geschäft von A bis Z. Keine Vorauszahlungen – Sie zahlen nur aus dem tatsächlichen Gewinn.";
+      "Professionelle eBay-Dropshipping-Verwaltung mit transparenter Gewinnbeteiligung. Keine Vorauszahlungen.";
     document.getElementById("servicesTitle").innerText =
       "Unsere Leistungen";
     document.getElementById("services").innerHTML = `
       <li>Produktrecherche & Angebotsoptimierung</li>
       <li>Bestellabwicklung & Lieferantenkoordination</li>
       <li>Kundensupport-Management</li>
-      <li>Konto- & Richtlinienüberwachung</li>
-      <li>Monatliche transparente Gewinnberichte</li>
+      <li>Kontoüberwachung</li>
+      <li>Monatliche Gewinnberichte</li>
     `;
   } else {
     location.reload();
   }
 }
+
+/* POPUP LOOP */
+setInterval(() => {
+  const popup = document.getElementById("popup");
+  popup.style.display = "block";
+  setTimeout(() => popup.style.display = "none", 4000);
+}, 12000);
 </script>
 
 </body>
 </html>
-
