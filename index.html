@@ -1,31 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Scale With Fahad</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Scale With Fahad - eBay Dropshipping</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    margin:0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:#f4f6fb;
+}
+header {
+    background: linear-gradient(90deg, #0d47a1, #1976d2);
+    color:white;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.logo {
+    display:flex;
+    align-items:center;
+}
+.logo img {
+    height:55px;
+    margin-right:15px;
+}
+.lang-btn button {
+    background:white;
+    border:none;
+    padding:6px 12px;
+    margin-left:5px;
+    cursor:pointer;
+    border-radius:4px;
+}
+.hero {
+    text-align:center;
+    padding:50px 20px;
+}
+.hero h1 {
+    font-size:36px;
+    margin-bottom:10px;
+}
+.hero p {
+    font-size:18px;
+    color:#333;
+}
+.btn {
+    display:inline-block;
+    margin:10px;
+    background:#1976d2;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:6px;
+}
+.cards {
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:20px;
+}
+.card {
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+footer {
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+.social a {
+    color:white;
+    margin:0 10px;
+    text-decoration:none;
+}
+.whatsapp-float {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:14px 18px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
 </head>
-<body style="font-family:Arial; background:#f4f4f4; padding:40px;">
 
-    <div style="background:white; padding:30px; border-radius:10px; max-width:700px; margin:auto;">
-        <h1>🚀 Scale With Fahad</h1>
-        <p>Professional eBay Dropshipping Management Service.</p>
+<body>
 
-        <h3>✅ What We Do</h3>
-        <ul>
+<header>
+    <div class="logo">
+        <img src="604302487_122101249323178351_3935497007922687978_n.jpg">
+        <strong>Scale With Fahad</strong>
+    </div>
+    <div class="lang-btn">
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('de')">DE</button>
+    </div>
+</header>
+
+<section class="hero">
+    <h1 id="title">Grow Your eBay Business Faster</h1>
+    <p id="subtitle">We manage your eBay dropshipping business A–Z. No upfront fees.</p>
+    <a href="mailto:fahad786sultan@gmail.com" class="btn">Email Us</a>
+    <a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" class="btn">Join WhatsApp Channel</a>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <h3 id="serviceTitle">Our Services</h3>
+        <ul id="services">
             <li>Product Research</li>
             <li>Order Fulfillment</li>
             <li>Customer Support</li>
             <li>Account Optimization</li>
-            <li>Monthly Profit Reporting</li>
+            <li>Profit Reporting</li>
         </ul>
+    </div>
 
-        <h3>📩 Contact</h3>
-        <p>Email: your@email.com</p>
+    <div class="card">
+        <h3>⭐ Client Reviews</h3>
+        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfFu2oG5tJ2heYC8Bo2CS2qWeAzP9XUueSk3axUJKJHOH4aJQ/viewform?usp=header" target="_blank">Submit Your Review</a></p>
+    </div>
 
-        <p style="margin-top:30px; font-size:13px;">
-            © 2026 Scale With Fahad
+    <div class="card">
+        <h3>🌐 Follow Us</h3>
+        <p class="social">
+            <a href="https://www.facebook.com/profile.php?id=61585717853843" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/scalewith.fahad/" target="_blank">Instagram</a> |
+            <a href="https://www.tiktok.com/@scalewithfahad" target="_blank">TikTok</a>
         </p>
     </div>
+</section>
+
+<footer>
+    © 2026 Scale With Fahad | fahad786sultan@gmail.com
+</footer>
+
+<a class="whatsapp-float" href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" target="_blank">
+WhatsApp
+</a>
+
+<script>
+function setLang(lang) {
+    if(lang === 'de') {
+        document.getElementById("title").innerText = "Wachsen Sie Ihr eBay-Geschäft schneller";
+        document.getElementById("subtitle").innerText = "Wir verwalten Ihr eBay-Dropshipping-Geschäft von A bis Z. Keine Vorauszahlungen.";
+        document.getElementById("serviceTitle").innerText = "Unsere Dienstleistungen";
+        document.getElementById("services").innerHTML = `
+            <li>Produktrecherche</li>
+            <li>Bestellabwicklung</li>
+            <li>Kundensupport</li>
+            <li>Konto-Optimierung</li>
+            <li>Gewinnberichte</li>
+        `;
+    } else {
+        location.reload();
+    }
+}
+</script>
 
 </body>
 </html>
+
