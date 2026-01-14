@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Scale With Fahad | eBay, Amazon & Walmart Automation</title>
+<title>Scale With Fahad | Legal eCommerce Automation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description" content="Scale With Fahad – 100% legal eBay, Amazon FBA & Walmart automation. Germany registered, transparent contracts, no upfront fees.">
@@ -34,7 +34,7 @@ header{
   z-index:100;
   background:rgba(0,0,0,.9);
   border-bottom:1px solid #1f1f1f;
-  padding:18px 30px;
+  padding:14px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -45,55 +45,65 @@ header{
   align-items:center;
   gap:12px;
 }
-.logo img{height:52px;}
-.logo span{font-weight:600;font-size:18px;}
+.logo img{
+  height:48px;
+}
+.logo span{
+  font-weight:600;
+  font-size:17px;
+}
 
+/* LANGUAGE */
 .lang button{
   background:#111;
   border:1px solid #333;
   color:#fff;
-  padding:6px 14px;
+  padding:6px 12px;
   border-radius:6px;
-  margin-left:6px;
+  margin-left:5px;
   cursor:pointer;
 }
 
 /* HERO */
 .hero{
   text-align:center;
-  padding:100px 20px 80px;
+  padding:80px 15px 60px;
   max-width:1200px;
   margin:auto;
   animation:fadeUp 1.2s ease;
 }
 
-.hero h1{font-size:44px;}
+.hero h1{
+  font-size:clamp(26px,5vw,44px);
+}
+
 .hero p{
   color:var(--muted);
-  max-width:850px;
-  margin:18px auto 35px;
+  max-width:900px;
+  margin:16px auto 30px;
+  font-size:clamp(14px,3.5vw,18px);
 }
 
 .btn{
   background:var(--gold);
   color:#000;
-  padding:14px 36px;
+  padding:12px 28px;
   border-radius:40px;
   text-decoration:none;
   font-weight:600;
-  margin:8px;
+  margin:6px;
   display:inline-block;
   transition:.3s;
 }
 .btn:hover{
   transform:translateY(-3px);
-  box-shadow:0 14px 28px rgba(245,183,0,.25);
+  box-shadow:0 12px 24px rgba(245,183,0,.25);
 }
 
 /* LIVE COUNTER */
 .counter{
-  margin-top:40px;
-  font-size:34px;
+  margin-top:30px;
+  font-size:clamp(22px,5vw,34px);
   color:var(--gold);
   font-weight:700;
 }
@@ -102,48 +112,49 @@ header{
 .section{
   max-width:1200px;
   margin:auto;
-  padding:80px 20px;
+  padding:60px 15px;
 }
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:28px;
-}
-
-.card{
-  background:var(--dark);
-  border:1px solid #1f1f1f;
-  border-radius:18px;
-  padding:32px;
-  animation:fadeUp 1.2s ease;
-}
-
-.card h2{color:var(--gold);}
-
-/* TRUST */
-.trust{
-  display:flex;
-  justify-content:space-around;
-  text-align:center;
-  margin-top:40px;
-}
-.trust div{
-  animation:fadeUp 1.4s ease;
-}
-
-/* REVIEWS */
-.reviews{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:22px;
 }
 
+.card{
+  background:var(--dark);
+  border:1px solid #1f1f1f;
+  border-radius:16px;
+  padding:26px;
+  animation:fadeUp 1.1s ease;
+}
+
+.card h2{
+  color:var(--gold);
+  margin-bottom:12px;
+}
+
+/* TRUST */
+.trust{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:20px;
+  text-align:center;
+  margin-top:30px;
+}
+
+/* REVIEWS */
+.reviews{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
 .review{
   background:#111;
   border:1px solid #222;
-  border-radius:16px;
-  padding:22px;
+  border-radius:14px;
+  padding:18px;
   font-size:14px;
 }
 
@@ -151,37 +162,64 @@ header{
 .social{
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:25px;
+  margin-top:20px;
+}
+
+.social a{
+  color:#fff;
   font-size:22px;
+  text-decoration:none;
+  transition:.3s;
+}
+.social a:hover{
+  color:var(--gold);
 }
 
 /* FOOTER */
 footer{
   border-top:1px solid #1f1f1f;
-  padding:40px 20px;
+  padding:35px 15px;
   text-align:center;
   color:#9a9a9a;
   font-size:14px;
 }
 
-footer a{color:var(--gold);text-decoration:none;}
+footer a{
+  color:var(--gold);
+  text-decoration:none;
+}
 
-/* WHATSAPP */
+/* FLOATING BUTTONS */
 .whatsapp{
   position:fixed;
-  right:22px;
-  bottom:22px;
+  right:18px;
+  bottom:18px;
   background:#25D366;
   color:#000;
-  padding:14px 22px;
+  padding:12px 18px;
   border-radius:50px;
   font-weight:600;
   text-decoration:none;
+  z-index:200;
+}
+
+.review-float{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  background:var(--gold);
+  color:#000;
+  padding:12px 18px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  z-index:200;
 }
 
 /* ANIMATION */
 @keyframes fadeUp{
-  from{opacity:0; transform:translateY(25px);}
+  from{opacity:0; transform:translateY(20px);}
   to{opacity:1; transform:translateY(0);}
 }
 </style>
@@ -191,7 +229,7 @@ footer a{color:var(--gold);text-decoration:none;}
 
 <header>
   <div class="logo">
-    <img src="./604302487_122101249323178351_3935497007922687978_n.jpg">
+    <img src="./604302487_122101249323178351_3935497007922687978_n.jpg" alt="Scale With Fahad Logo">
     <span>Scale With Fahad</span>
   </div>
   <div class="lang">
@@ -201,14 +239,16 @@ footer a{color:var(--gold);text-decoration:none;}
 </header>
 
 <section class="hero">
-  <h1 id="title">100% Legal eCommerce Automation – Germany, UK & USA</h1>
+  <h1 id="title">100% Legal eCommerce Automation</h1>
   <p id="subtitle">
-    We manage eBay, Amazon FBA & Walmart stores from A–Z.  
-    Fully transparent contracts, registered in Germany, no upfront fees, no hidden charges.
+    We manage eBay, Amazon FBA & Walmart stores for clients in Germany, UK and USA.
+    Fully transparent contracts, registered in Germany, no upfront fees.
   </p>
 
   <a class="btn" href="mailto:fahad786sultan@gmail.com">Contact Us</a>
-  <a class="btn" target="_blank" href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">WhatsApp Channel</a>
+  <a class="btn" target="_blank" href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">
+    WhatsApp Channel
+  </a>
 
   <div class="counter">
     €<span id="profit">0</span>+ Generated for Clients
@@ -216,46 +256,49 @@ footer a{color:var(--gold);text-decoration:none;}
 </section>
 
 <section class="section">
-  <h2 style="text-align:center;color:var(--gold);">How We Work (Full Transparency)</h2>
   <div class="grid">
     <div class="card">
+      <h2>How We Work</h2>
       ✔ Written service agreement<br>
-      ✔ Registered business in Germany<br>
-      ✔ Reported income & Finanzamt compliant<br>
-      ✔ Monthly profit statements<br>
-      ✔ No black money – 100% legal
+      ✔ Registered with German Finanzamt<br>
+      ✔ 100% legal & transparent<br>
+      ✔ Monthly profit reports<br>
+      ✔ No black money
     </div>
     <div class="card">
-      ✔ No upfront fees<br>
-      ✔ Profit-based model only<br>
-      ✔ Side business allowed (even with full-time job)<br>
-      ✔ Works for Germany, UK & USA clients
+      <h2>Who Can Join</h2>
+      ✔ Full-time job holders<br>
+      ✔ Germany, UK, USA clients<br>
+      ✔ Side business allowed<br>
+      ✔ No upfront or hidden fees
     </div>
   </div>
 </section>
 
 <section class="section">
-  <h2 style="text-align:center;color:var(--gold);">Trusted by Clients</h2>
+  <h2 style="text-align:center;color:var(--gold);">Trusted Clients</h2>
   <div class="trust">
-    <div>🇩🇪 Germany<br><strong>5+ Clients</strong></div>
-    <div>🇬🇧 UK<br><strong>3+ Clients</strong></div>
-    <div>🇺🇸 USA<br><strong>2+ Clients</strong></div>
+    <div>🇩🇪 5+ Germany</div>
+    <div>🇬🇧 3+ UK</div>
+    <div>🇺🇸 2+ USA</div>
   </div>
 </section>
 
 <section class="section">
   <h2 style="text-align:center;color:var(--gold);">Client Reviews</h2>
   <div class="reviews">
-    <div class="review">⭐ “Transparent and professional service.”</div>
-    <div class="review">⭐ “Perfect side business with my full-time job.”</div>
-    <div class="review">⭐ “Clear reports and honest communication.”</div>
+    <div class="review">⭐ Transparent and legal service</div>
+    <div class="review">⭐ Perfect side business with job</div>
+    <div class="review">⭐ Clear reports & honest team</div>
   </div>
 </section>
 
 <section class="section">
   <h2 style="text-align:center;color:var(--gold);">Follow Us</h2>
   <div class="social">
-    📘 📸 🎵
+    <a href="https://www.facebook.com/profile.php?id=61585717853843" target="_blank">📘</a>
+    <a href="https://www.instagram.com/scalewith.fahad/" target="_blank">📸</a>
+    <a href="https://www.tiktok.com/@scalewithfahad" target="_blank">🎵</a>
   </div>
 </section>
 
@@ -265,21 +308,28 @@ footer a{color:var(--gold);text-decoration:none;}
 <a href="datenschutz.html">Datenschutz</a>
 </footer>
 
-<a class="whatsapp" target="_blank" href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">WhatsApp</a>
+<a class="whatsapp" target="_blank" href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">
+WhatsApp
+</a>
+
+<a class="review-float" target="_blank"
+href="https://docs.google.com/forms/d/e/1FAIpQLSfFu2oG5tJ2heYC8Bo2CS2qWeAzP9XUueSk3axUJKJHOH4aJQ/viewform">
+⭐ Write Review
+</a>
 
 <script>
 let profit = 0;
-setInterval(() => {
-  profit += Math.floor(Math.random()*7)+3;
+setInterval(()=>{
+  profit += Math.floor(Math.random()*6)+4;
   document.getElementById("profit").innerText = profit.toLocaleString();
-}, 120);
+},150);
 
 function setLang(lang){
   if(lang==="de"){
     document.getElementById("title").innerText =
-      "100% legale eCommerce-Automatisierung – Deutschland, UK & USA";
+      "100% legale eCommerce-Automatisierung";
     document.getElementById("subtitle").innerText =
-      "Wir verwalten eBay-, Amazon-FBA- und Walmart-Konten vollständig. Transparente Verträge, in Deutschland registriert, keine Vorauszahlungen.";
+      "Wir verwalten eBay-, Amazon-FBA- und Walmart-Konten. Transparente Verträge, in Deutschland registriert, keine Vorauszahlungen.";
   } else {
     location.reload();
   }
