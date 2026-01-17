@@ -2,17 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Scale With Fahad | eCommerce Store Management</title>
+<title>Scale With Fahad | eCommerce Store Management (DE · UK · USA)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Scale With Fahad – Professional eCommerce store management for eBay, Amazon FBA & Walmart. Active in Germany, UK and USA.">
+
+<!-- SEO -->
+<meta name="description" content="Scale With Fahad provides professional eCommerce store management for eBay, Amazon FBA and Walmart. Active in Germany, UK and USA.">
+<meta name="keywords" content="eBay store management, Amazon FBA management, eCommerce services Germany, online store operations">
+<meta name="author" content="Fahad bin Sultan">
+<link rel="canonical" href="https://scalewithfahad.com">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Scale With Fahad | Professional eCommerce Store Management">
+<meta property="og:description" content="Professional management of eBay, Amazon FBA & Walmart stores for Germany, UK & USA markets.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.jpg">
 
 <style>
 :root{
-  --gold:#f5b700;
-  --black:#000;
-  --dark:#0f0f0f;
+  --bg:#000;
+  --card:#0f0f0f;
   --text:#fff;
   --muted:#bdbdbd;
+  --gold:#f5b700;
+}
+
+/* LIGHT MODE */
+.light{
+  --bg:#f6f6f6;
+  --card:#ffffff;
+  --text:#111;
+  --muted:#555;
 }
 
 *{box-sizing:border-box;}
@@ -20,24 +39,21 @@
 body{
   margin:0;
   font-family:Segoe UI, Arial, sans-serif;
-  background:var(--black);
+  background:var(--bg);
   color:var(--text);
   line-height:1.6;
-  overflow-x:hidden;
+  transition:.3s;
 }
 
-/* ANIMATIONS */
-.fade-up{
+/* SCROLL ANIMATION */
+.reveal{
   opacity:0;
-  transform:translateY(30px);
-  animation:fadeUp 1s ease forwards;
+  transform:translateY(40px);
+  transition:1s ease;
 }
-.delay-1{animation-delay:.2s}
-.delay-2{animation-delay:.4s}
-.delay-3{animation-delay:.6s}
-
-@keyframes fadeUp{
-  to{opacity:1;transform:translateY(0);}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* HEADER */
@@ -45,12 +61,17 @@ header{
   position:sticky;
   top:0;
   z-index:100;
-  background:rgba(0,0,0,.9);
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(8px);
   border-bottom:1px solid #1f1f1f;
   padding:14px 18px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+}
+
+.light header{
+  background:rgba(255,255,255,.9);
 }
 
 .logo{
@@ -63,27 +84,36 @@ header{
   transition:.4s;
 }
 .logo img:hover{
-  transform:scale(1.08) rotate(-1deg);
+  transform:scale(1.08);
 }
 .logo span{
   font-weight:600;
-  font-size:17px;
 }
 
-/* SOCIAL ICONS */
-.social{
+/* HEADER RIGHT */
+.header-right{
   display:flex;
+  align-items:center;
   gap:16px;
 }
-.social a{
+.header-right a{
   font-size:22px;
-  color:#fff;
   text-decoration:none;
+  color:var(--text);
   transition:.3s;
 }
-.social a:hover{
+.header-right a:hover{
   color:var(--gold);
-  transform:translateY(-4px) scale(1.1);
+  transform:translateY(-3px);
+}
+
+/* TOGGLE */
+.toggle{
+  cursor:pointer;
+  border:1px solid #444;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:14px;
 }
 
 /* HERO */
@@ -93,16 +123,13 @@ header{
   max-width:1200px;
   margin:auto;
 }
-
 .hero h1{
-  font-size:clamp(28px,5vw,46px);
+  font-size:clamp(30px,5vw,46px);
 }
-
 .hero p{
-  color:var(--muted);
   max-width:900px;
   margin:18px auto 34px;
-  font-size:clamp(15px,3.5vw,18px);
+  color:var(--muted);
 }
 
 /* BUTTONS */
@@ -128,15 +155,13 @@ header{
   margin:auto;
   padding:70px 16px;
 }
-
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:22px;
 }
-
 .card{
-  background:var(--dark);
+  background:var(--card);
   border:1px solid #1f1f1f;
   border-radius:16px;
   padding:28px;
@@ -148,7 +173,6 @@ header{
 }
 .card h2{
   color:var(--gold);
-  margin-bottom:14px;
 }
 
 /* MARKETS */
@@ -157,7 +181,6 @@ header{
   justify-content:center;
   gap:40px;
   font-size:18px;
-  margin-top:30px;
 }
 
 /* REVIEWS */
@@ -167,11 +190,10 @@ header{
   gap:20px;
 }
 .review{
-  background:#111;
+  background:var(--card);
   border:1px solid #222;
   border-radius:14px;
   padding:18px;
-  font-size:14px;
 }
 
 /* FOOTER */
@@ -179,11 +201,11 @@ footer{
   border-top:1px solid #1f1f1f;
   padding:40px 16px;
   text-align:center;
-  color:#9a9a9a;
   font-size:14px;
+  color:var(--muted);
 }
 
-/* FLOATING WHATSAPP */
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   right:18px;
@@ -210,78 +232,99 @@ footer{
 
 <header>
   <div class="logo">
-    <img src="./logo.jpg" alt="Scale With Fahad">
+    <img src="logo.jpg" alt="Scale With Fahad">
     <span>Scale With Fahad</span>
   </div>
-  <div class="social">
+
+  <div class="header-right">
     <a href="https://www.facebook.com/profile.php?id=61585717853843" target="_blank">📘</a>
     <a href="https://www.instagram.com/scalewith.fahad/" target="_blank">📸</a>
     <a href="https://www.tiktok.com/@scalewithfahad" target="_blank">🎵</a>
+    <div class="toggle" onclick="toggleMode()">🌙 / ☀️</div>
   </div>
 </header>
 
-<section class="hero fade-up">
+<section class="hero reveal">
   <h1>Scale Your eCommerce With Confidence</h1>
-  <p class="delay-1 fade-up">
+  <p>
     Professional management of eBay, Amazon FBA and Walmart stores
     for clients across Germany, the UK and the USA.
-    Structured operations, transparent cooperation, long-term focus.
   </p>
-
-  <a class="btn delay-2 fade-up" href="mailto:fahad786sultan@gmail.com">Contact</a>
-  <a class="btn delay-3 fade-up" target="_blank"
+  <a class="btn" href="mailto:fahad786sultan@gmail.com">Contact</a>
+  <a class="btn" target="_blank"
      href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">
     WhatsApp
   </a>
 </section>
 
-<section class="section">
+<section class="section reveal">
   <div class="grid">
-    <div class="card fade-up">
+    <div class="card">
       <h2>How We Work</h2>
-      ✔ Written service agreement<br>
-      ✔ Germany-registered business<br>
+      ✔ Written agreements<br>
       ✔ Structured daily operations<br>
       ✔ Transparent reporting<br>
-      ✔ Long-term cooperation
+      ✔ Long-term focus
     </div>
-    <div class="card fade-up delay-1">
+    <div class="card">
       <h2>Who We Work With</h2>
       ✔ Full-time job holders<br>
-      ✔ Business-minded individuals<br>
-      ✔ Germany · UK · USA<br>
-      ✔ Serious long-term setups
+      ✔ Business-minded partners<br>
+      ✔ Germany · UK · USA
     </div>
   </div>
 </section>
 
-<section class="section fade-up">
+<section class="section reveal">
   <h2 style="text-align:center;color:var(--gold);">Active Markets</h2>
   <div class="markets">
     🇩🇪 Germany &nbsp; 🇬🇧 UK &nbsp; 🇺🇸 USA
   </div>
 </section>
 
-<section class="section">
+<section class="section reveal">
   <h2 style="text-align:center;color:var(--gold);">Client Feedback</h2>
   <div class="reviews">
-    <div class="review fade-up">⭐ Clear communication and structured execution (DE)</div>
-    <div class="review fade-up delay-1">⭐ Reliable operations alongside full-time work (UK)</div>
-    <div class="review fade-up delay-2">⭐ Transparent reporting and professional support (USA)</div>
+    <div class="review">⭐ Structured process & clarity (DE)</div>
+    <div class="review">⭐ Reliable alongside full-time work (UK)</div>
+    <div class="review">⭐ Transparent support & reporting (USA)</div>
   </div>
 </section>
 
 <footer>
 © 2026 Fahad bin Sultan · Germany<br>
 VAT ID: DE453914117<br><br>
-<a href="impressum.html" style="color:var(--gold)">Impressum</a> |
-<a href="datenschutz.html" style="color:var(--gold)">Datenschutz</a>
+<a href="impressum.html">Impressum</a> |
+<a href="datenschutz.html">Datenschutz</a>
 </footer>
 
 <a class="whatsapp" target="_blank"
 href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">
 WhatsApp
 </a>
+
+<script>
+/* Scroll reveal */
+const reveals = document.querySelectorAll(".reveal");
+window.addEventListener("scroll",()=>{
+  reveals.forEach(el=>{
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 80){
+      el.classList.add("active");
+    }
+  });
+});
+
+/* Light / Dark */
+function toggleMode(){
+  document.body.classList.toggle("light");
+  localStorage.setItem("mode",
+    document.body.classList.contains("light") ? "light" : "dark");
+}
+if(localStorage.getItem("mode")==="light"){
+  document.body.classList.add("light");
+}
+</script>
 
 </body>
 </html>
