@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Scale With Fahad | Professional eCommerce Store Management</title>
+<title>Scale With Fahad | eCommerce Store Management</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta name="description" content="Scale With Fahad – Professional eBay, Amazon FBA & Walmart store management. Germany-registered business, structured operations, transparent cooperation.">
-<meta name="author" content="Fahad bin Sultan">
+<meta name="description" content="Scale With Fahad – Professional eCommerce store management for eBay, Amazon FBA & Walmart. Active in Germany, UK and USA.">
 
 <style>
 :root{
@@ -16,77 +14,153 @@
   --text:#fff;
   --muted:#bdbdbd;
 }
+
 *{box-sizing:border-box;}
+
 body{
   margin:0;
   font-family:Segoe UI, Arial, sans-serif;
   background:var(--black);
   color:var(--text);
   line-height:1.6;
+  overflow-x:hidden;
 }
+
+/* ANIMATIONS */
+.fade-up{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp 1s ease forwards;
+}
+.delay-1{animation-delay:.2s}
+.delay-2{animation-delay:.4s}
+.delay-3{animation-delay:.6s}
+
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* HEADER */
 header{
   position:sticky;
   top:0;
   z-index:100;
-  background:rgba(0,0,0,.92);
+  background:rgba(0,0,0,.9);
   border-bottom:1px solid #1f1f1f;
   padding:14px 18px;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
-.logo{display:flex;align-items:center;gap:10px;}
-.logo img{height:46px;}
-.logo span{font-weight:600;font-size:17px;}
-.header-right{display:flex;align-items:center;gap:14px;}
-.header-right a{color:#fff;font-size:20px;text-decoration:none;}
-.lang button{
-  background:#111;border:1px solid #333;color:#fff;
-  padding:5px 10px;border-radius:6px;margin-left:4px;cursor:pointer;
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
+.logo img{
+  height:46px;
+  transition:.4s;
+}
+.logo img:hover{
+  transform:scale(1.08) rotate(-1deg);
+}
+.logo span{
+  font-weight:600;
+  font-size:17px;
+}
+
+/* SOCIAL ICONS */
+.social{
+  display:flex;
+  gap:16px;
+}
+.social a{
+  font-size:22px;
+  color:#fff;
+  text-decoration:none;
+  transition:.3s;
+}
+.social a:hover{
+  color:var(--gold);
+  transform:translateY(-4px) scale(1.1);
+}
+
+/* HERO */
 .hero{
   text-align:center;
-  padding:80px 16px 60px;
+  padding:90px 16px 70px;
   max-width:1200px;
   margin:auto;
 }
-.hero h1{font-size:clamp(26px,5vw,44px);}
+
+.hero h1{
+  font-size:clamp(28px,5vw,46px);
+}
+
 .hero p{
   color:var(--muted);
   max-width:900px;
-  margin:16px auto 30px;
-  font-size:clamp(14px,3.5vw,18px);
+  margin:18px auto 34px;
+  font-size:clamp(15px,3.5vw,18px);
 }
+
+/* BUTTONS */
 .btn{
   background:var(--gold);
   color:#000;
-  padding:12px 26px;
+  padding:13px 28px;
   border-radius:40px;
   text-decoration:none;
   font-weight:600;
   margin:6px;
   display:inline-block;
+  transition:.3s;
 }
-.section{max-width:1200px;margin:auto;padding:60px 16px;}
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 24px rgba(245,183,0,.25);
+}
+
+/* SECTIONS */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 16px;
+}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:22px;
 }
+
 .card{
   background:var(--dark);
   border:1px solid #1f1f1f;
   border-radius:16px;
-  padding:26px;
+  padding:28px;
+  transition:.3s;
 }
-.card h2{color:var(--gold);margin-bottom:12px;}
-.trust{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:20px;
-  text-align:center;
+.card:hover{
+  transform:translateY(-6px);
+  border-color:var(--gold);
+}
+.card h2{
+  color:var(--gold);
+  margin-bottom:14px;
+}
+
+/* MARKETS */
+.markets{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  font-size:18px;
   margin-top:30px;
 }
+
+/* REVIEWS */
 .reviews{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -99,34 +173,35 @@ header{
   padding:18px;
   font-size:14px;
 }
+
+/* FOOTER */
 footer{
   border-top:1px solid #1f1f1f;
-  padding:35px 16px;
+  padding:40px 16px;
   text-align:center;
   color:#9a9a9a;
   font-size:14px;
 }
+
+/* FLOATING WHATSAPP */
 .whatsapp{
   position:fixed;
-  right:16px;
-  bottom:16px;
+  right:18px;
+  bottom:18px;
   background:#25D366;
   color:#000;
-  padding:12px 18px;
+  padding:14px 20px;
   border-radius:50px;
   font-weight:600;
   text-decoration:none;
+  z-index:200;
+  animation:pulse 2s infinite;
 }
-.review-float{
-  position:fixed;
-  left:16px;
-  bottom:16px;
-  background:var(--gold);
-  color:#000;
-  padding:12px 18px;
-  border-radius:50px;
-  font-weight:600;
-  text-decoration:none;
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6);}
+  70%{box-shadow:0 0 0 16px rgba(37,211,102,0);}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 </style>
 </head>
@@ -138,64 +213,61 @@ footer{
     <img src="./logo.jpg" alt="Scale With Fahad">
     <span>Scale With Fahad</span>
   </div>
-  <div class="header-right">
+  <div class="social">
+    <a href="https://www.facebook.com/profile.php?id=61585717853843" target="_blank">📘</a>
     <a href="https://www.instagram.com/scalewith.fahad/" target="_blank">📸</a>
     <a href="https://www.tiktok.com/@scalewithfahad" target="_blank">🎵</a>
-    <div class="lang">
-      <button onclick="setLang('en')">EN</button>
-      <button onclick="setLang('de')">DE</button>
-    </div>
   </div>
 </header>
 
-<section class="hero">
-  <h1 id="title">Professional eCommerce Store Management</h1>
-  <p id="subtitle">
-    We manage eBay, Amazon FBA and Walmart stores for clients across
-    Germany, the United Kingdom and the United States.
-    Our focus is structured operations, transparent cooperation and long-term sustainability.
+<section class="hero fade-up">
+  <h1>Scale Your eCommerce With Confidence</h1>
+  <p class="delay-1 fade-up">
+    Professional management of eBay, Amazon FBA and Walmart stores
+    for clients across Germany, the UK and the USA.
+    Structured operations, transparent cooperation, long-term focus.
   </p>
-  <a class="btn" href="mailto:fahad786sultan@gmail.com">Contact</a>
-  <a class="btn" target="_blank" href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">
+
+  <a class="btn delay-2 fade-up" href="mailto:fahad786sultan@gmail.com">Contact</a>
+  <a class="btn delay-3 fade-up" target="_blank"
+     href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">
     WhatsApp
   </a>
 </section>
 
 <section class="section">
   <div class="grid">
-    <div class="card">
+    <div class="card fade-up">
       <h2>How We Work</h2>
       ✔ Written service agreement<br>
       ✔ Germany-registered business<br>
-      ✔ Structured store operations<br>
-      ✔ Transparent monthly reporting<br>
-      ✔ Long-term cooperation focus
+      ✔ Structured daily operations<br>
+      ✔ Transparent reporting<br>
+      ✔ Long-term cooperation
     </div>
-    <div class="card">
+    <div class="card fade-up delay-1">
       <h2>Who We Work With</h2>
       ✔ Full-time job holders<br>
       ✔ Business-minded individuals<br>
-      ✔ Germany · UK · USA markets<br>
-      ✔ No short-term or experimental setups
+      ✔ Germany · UK · USA<br>
+      ✔ Serious long-term setups
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section fade-up">
   <h2 style="text-align:center;color:var(--gold);">Active Markets</h2>
-  <div class="trust">
-    <div>🇩🇪 Germany</div>
-    <div>🇬🇧 United Kingdom</div>
-    <div>🇺🇸 United States</div>
+  <div class="markets">
+    🇩🇪 Germany &nbsp; 🇬🇧 UK &nbsp; 🇺🇸 USA
   </div>
 </section>
 
 <section class="section">
   <h2 style="text-align:center;color:var(--gold);">Client Feedback</h2>
   <div class="reviews">
-    <div class="review">⭐ Clear communication and structured process (DE)</div>
-    <div class="review">⭐ Reliable operations alongside full-time work (UK)</div>
-    <div class="review">⭐ Transparent reporting and support (USA)</div>
+    <div class="review fade-up">⭐ Clear communication and structured execution (DE)</div>
+    <div class="review fade-up delay-1">⭐ Reliable operations alongside full-time work (UK)</div>
+    <div class="review fade-up delay-2">⭐ Transparent reporting and professional support (USA)</div>
   </div>
 </section>
 
@@ -206,27 +278,10 @@ VAT ID: DE453914117<br><br>
 <a href="datenschutz.html" style="color:var(--gold)">Datenschutz</a>
 </footer>
 
-<a class="whatsapp" target="_blank" href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">
+<a class="whatsapp" target="_blank"
+href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">
 WhatsApp
 </a>
-
-<a class="review-float" target="_blank"
-href="https://docs.google.com/forms/d/e/1FAIpQLSfFu2oG5tJ2heYC8Bo2CS2qWeAzP9XUueSk3axUJKJHOH4aJQ/viewform">
-⭐ Review
-</a>
-
-<script>
-function setLang(lang){
-  if(lang==="de"){
-    document.getElementById("title").innerText =
-      "Professionelles eCommerce Store Management";
-    document.getElementById("subtitle").innerText =
-      "Wir betreuen eBay-, Amazon-FBA- und Walmart-Stores für Kunden in Deutschland, Großbritannien und den USA mit strukturierten Prozessen und transparenter Zusammenarbeit.";
-  } else {
-    location.reload();
-  }
-}
-</script>
 
 </body>
 </html>
