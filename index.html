@@ -2,216 +2,188 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Scale With Fahad | eCommerce Store Management (DE · UK · USA)</title>
+<title>Scale With Fahad | eCommerce Operations</title>
 
-<!-- SEO -->
-<meta name="description" content="Scale With Fahad provides professional eCommerce store management for eBay, Amazon FBA and Walmart. Active in Germany, UK and USA.">
-<meta name="keywords" content="eBay Store Management, Amazon FBA Management, eCommerce Services Germany, Online Store Operations">
+<meta name="description" content="Scale With Fahad provides professional eCommerce operations and store management for eBay and Amazon. Germany, UK and USA.">
 <meta name="author" content="Fahad bin Sultan">
-
-<link rel="canonical" href="https://YOURDOMAIN.com/">
-<link rel="alternate" hreflang="en" href="https://YOURDOMAIN.com/">
-<link rel="alternate" hreflang="de" href="https://YOURDOMAIN.com/index-de.html">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Scale With Fahad | Professional eCommerce Store Management">
-<meta property="og:description" content="Professional management of eBay, Amazon FBA and Walmart stores for Germany, UK and USA.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="logo.webp">
+<link rel="canonical" href="https://scalewithfahad.de/">
 
 <style>
-/* -------------------- VARIABLES -------------------- */
 :root{
-  --bg:#0b0b0b;
-  --card:#131313;
-  --text:#ffffff;
-  --muted:#b0b0b0;
-  --accent:#f5b700;
+  --bg:#ffffff;
+  --section:#f6f7f9;
+  --text:#0f172a;
+  --muted:#475569;
+  --accent:#0a2540;
+  --border:#e2e8f0;
 }
 
-.light{
-  --bg:#f4f4f4;
-  --card:#ffffff;
-  --text:#111;
-  --muted:#555;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* -------------------- BASE -------------------- */
-*{box-sizing:border-box;margin:0;padding:0}
 body{
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
-  line-height:1.6;
-  transition:.3s;
+  line-height:1.65;
 }
 
-a{text-decoration:none;color:inherit}
-
-/* -------------------- SCROLL ANIMATION -------------------- */
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:1s ease;
-}
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
+a{
+  text-decoration:none;
+  color:inherit;
 }
 
-/* -------------------- HEADER -------------------- */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 16px;
+}
+
+/* HEADER */
 header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(0,0,0,.85);
-  backdrop-filter:blur(8px);
-  padding:14px 20px;
+  border-bottom:1px solid var(--border);
+  background:#fff;
+}
+
+.header-inner{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:1px solid #222;
+  padding:22px 0;
 }
-.light header{background:rgba(255,255,255,.9)}
 
-.logo{
+.brand{
   display:flex;
   align-items:center;
   gap:12px;
   font-weight:600;
 }
-.logo img{
-  height:44px;
-  transition:.4s;
-}
-.logo img:hover{transform:scale(1.08)}
 
-.nav{
-  display:flex;
-  gap:18px;
-  align-items:center;
-}
-.nav a{
-  font-size:20px;
-  transition:.3s;
-}
-.nav a:hover{color:var(--accent);transform:translateY(-3px)}
-
-.toggle{
-  border:1px solid #444;
-  padding:6px 12px;
-  border-radius:20px;
-  cursor:pointer;
-  font-size:14px;
+.brand img{
+  height:38px;
 }
 
-/* -------------------- HERO -------------------- */
-.hero{
-  max-width:1100px;
-  margin:auto;
-  padding:90px 16px 70px;
-  text-align:center;
-}
-.hero h1{
-  font-size:clamp(30px,5vw,48px);
-}
-.hero p{
-  max-width:850px;
-  margin:18px auto 34px;
+nav a{
+  margin-left:28px;
+  font-weight:500;
   color:var(--muted);
 }
 
-/* -------------------- BUTTONS -------------------- */
-.btn{
-  display:inline-block;
-  background:var(--accent);
-  color:#000;
-  padding:14px 30px;
-  border-radius:40px;
-  font-weight:600;
-  margin:6px;
-  transition:.3s;
-}
-.btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 26px rgba(245,183,0,.3);
+nav a.cta{
+  padding:10px 18px;
+  border:1px solid var(--accent);
+  border-radius:6px;
+  color:var(--accent);
 }
 
-/* -------------------- SECTIONS -------------------- */
-.section{
-  max-width:1100px;
-  margin:auto;
-  padding:70px 16px;
+/* HERO */
+.hero{
+  padding:110px 0 90px;
 }
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:40px;
+}
+
+.hero h1{
+  font-size:44px;
+  line-height:1.2;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:18px;
+  color:var(--muted);
+  margin-bottom:32px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:6px;
+  font-weight:500;
+  border:1px solid var(--accent);
+}
+
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  margin-right:12px;
+}
+
+/* INFO BOX */
+.info-box{
+  background:var(--section);
+  padding:32px;
+  border-radius:10px;
+  border:1px solid var(--border);
+}
+
+.info-box h3{
+  margin-bottom:12px;
+}
+
+/* SECTIONS */
+.section{
+  padding:90px 0;
+}
+
+.section.gray{
+  background:var(--section);
+}
+
+.section h2{
+  font-size:34px;
+  margin-bottom:40px;
+}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
+  gap:28px;
 }
+
 .card{
-  background:var(--card);
-  padding:28px;
-  border-radius:18px;
-  border:1px solid #222;
-  transition:.3s;
+  background:#fff;
+  padding:30px;
+  border-radius:10px;
+  border:1px solid var(--border);
 }
-.card:hover{
-  transform:translateY(-6px);
-  border-color:var(--accent);
-}
-.card h2{color:var(--accent);margin-bottom:12px}
 
-/* -------------------- MARKETS -------------------- */
+.card h3{
+  margin-bottom:12px;
+}
+
+/* MARKETS */
 .markets{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  font-size:18px;
-  margin-top:20px;
+  font-size:20px;
+  text-align:center;
 }
 
-/* -------------------- REVIEWS -------------------- */
-.reviews{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
-}
-.review{
-  background:var(--card);
-  padding:18px;
-  border-radius:14px;
-  border:1px solid #222;
-}
-
-/* -------------------- FOOTER -------------------- */
+/* FOOTER */
 footer{
-  border-top:1px solid #222;
-  padding:40px 16px;
+  border-top:1px solid var(--border);
+  padding:50px 16px;
   text-align:center;
   color:var(--muted);
   font-size:14px;
 }
 
-/* -------------------- WHATSAPP -------------------- */
-.whatsapp{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  background:#25D366;
-  color:#000;
-  padding:14px 22px;
-  border-radius:50px;
-  font-weight:600;
-  z-index:200;
-  animation:pulse 2s infinite;
-}
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
-  70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
-  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+/* MOBILE */
+@media(max-width:900px){
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+  nav a{
+    margin-left:16px;
+  }
 }
 </style>
 </head>
@@ -219,100 +191,112 @@ footer{
 <body>
 
 <header>
-  <div class="logo">
-    <img src="logo.webp" alt="Scale With Fahad" loading="lazy">
-    <span>Scale With Fahad</span>
-  </div>
-
-  <div class="nav">
-    <a href="https://www.facebook.com/profile.php?id=61585717853843" target="_blank">📘</a>
-    <a href="https://www.instagram.com/scalewith.fahad/" target="_blank">📸</a>
-    <a href="https://www.tiktok.com/@scalewithfahad" target="_blank">🎵</a>
-    <div class="toggle" onclick="toggleMode()">🌙 / ☀️</div>
+  <div class="container header-inner">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Scale With Fahad">
+      <span>Scale With Fahad</span>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
   </div>
 </header>
 
-<section class="hero reveal">
-  <h1>Scale Your eCommerce With Confidence</h1>
-  <p>
-    Professional management of eBay, Amazon FBA and Walmart stores
-    for clients across Germany, the United Kingdom and the United States.
-    Structured operations, transparent cooperation and long-term focus.
-  </p>
-
-  <a class="btn" href="mailto:fahad786sultan@gmail.com">Contact</a>
-  <a class="btn" target="_blank"
-     href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">
-     WhatsApp
-  </a>
-</section>
-
-<section class="section reveal">
-  <div class="grid">
-    <div class="card">
-      <h2>How We Work</h2>
-      ✔ Written service agreements<br>
-      ✔ Structured daily operations<br>
-      ✔ Transparent reporting<br>
-      ✔ Long-term cooperation
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Professional eCommerce Operations for Sustainable Growth</h1>
+      <p>
+        We manage and scale eBay and Amazon stores with structured operations,
+        transparent reporting, and a compliance-first approach.
+        Built for long-term partnerships.
+      </p>
+      <a href="#contact" class="btn primary">Get in Touch</a>
+      <a href="#about" class="btn">Learn More</a>
     </div>
-    <div class="card">
-      <h2>Who We Work With</h2>
-      ✔ Full-time job holders<br>
-      ✔ Business-minded partners<br>
-      ✔ Germany · UK · USA
+
+    <div class="info-box">
+      <h3>What We Focus On</h3>
+      <p>
+        ✔ Daily store operations<br>
+        ✔ Account health & compliance<br>
+        ✔ Clear communication<br>
+        ✔ Long-term cooperation
+      </p>
     </div>
   </div>
 </section>
 
-<section class="section reveal">
-  <h2 style="text-align:center;color:var(--accent)">Active Markets</h2>
-  <div class="markets">
-    🇩🇪 Germany &nbsp; 🇬🇧 UK &nbsp; 🇺🇸 USA
+<section id="services" class="section gray">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Store Management</h3>
+        <p>
+          Full operational management including orders, customer communication
+          and performance monitoring.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Process & Compliance</h3>
+        <p>
+          Structured workflows aligned with platform policies and EU regulations.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Scaling Strategy</h3>
+        <p>
+          Sustainable growth without shortcuts or high-risk practices.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section reveal">
-  <h2 style="text-align:center;color:var(--accent)">Client Feedback</h2>
-  <div class="reviews">
-    <div class="review">⭐ Clear communication and structured execution (DE)</div>
-    <div class="review">⭐ Reliable alongside full-time employment (UK)</div>
-    <div class="review">⭐ Transparent reporting and professional support (USA)</div>
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Scale With Fahad</h2>
+    <p>
+      Scale With Fahad works with individuals and businesses who want reliable,
+      professionally managed eCommerce operations.
+      Transparency, structure, and trust are the foundation of our work.
+    </p>
+    <p>
+      Active across Germany, the United Kingdom, and the United States.
+    </p>
+  </div>
+</section>
+
+<section class="section gray">
+  <div class="container">
+    <h2>Active Markets</h2>
+    <div class="markets">
+      🇩🇪 Germany &nbsp;&nbsp; 🇬🇧 United Kingdom &nbsp;&nbsp; 🇺🇸 United States
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>
+      If you’re looking for a reliable partner to manage and scale your
+      eCommerce operations, let’s talk.
+    </p>
+    <a href="mailto:fahad786sultan@gmail.com" class="btn primary">Email Us</a>
+    <a href="https://wa.me/491XXXXXXXXX" target="_blank" class="btn">WhatsApp</a>
   </div>
 </section>
 
 <footer>
-© 2026 Fahad bin Sultan · Germany<br>
-VAT ID: DE453914117<br><br>
-<a href="impressum.html">Impressum</a> ·
-<a href="datenschutz.html">Datenschutz</a>
+  © 2026 Fahad bin Sultan · Germany<br>
+  VAT ID: DE453914117<br><br>
+  <a href="impressum.html">Impressum</a> ·
+  <a href="datenschutz.html">Datenschutz</a>
 </footer>
-
-<a class="whatsapp" target="_blank"
-href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H">
-WhatsApp
-</a>
-
-<script>
-/* Scroll animation */
-document.addEventListener("scroll",()=>{
-  document.querySelectorAll(".reveal").forEach(el=>{
-    if(el.getBoundingClientRect().top < window.innerHeight - 80){
-      el.classList.add("active");
-    }
-  });
-});
-
-/* Light / Dark mode */
-function toggleMode(){
-  document.body.classList.toggle("light");
-  localStorage.setItem("mode",
-    document.body.classList.contains("light") ? "light" : "dark");
-}
-if(localStorage.getItem("mode")==="light"){
-  document.body.classList.add("light");
-}
-</script>
 
 </body>
 </html>
