@@ -9,20 +9,15 @@
 <meta name="description" content="Scale With Fahad – professionelles E-Commerce Management und Dropshipping Betreuung in Deutschland. Strukturierte Prozesse, Transparenz und langfristiger Fokus.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Fahad bin Sultan">
-<meta name="language" content="de">
-<meta name="geo.region" content="DE">
-<meta name="geo.placename" content="Deutschland">
-
 <link rel="canonical" href="https://scalewithfahad.de/">
 
-<!-- TRUSTPILOT META VERIFICATION -->
+<!-- Trustpilot verification -->
 <meta name="trustpilot-one-time-domain-verification-id"
 content="6526d371-50f6-460d-ab8a-c42949a4e4b3"/>
 
 <style>
 :root{
   --blue:#0a3d91;
-  --bg:#ffffff;
   --text:#0f172a;
   --muted:#475569;
   --border:#e2e8f0;
@@ -32,9 +27,8 @@ content="6526d371-50f6-460d-ab8a-c42949a4e4b3"/>
 
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
   line-height:1.8;
+  color:var(--text);
 }
 
 a{text-decoration:none;color:var(--blue)}
@@ -56,99 +50,78 @@ header{
   align-items:center;
   padding:18px 0;
 }
-.header-left a{
-  color:#fff;
-  font-size:15px;
-  white-space:nowrap;
-}
-.header-center{
-  text-align:center;
-  font-weight:700;
-  font-size:18px;
-}
-.header-right{
-  text-align:right;
-  font-size:14px;
-  white-space:nowrap;
-}
+.header-left a{color:#fff;font-size:15px}
+.header-center{text-align:center;font-weight:700}
+.header-right{white-space:nowrap}
 
 /* HERO */
 .hero{
-  padding:100px 0 90px;
   text-align:center;
+  padding:90px 0;
 }
 .hero h1{
-  font-size:clamp(34px,6vw,54px);
-  margin-bottom:22px;
+  font-size:clamp(32px,6vw,52px);
+  margin-bottom:20px;
 }
 .hero p{
   max-width:720px;
-  margin:0 auto 36px;
-  font-size:18px;
+  margin:0 auto 30px;
   color:var(--muted);
 }
 
 /* BUTTONS */
 .btn{
-  display:inline-block;
   padding:14px 32px;
   border-radius:8px;
   border:1px solid var(--blue);
   font-weight:600;
   margin:6px;
+  display:inline-block;
 }
 .btn.primary{
   background:var(--blue);
   color:#fff;
 }
 
-/* TRUSTPILOT NOTE */
-.trustpilot-note{
-  margin-top:14px;
-  font-size:14px;
-  color:var(--muted);
-}
-
 /* SECTIONS */
 .section{
-  padding:90px 0;
+  padding:80px 0;
 }
 .section.gray{
   background:#f6f7f9;
 }
 .section h2{
-  font-size:32px;
-  margin-bottom:28px;
+  margin-bottom:24px;
 }
-.section h3{
-  margin-top:26px;
-  margin-bottom:10px;
-}
-.section p{
-  margin-bottom:18px;
+
+/* FOOTER */
+footer{
+  border-top:1px solid var(--border);
+  padding:40px 18px;
+  text-align:center;
+  font-size:14px;
   color:var(--muted);
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT */
 .whatsapp{
   position:fixed;
   left:18px;
   bottom:18px;
   background:#25D366;
-  color:#000;
   padding:14px 22px;
   border-radius:50px;
   font-weight:600;
+  color:#000;
   z-index:999;
 }
 
-/* MOBILE – KEEP HEADER STRUCTURE */
+/* MOBILE */
 @media(max-width:768px){
   .header-inner{
-    grid-template-columns:auto 1fr auto;
-  }
-  .header-center{
-    font-size:16px;
+    grid-template-columns:1fr;
+    gap:10px;
+    text-align:center;
   }
 }
 </style>
@@ -159,92 +132,72 @@ header{
 <header>
   <div class="container header-inner">
     <div class="header-left">
-      <a href="#services">Leistungen</a>
+      <a href="#details" data-de="Leistungen" data-en="Services">Leistungen</a>
     </div>
     <div class="header-center">Scale With Fahad</div>
-    <div class="header-right">DE | EN</div>
+    <div class="header-right">
+      <span onclick="setLang('de')">DE</span> | 
+      <span onclick="setLang('en')">EN</span>
+    </div>
   </div>
 </header>
 
-<!-- FRONT / HERO -->
 <section class="hero">
   <div class="container">
-    <h1>Professionelles E-Commerce Management</h1>
+    <h1 data-de="Professionelles E-Commerce Management"
+        data-en="Professional E-Commerce Management">
+      Professionelles E-Commerce Management
+    </h1>
 
-    <p>
-      Scale With Fahad steht für strukturierte, transparente und
-      langfristig ausgerichtete E-Commerce-Betreuung.
-      Kein Hype, keine leeren Versprechen – sondern saubere Prozesse
-      und klare Zusammenarbeit.
+    <p data-de="Strukturierte, transparente und langfristige Betreuung für nachhaltige E-Commerce-Projekte."
+       data-en="Structured, transparent and long-term management for sustainable eCommerce projects.">
+      Strukturierte, transparente und langfristige Betreuung für nachhaltige E-Commerce-Projekte.
     </p>
 
-    <a href="#details" class="btn primary">Mehr erfahren</a>
-    <a href="https://de.trustpilot.com/review/scalewithfahad.de"
-       target="_blank"
-       class="btn">
-       Bewertungen
-    </a>
+    <a href="#details" class="btn primary"
+       data-de="Mehr erfahren" data-en="Learn more">Mehr erfahren</a>
 
-    <div class="trustpilot-note">
+    <a href="https://de.trustpilot.com/review/scalewithfahad.de"
+       target="_blank" class="btn"
+       data-de="Bewertungen" data-en="Reviews">Bewertungen</a>
+
+    <div style="margin-top:12px;font-size:14px;color:#555"
+         data-de="✔ Verifiziertes Unternehmen auf Trustpilot"
+         data-en="✔ Verified business on Trustpilot">
       ✔ Verifiziertes Unternehmen auf Trustpilot
     </div>
   </div>
 </section>
 
-<!-- DETAILS -->
 <section id="details" class="section gray">
   <div class="container">
-    <h2>Über Scale With Fahad</h2>
+    <h2 data-de="Über Scale With Fahad"
+        data-en="About Scale With Fahad">Über Scale With Fahad</h2>
 
-    <p>
-      Scale With Fahad ist ein professioneller E-Commerce-Dienstleister
-      mit Fokus auf nachhaltige Online-Geschäftsmodelle.
-      Wir unterstützen Kunden dabei, E-Commerce strukturiert aufzubauen
-      und langfristig stabil zu betreiben.
-    </p>
-
-    <p>
-      Unsere Arbeit richtet sich an Unternehmer, Berufstätige und Partner,
-      die Wert auf Transparenz, Compliance und klare Prozesse legen.
-      Wir übernehmen operative Aufgaben, damit sich unsere Kunden
-      auf strategische Entscheidungen konzentrieren können.
-    </p>
-
-    <p>
-      Jede Zusammenarbeit basiert auf klaren Absprachen,
-      realistischen Erwartungen und langfristigem Denken.
-      Genau das unterscheidet uns von kurzfristig orientierten Anbietern.
+    <p data-de="Wir betreuen E-Commerce-Modelle im Dropshipping sowie mit eigenem Lagerbestand oder hybriden Strukturen. Unser Fokus liegt auf stabilen Prozessen, Compliance und langfristiger Skalierung."
+       data-en="We manage eCommerce models using dropshipping, own stock or hybrid structures, focusing on stability, compliance and long-term growth.">
+      Wir betreuen E-Commerce-Modelle im Dropshipping sowie mit eigenem Lagerbestand oder hybriden Strukturen. Unser Fokus liegt auf stabilen Prozessen, Compliance und langfristiger Skalierung.
     </p>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section">
+<!-- CITY PAGES SEO -->
+<section class="section">
   <div class="container">
-    <h2>Unsere Leistungen</h2>
+    <h2>E-Commerce Management in Deutschland</h2>
 
-    <h3>Dropshipping & Marktplatz-Management</h3>
     <p>
-      Wir betreuen E-Commerce-Modelle im Dropshipping
-      sowie mit eigenem Lagerbestand oder hybriden Strukturen.
-      Dabei arbeiten wir mit Plattformen wie eBay und Amazon
-      sowie mit internationalen Lieferanten.
+      Unsere Leistungen richten sich an Kunden in ganz Deutschland,
+      unter anderem in folgenden Städten:
     </p>
 
-    <h3>Operative Umsetzung & Prozesse</h3>
-    <p>
-      Unsere Leistungen umfassen Bestellabwicklung,
-      Kundenkommunikation, Performance-Überwachung,
-      Account-Health-Monitoring sowie Reporting.
-    </p>
-
-    <h3>Tools, Software & Transparenz</h3>
-    <p>
-      Wir nutzen professionelle Softwarelösungen zur
-      Prozesssteuerung, Analyse und Dokumentation,
-      sodass unsere Kunden jederzeit Einblick
-      in Abläufe und Ergebnisse haben.
-    </p>
+    <ul style="margin-top:20px;line-height:2">
+      <li><a href="e-commerce-management-berlin.html">E-Commerce Management Berlin</a></li>
+      <li><a href="e-commerce-management-hamburg.html">E-Commerce Management Hamburg</a></li>
+      <li><a href="e-commerce-management-duesseldorf.html">E-Commerce Management Düsseldorf</a></li>
+      <li><a href="e-commerce-management-muenchen.html">E-Commerce Management München</a></li>
+      <li><a href="e-commerce-management-frankfurt.html">E-Commerce Management Frankfurt</a></li>
+    </ul>
   </div>
 </section>
 
@@ -256,9 +209,16 @@ header{
 
 <a class="whatsapp"
 href="https://whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H"
-target="_blank">
-WhatsApp
-</a>
+target="_blank">WhatsApp</a>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll("[data-de]").forEach(el=>{
+    el.innerText = el.getAttribute("data-"+lang);
+  });
+  document.documentElement.lang = lang;
+}
+</script>
 
 </body>
 </html>
