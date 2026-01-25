@@ -1,167 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Scale With Fahad | eCommerce Operations</title>
+<title>E-Commerce Management Deutschland | Scale With Fahad</title>
 
-<meta name="description" content="Professional eCommerce operations and store management for Germany, UK and USA.">
+<meta name="description" content="Professionelles E-Commerce Management in Deutschland. Betreuung von eBay- und Amazon-Shops mit strukturierten Prozessen, Transparenz und langfristigem Fokus.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Fahad bin Sultan">
+<meta name="language" content="de">
+<meta name="geo.region" content="DE">
+
 <link rel="canonical" href="https://scalewithfahad.de/">
 
+<!-- Trustpilot domain verification already done via DNS -->
+
 <style>
-:root{
-  --bg:#ffffff;
-  --section:#f6f7f9;
-  --text:#0f172a;
-  --muted:#475569;
-  --accent:#0a2540;
-  --border:#e2e8f0;
-}
-
-*{margin:0;padding:0;box-sizing:border-box}
-
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
+  background:#ffffff;
+  color:#0f172a;
   line-height:1.75;
+  margin:0;
 }
-
-a{text-decoration:none;color:inherit}
-
 .container{
   max-width:1000px;
   margin:auto;
   padding:0 18px;
 }
-
-/* HEADER */
 header{
-  border-bottom:1px solid var(--border);
-  background:#fff;
+  border-bottom:1px solid #e2e8f0;
+  padding:20px 0;
 }
 .header-inner{
   display:grid;
   grid-template-columns:1fr auto 1fr;
   align-items:center;
-  padding:20px 0;
-}
-.header-left a{
-  color:var(--muted);
-  font-size:15px;
 }
 .header-center{
   text-align:center;
   font-weight:600;
-  letter-spacing:.4px;
 }
-.header-right{
-  text-align:right;
+.header-left a,
+.header-right a{
+  color:#475569;
   font-size:14px;
-  color:var(--muted);
+  text-decoration:none;
 }
-.header-right span{
-  cursor:pointer;
-  margin-left:10px;
-}
-.header-right .active{
-  font-weight:600;
-  color:var(--accent);
-}
-
-/* FADE */
-.fade{transition:opacity .35s ease}
-.fade.hide{opacity:0}
-
-/* HERO */
-.hero{
-  padding:90px 0 70px;
-}
-.hero h1{
-  font-size:44px;
-  line-height:1.2;
-  margin-bottom:22px;
-}
-.hero p{
-  font-size:18px;
-  color:var(--muted);
-  max-width:780px;
-  margin-bottom:36px;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 30px;
-  border-radius:6px;
-  border:1px solid var(--accent);
-  font-weight:500;
-}
-.btn.primary{
-  background:var(--accent);
-  color:#fff;
-  margin-right:12px;
-}
-
-/* SECTIONS */
-.section{
-  padding:90px 0;
-}
-.section.gray{
-  background:var(--section);
-}
-.section h2{
-  font-size:32px;
-  margin-bottom:30px;
-}
-.section p{
-  margin-bottom:18px;
-  color:var(--muted);
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
-}
-
-.card{
-  background:#fff;
-  padding:30px;
-  border-radius:10px;
-  border:1px solid var(--border);
-}
-
-/* FORM */
-form{
-  max-width:520px;
-}
-input, textarea{
-  width:100%;
-  padding:14px;
-  margin-bottom:14px;
-  border-radius:6px;
-  border:1px solid var(--border);
-  font-size:15px;
-}
-
-/* FOOTER */
+section{padding:80px 0}
+h1{font-size:40px;line-height:1.2}
+h2{font-size:28px;margin-top:40px}
+p{color:#475569;margin-bottom:18px}
 footer{
-  border-top:1px solid var(--border);
+  border-top:1px solid #e2e8f0;
   padding:40px 18px;
   text-align:center;
   font-size:14px;
-  color:var(--muted);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .header-inner{
-    grid-template-columns:1fr;
-    gap:10px;
-    text-align:center;
-  }
-  .header-right{text-align:center}
+  color:#475569;
 }
 </style>
 </head>
@@ -171,93 +67,46 @@ footer{
 <header>
   <div class="container header-inner">
     <div class="header-left">
-      <a href="#services">Services</a>
+      <a href="leistungen.html">Leistungen</a>
     </div>
     <div class="header-center">Scale With Fahad</div>
     <div class="header-right">
-      <span class="active" onclick="setLang('en',this)">EN</span> |
-      <span onclick="setLang('de',this)">DE</span>
+      <a href="leistungen.html">DE</a>
     </div>
   </div>
 </header>
 
-<section class="hero container fade" id="content">
-  <h1 id="title">Professional eCommerce Operations for Sustainable Growth</h1>
-  <p id="intro">
-    We manage and operate eCommerce stores with structured processes,
-    transparent communication, and a compliance-first mindset.
+<section class="container">
+  <h1>E-Commerce Management in Deutschland</h1>
+
+  <p>
+    Scale With Fahad ist ein professioneller E-Commerce Dienstleister mit Fokus auf
+    strukturierte Shop-Betreuung und operative Umsetzung.
+    Wir unterstützen Verkäufer in Deutschland beim langfristigen Betrieb und der
+    Skalierung von eBay- und Amazon-Shops.
   </p>
-  <a href="#contact" class="btn primary" id="btn1">Get in Touch</a>
-  <a href="#details" class="btn" id="btn2">Learn More</a>
-</section>
 
-<section id="details" class="section gray">
-  <div class="container">
-    <h2>How We Work & What We Do</h2>
+  <h2>Professionelle Betreuung von eBay- und Amazon-Shops</h2>
+  <p>
+    Unser E-Commerce Management umfasst die tägliche Verwaltung von Online-Shops,
+    die Überwachung der Account-Gesundheit sowie eine transparente operative Umsetzung.
+    Dabei legen wir besonderen Wert auf Compliance, Plattform-Richtlinien und
+    nachhaltiges Wachstum.
+  </p>
 
-    <p>
-      Scale With Fahad provides professional, long-term eCommerce operations and
-      store management services for individuals and businesses who want to build
-      sustainable online revenue streams without handling daily operations themselves.
-    </p>
+  <h2>Wie wir E-Commerce Unternehmen langfristig skalieren</h2>
+  <p>
+    Unser Ansatz basiert auf klaren Prozessen, realistischer Planung und
+    langfristiger Zusammenarbeit. Wir verzichten bewusst auf kurzfristige Strategien
+    und risikoreiche Methoden, um stabile und belastbare E-Commerce-Strukturen
+    aufzubauen.
+  </p>
 
-    <p>
-      Our work is based on structure, transparency, and compliance.
-      We do not focus on short-term hype or risky tactics, but on building stable
-      systems that grow responsibly over time.
-    </p>
-
-    <p>
-      We manage stores on platforms such as eBay and Amazon, handling daily operational
-      tasks including order processing, customer communication, performance monitoring,
-      and account health management.
-    </p>
-
-    <p>
-      All cooperation is based on clear agreements, defined responsibilities,
-      and open communication. Partners always know how their store is performing
-      and how operations are handled.
-    </p>
-
-    <p>
-      Our services are ideal for individuals with full-time jobs, entrepreneurs
-      who value delegation, and partners who seek long-term cooperation instead
-      of short-term experiments.
-    </p>
-
-    <p>
-      We do not work with “get rich quick” expectations or policy-violating strategies.
-      Sustainable growth requires discipline, patience, and responsible execution.
-    </p>
-
-    <p>
-      Transparency is a core principle of our work. We focus on compliance,
-      account stability, and realistic expectations to protect long-term value.
-    </p>
-  </div>
-</section>
-
-<section id="services" class="section">
-  <div class="container">
-    <h2>Services</h2>
-    <div class="grid">
-      <div class="card">Daily Store Operations & Management</div>
-      <div class="card">Account Health & Compliance Monitoring</div>
-      <div class="card">Sustainable Scaling & Optimization</div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <div class="container">
-    <h2>Contact</h2>
-    <form action="mailto:fahad786sultan@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" rows="4" placeholder="Your message" required></textarea>
-      <button class="btn primary" type="submit">Send</button>
-    </form>
-  </div>
+  <h2>E-Commerce Dienstleister für Deutschland</h2>
+  <p>
+    Unser Hauptfokus liegt auf dem deutschen Markt sowie den rechtlichen und
+    operativen Anforderungen innerhalb der EU.
+  </p>
 </section>
 
 <footer>
@@ -265,30 +114,6 @@ footer{
   <a href="impressum.html">Impressum</a> ·
   <a href="datenschutz.html">Datenschutz</a>
 </footer>
-
-<script>
-function setLang(lang, el){
-  const c=document.getElementById("content");
-  c.classList.add("hide");
-  document.querySelectorAll(".header-right span").forEach(s=>s.classList.remove("active"));
-  el.classList.add("active");
-
-  setTimeout(()=>{
-    if(lang==="de"){
-      title.innerText="Professionelle E-Commerce-Prozesse für nachhaltiges Wachstum";
-      intro.innerText="Wir betreiben E-Commerce-Shops mit strukturierten Abläufen, transparenter Kommunikation und Compliance-Fokus.";
-      btn1.innerText="Kontakt";
-      btn2.innerText="Mehr erfahren";
-    }else{
-      title.innerText="Professional eCommerce Operations for Sustainable Growth";
-      intro.innerText="We manage and operate eCommerce stores with structured processes, transparent communication, and a compliance-first mindset.";
-      btn1.innerText="Get in Touch";
-      btn2.innerText="Learn More";
-    }
-    c.classList.remove("hide");
-  },200);
-}
-</script>
 
 </body>
 </html>
