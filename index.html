@@ -15,7 +15,6 @@
 content="6526d371-50f6-460d-ab8a-c42949a4e4b3"/>
 
 <style>
-/* (STYLE UNCHANGED — SAME AS YOUR CODE) */
 :root{
   --blue:#0a3d91;
   --text:#0f172a;
@@ -29,46 +28,89 @@ body{
   color:var(--text);
 }
 a{text-decoration:none;color:var(--blue)}
-.container{max-width:1100px;margin:auto;padding:0 18px;}
-header{background:var(--blue);color:#fff;}
-.header-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;padding:18px 0;}
+.container{max-width:1100px;margin:auto;padding:0 18px}
+
+/* HEADER */
+header{background:var(--blue);color:#fff}
+.header-inner{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  padding:18px 0;
+}
 .header-left a{color:#fff;font-size:15px}
 .header-center{text-align:center;font-weight:700}
 .header-right{white-space:nowrap}
+
+/* HERO */
 .hero{text-align:center;padding:90px 0}
 .hero h1{font-size:clamp(32px,6vw,52px);margin-bottom:20px}
 .hero p{max-width:720px;margin:0 auto 30px;color:var(--muted)}
-.btn{padding:14px 32px;border-radius:8px;border:1px solid var(--blue);font-weight:600;margin:6px;display:inline-block}
+
+/* BUTTONS */
+.btn{
+  padding:14px 32px;
+  border-radius:8px;
+  border:1px solid var(--blue);
+  font-weight:600;
+  margin:6px;
+  display:inline-block;
+}
 .btn.primary{background:var(--blue);color:#fff}
+
+/* SECTIONS */
 .section{padding:80px 0}
 .section.gray{background:#f6f7f9}
 .section h2{margin-bottom:24px}
 .section h3{margin-top:26px;margin-bottom:10px}
-footer{border-top:1px solid var(--border);padding:40px 18px;text-align:center;font-size:14px;color:var(--muted)}
-.whatsapp{position:fixed;left:18px;bottom:18px;background:#25D366;padding:14px 22px;border-radius:50px;font-weight:600;color:#000;z-index:999}
+
+/* FOOTER */
+footer{
+  border-top:1px solid var(--border);
+  padding:40px 18px;
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  background:#25D366;
+  padding:14px 22px;
+  border-radius:50px;
+  font-weight:600;
+  color:#000;
+  z-index:999;
+}
+
 @media(max-width:768px){
-  .header-inner{grid-template-columns:1fr;gap:10px;text-align:center;}
+  .header-inner{
+    grid-template-columns:1fr;
+    gap:10px;
+    text-align:center;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER (UNCHANGED) -->
 <header>
   <div class="container header-inner">
     <div class="header-left">
-      <a href="#details" data-de="Leistungen" data-en="Services">Leistungen</a>
+      <a href="#details">Leistungen</a>
     </div>
     <div class="header-center">Scale With Fahad</div>
     <div class="header-right">
-      <span onclick="setLang('de')">DE</span> | 
+      <span onclick="setLang('de')">DE</span> |
       <span onclick="setLang('en')">EN</span>
     </div>
   </div>
 </header>
 
-<!-- HERO (UNCHANGED) -->
 <section class="hero">
   <div class="container">
     <h1 data-de="Professionelles E-Commerce Management"
@@ -81,79 +123,86 @@ footer{border-top:1px solid var(--border);padding:40px 18px;text-align:center;fo
       Strukturierte, transparente und langfristige Betreuung für nachhaltige E-Commerce-Projekte.
     </p>
 
-    <a href="#details" class="btn primary"
-       data-de="Mehr erfahren" data-en="Learn more">Mehr erfahren</a>
+    <a href="#details" class="btn primary">Mehr erfahren</a>
+    <a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank" class="btn">Bewertungen</a>
 
-    <a href="https://de.trustpilot.com/review/scalewithfahad.de"
-       target="_blank" class="btn"
-       data-de="Bewertungen" data-en="Reviews">Bewertungen</a>
-
-    <div style="margin-top:12px;font-size:14px;color:#555"
-         data-de="✔ Verifiziertes Unternehmen auf Trustpilot"
-         data-en="✔ Verified business on Trustpilot">
+    <div style="margin-top:12px;font-size:14px;color:#555">
       ✔ Verifiziertes Unternehmen auf Trustpilot
     </div>
   </div>
 </section>
 
-<!-- DETAILS (UNCHANGED – YOUR LONG BUSINESS TEXT IS HERE) -->
+<!-- 🔴 EXTENDED BUSINESS & SERVICES DETAILS -->
 <section id="details" class="section gray">
   <div class="container">
-    <h2 data-de="Über Scale With Fahad"
-        data-en="About Scale With Fahad">Über Scale With Fahad</h2>
-    <!-- (content unchanged) -->
-    <p>Scale With Fahad ist ein professioneller E-Commerce-Dienstleister …</p>
-  </div>
-</section>
+    <h2>Über Scale With Fahad</h2>
 
-<!-- FAQ SECTION (NEW – SEO + CLIENT TRUST) -->
-<section class="section">
-  <div class="container">
-    <h2 data-de="Häufige Fragen (FAQ)"
-        data-en="Frequently Asked Questions (FAQ)">
-      Häufige Fragen (FAQ)
-    </h2>
-
-    <h3 data-de="Was genau macht Scale With Fahad?"
-        data-en="What exactly does Scale With Fahad do?">
-      Was genau macht Scale With Fahad?
-    </h3>
-    <p data-de="Wir übernehmen die operative Betreuung von E-Commerce-Projekten, inklusive Dropshipping, Lager- und Hybridmodellen."
-       data-en="We handle the operational management of eCommerce projects, including dropshipping, stock-based and hybrid models.">
-      Wir übernehmen die operative Betreuung von E-Commerce-Projekten, inklusive Dropshipping, Lager- und Hybridmodellen.
+    <p>
+      Scale With Fahad ist ein professioneller E-Commerce-Dienstleister mit Sitz in Deutschland,
+      der sich auf den nachhaltigen Betrieb und die langfristige Skalierung von
+      Online-Geschäftsmodellen spezialisiert hat. Unser Ansatz unterscheidet sich bewusst
+      von kurzfristigen, risikoreichen Methoden oder unrealistischen Versprechen.
     </p>
 
-    <h3 data-de="Ist das Angebot auch für Berufstätige geeignet?"
-        data-en="Is this service suitable for full-time employees?">
-      Ist das Angebot auch für Berufstätige geeignet?
-    </h3>
-    <p data-de="Ja. Unsere Services sind speziell für Kunden gedacht, die nicht täglich operativ arbeiten möchten."
-       data-en="Yes. Our services are designed for clients who do not want to manage daily operations themselves.">
-      Ja. Unsere Services sind speziell für Kunden gedacht, die nicht täglich operativ arbeiten möchten.
+    <p>
+      Wir verstehen E-Commerce als operatives Business, das klare Prozesse,
+      saubere Umsetzung und kontinuierliche Optimierung erfordert.
+      Genau hier setzen wir an: Wir übernehmen die operative Verantwortung,
+      damit unsere Kunden sich auf Strategie, Kapital und langfristige Planung
+      konzentrieren können.
     </p>
 
-    <h3 data-de="Arbeitet ihr regelkonform mit Marktplätzen?"
-        data-en="Do you operate in compliance with marketplaces?">
-      Arbeitet ihr regelkonform mit Marktplätzen?
-    </h3>
-    <p data-de="Ja. Compliance, Richtlinien-Einhaltung und Account-Sicherheit haben höchste Priorität."
-       data-en="Yes. Compliance, policy adherence and account safety are top priorities.">
-      Ja. Compliance, Richtlinien-Einhaltung und Account-Sicherheit haben höchste Priorität.
+    <h3>Unsere Arbeitsmodelle</h3>
+    <p>
+      Wir betreuen unterschiedliche E-Commerce-Strukturen, darunter
+      Dropshipping-Modelle, Shops mit eigenem Lagerbestand sowie hybride
+      Konzepte. Jedes Modell wird individuell bewertet und strukturiert,
+      um Stabilität, Skalierbarkeit und Regelkonformität sicherzustellen.
     </p>
-  </div>
-</section>
 
-<!-- CITY PAGES (UNCHANGED) -->
-<section class="section">
-  <div class="container">
-    <h2>E-Commerce Management in Deutschland</h2>
-    <ul>
-      <li><a href="e-commerce-management-berlin.html">Berlin</a></li>
-      <li><a href="e-commerce-management-hamburg.html">Hamburg</a></li>
-      <li><a href="e-commerce-management-duesseldorf.html">Düsseldorf</a></li>
-      <li><a href="e-commerce-management-muenchen.html">München</a></li>
-      <li><a href="e-commerce-management-frankfurt.html">Frankfurt</a></li>
-    </ul>
+    <h3>Operative Leistungen im Detail</h3>
+    <p>
+      Zu unseren täglichen Aufgaben zählen die vollständige Bestellabwicklung,
+      die professionelle Kundenkommunikation, die Überwachung von Kennzahlen,
+      die Pflege von Angeboten sowie das kontinuierliche Monitoring der
+      Account-Gesundheit auf den jeweiligen Plattformen.
+    </p>
+
+    <p>
+      Wir arbeiten mit professionellen Tools für Auftragsmanagement,
+      Prozesssteuerung und Reporting. Dadurch stellen wir sicher,
+      dass Abläufe nachvollziehbar, effizient und jederzeit kontrollierbar bleiben.
+    </p>
+
+    <h3>Transparenz & Zusammenarbeit</h3>
+    <p>
+      Transparenz ist ein zentraler Bestandteil unserer Arbeit.
+      Unsere Kunden erhalten klare Einblicke in Abläufe,
+      Leistungskennzahlen und operative Entwicklungen.
+      Entscheidungen werden nachvollziehbar getroffen,
+      nicht impulsiv oder spekulativ.
+    </p>
+
+    <h3>Compliance & Verantwortung</h3>
+    <p>
+      Die Einhaltung von Plattform-Richtlinien, rechtlichen Rahmenbedingungen
+      und sauberen Geschäftsprozessen hat für uns höchste Priorität.
+      Wir vermeiden bewusst Strategien, die Accounts, Kapital oder
+      langfristige Geschäftsperspektiven gefährden könnten.
+    </p>
+
+    <h3>Für wen ist Scale With Fahad geeignet?</h3>
+    <p>
+      Unser Service richtet sich an Unternehmer, Berufstätige und Investoren,
+      die E-Commerce professionell betreiben möchten, ohne selbst täglich
+      operativ tätig zu sein. Besonders geeignet ist unser Angebot für
+      Kunden, die Wert auf Struktur, Stabilität und langfristige Partnerschaften legen.
+    </p>
+
+    <p>
+      Scale With Fahad steht für Klarheit, Verantwortung und nachhaltiges Wachstum
+      im deutschen E-Commerce-Markt.
+    </p>
   </div>
 </section>
 
@@ -173,31 +222,6 @@ function setLang(lang){
     el.innerText = el.getAttribute("data-"+lang);
   });
   document.documentElement.lang = lang;
-}
-</script>
-
-<!-- FAQ JSON-LD (SEO POWER) -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {
-      "@type":"Question",
-      "name":"Was genau macht Scale With Fahad?",
-      "acceptedAnswer":{"@type":"Answer","text":"Scale With Fahad übernimmt die operative Betreuung von E-Commerce-Projekten inklusive Dropshipping und Hybridmodellen."}
-    },
-    {
-      "@type":"Question",
-      "name":"Ist das Angebot auch für Berufstätige geeignet?",
-      "acceptedAnswer":{"@type":"Answer","text":"Ja, das Angebot ist ideal für Berufstätige, die E-Commerce professionell betreiben möchten ohne tägliche operative Arbeit."}
-    },
-    {
-      "@type":"Question",
-      "name":"Arbeitet ihr regelkonform mit Marktplätzen?",
-      "acceptedAnswer":{"@type":"Answer","text":"Ja, Compliance und Richtlinien-Einhaltung stehen bei Scale With Fahad an erster Stelle."}
-    }
-  ]
 }
 </script>
 
