@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 60">
+  <style>
+    .name { font: 700 28px Arial, Helvetica, sans-serif; fill: #0a2540; }
+    .tag  { font: 400 12px Arial, Helvetica, sans-serif; fill: #5b6770; letter-spacing: 1px; }
+  </style>
+
+  <!-- Icon -->
+  <rect x="0" y="6" rx="8" ry="8" width="48" height="48" fill="#0a2540"/>
+  <path d="M14 36 L24 26 L34 36" stroke="#ffffff" stroke-width="3" fill="none"/>
+  <path d="M14 30 L24 20 L34 30" stroke="#ffffff" stroke-width="3" fill="none"/>
+
+  <!-- Text -->
+  <text x="64" y="34" class="name">Scale With Fahad</text>
+  <text x="64" y="52" class="tag">ECOMMERCE OPERATIONS & MANAGEMENT</text>
+</svg>
