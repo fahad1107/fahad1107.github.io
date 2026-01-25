@@ -6,7 +6,7 @@
 
 <title>E-Commerce Management Deutschland | Scale With Fahad</title>
 
-<meta name="description" content="Professionelles E-Commerce Management in Deutschland. Betreuung von eBay-, Amazon- und Online-Shops mit nachhaltigen, regelkonformen Prozessen.">
+<meta name="description" content="Professionelles E-Commerce Management & Dropshipping in Deutschland. Betreuung von eBay-, Amazon- und AliExpress-Shops mit nachhaltigen, regelkonformen Prozessen.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Fahad bin Sultan">
 <meta name="language" content="de">
@@ -34,36 +34,6 @@ content="6526d371-50f6-460d-ab8a-c42949a4e4b3"/>
   "sameAs": [
     "https://de.trustpilot.com/review/scalewithfahad.de"
   ]
-}
-</script>
-
-<!-- FAQ JSON-LD -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [{
-   "@type": "Question",
-   "name": "Was ist E-Commerce Management?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "E-Commerce Management umfasst die operative Betreuung, Optimierung und Überwachung von Online-Shops inklusive Bestellabwicklung, Kundenservice und Account Health."
-   }
- },{
-   "@type": "Question",
-   "name": "Arbeiten Sie mit eBay und Amazon?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "Ja, wir betreuen Verkäuferkonten auf eBay und Amazon mit regelkonformen, nachhaltigen Prozessen."
-   }
- },{
-   "@type": "Question",
-   "name": "Ist Dropshipping erlaubt?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "Dropshipping ist erlaubt, sofern alle Plattformrichtlinien eingehalten werden. Wir arbeiten ausschließlich compliance-orientiert."
-   }
- }]
 }
 </script>
 
@@ -114,28 +84,40 @@ header{
   margin-bottom:20px;
 }
 .hero p{
-  max-width:820px;
-  margin:auto;
+  max-width:860px;
+  margin:0 auto 36px;
   font-size:18px;
   color:var(--muted);
 }
 
-/* SECTION */
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  padding:14px 30px;
+  border-radius:8px;
+  border:1px solid var(--blue);
+  font-weight:600;
+  margin:6px;
+}
+.btn.primary{
+  background:var(--blue);
+  color:#fff;
+}
+
+/* SECTIONS */
 .section{padding:90px 0}
 .section.gray{background:#f6f7f9}
-.section h2{font-size:34px;margin-bottom:30px}
+.section h2{font-size:34px;margin-bottom:28px}
+.section h3{margin-top:26px;margin-bottom:12px}
+.section p{margin-bottom:18px;color:var(--muted)}
 
-/* CARDS */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:26px;
-}
-.card{
-  background:#fff;
-  padding:30px;
-  border-radius:12px;
-  border:1px solid var(--border);
+/* FOOTER */
+footer{
+  border-top:1px solid var(--border);
+  padding:40px 18px;
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
 }
 
 /* WHATSAPP */
@@ -151,13 +133,13 @@ header{
   z-index:999;
 }
 
-/* FOOTER */
-footer{
-  border-top:1px solid var(--border);
-  padding:40px 18px;
-  text-align:center;
-  font-size:14px;
-  color:var(--muted);
+/* MOBILE */
+@media(max-width:768px){
+  .header-inner{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:10px;
+  }
 }
 </style>
 </head>
@@ -174,60 +156,108 @@ footer{
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h1>Professionelles E-Commerce Management in Deutschland</h1>
+    <h1>Professionelles E-Commerce Management & Dropshipping</h1>
+
     <p>
-      Wir betreuen Online-Shops auf
-      <a href="https://www.ebay.de" target="_blank" rel="nofollow">eBay.de</a>,
-      <a href="https://www.amazon.de" target="_blank" rel="nofollow">Amazon.de</a>
-      und internationalen Plattformen wie
+      Wir betreuen und skalieren Online-Shops auf
+      <a href="https://www.ebay.de" target="_blank" rel="nofollow">eBay</a>,
+      <a href="https://www.amazon.de" target="_blank" rel="nofollow">Amazon</a>
+      und mit Lieferanten über
       <a href="https://www.aliexpress.com" target="_blank" rel="nofollow">AliExpress</a>
-      mit strukturierten, nachhaltigen Prozessen.
+      – strukturiert, regelkonform und langfristig.
     </p>
+
+    <a href="#contact" class="btn primary">Kontakt</a>
+    <a href="#details" class="btn">Mehr erfahren</a>
+    <a href="https://de.trustpilot.com/review/scalewithfahad.de"
+       target="_blank"
+       class="btn">
+       ⭐ Trustpilot Bewertungen
+    </a>
   </div>
 </section>
 
-<section class="section gray">
+<!-- DETAILS -->
+<section id="details" class="section gray">
   <div class="container">
-    <h2>Über unser Unternehmen</h2>
+    <h2>Über Scale With Fahad</h2>
 
     <p>
-      <strong>Scale With Fahad</strong> ist ein auf E-Commerce Operations spezialisiertes
-      Unternehmen mit Fokus auf den deutschen Markt. Wir helfen Unternehmern,
-      Berufstätigen und Investoren dabei, Online-Shops professionell zu betreiben,
-      ohne täglich operativ eingebunden zu sein.
+      <strong>Scale With Fahad</strong> ist ein auf E-Commerce Operations
+      spezialisiertes Unternehmen mit Fokus auf den deutschen Markt.
+      Wir helfen Unternehmern, Berufstätigen und Investoren dabei,
+      Online-Shops professionell zu betreiben, ohne selbst täglich
+      operativ tätig zu sein.
     </p>
 
     <p>
-      Unsere Arbeit umfasst die vollständige operative Abwicklung:
-      Produktmanagement, Bestellabwicklung, Kundenkommunikation,
+      Unser Leistungsumfang umfasst sowohl
+      <strong>Dropshipping-Modelle</strong>
+      als auch <strong>stockbasierte</strong> und
+      <strong>hybride E-Commerce-Strukturen</strong>.
+      Dabei legen wir höchsten Wert auf Plattform-Compliance,
+      Transparenz und nachhaltiges Wachstum.
+    </p>
+
+    <p>
+      Wir übernehmen die komplette operative Umsetzung:
+      Produktmanagement, Lieferantenkoordination,
+      Bestellabwicklung, Kundenkommunikation,
       Performance-Analyse sowie Account-Health-Überwachung.
     </p>
-
-    <p>
-      Wir arbeiten mit professionellen Tools und Softwarelösungen zur
-      Automatisierung, Reporting und Prozesskontrolle. Dazu gehören
-      Monitoring-Tools, Bestellmanagement-Systeme und Analyse-Software
-      zur langfristigen Optimierung.
-    </p>
-
-    <p>
-      Unser Ansatz ist klar: keine Richtlinienverstöße, keine kurzfristigen
-      Methoden, sondern nachhaltiger Aufbau stabiler E-Commerce-Strukturen
-      in Deutschland (Berlin, Hamburg, München, NRW und bundesweit).
-    </p>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services" class="section">
   <div class="container">
     <h2>Unsere Leistungen</h2>
-    <div class="grid">
-      <div class="card">eBay Shop Betreuung Deutschland</div>
-      <div class="card">Amazon Verkäufer Management</div>
-      <div class="card">E-Commerce Prozesse & Skalierung</div>
-    </div>
+
+    <h3>Dropshipping mit Amazon, eBay & AliExpress</h3>
+    <p>
+      Wir betreuen Dropshipping-Shops auf Amazon und eBay
+      unter Einhaltung aller Plattformrichtlinien.
+      Lieferantenbeziehungen – z. B. über AliExpress –
+      werden strukturiert und kontrolliert aufgebaut.
+    </p>
+
+    <h3>Stock- & Hybrid-Modelle</h3>
+    <p>
+      Neben Dropshipping betreuen wir auch Shops
+      mit eigenem Lagerbestand oder hybriden Modellen,
+      inklusive Bestandsmanagement, Versandkoordination
+      und Margenkontrolle.
+    </p>
+
+    <h3>Tools, Software & Prozesse</h3>
+    <p>
+      Wir arbeiten mit professionellen Tools für
+      Bestellmanagement, Reporting, Performance-Tracking
+      und operative Prozesssteuerung.
+      Kunden erhalten volle Transparenz über Abläufe
+      und Ergebnisse.
+    </p>
+
+    <h3>Langfristige Skalierung & Compliance</h3>
+    <p>
+      Unser Fokus liegt auf nachhaltigem Wachstum.
+      Keine kurzfristigen Methoden, keine Richtlinienverstöße –
+      sondern stabile Strukturen für langfristigen Erfolg.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section gray">
+  <div class="container">
+    <h2>Kontakt</h2>
+    <p>
+      Für Anfragen und weitere Informationen erreichen Sie uns
+      direkt per E-Mail oder über unseren WhatsApp-Kanal.
+    </p>
   </div>
 </section>
 
@@ -237,6 +267,7 @@ footer{
   <a href="datenschutz.html">Datenschutz</a>
 </footer>
 
+<!-- WHATSAPP CHANNEL -->
 <a class="whatsapp"
 href="https://whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H"
 target="_blank">
