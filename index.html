@@ -26,7 +26,6 @@ body{
   background:var(--bg);
   color:var(--text);
   line-height:1.75;
-  -webkit-font-smoothing:antialiased;
 }
 
 a{text-decoration:none;color:inherit}
@@ -42,60 +41,48 @@ header{
   border-bottom:1px solid var(--border);
   background:#fff;
 }
-
 .header-inner{
   display:grid;
   grid-template-columns:1fr auto 1fr;
   align-items:center;
   padding:20px 0;
 }
-
 .header-left a{
-  font-size:15px;
   color:var(--muted);
+  font-size:15px;
 }
-
 .header-center{
   text-align:center;
   font-weight:600;
   letter-spacing:.4px;
 }
-
 .header-right{
   text-align:right;
   font-size:14px;
   color:var(--muted);
 }
-
 .header-right span{
   cursor:pointer;
   margin-left:10px;
 }
-
 .header-right .active{
   font-weight:600;
   color:var(--accent);
 }
 
-/* FADE ANIMATION */
-.fade{
-  transition:opacity .35s ease;
-}
-.fade.hide{
-  opacity:0;
-}
+/* FADE */
+.fade{transition:opacity .35s ease}
+.fade.hide{opacity:0}
 
 /* HERO */
 .hero{
   padding:90px 0 70px;
 }
-
 .hero h1{
   font-size:44px;
   line-height:1.2;
   margin-bottom:22px;
 }
-
 .hero p{
   font-size:18px;
   color:var(--muted);
@@ -110,7 +97,6 @@ header{
   border:1px solid var(--accent);
   font-weight:500;
 }
-
 .btn.primary{
   background:var(--accent);
   color:#fff;
@@ -119,16 +105,18 @@ header{
 
 /* SECTIONS */
 .section{
-  padding:80px 0;
+  padding:90px 0;
 }
-
 .section.gray{
   background:var(--section);
 }
-
 .section h2{
-  font-size:30px;
-  margin-bottom:34px;
+  font-size:32px;
+  margin-bottom:30px;
+}
+.section p{
+  margin-bottom:18px;
+  color:var(--muted);
 }
 
 .grid{
@@ -148,7 +136,6 @@ header{
 form{
   max-width:520px;
 }
-
 input, textarea{
   width:100%;
   padding:14px;
@@ -186,36 +173,77 @@ footer{
     <div class="header-left">
       <a href="#services">Services</a>
     </div>
-
-    <div class="header-center">
-      Scale With Fahad
-    </div>
-
+    <div class="header-center">Scale With Fahad</div>
     <div class="header-right">
-      <span class="active" onclick="setLang('en', this)">EN</span> |
-      <span onclick="setLang('de', this)">DE</span>
+      <span class="active" onclick="setLang('en',this)">EN</span> |
+      <span onclick="setLang('de',this)">DE</span>
     </div>
   </div>
 </header>
 
 <section class="hero container fade" id="content">
   <h1 id="title">Professional eCommerce Operations for Sustainable Growth</h1>
-  <p id="text">
-    We manage and scale eBay and Amazon stores with structured operations,
-    transparent reporting, and a compliance-first approach.
+  <p id="intro">
+    We manage and operate eCommerce stores with structured processes,
+    transparent communication, and a compliance-first mindset.
   </p>
-
   <a href="#contact" class="btn primary" id="btn1">Get in Touch</a>
-  <a href="#services" class="btn" id="btn2">Learn More</a>
+  <a href="#details" class="btn" id="btn2">Learn More</a>
 </section>
 
-<section id="services" class="section gray">
+<section id="details" class="section gray">
+  <div class="container">
+    <h2>How We Work & What We Do</h2>
+
+    <p>
+      Scale With Fahad provides professional, long-term eCommerce operations and
+      store management services for individuals and businesses who want to build
+      sustainable online revenue streams without handling daily operations themselves.
+    </p>
+
+    <p>
+      Our work is based on structure, transparency, and compliance.
+      We do not focus on short-term hype or risky tactics, but on building stable
+      systems that grow responsibly over time.
+    </p>
+
+    <p>
+      We manage stores on platforms such as eBay and Amazon, handling daily operational
+      tasks including order processing, customer communication, performance monitoring,
+      and account health management.
+    </p>
+
+    <p>
+      All cooperation is based on clear agreements, defined responsibilities,
+      and open communication. Partners always know how their store is performing
+      and how operations are handled.
+    </p>
+
+    <p>
+      Our services are ideal for individuals with full-time jobs, entrepreneurs
+      who value delegation, and partners who seek long-term cooperation instead
+      of short-term experiments.
+    </p>
+
+    <p>
+      We do not work with “get rich quick” expectations or policy-violating strategies.
+      Sustainable growth requires discipline, patience, and responsible execution.
+    </p>
+
+    <p>
+      Transparency is a core principle of our work. We focus on compliance,
+      account stability, and realistic expectations to protect long-term value.
+    </p>
+  </div>
+</section>
+
+<section id="services" class="section">
   <div class="container">
     <h2>Services</h2>
     <div class="grid">
-      <div class="card">Store Management & Daily Operations</div>
-      <div class="card">Compliance & Account Health</div>
-      <div class="card">Sustainable Scaling Strategy</div>
+      <div class="card">Daily Store Operations & Management</div>
+      <div class="card">Account Health & Compliance Monitoring</div>
+      <div class="card">Sustainable Scaling & Optimization</div>
     </div>
   </div>
 </section>
@@ -240,25 +268,24 @@ footer{
 
 <script>
 function setLang(lang, el){
-  const content = document.getElementById("content");
-  content.classList.add("hide");
-
+  const c=document.getElementById("content");
+  c.classList.add("hide");
   document.querySelectorAll(".header-right span").forEach(s=>s.classList.remove("active"));
   el.classList.add("active");
 
   setTimeout(()=>{
     if(lang==="de"){
       title.innerText="Professionelle E-Commerce-Prozesse für nachhaltiges Wachstum";
-      text.innerText="Wir verwalten und skalieren eBay- und Amazon-Shops mit strukturierten Abläufen, transparenter Berichterstattung und Compliance-Fokus.";
+      intro.innerText="Wir betreiben E-Commerce-Shops mit strukturierten Abläufen, transparenter Kommunikation und Compliance-Fokus.";
       btn1.innerText="Kontakt";
       btn2.innerText="Mehr erfahren";
     }else{
       title.innerText="Professional eCommerce Operations for Sustainable Growth";
-      text.innerText="We manage and scale eBay and Amazon stores with structured operations, transparent reporting, and a compliance-first approach.";
+      intro.innerText="We manage and operate eCommerce stores with structured processes, transparent communication, and a compliance-first mindset.";
       btn1.innerText="Get in Touch";
       btn2.innerText="Learn More";
     }
-    content.classList.remove("hide");
+    c.classList.remove("hide");
   },200);
 }
 </script>
