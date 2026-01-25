@@ -4,38 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>E-Commerce Management Deutschland ⭐⭐⭐⭐⭐ | Scale With Fahad</title>
+<title>E-Commerce Management Deutschland | Scale With Fahad</title>
 
-<meta name="description" content="Professionelles E-Commerce Management in Deutschland. eBay- & Amazon-Shop Betreuung mit strukturierten Prozessen, Transparenz und nachhaltigem Wachstum.">
+<meta name="description" content="Professionelles E-Commerce Management in Deutschland. eBay- und Amazon-Shop Betreuung mit strukturierten Prozessen, Transparenz und nachhaltigem Wachstum.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Fahad bin Sultan">
 <meta name="language" content="de">
 <meta name="geo.region" content="DE">
+<meta name="geo.placename" content="Deutschland">
 
 <link rel="canonical" href="https://scalewithfahad.de/">
 
 <!-- TRUSTPILOT META VERIFICATION -->
 <meta name="trustpilot-one-time-domain-verification-id"
       content="6526d371-50f6-460d-ab8a-c42949a4e4b3"/>
-
-<!-- GOOGLE RICH STARS SCHEMA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Scale With Fahad",
-  "url": "https://scalewithfahad.de",
-  "logo": "https://scalewithfahad.de/",
-  "sameAs": [
-    "https://de.trustpilot.com/review/scalewithfahad.de"
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "5"
-  }
-}
-</script>
 
 <style>
 :root{
@@ -75,9 +57,19 @@ header{
   align-items:center;
   padding:20px 0;
 }
-.header-left a{color:var(--muted)}
-.header-center{font-weight:600;text-align:center}
-.header-right a{font-weight:600;color:var(--accent)}
+.header-left a{
+  color:var(--muted);
+  font-size:15px;
+}
+.header-center{
+  text-align:center;
+  font-weight:600;
+}
+.header-right{
+  text-align:right;
+  font-size:14px;
+  color:var(--muted);
+}
 
 /* HERO */
 .hero{
@@ -87,10 +79,28 @@ header{
   justify-content:center;
   text-align:center;
 }
-.hero-inner{max-width:820px}
+.hero-inner{
+  max-width:820px;
+}
+
+/* ANIMATION */
+.fade-up{
+  opacity:0;
+  transform:translateY(25px);
+  animation:fadeUp 1s ease forwards;
+}
+.fade-up.delay{animation-delay:.25s}
+.fade-up.delay2{animation-delay:.5s}
+
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* TEXT */
 .hero h1{
   font-size:clamp(34px,6vw,54px);
-  margin-bottom:22px;
+  line-height:1.15;
+  margin-bottom:24px;
 }
 .hero p{
   font-size:18px;
@@ -98,7 +108,7 @@ header{
   margin-bottom:36px;
 }
 
-/* BUTTON */
+/* BUTTONS */
 .btn{
   display:inline-block;
   padding:14px 32px;
@@ -107,27 +117,52 @@ header{
   font-weight:500;
 }
 .btn.primary{
-  background:#25D366;
-  border-color:#25D366;
-  color:#000;
-}
-
-/* TRUSTPILOT BADGE */
-.trustpilot-badge{
-  margin-top:28px;
-  font-size:15px;
-  color:var(--muted);
-}
-.trustpilot-badge a{
-  font-weight:600;
-  color:var(--accent);
+  background:var(--accent);
+  color:#fff;
+  margin-right:12px;
 }
 
 /* SECTIONS */
-.section{padding:90px 0}
-.section.gray{background:var(--section)}
-.section h2{font-size:32px;margin-bottom:26px}
-.section p{color:var(--muted);margin-bottom:18px}
+.section{
+  padding:100px 0;
+}
+.section.gray{
+  background:var(--section);
+}
+.section h2{
+  font-size:32px;
+  margin-bottom:26px;
+}
+.section p{
+  margin-bottom:18px;
+  color:var(--muted);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+.card{
+  background:#fff;
+  padding:32px;
+  border-radius:12px;
+  border:1px solid var(--border);
+}
+
+/* FORM */
+form{
+  max-width:520px;
+}
+input, textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:14px;
+  border-radius:6px;
+  border:1px solid var(--border);
+  font-size:15px;
+}
 
 /* FOOTER */
 footer{
@@ -138,17 +173,14 @@ footer{
   color:var(--muted);
 }
 
-/* WHATSAPP FLOAT */
-.whatsapp-btn{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  background:#25D366;
-  color:#000;
-  padding:14px 22px;
-  border-radius:50px;
-  font-weight:600;
-  z-index:999;
+/* MOBILE */
+@media(max-width:768px){
+  .header-inner{
+    grid-template-columns:1fr;
+    gap:10px;
+    text-align:center;
+  }
+  .header-right{text-align:center}
 }
 </style>
 </head>
@@ -161,53 +193,98 @@ footer{
       <a href="#services">Leistungen</a>
     </div>
     <div class="header-center">Scale With Fahad</div>
-    <div class="header-right">
-      <a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank">
-        Reviews ⭐⭐⭐⭐⭐
-      </a>
-    </div>
+    <div class="header-right">DE | EN</div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <h1>E-Commerce Management in Deutschland</h1>
-    <p>
+    <h1 class="fade-up">E-Commerce Management in Deutschland</h1>
+
+    <p class="fade-up delay">
       Professionelle Betreuung von eBay- und Amazon-Shops mit
-      strukturierten Prozessen, Transparenz und nachhaltigem Wachstum.
+      strukturierten Prozessen, transparenter Zusammenarbeit
+      und langfristigem Fokus.
     </p>
 
-    <!-- WHATSAPP CTA (REPLACED CONTACT) -->
-    <a href="https://whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H"
-       target="_blank"
-       class="btn primary">
-       WhatsApp Kanal kontaktieren
-    </a>
-
-    <!-- TRUSTPILOT BADGE -->
-    <div class="trustpilot-badge">
-      ⭐⭐⭐⭐⭐ Verifizierte Bewertungen auf
-      <a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank">
-        Trustpilot
+    <!-- TRUSTPILOT CTA -->
+    <div class="fade-up delay2">
+      <a href="https://de.trustpilot.com/review/scalewithfahad.de"
+         target="_blank"
+         rel="noopener"
+         class="btn primary">
+         ⭐⭐⭐⭐⭐ Bewertungen auf Trustpilot
       </a>
+      <a href="#details" class="btn">Mehr erfahren</a>
     </div>
+
+    <!-- TRUSTPILOT BADGE TEXT -->
+    <p style="margin-top:18px;font-size:14px;color:#475569">
+      Verifizierte Kundenbewertungen auf
+      <a href="https://de.trustpilot.com/review/scalewithfahad.de"
+         target="_blank"
+         style="font-weight:600">
+         Trustpilot
+      </a>
+    </p>
   </div>
 </section>
 
-<section id="services" class="section gray">
+<!-- DETAILS -->
+<section id="details" class="section gray">
+  <div class="container">
+    <h2>Professionelles E-Commerce Management</h2>
+
+    <p>
+      Scale With Fahad ist ein spezialisierter E-Commerce Dienstleister
+      für Verkäufer in Deutschland. Wir unterstützen den nachhaltigen
+      Betrieb und die langfristige Skalierung von Online-Shops auf
+      Plattformen wie
+      <a href="https://www.ebay.de" target="_blank" rel="nofollow noopener">eBay.de</a>
+      und
+      <a href="https://www.amazon.de" target="_blank" rel="nofollow noopener">Amazon.de</a>.
+    </p>
+
+    <p>
+      Unser Ansatz basiert auf klaren Prozessen, Plattform-Compliance
+      und stabiler operativer Umsetzung. Wir vermeiden kurzfristige
+      Methoden und setzen auf verantwortungsvolles Wachstum.
+    </p>
+
+    <p>
+      Zu unseren Aufgaben gehören Bestellabwicklung,
+      Kundenkommunikation, Performance-Analyse und Account Health
+      Monitoring. Dadurch schaffen wir stabile Strukturen
+      für langfristigen Erfolg.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
   <div class="container">
     <h2>Unsere Leistungen</h2>
-    <p>
-      Wir betreuen Online-Shops auf
-      <a href="https://www.ebay.de" target="_blank" rel="nofollow">eBay.de</a>
-      und
-      <a href="https://www.amazon.de" target="_blank" rel="nofollow">Amazon.de</a>
-      mit nachhaltigen, regelkonformen Prozessen.
-    </p>
-    <p>
-      Unser Fokus liegt auf E-Commerce Operations, Account Health,
-      Kundenkommunikation und langfristiger Skalierung für Deutschland.
-    </p>
+
+    <div class="grid">
+      <div class="card">
+        <strong>eBay Shop Betreuung Deutschland</strong><br><br>
+        Strukturierte Verwaltung von eBay-Shops inklusive operativer
+        Umsetzung und Richtlinien-Compliance.
+      </div>
+
+      <div class="card">
+        <strong>Amazon Verkäufer Betreuung</strong><br><br>
+        Professionelles Amazon Management mit Fokus auf Account Health
+        und langfristiger Performance.
+      </div>
+
+      <div class="card">
+        <strong>E-Commerce Operations & Skalierung</strong><br><br>
+        Aufbau nachhaltiger Prozesse für langfristiges Wachstum
+        im Onlinehandel.
+      </div>
+    </div>
   </div>
 </section>
 
@@ -216,13 +293,6 @@ footer{
   <a href="impressum.html">Impressum</a> ·
   <a href="datenschutz.html">Datenschutz</a>
 </footer>
-
-<!-- FLOATING WHATSAPP -->
-<a class="whatsapp-btn"
-   href="https://whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H"
-   target="_blank">
-  WhatsApp
-</a>
 
 </body>
 </html>
