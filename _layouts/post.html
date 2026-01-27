@@ -1,0 +1,26 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<main style="max-width:900px;margin:80px auto;padding:0 20px;font-family:system-ui,Arial">
+  <h1>{{ page.title }}</h1>
+  <p style="color:#666;font-size:14px">
+    {{ page.date | date: "%d.%m.%Y" }}
+  </p>
+
+  <article>
+    {{ content }}
+  </article>
+</main>
+
+</body>
+</html>
