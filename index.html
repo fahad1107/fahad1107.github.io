@@ -188,6 +188,27 @@ footer{
   </div>
 </section>
 
+<!-- BLOG SECTION (AUTO FROM _posts) -->
+<section class="section gray">
+  <div class="container">
+    <h2>Aktuelle Blogartikel</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      {% for post in site.posts limit:3 %}
+      <div style="border:1px solid #e2e8f0;padding:20px;border-radius:10px;">
+        <h3>{{ post.title }}</h3>
+        <p style="color:#475569;font-size:14px;">
+          {{ post.excerpt | strip_html | truncate:120 }}
+        </p>
+        <a href="{{ post.url }}" style="font-weight:600;">
+          Artikel lesen →
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
