@@ -1024,49 +1024,73 @@ footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5r
 
 <script>
 function toggleFaq(btn){
-  var item=btn.parentElement;
-  var answer=item.querySelector('.faq-a');
-  var isOpen=item.classList.contains('open');
+  var item = btn.parentElement;
+  var answer = item.querySelector('.faq-a');
+  var isOpen = item.classList.contains('open');
+
+<script>
+function toggleFaq(btn){
+  var item = btn.parentElement;
+  var answer = item.querySelector('.faq-a');
+  var isOpen = item.classList.contains('open');
+
+function toggleFaq(btn){
+  var item = btn.parentElement;
+  var answer = item.querySelector('.faq-a');
+  var isOpen = item.classList.contains('open');
+
   document.querySelectorAll('.faq-item.open').forEach(function(i){
     i.classList.remove('open');
-    i.querySelector('.faq-a').classList.remove('open');
+    var a = i.querySelector('.faq-a');
+    if(a) a.classList.remove('open');
   });
-  if(!isOpen){item.classList.add('open');answer.classList.add('open');}
-}
-</script>
-/* ── LIVE VISITOR COUNTER ── */
-var visitorEl = document.getElementById('visitorCount');
-var base = 18;
-var current = Math.floor(Math.random()*14)+base; // 18-31
 
-function updateVisitors(){
-  var change = Math.floor(Math.random()*5)-2; // -2 to +2
-  current = Math.max(12, Math.min(42, current + change));
-  if(visitorEl){
+  if(!isOpen){
+    item.classList.add('open');
+    answer.classList.add('open');
+  }
+}
+
+/* ── LIVE VISITOR COUNTER ── */
+document.addEventListener('DOMContentLoaded', function(){
+
+  var visitorEl = document.getElementById('visitorCount');
+  if(!visitorEl) return;
+
+  var base = 18;
+  var current = Math.floor(Math.random()*14)+base;
+
+  function updateVisitors(){
+    var change = Math.floor(Math.random()*5)-2;
+    current = Math.max(12, Math.min(42, current + change));
+
     visitorEl.style.transition='opacity .4s';
     visitorEl.style.opacity='0';
+
     setTimeout(function(){
       visitorEl.textContent = current;
       visitorEl.style.opacity='1';
     }, 400);
   }
-}
 
-// Initial random value
-if(visitorEl) visitorEl.textContent = current;
-// Update every 8–15s
-function scheduleVisitor(){
-  var delay = 8000 + Math.random()*7000;
-  setTimeout(function(){ updateVisitors(); scheduleVisitor(); }, delay);
-}
-scheduleVisitor();
+  visitorEl.textContent = current;
+
+  function scheduleVisitor(){
+    var delay = 8000 + Math.random()*7000;
+    setTimeout(function(){
+      updateVisitors();
+      scheduleVisitor();
+    }, delay);
+  }
+
+  scheduleVisitor();
+
+});
 </script>
-
 
 <script>
 /* ============================================================
    AUTO LANGUAGE DETECTION + TRANSLATION
-   Supports: DE (default) | EN (fallback for all other languages)
    ============================================================ */
 
 var CURRENT_LANG = 'de';
