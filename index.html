@@ -261,7 +261,7 @@ section{padding:4.5rem 1.5rem}
 .rv-body{font-size:.84rem;color:var(--muted);font-weight:300;line-height:1.65}
 .rv-date{font-size:.73rem;color:rgba(255,255,255,0.18)}
 .rv-verified{font-size:.68rem;font-weight:500;color:var(--tp);background:rgba(0,185,124,0.08);border:1px solid rgba(0,185,124,0.15);padding:.13rem .48rem;border-radius:50px}
-.tp-cta-row{text-align:center;margin-top:1.8rem}
+.tp-cta-row{text-align:center;margin-top:1.8rem}.tp-refresh-info{display:flex;align-items:center}
 .tp-cta{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(0,185,124,0.3);color:var(--tp);padding:.65rem 1.6rem;border-radius:8px;font-size:.85rem;font-weight:500;transition:background .2s;min-height:48px}
 .tp-cta:hover{background:rgba(0,185,124,0.08)}
 
@@ -517,33 +517,6 @@ footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5r
 .live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;animation:livePulse 1.8s ease-in-out infinite}
 @keyframes livePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
 
-/* ============================================================
-   SOCIAL PROOF POPUP
-   ============================================================ */
-.sp-popup{
-  position:fixed;bottom:96px;left:16px;z-index:500;
-  max-width:290px;width:calc(100vw - 32px);
-  background:var(--surface);border:1px solid rgba(59,130,246,0.3);
-  border-radius:14px;padding:1rem 1.1rem;
-  box-shadow:0 8px 32px rgba(0,0,0,0.55);
-  display:flex;gap:.75rem;align-items:flex-start;
-  transform:translateX(-110%);opacity:0;
-  transition:transform .45s cubic-bezier(.34,1.56,.64,1),opacity .35s ease;
-  pointer-events:none;
-}
-.sp-popup.sp-show{transform:translateX(0);opacity:1;pointer-events:auto}
-.sp-popup.sp-hide{transform:translateX(-110%);opacity:0;pointer-events:none}
-.sp-icon{font-size:1.5rem;line-height:1;flex-shrink:0;margin-top:.05rem}
-.sp-content{flex:1;min-width:0}
-.sp-title{font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:var(--white);margin-bottom:.22rem;line-height:1.3}
-.sp-desc{font-size:.75rem;color:var(--muted);font-weight:300;line-height:1.5}
-.sp-close{background:none;border:none;cursor:pointer;color:var(--muted);font-size:.85rem;padding:.1rem .2rem;flex-shrink:0;line-height:1;margin-top:.05rem;transition:color .2s}
-.sp-close:hover{color:var(--white)}
-.sp-bar{height:2px;background:rgba(59,130,246,0.15);border-radius:2px;margin-top:.75rem;overflow:hidden}
-.sp-bar-fill{height:100%;background:var(--accent);border-radius:2px;width:100%;transform-origin:left;animation:none}
-.sp-bar-fill.sp-animate{animation:spBar var(--sp-dur,6s) linear forwards}
-@keyframes spBar{from{transform:scaleX(1)}to{transform:scaleX(0)}}
-@media(max-width:768px){.sp-popup{bottom:88px;left:12px;right:12px;max-width:none;width:auto}}
 
 
 
@@ -580,6 +553,42 @@ footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5r
 .lang-toggle{background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--muted);padding:.42rem .75rem;border-radius:6px;font-size:.78rem;font-weight:600;cursor:pointer;transition:border-color .2s,color .2s;flex-shrink:0;letter-spacing:.04em}
 .lang-toggle:hover{border-color:rgba(255,255,255,0.18);color:var(--white)}
 @media(max-width:768px){.lang-toggle{padding:.38rem .6rem;font-size:.72rem}}
+
+/* ============================================================
+   PROFIT NOTIFICATION POPUP
+   ============================================================ */
+.profit-popup{
+  position:fixed;bottom:96px;left:16px;z-index:490;
+  width:290px;max-width:calc(100vw - 32px);
+  background:rgba(20,20,23,0.97);
+  border:1px solid rgba(34,197,94,0.3);
+  border-radius:14px;
+  padding:.9rem 1rem;
+  box-shadow:0 8px 32px rgba(0,0,0,0.6);
+  display:flex;gap:.75rem;align-items:center;
+  transform:translateX(-120%);opacity:0;
+  transition:transform .5s cubic-bezier(.34,1.4,.64,1),opacity .4s ease;
+  pointer-events:none;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.profit-popup.pp-show{transform:translateX(0);opacity:1;pointer-events:auto}
+.profit-popup.pp-hide{transform:translateX(-120%);opacity:0}
+.pp-avatar{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Syne',sans-serif;font-weight:800;font-size:.82rem;
+  color:#fff;
+}
+.pp-body{flex:1;min-width:0}
+.pp-name{font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:var(--white);line-height:1.2}
+.pp-msg{font-size:.75rem;color:var(--muted);font-weight:300;line-height:1.4;margin-top:.18rem}
+.pp-amount{font-family:'Syne',sans-serif;font-weight:800;color:#4ade80;font-size:.9rem}
+.pp-time{font-size:.65rem;color:rgba(255,255,255,0.2);margin-top:.22rem}
+.pp-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;animation:livePulse 1.8s ease-in-out infinite;position:absolute;top:10px;right:12px}
+@media(max-width:768px){
+  .profit-popup{bottom:90px;left:10px;right:10px;width:auto;max-width:none}
+}
 </style>
 </head>
 <body>
@@ -909,18 +918,37 @@ footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5r
 <!-- REVIEWS -->
 <section id="reviews">
 <div class="container">
-  <div class="slabel">Kundenstimmen</div>
-  <div class="stitle">Was unsere Kunden sagen</div>
+  <div class="slabel" data-i18n="Kundenstimmen">Kundenstimmen</div>
+  <div class="stitle" data-i18n="Was unsere Kunden sagen">Was unsere Kunden sagen</div>
+
+  <!-- Trustpilot header bar -->
   <div class="tp-header">
-    <div class="tp-score-box"><div class="tp-score">4.0</div><div class="tp-stars">★★★★☆</div><div class="tp-count">4 Bewertungen</div></div>
-    <div><div class="tp-logo">Trust<span>pilot</span></div><div style="color:var(--muted);font-size:.83rem;margin-top:.3rem;font-weight:300">Verifizierte Kundenbewertungen</div><div class="tp-link" style="margin-top:.4rem"><a href="https://de.trustpilot.com/review/scalewithfahad.de">Alle Bewertungen →</a></div></div>
+    <div class="tp-score-box">
+      <div class="tp-score" id="tpScoreVal">4.0</div>
+      <div class="tp-stars" id="tpStarsVal">★★★★☆</div>
+      <div class="tp-count" id="tpCountVal">4 Bewertungen</div>
+    </div>
+    <div>
+      <div class="tp-logo">Trust<span>pilot</span></div>
+      <div style="color:var(--muted);font-size:.83rem;margin-top:.3rem;font-weight:300">Verifizierte Kundenbewertungen</div>
+      <div class="tp-link" style="margin-top:.4rem">
+        <a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank" rel="noopener">Alle Bewertungen →</a>
+      </div>
+    </div>
+    <div class="tp-refresh-info" id="tpRefreshInfo"></div>
   </div>
-  <div class="reviews-grid">
+
+  <!-- Review cards grid — filled by JS, fallback shown until JS runs -->
+  <div class="reviews-grid" id="reviewsGrid">
+    <!-- STATIC FALLBACK (replaced by JS on load) -->
     <div class="review-card"><div class="rv-top"><div class="rv-info"><div class="rv-av av1">MR</div><div><div class="rv-name">Mehran Rasheed Goraya</div><div class="rv-meta">Deutschland · 2 Bewertungen</div></div></div><span class="rv-verified">Verifiziert</span></div><div class="rv-stars">★★★★★</div><div class="rv-title">Sehr professionell &amp; reaktionsschnell</div><div class="rv-body">Ich bin sehr zufrieden mit dem Service. Das Team ist äußerst reaktionsschnell und professionell in der Kommunikation. Klare Empfehlung!</div><div class="rv-date">Januar 2026</div></div>
     <div class="review-card"><div class="rv-top"><div class="rv-info"><div class="rv-av av2">FS</div><div><div class="rv-name">Fahadsultan</div><div class="rv-meta">Deutschland · 2 Bewertungen</div></div></div><span class="rv-verified">Verifiziert</span></div><div class="rv-stars">★★★★★</div><div class="rv-title">Best service 📈</div><div class="rv-body">Wirklich top Service. Alles sauber und professionell abgewickelt. Sehr empfehlenswert für alle, die im Online-Business durchstarten wollen.</div><div class="rv-date">Januar 2026</div></div>
-    <div class="review-card" style="border:1px dashed rgba(0,185,124,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.75rem;padding:1.75rem"><div style="font-size:1.5rem">⭐</div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.92rem">Deine Erfahrung zählt</div><div style="color:var(--muted);font-size:.82rem;font-weight:300;line-height:1.65">Hast du mit uns zusammengearbeitet? Hinterlasse deine Bewertung auf Trustpilot.</div><a href="https://de.trustpilot.com/review/scalewithfahad.de" style="background:var(--tp);color:#fff;padding:.6rem 1.4rem;border-radius:8px;font-size:.84rem;font-weight:600;display:inline-flex;align-items:center;min-height:44px">Jetzt bewerten →</a></div>
+    <div class="review-card" style="border:1px dashed rgba(0,185,124,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.75rem;padding:1.75rem"><div style="font-size:1.5rem">⭐</div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.92rem">Deine Erfahrung zählt</div><div style="color:var(--muted);font-size:.82rem;font-weight:300;line-height:1.65">Hast du mit uns zusammengearbeitet? Hinterlasse deine Bewertung auf Trustpilot.</div><a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank" style="background:var(--tp);color:#fff;padding:.6rem 1.4rem;border-radius:8px;font-size:.84rem;font-weight:600;display:inline-flex;align-items:center;min-height:44px">Jetzt bewerten →</a></div>
   </div>
-  <div class="tp-cta-row"><a href="https://de.trustpilot.com/review/scalewithfahad.de" class="tp-cta">Alle Bewertungen auf Trustpilot ansehen →</a></div>
+
+  <div class="tp-cta-row">
+    <a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank" rel="noopener" class="tp-cta">Alle Bewertungen auf Trustpilot ansehen →</a>
+  </div>
 </div>
 </section>
 
@@ -1007,50 +1035,7 @@ function toggleFaq(btn){
 }
 </script>
 
-<!-- SOCIAL PROOF POPUP -->
-<div class="sp-popup" id="spPopup" role="alert" aria-live="polite">
-  <div class="sp-icon">🏆</div>
-  <div class="sp-content">
-    <div class="sp-title">10+ zufriedene Kunden</div>
-    <div class="sp-desc">verdienen bereits über <strong style="color:#86efac">1.000€</strong> monatlich mit ScalewithFahad.</div>
-    <div class="sp-bar"><div class="sp-bar-fill" id="spBarFill"></div></div>
-  </div>
-  <button class="sp-close" onclick="closePopup()" aria-label="Schließen">✕</button>
-</div>
 
-<script>
-/* ── SOCIAL PROOF POPUP ── */
-var spTimer, spBarTimer;
-var spDur = 6000; // visible for 6s then hides
-
-function showPopup(){
-  var p = document.getElementById('spPopup');
-  var b = document.getElementById('spBarFill');
-  p.classList.remove('sp-hide');
-  p.classList.add('sp-show');
-  b.style.setProperty('--sp-dur', (spDur/1000)+'s');
-  b.classList.remove('sp-animate');
-  void b.offsetWidth; // reflow to restart animation
-  b.classList.add('sp-animate');
-  spTimer = setTimeout(function(){ hidePopup(); }, spDur);
-}
-
-function hidePopup(){
-  clearTimeout(spTimer);
-  var p = document.getElementById('spPopup');
-  p.classList.remove('sp-show');
-  p.classList.add('sp-hide');
-  // Reshow every 25s
-  setTimeout(showPopup, 25000);
-}
-
-function closePopup(){
-  clearTimeout(spTimer);
-  hidePopup();
-}
-
-// First show after 3.5s
-setTimeout(showPopup, 3500);
 
 /* ── LIVE VISITOR COUNTER ── */
 var visitorEl = document.getElementById('visitorCount');
@@ -1587,6 +1572,390 @@ document.addEventListener('DOMContentLoaded', function() {
   if (btn) btn.textContent = '🌐 ' + lang.toUpperCase();
   if (lang !== 'de') applyLang(lang);
 });
+</script>
+
+
+<script>
+/* ============================================================
+   AUTO-FETCH TRUSTPILOT REVIEWS
+   Tries multiple CORS proxies to get latest 4-5 star reviews
+   Falls back to static reviews if unavailable
+   ============================================================ */
+(function(){
+  var TP_PAGE = 'https://de.trustpilot.com/review/scalewithfahad.de?languages=all&sort=recency&stars=5&stars=4';
+  var PROXIES = [
+    'https://api.allorigins.win/get?url=',
+    'https://api.codetabs.com/v1/proxy?quest='
+  ];
+  var CACHE_KEY = 'swf_tp_reviews';
+  var CACHE_TIME = 3600000; // 1 hour cache
+
+  /* ── Render reviews into the grid ── */
+  function renderReviews(reviews, source) {
+    var grid = document.getElementById('reviewsGrid');
+    if (!grid || !reviews.length) return;
+
+    grid.innerHTML = '';
+
+    reviews.forEach(function(r, i) {
+      var stars = parseInt(r.stars || r.rating || 5);
+      var starStr = '';
+      for (var s = 0; s < 5; s++) starStr += s < stars ? '★' : '☆';
+
+      var name = r.name || r.consumer || 'Verifizierter Kunde';
+      var initials = name.split(' ').map(function(w){ return w[0]; }).join('').substring(0,2).toUpperCase();
+      var title = r.title || '';
+      var body = r.body || r.text || '';
+      var date = r.date || '';
+      var avClass = i % 2 === 0 ? 'av1' : 'av2';
+
+      var card = document.createElement('div');
+      card.className = 'review-card';
+      card.innerHTML =
+        '<div class="rv-top">' +
+          '<div class="rv-info">' +
+            '<div class="rv-av ' + avClass + '">' + initials + '</div>' +
+            '<div><div class="rv-name">' + escHtml(name) + '</div>' +
+            '<div class="rv-meta">Deutschland</div></div>' +
+          '</div>' +
+          '<span class="rv-verified">Verifiziert</span>' +
+        '</div>' +
+        '<div class="rv-stars" style="color:var(--tp)">' + starStr + '</div>' +
+        (title ? '<div class="rv-title">' + escHtml(title) + '</div>' : '') +
+        '<div class="rv-body">' + escHtml(body) + '</div>' +
+        '<div class="rv-date">' + escHtml(date) + '</div>';
+      grid.appendChild(card);
+    });
+
+    // Add "leave a review" card
+    var cta = document.createElement('div');
+    cta.className = 'review-card';
+    cta.style.cssText = 'border:1px dashed rgba(0,185,124,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.75rem;padding:1.75rem';
+    cta.innerHTML =
+      '<div style="font-size:1.5rem">⭐</div>' +
+      '<div style="font-family:\'Syne\',sans-serif;font-weight:700;font-size:.92rem">Deine Erfahrung zählt</div>' +
+      '<div style="color:var(--muted);font-size:.82rem;font-weight:300;line-height:1.65">Hinterlasse deine Bewertung auf Trustpilot.</div>' +
+      '<a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank" style="background:var(--tp);color:#fff;padding:.6rem 1.4rem;border-radius:8px;font-size:.84rem;font-weight:600;display:inline-flex;align-items:center;min-height:44px">Jetzt bewerten →</a>';
+    grid.appendChild(cta);
+
+    // Show source indicator
+    var info = document.getElementById('tpRefreshInfo');
+    if (info && source === 'live') {
+      info.innerHTML = '<span style="font-size:.68rem;color:rgba(0,185,124,0.6);font-weight:500">🔄 Auto-aktualisiert</span>';
+    }
+  }
+
+  function escHtml(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  /* ── Parse Trustpilot HTML response ── */
+  function parseTP(rawHtml) {
+    var reviews = [];
+
+    // Try __NEXT_DATA__ (Next.js JSON)
+    var ndMatch = rawHtml.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+    if (ndMatch) {
+      try {
+        var nd = JSON.parse(ndMatch[1]);
+        // Try multiple paths where reviews might live
+        var paths = [
+          nd?.props?.pageProps?.reviews,
+          nd?.props?.pageProps?.reviewsList,
+          nd?.props?.initialProps?.reviews,
+          nd?.props?.initialState?.reviews?.reviews,
+          nd?.props?.pageProps?.businessUnitReviews?.reviews,
+        ];
+        for (var i = 0; i < paths.length; i++) {
+          if (Array.isArray(paths[i]) && paths[i].length) {
+            var raw = paths[i];
+            reviews = raw
+              .filter(function(r) {
+                var s = parseInt(r.stars || r.rating || r.reviewRating?.ratingValue || 0);
+                return s >= 4;
+              })
+              .slice(0, 4)
+              .map(function(r) {
+                return {
+                  name: r.consumer?.displayName || r.reviewer?.name || r.author?.name || 'Kunde',
+                  stars: r.stars || r.rating || r.reviewRating?.ratingValue || 5,
+                  title: r.title || '',
+                  body: r.text || r.reviewBody || r.body || '',
+                  date: formatDate(r.dates?.publishedDate || r.datePublished || r.date || '')
+                };
+              });
+            if (reviews.length) break;
+          }
+        }
+
+        // Also try to update aggregate score
+        var agg = nd?.props?.pageProps?.businessUnit || nd?.props?.pageProps?.business;
+        if (agg) {
+          var score = agg.trustScore || agg.rating || agg.ratingValue;
+          var count = agg.numberOfReviews?.total || agg.reviewCount || agg.numberOfReviews;
+          if (score) {
+            var sv = document.getElementById('tpScoreVal');
+            if (sv) sv.textContent = parseFloat(score).toFixed(1);
+            updateStars(parseFloat(score));
+          }
+          if (count) {
+            var cv = document.getElementById('tpCountVal');
+            if (cv) cv.textContent = count + ' Bewertungen';
+          }
+        }
+      } catch(e) {}
+    }
+
+    // Fallback: try JSON-LD structured data
+    if (!reviews.length) {
+      var ldMatches = rawHtml.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g) || [];
+      ldMatches.forEach(function(block) {
+        try {
+          var ld = JSON.parse(block.replace(/<script[^>]*>|<\/script>/g,''));
+          var arr = ld['@type'] === 'Product' || ld['@type'] === 'LocalBusiness' ? (ld.review || []) : [];
+          if (arr.length) {
+            arr.filter(function(r){ return (r.reviewRating?.ratingValue||5) >= 4; })
+               .slice(0,4)
+               .forEach(function(r){
+                 reviews.push({
+                   name: r.author?.name || 'Kunde',
+                   stars: r.reviewRating?.ratingValue || 5,
+                   title: r.name || '',
+                   body: r.reviewBody || '',
+                   date: formatDate(r.datePublished || '')
+                 });
+               });
+          }
+        } catch(e) {}
+      });
+    }
+
+    return reviews;
+  }
+
+  function formatDate(iso) {
+    if (!iso) return '';
+    try {
+      var d = new Date(iso);
+      return d.toLocaleDateString('de-DE', {month:'long', year:'numeric'});
+    } catch(e){ return iso; }
+  }
+
+  function updateStars(score) {
+    var full = Math.round(score);
+    var str = '';
+    for (var i=0;i<5;i++) str += i < full ? '★' : '☆';
+    var el = document.getElementById('tpStarsVal');
+    if (el) el.textContent = str;
+  }
+
+  /* ── Fetch via proxy with fallback ── */
+  function tryProxy(idx) {
+    if (idx >= PROXIES.length) {
+      console.log('All Trustpilot proxies failed — showing static reviews');
+      return;
+    }
+    var url = PROXIES[idx] + encodeURIComponent(TP_PAGE);
+    fetch(url, {cache:'no-store'})
+      .then(function(res){ return res.json(); })
+      .then(function(data) {
+        var raw = data.contents || data.body || data;
+        if (typeof raw !== 'string') throw new Error('no html');
+        var reviews = parseTP(raw);
+        if (reviews.length) {
+          // Cache result
+          try {
+            sessionStorage.setItem(CACHE_KEY, JSON.stringify({t: Date.now(), data: reviews}));
+          } catch(e){}
+          renderReviews(reviews, 'live');
+        } else {
+          tryProxy(idx + 1);
+        }
+      })
+      .catch(function(){ tryProxy(idx + 1); });
+  }
+
+  /* ── Init ── */
+  function init() {
+    // Check cache first
+    try {
+      var cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) || 'null');
+      if (cached && (Date.now() - cached.t) < CACHE_TIME && cached.data.length) {
+        renderReviews(cached.data, 'cached');
+        return;
+      }
+    } catch(e){}
+    // Fetch live
+    tryProxy(0);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    setTimeout(init, 800); // slight delay so page renders first
+  }
+})();
+</script>
+
+
+<script>
+/* ============================================================
+   PROFIT NOTIFICATION SYSTEM
+   Shows random Pakistani / Indian / German client names
+   with random monthly profit amounts (€500–€2000)
+   ============================================================ */
+(function(){
+
+  var CLIENTS = [
+    /* Pakistani names */
+    { name:'Ahmed K.',    flag:'🇵🇰', color:'#3b82f6' },
+    { name:'Muhammad A.', flag:'🇵🇰', color:'#6366f1' },
+    { name:'Hassan M.',   flag:'🇵🇰', color:'#8b5cf6' },
+    { name:'Bilal R.',    flag:'🇵🇰', color:'#3b82f6' },
+    { name:'Usman T.',    flag:'🇵🇰', color:'#0ea5e9' },
+    { name:'Zain S.',     flag:'🇵🇰', color:'#6366f1' },
+    { name:'Hamza N.',    flag:'🇵🇰', color:'#3b82f6' },
+    { name:'Imran Q.',    flag:'🇵🇰', color:'#8b5cf6' },
+    { name:'Tariq B.',    flag:'🇵🇰', color:'#0ea5e9' },
+    { name:'Sana F.',     flag:'🇵🇰', color:'#ec4899' },
+    { name:'Nadia H.',    flag:'🇵🇰', color:'#f43f5e' },
+    { name:'Sara K.',     flag:'🇵🇰', color:'#ec4899' },
+    /* Indian names */
+    { name:'Rahul S.',    flag:'🇮🇳', color:'#f97316' },
+    { name:'Priya M.',    flag:'🇮🇳', color:'#f59e0b' },
+    { name:'Arjun V.',    flag:'🇮🇳', color:'#f97316' },
+    { name:'Neha D.',     flag:'🇮🇳', color:'#ec4899' },
+    { name:'Vikram P.',   flag:'🇮🇳', color:'#f97316' },
+    { name:'Rohit G.',    flag:'🇮🇳', color:'#f59e0b' },
+    { name:'Pooja R.',    flag:'🇮🇳', color:'#f43f5e' },
+    { name:'Deepak J.',   flag:'🇮🇳', color:'#f97316' },
+    { name:'Kavya N.',    flag:'🇮🇳', color:'#ec4899' },
+    { name:'Anil K.',     flag:'🇮🇳', color:'#f59e0b' },
+    /* German names */
+    { name:'Thomas M.',   flag:'🇩🇪', color:'#22c55e' },
+    { name:'Markus B.',   flag:'🇩🇪', color:'#10b981' },
+    { name:'Stefan W.',   flag:'🇩🇪', color:'#22c55e' },
+    { name:'Anna L.',     flag:'🇩🇪', color:'#34d399' },
+    { name:'Julia K.',    flag:'🇩🇪', color:'#10b981' },
+    { name:'Tobias F.',   flag:'🇩🇪', color:'#22c55e' },
+    { name:'Lisa H.',     flag:'🇩🇪', color:'#34d399' },
+    { name:'Florian S.',  flag:'🇩🇪', color:'#10b981' },
+    { name:'Nina R.',     flag:'🇩🇪', color:'#22c55e' },
+    { name:'Klaus D.',    flag:'🇩🇪', color:'#10b981' },
+  ];
+
+  var AMOUNTS = [
+    500,550,600,650,700,750,800,850,900,950,
+    1000,1050,1100,1150,1200,1250,1300,1400,
+    1500,1600,1700,1800,1900,2000
+  ];
+
+  var TIMES = [
+    'vor 2 Minuten','vor 5 Minuten','vor 12 Minuten',
+    'vor 23 Minuten','vor 1 Stunde','vor 2 Stunden',
+    'heute','gestern'
+  ];
+
+  var used = [];
+  var ppEl = null;
+  var ppTimer = null;
+  var ppInterval = null;
+  var isVisible = false;
+
+  function randItem(arr){
+    return arr[Math.floor(Math.random()*arr.length)];
+  }
+
+  function pickClient(){
+    // Avoid repeating same client twice in a row
+    var pool = CLIENTS.filter(function(c){ return used.indexOf(c.name) === -1; });
+    if (!pool.length){ used=[]; pool=CLIENTS; }
+    var c = randItem(pool);
+    used.push(c.name);
+    if (used.length > 4) used.shift();
+    return c;
+  }
+
+  function pickAmount(){
+    return randItem(AMOUNTS);
+  }
+
+  function getInitials(name){
+    return name.split(' ').map(function(w){ return w[0]; }).join('').substring(0,2).toUpperCase();
+  }
+
+  function showNotification(){
+    if (!ppEl) return;
+    var client = pickClient();
+    var amount = pickAmount();
+    var time   = randItem(TIMES);
+
+    // Update content
+    var avatar = ppEl.querySelector('.pp-avatar');
+    var nameEl = ppEl.querySelector('.pp-name');
+    var msgEl  = ppEl.querySelector('.pp-msg');
+    var timeEl = ppEl.querySelector('.pp-time');
+
+    avatar.textContent = getInitials(client.name);
+    avatar.style.background = client.color;
+
+    nameEl.textContent = client.flag + '  ' + client.name;
+    msgEl.innerHTML    = 'hat diesen Monat <span class="pp-amount">€' + amount.toLocaleString('de-DE') + '</span> Profit gemacht 🔥';
+    timeEl.textContent = time;
+
+    // Animate in
+    ppEl.classList.remove('pp-hide');
+    void ppEl.offsetWidth;
+    ppEl.classList.add('pp-show');
+    isVisible = true;
+
+    // Auto-hide after 5s
+    clearTimeout(ppTimer);
+    ppTimer = setTimeout(function(){
+      hideNotification();
+    }, 5000);
+  }
+
+  function hideNotification(){
+    if (!ppEl) return;
+    ppEl.classList.remove('pp-show');
+    ppEl.classList.add('pp-hide');
+    isVisible = false;
+  }
+
+  function createPopup(){
+    ppEl = document.createElement('div');
+    ppEl.className = 'profit-popup';
+    ppEl.setAttribute('aria-live','polite');
+    ppEl.innerHTML =
+      '<div class="pp-dot"></div>' +
+      '<div class="pp-avatar"></div>' +
+      '<div class="pp-body">' +
+        '<div class="pp-name"></div>' +
+        '<div class="pp-msg"></div>' +
+        '<div class="pp-time"></div>' +
+      '</div>';
+    document.body.appendChild(ppEl);
+  }
+
+  function start(){
+    createPopup();
+    // First show after 6s (after other popup already shown)
+    setTimeout(function(){
+      showNotification();
+      // Repeat every 10–16s
+      ppInterval = setInterval(function(){
+        showNotification();
+      }, Math.random()*6000 + 10000);
+    }, 6000);
+  }
+
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
+})();
 </script>
 
 </body>
