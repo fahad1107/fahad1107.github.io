@@ -1,331 +1,938 @@
----
-layout: null
----
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Scale With Fahad | E-Commerce Management Deutschland</title>
-
-<meta name="description" content="Scale With Fahad – professionelles E-Commerce Management und Dropshipping Betreuung in Deutschland. Strukturierte Prozesse, Transparenz und langfristiger Fokus.">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Fahad bin Sultan">
-<link rel="canonical" href="https://scalewithfahad.de/">
-
-<meta name="trustpilot-one-time-domain-verification-id"
-content="6526d371-50f6-460d-ab8a-c42949a4e4b3"/>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#09090b">
+<title>ScalewithFahad | eBay Dropshipping & Online Business Services</title>
+<meta name="description" content="Professionelles eBay Dropshipping Management, Coaching und Online Business Services für den deutschen Markt. MwSt.-konform, rechtssicher, transparent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+/* ============================================================
+   BASE
+   ============================================================ */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
-  --blue:#0a3d91;
-  --text:#0f172a;
-  --muted:#475569;
-  --border:#e2e8f0;
+  --black:#09090b;--surface:#141417;--accent:#3b82f6;--accent-soft:#60a5fa;
+  --white:#f4f4f5;--muted:#71717a;--border:rgba(255,255,255,0.07);
+  --bh:rgba(59,130,246,0.28);--wa:#25d366;--fb:#1877f2;--tp:#00b97c;
+  --red:#ef4444;--amber:#f59e0b;--green:#22c55e;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  line-height:1.8;
-  color:var(--text);
-}
-a{text-decoration:none;color:var(--blue)}
-.container{max-width:1100px;margin:auto;padding:0 18px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;min-width:320px}
+a{color:inherit;text-decoration:none}
 
-/* HEADER */
-header{background:var(--blue);color:#fff}
-.header-inner{
-  display:grid;
-  grid-template-columns:auto 1fr auto;
-  align-items:center;
-  padding:18px 0;
-}
-.header-left a{color:#fff;font-size:15px}
-.header-center{text-align:center;font-weight:700}
-.header-right{white-space:nowrap}
+/* ============================================================
+   NAV
+   ============================================================ */
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;background:rgba(9,9,11,0.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;letter-spacing:-0.03em;flex-shrink:0}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.4rem;font-size:.82rem;color:var(--muted);flex-wrap:wrap}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--accent);color:#fff;padding:.52rem 1.2rem;border-radius:6px;font-weight:500;font-size:.82rem;flex-shrink:0;transition:background .2s;white-space:nowrap;min-height:40px;display:inline-flex;align-items:center}
+.nav-cta:hover{background:var(--accent-soft)}
 
-/* HERO */
-.hero{text-align:center;padding:90px 0}
-.hero h1{font-size:clamp(32px,6vw,52px);margin-bottom:20px}
-.hero p{max-width:720px;margin:0 auto 30px;color:var(--muted)}
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{text-align:center;padding:6rem 1.5rem 4.5rem;max-width:800px;margin:0 auto}
+.badge{display:inline-block;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.22);color:var(--accent-soft);font-size:.72rem;font-weight:500;padding:.3rem .9rem;border-radius:50px;margin-bottom:1.6rem;letter-spacing:.06em;text-transform:uppercase}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.1rem,5vw,3.6rem);font-weight:800;line-height:1.08;letter-spacing:-0.03em;margin-bottom:1.3rem}
+.hero h1 em{color:var(--accent);font-style:normal}
+.hero p{font-size:1.05rem;color:var(--muted);max-width:540px;margin:0 auto 2.3rem;font-weight:300;line-height:1.75}
+.hero-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:#fff;padding:.82rem 2rem;border-radius:8px;font-weight:500;font-size:.95rem;transition:background .2s,transform .15s;min-height:48px}
+.btn:hover{background:var(--accent-soft);transform:translateY(-1px)}
+.btn-ghost{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border);color:var(--muted);padding:.82rem 1.7rem;border-radius:8px;font-size:.9rem;transition:border-color .2s,color .2s;min-height:48px}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.16);color:var(--white)}
+.social-strip{display:flex;justify-content:center;gap:.55rem;flex-wrap:wrap;margin-top:1.8rem}
+.soc-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .95rem;border-radius:50px;font-size:.77rem;font-weight:500;transition:opacity .2s;min-height:36px}
+.soc-btn:active{opacity:.75}
+.ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
+.fb-p{background:var(--fb);color:#fff}
+.tt{background:#fff;color:#000}
+.wa-s{background:var(--wa);color:#fff}
+.fbc{background:#1a6eff;color:#fff}
+.tpp{background:var(--tp);color:#fff}
 
-/* BUTTONS */
-.btn{
-  padding:14px 32px;
-  border-radius:8px;
-  border:1px solid var(--blue);
-  font-weight:600;
-  margin:6px;
-  display:inline-block;
-}
-.btn.primary{background:var(--blue);color:#fff}
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+section{padding:4.5rem 1.5rem}
+.container{max-width:1120px;margin:0 auto}
+.slabel{font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+.stitle{font-family:'Syne',sans-serif;font-size:clamp(1.65rem,3vw,2.4rem);font-weight:700;letter-spacing:-0.025em;margin-bottom:.8rem}
+.ssub{color:var(--muted);font-size:.95rem;font-weight:300;max-width:520px;line-height:1.75}
 
-/* SECTIONS */
-.section{padding:80px 0}
-.section.gray{background:#f6f7f9}
-.section h2{margin-bottom:24px}
-.section h3{margin-top:26px;margin-bottom:10px}
+/* ============================================================
+   SERVICE CARDS
+   ============================================================ */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.25rem;margin-top:2.8rem}
+.svc{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,transform .2s}
+.svc:hover{border-color:var(--bh);transform:translateY(-2px)}
+.svc.hot{border-color:rgba(59,130,246,0.32);background:linear-gradient(160deg,rgba(59,130,246,0.05) 0%,var(--surface) 60%)}
+.svc-top{padding:1.65rem 1.65rem 0}
+.svc-top-row{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:.9rem}
+.svc-icon{font-size:1.5rem;line-height:1}
+.svc-pill{font-size:.63rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.22rem .65rem;border-radius:50px}
+.pill-hot{background:var(--accent);color:#fff}
+.pill-num{background:rgba(255,255,255,0.06);color:var(--muted)}
+.svc h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;line-height:1.3;margin-bottom:.42rem}
+.svc-what{font-size:.84rem;color:var(--muted);font-style:italic;font-weight:300;line-height:1.6;margin-bottom:1rem}
+.svc-divider{height:1px;background:var(--border);margin:0 1.65rem}
+.svc-body{padding:1.1rem 1.65rem;flex:1;display:flex;flex-direction:column;gap:.95rem}
+.sbl{font-size:.66rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-soft);margin-bottom:.42rem}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:.32rem}
+.svc-list li{font-size:.84rem;color:var(--muted);font-weight:300;line-height:1.55;display:flex;gap:.5rem}
+.svc-list li::before{content:'›';color:var(--accent);font-weight:700;flex-shrink:0}
+.svc-for{display:flex;flex-wrap:wrap;gap:.32rem}
+.for-tag{font-size:.71rem;color:rgba(255,255,255,0.45);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);padding:.18rem .55rem;border-radius:50px}
+.svc-outcome{background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.14);border-radius:8px;padding:.7rem .9rem;margin-top:auto}
+.svc-outcome p{font-size:.83rem;color:var(--accent-soft);font-weight:400;line-height:1.5}
+.svc-outcome p::before{content:'👉 '}
+.svc-footer{padding:.9rem 1.65rem 1.35rem}
+.svc-cta{display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid rgba(59,130,246,0.25);color:var(--accent-soft);padding:.6rem;border-radius:7px;font-size:.85rem;font-weight:500;transition:background .2s,border-color .2s;min-height:48px}
+.svc-cta:hover{background:rgba(59,130,246,0.1);border-color:var(--accent)}
+.svc.hot .svc-cta{background:var(--accent);border-color:var(--accent);color:#fff}
+.pricing-row{background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.15);border-radius:8px;padding:.75rem .9rem}
+.pricing-item{display:flex;align-items:baseline;gap:.4rem;font-size:.85rem;color:var(--white);font-weight:500}
+.pricing-item span{font-size:.78rem;color:var(--muted);font-weight:300}
 
-/* BLOG ADDITIONS (ONLY ADD) */
-.blog-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
-}
-.blog-card{
-  border:1px solid var(--border);
-  border-radius:12px;
-  overflow:hidden;
-  background:#fff;
-}
-.blog-card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-.blog-content{padding:20px}
-.blog-meta{
-  font-size:13px;
-  color:var(--muted);
-  margin-bottom:6px;
-}
+/* ============================================================
+   CONSULTATION
+   ============================================================ */
+.consult-wrap{margin-top:2.8rem;display:grid;grid-template-columns:1fr 1.1fr;gap:1.4rem;align-items:start}
+.consult-main{background:linear-gradient(150deg,rgba(59,130,246,0.07) 0%,var(--surface) 70%);border:1px solid rgba(59,130,246,0.3);border-radius:16px;padding:2.2rem;display:flex;flex-direction:column;gap:1.2rem}
+.consult-price-box{display:flex;align-items:baseline;gap:.6rem;margin:.3rem 0}
+.consult-price{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:var(--accent);line-height:1}
+.consult-price-note{font-size:.82rem;color:var(--muted);font-weight:300}
+.consult-badge{display:inline-block;background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.25);color:var(--accent-soft);font-size:.7rem;font-weight:600;padding:.25rem .75rem;border-radius:50px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.5rem}
+.consult-main h3{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700}
+.consult-meta{display:flex;gap:1rem;flex-wrap:wrap;margin:.2rem 0}
+.cmeta-item{display:flex;align-items:center;gap:.45rem;font-size:.83rem;color:var(--muted);font-weight:300}
+.cmeta-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.c-list{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.c-list li{font-size:.86rem;color:var(--muted);font-weight:300;line-height:1.55;display:flex;gap:.6rem;align-items:flex-start}
+.c-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;font-size:.8rem;margin-top:.1rem}
+.c-note{background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.14);border-radius:9px;padding:.85rem 1rem}
+.c-note p{font-size:.83rem;color:var(--accent-soft);line-height:1.55}
+.c-note p::before{content:'👉 '}
+.consult-cta{display:flex;align-items:center;justify-content:center;text-align:center;background:var(--accent);color:#fff;padding:.9rem;border-radius:9px;font-weight:600;font-size:.95rem;transition:background .2s;margin-top:.3rem;min-height:52px}
+.consult-cta:hover{background:var(--accent-soft)}
+.consult-side{display:flex;flex-direction:column;gap:1.1rem}
+.cs-card{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:1.5rem;display:flex;flex-direction:column;gap:.75rem}
+.cs-card h4{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;display:flex;align-items:center;gap:.55rem}
+.cs-icon{font-size:1.1rem}
+.cs-list{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.cs-list li{font-size:.84rem;color:var(--muted);font-weight:300;line-height:1.5;display:flex;gap:.5rem;align-items:flex-start}
+.cs-list li::before{content:'›';color:var(--accent);font-weight:700;flex-shrink:0}
+.phil-box{background:linear-gradient(135deg,rgba(34,197,94,0.05),var(--surface));border:1px solid rgba(34,197,94,0.2);border-radius:13px;padding:1.5rem}
+.phil-box h4{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.phil-note{font-size:.83rem;color:var(--muted);font-weight:300;line-height:1.65;margin-top:.75rem;padding-top:.75rem;border-top:1px solid rgba(255,255,255,0.06)}
+.phil-note em{color:#86efac;font-style:normal}
 
-/* FOOTER */
-footer{
-  border-top:1px solid var(--border);
-  padding:40px 18px;
-  text-align:center;
-  font-size:14px;
-  color:var(--muted);
-}
+/* ============================================================
+   INVESTMENT
+   ============================================================ */
+.invest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.25rem;margin-top:2.8rem}
+.invest-card{border-radius:14px;padding:1.85rem;border:1px solid;display:flex;flex-direction:column;gap:1rem}
+.invest-card.green-c{border-color:rgba(34,197,94,0.22);background:linear-gradient(150deg,rgba(34,197,94,0.05) 0%,var(--surface) 70%)}
+.invest-card.blue-c{border-color:rgba(59,130,246,0.2);background:linear-gradient(150deg,rgba(59,130,246,0.04) 0%,var(--surface) 70%)}
+.ic-head{display:flex;align-items:center;gap:.8rem}
+.ic-icon{font-size:1.4rem}
+.ic-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700}
+.ic-list{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.ic-list li{font-size:.86rem;color:var(--muted);font-weight:300;line-height:1.55;display:flex;gap:.55rem;align-items:flex-start}
+.ic-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;font-size:.78rem;margin-top:.12rem}
+.invest-hl{background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.18);border-radius:9px;padding:.9rem 1rem}
+.invest-hl p{font-size:.85rem;color:#86efac;font-weight:400;line-height:1.55}
+.invest-hl p::before{content:'👉 '}
+.invest-amount{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--green);line-height:1}
+.invest-sub{font-size:.78rem;color:var(--muted);margin-top:.28rem}
+.zero-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:.5rem}
+.zero-box{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:9px;padding:.85rem;text-align:center}
+.zero-val{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;color:var(--green)}
+.zero-lbl{font-size:.72rem;color:var(--muted);margin-top:.2rem}
 
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  left:18px;
-  bottom:18px;
-  background:#25D366;
-  padding:14px 22px;
-  border-radius:50px;
-  font-weight:600;
-  color:#000;
-  z-index:999;
-}
+/* ============================================================
+   WARNING
+   ============================================================ */
+.warning-wrap{display:flex;flex-direction:column;gap:1.4rem;margin-top:2.8rem}
+.warning-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.warn-card{border-radius:14px;padding:1.85rem;border:1px solid;display:flex;flex-direction:column;gap:.9rem}
+.warn-card.amber-c{border-color:rgba(245,158,11,0.25);background:linear-gradient(150deg,rgba(245,158,11,0.05) 0%,var(--surface) 70%)}
+.warn-card.red-c{border-color:rgba(239,68,68,0.25);background:linear-gradient(150deg,rgba(239,68,68,0.05) 0%,var(--surface) 70%)}
+.wc-head{display:flex;align-items:center;gap:.7rem}
+.wc-icon{font-size:1.2rem}
+.wc-title{font-family:'Syne',sans-serif;font-size:.97rem;font-weight:700}
+.wc-list{list-style:none;display:flex;flex-direction:column;gap:.38rem}
+.wc-list li{font-size:.84rem;color:var(--muted);font-weight:300;line-height:1.55;display:flex;gap:.5rem;align-items:flex-start}
+.wc-list.am li::before{content:'⚠';color:var(--amber);flex-shrink:0;font-size:.78rem}
+.wc-list.rd li::before{content:'✕';color:var(--red);font-weight:700;flex-shrink:0;font-size:.8rem;margin-top:.1rem}
+.warn-note{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.18);border-radius:9px;padding:.85rem 1rem}
+.warn-note p{font-size:.84rem;color:#fca5a5;font-weight:400;line-height:1.6}
+.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.legal-card{border-radius:13px;padding:1.75rem;border:1px solid;display:flex;flex-direction:column;gap:.9rem}
+.legal-card.de-c{border-color:rgba(59,130,246,0.2);background:var(--surface)}
+.legal-card.ok-c{border-color:rgba(34,197,94,0.2);background:linear-gradient(150deg,rgba(34,197,94,0.04) 0%,var(--surface) 70%)}
+.lc-head{display:flex;align-items:center;gap:.7rem}
+.lc-icon{font-size:1.2rem}
+.lc-title{font-family:'Syne',sans-serif;font-size:.97rem;font-weight:700}
+.lc-list{list-style:none;display:flex;flex-direction:column;gap:.38rem}
+.lc-list li{font-size:.84rem;color:var(--muted);font-weight:300;line-height:1.55;display:flex;gap:.5rem;align-items:flex-start}
+.lc-list.de li::before{content:'›';color:var(--accent-soft);font-weight:700;flex-shrink:0}
+.lc-list.ri li::before{content:'!';color:var(--amber);font-weight:700;flex-shrink:0}
+.lc-list.ok li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;font-size:.8rem;margin-top:.1rem}
+.legal-outcome{background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.18);border-radius:8px;padding:.85rem 1rem;margin-top:auto}
+.legal-outcome p{font-size:.83rem;color:#86efac;font-weight:400;line-height:1.55}
+.legal-outcome p::before{content:'👉 '}
+.sublabel{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.45rem}
+.sublabel.blue{color:var(--accent-soft)}
+.sublabel.amber{color:#fbbf24}
 
-@media(max-width:768px){
-  .header-inner{
-    grid-template-columns:1fr;
-    gap:10px;
-    text-align:center;
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1px;margin-top:2.8rem;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--border)}
+.faq-item{background:var(--surface);padding:0}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:1.2rem 1.4rem;display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;color:var(--white);min-height:56px}
+.faq-q-text{font-family:'Syne',sans-serif;font-size:.93rem;font-weight:700;line-height:1.35;flex:1}
+.faq-chevron{font-size:.75rem;color:var(--muted);flex-shrink:0;transition:transform .25s;margin-top:.15rem}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a.open{max-height:600px}
+.faq-a-inner{padding:0 1.4rem 1.25rem;border-top:1px solid var(--border)}
+.faq-a-inner p{font-size:.86rem;color:var(--muted);font-weight:300;line-height:1.7;margin-top:.8rem}
+.faq-a-list{list-style:none;margin-top:.65rem;display:flex;flex-direction:column;gap:.32rem}
+.faq-a-list li{font-size:.84rem;color:var(--muted);font-weight:300;line-height:1.5;display:flex;gap:.5rem;align-items:flex-start}
+.faq-a-list li::before{content:'›';color:var(--accent);font-weight:700;flex-shrink:0}
+.faq-note{font-size:.82rem;color:var(--accent-soft);font-weight:400;margin-top:.65rem;padding:.65rem .85rem;background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.14);border-radius:7px}
+.faq-note::before{content:'👉 '}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+
+/* ============================================================
+   SOCIAL CARDS
+   ============================================================ */
+.socials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1.1rem;margin-top:2.8rem}
+.social-card{border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;align-items:flex-start;gap:.75rem;border:1px solid var(--border);transition:transform .2s,border-color .2s}
+.social-card.ig-c{border-color:rgba(225,48,108,0.2);background:linear-gradient(135deg,rgba(225,48,108,0.05) 0%,var(--surface) 65%)}
+.social-card.fb-c{border-color:rgba(24,119,242,0.2);background:linear-gradient(135deg,rgba(24,119,242,0.05) 0%,var(--surface) 65%)}
+.social-card.tt-c{border-color:rgba(255,255,255,0.1);background:linear-gradient(135deg,rgba(255,255,255,0.02) 0%,var(--surface) 65%)}
+.social-card.wa-c{border-color:rgba(37,211,102,0.2);background:linear-gradient(135deg,rgba(37,211,102,0.05) 0%,var(--surface) 65%)}
+.social-card.fbc-c{border-color:rgba(24,119,242,0.2);background:linear-gradient(135deg,rgba(24,119,242,0.05) 0%,var(--surface) 65%)}
+.social-card.tp-c{border-color:rgba(0,185,124,0.2);background:linear-gradient(135deg,rgba(0,185,124,0.05) 0%,var(--surface) 65%)}
+.sc-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;background:rgba(255,255,255,0.06)}
+.social-card h3{font-family:'Syne',sans-serif;font-size:.92rem;font-weight:700}
+.social-card p{color:var(--muted);font-size:.82rem;font-weight:300;line-height:1.6;flex:1}
+.sc-handle{font-size:.72rem;color:rgba(255,255,255,0.22)}
+.sc-btn{display:inline-flex;align-items:center;padding:.45rem 1rem;border-radius:50px;font-size:.78rem;font-weight:600;transition:opacity .2s;margin-top:.2rem;min-height:36px}
+.sc-btn.ig-b{background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);color:#fff}
+.sc-btn.fb-b{background:var(--fb);color:#fff}
+.sc-btn.tt-b{background:#fff;color:#000}
+.sc-btn.wa-b{background:var(--wa);color:#fff}
+.sc-btn.fbc-b{background:#1a6eff;color:#fff}
+.sc-btn.tp-b{background:var(--tp);color:#fff}
+
+/* ============================================================
+   REVIEWS
+   ============================================================ */
+.tp-header{display:flex;align-items:center;gap:1.5rem;margin-bottom:2.3rem;flex-wrap:wrap}
+.tp-score-box{background:var(--surface);border:1px solid rgba(0,185,124,0.2);border-radius:12px;padding:1.2rem 1.65rem;text-align:center}
+.tp-score{font-family:'Syne',sans-serif;font-size:2.6rem;font-weight:800;color:var(--tp);line-height:1}
+.tp-stars{color:var(--tp);font-size:1.1rem;letter-spacing:.1rem}
+.tp-count{font-size:.77rem;color:var(--muted);margin-top:.1rem}
+.tp-logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800}
+.tp-logo span{color:var(--tp)}
+.tp-link a{color:var(--tp);text-decoration:underline;font-size:.82rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.2rem}
+.review-card{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:1.4rem;display:flex;flex-direction:column;gap:.75rem;transition:border-color .2s}
+.review-card:hover{border-color:rgba(0,185,124,0.2)}
+.rv-top{display:flex;align-items:center;justify-content:space-between}
+.rv-info{display:flex;align-items:center;gap:.65rem}
+.rv-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:700;font-size:.82rem;flex-shrink:0}
+.av1{background:rgba(59,130,246,0.15);color:var(--accent-soft)}
+.av2{background:rgba(0,185,124,0.15);color:var(--tp)}
+.rv-name{font-size:.86rem;font-weight:500}
+.rv-meta{font-size:.73rem;color:var(--muted)}
+.rv-stars{color:var(--tp);font-size:.92rem}
+.rv-title{font-family:'Syne',sans-serif;font-size:.93rem;font-weight:700}
+.rv-body{font-size:.84rem;color:var(--muted);font-weight:300;line-height:1.65}
+.rv-date{font-size:.73rem;color:rgba(255,255,255,0.18)}
+.rv-verified{font-size:.68rem;font-weight:500;color:var(--tp);background:rgba(0,185,124,0.08);border:1px solid rgba(0,185,124,0.15);padding:.13rem .48rem;border-radius:50px}
+.tp-cta-row{text-align:center;margin-top:1.8rem}
+.tp-cta{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(0,185,124,0.3);color:var(--tp);padding:.65rem 1.6rem;border-radius:8px;font-size:.85rem;font-weight:500;transition:background .2s;min-height:48px}
+.tp-cta:hover{background:rgba(0,185,124,0.08)}
+
+/* ============================================================
+   HOW IT WORKS
+   ============================================================ */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.2rem;margin-top:2.8rem}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:1.65rem;position:relative;overflow:hidden}
+.step::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+.step-n{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:rgba(59,130,246,0.07);line-height:1;margin-bottom:.55rem}
+.step h3{font-family:'Syne',sans-serif;font-size:.97rem;font-weight:700;margin-bottom:.4rem}
+.step p{color:var(--muted);font-size:.84rem;font-weight:300;line-height:1.65}
+
+/* ============================================================
+   STATS
+   ============================================================ */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:1rem;margin-top:2.8rem}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:1.35rem;text-align:center}
+.stat-v{font-family:'Syne',sans-serif;font-size:1.75rem;font-weight:800}
+.stat-m{font-size:.68rem;color:var(--accent-soft);font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin:.2rem 0 .22rem}
+.stat-s{font-size:.75rem;color:var(--muted)}
+
+/* ============================================================
+   WHY US
+   ============================================================ */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.1rem;margin-top:2.8rem}
+.why-c{padding:1.45rem;border:1px solid var(--border);border-radius:12px;background:var(--surface);transition:border-color .2s}
+.why-c:hover{border-color:var(--bh)}
+.wi{width:33px;height:33px;background:rgba(59,130,246,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;margin-bottom:.85rem}
+.wi svg{width:14px;height:14px;fill:var(--accent)}
+.why-c h3{font-family:'Syne',sans-serif;font-size:.93rem;font-weight:700;margin-bottom:.4rem}
+.why-c p{color:var(--muted);font-size:.84rem;font-weight:300;line-height:1.65}
+
+/* ============================================================
+   CTA SECTION
+   ============================================================ */
+.cta-sec{text-align:center;padding:5rem 1.5rem;border-top:1px solid var(--border)}
+.cta-sec h2{font-family:'Syne',sans-serif;font-size:clamp(1.75rem,4vw,2.7rem);font-weight:800;margin-bottom:.9rem;letter-spacing:-0.025em}
+.cta-sec p{color:var(--muted);margin-bottom:2.3rem;font-size:.97rem;font-weight:300}
+.cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem}
+.cta-btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.78rem 1.5rem;border-radius:8px;font-weight:500;font-size:.9rem;transition:opacity .2s;min-height:48px}
+.cta-btn:hover{opacity:.85}
+.cb-wa{background:var(--wa);color:#fff}
+.cb-ig{background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);color:#fff}
+.cb-tt{background:#fff;color:#000}
+.cb-fb{background:var(--fb);color:#fff}
+.cb-acc{background:var(--accent);color:#fff}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5rem}
+.footer-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.fl{font-family:'Syne',sans-serif;font-weight:800;font-size:.97rem}
+.fl span{color:var(--accent)}
+.footer-socials{display:flex;flex-wrap:wrap;gap:.45rem}
+.fsoc{font-size:.7rem;font-weight:500;padding:.3rem .7rem;border-radius:50px;transition:opacity .2s;min-height:28px;display:inline-flex;align-items:center}
+.fsoc:hover{opacity:.8}
+.fsoc.fs-ig{background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);color:#fff}
+.fsoc.fs-fb{background:var(--fb);color:#fff}
+.fsoc.fs-tt{background:#fff;color:#000}
+.fsoc.fs-wa{background:var(--wa);color:#fff}
+.fsoc.fs-fbc{background:#1a6eff;color:#fff}
+.fsoc.fs-tp{background:var(--tp);color:#fff}
+.fi{font-size:.74rem;color:var(--muted);line-height:1.6}
+.footer-bottom{border-top:1px solid var(--border);padding-top:.9rem;margin-top:1rem;font-size:.72rem;color:rgba(255,255,255,0.15);text-align:center}
+
+/* ============================================================
+   STICKY CTA BAR — hidden on desktop
+   ============================================================ */
+.sticky-cta-bar{display:none}
+
+/* ============================================================
+   ██  MOBILE STYLES  ██  (max-width: 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Pad body so content clears sticky bar */
+  body{padding-bottom:80px}
+
+  /* NAV */
+  nav{padding:.85rem 1rem;gap:.65rem}
+  .nav-links{display:none}
+  .logo{font-size:1.1rem}
+  .nav-cta{padding:.5rem .95rem;font-size:.8rem;min-height:42px}
+
+  /* HERO */
+  .hero{padding:2.75rem 1.1rem 2.75rem}
+  .badge{font-size:.67rem;padding:.26rem .7rem;margin-bottom:1.1rem}
+  .hero h1{font-size:clamp(1.7rem,7vw,2.3rem);line-height:1.12;letter-spacing:-0.02em;margin-bottom:.95rem}
+  .hero p{font-size:.93rem;line-height:1.7;margin-bottom:1.6rem}
+  .hero-btns{flex-direction:column;width:100%;gap:.55rem}
+  .btn,.btn-ghost{width:100%;padding:.9rem 1.25rem;font-size:.95rem;border-radius:10px;min-height:52px;margin-left:0}
+  .social-strip{gap:.45rem;margin-top:1.3rem;display:grid;grid-template-columns:repeat(3,1fr)}
+  .soc-btn{padding:.38rem .5rem;font-size:.7rem;border-radius:8px;justify-content:center;min-height:38px;width:100%}
+
+  /* SECTIONS */
+  section{padding:2.5rem 1rem}
+  .stitle{font-size:clamp(1.35rem,5.5vw,1.85rem);margin-bottom:.6rem}
+  .slabel{font-size:.67rem;margin-bottom:.55rem}
+  .ssub{font-size:.88rem;line-height:1.7;max-width:100%}
+
+  /* SERVICE CARDS → 1 col */
+  .svc-grid{grid-template-columns:1fr;gap:.9rem;margin-top:1.75rem}
+  .svc-top{padding:1.15rem 1.15rem 0}
+  .svc-divider{margin:0 1.15rem}
+  .svc-body{padding:.85rem 1.15rem;gap:.8rem}
+  .svc h3{font-size:.97rem}
+  .svc-what{font-size:.82rem}
+  .svc-footer{padding:.75rem 1.15rem 1rem}
+  .svc-cta{min-height:48px;font-size:.88rem;border-radius:8px}
+
+  /* CONSULTATION → stack */
+  .consult-wrap{grid-template-columns:1fr;gap:.9rem;margin-top:1.75rem}
+  .consult-main{padding:1.4rem;gap:.95rem;border-radius:12px}
+  .consult-price{font-size:2.4rem}
+  .consult-main h3{font-size:1.05rem}
+  .consult-meta{gap:.55rem}
+  .cmeta-item{font-size:.81rem}
+  .c-list li{font-size:.83rem}
+  .consult-cta{min-height:54px;font-size:.95rem;padding:1rem;border-radius:10px}
+  .consult-side{gap:.8rem}
+  .cs-card{padding:1.15rem}
+  .phil-box{padding:1.15rem}
+
+  /* INVESTMENT → 1 col */
+  .invest-grid{grid-template-columns:1fr;gap:.9rem;margin-top:1.75rem}
+  .invest-card{padding:1.3rem}
+  .invest-amount{font-size:1.9rem}
+
+  /* WARNING → 1 col */
+  .warning-wrap{margin-top:1.75rem;gap:.9rem}
+  .warning-top{grid-template-columns:1fr;gap:.9rem}
+  .warn-card{padding:1.3rem;gap:.75rem}
+  .legal-grid{grid-template-columns:1fr;gap:.9rem}
+  .legal-card{padding:1.3rem;gap:.75rem}
+
+  /* FAQ → 1 col */
+  .faq-grid{grid-template-columns:1fr;margin-top:1.75rem;border-radius:12px}
+  .faq-q{padding:1.05rem 1.1rem;min-height:56px}
+  .faq-q-text{font-size:.88rem}
+  .faq-a-inner{padding:0 1.1rem 1.05rem}
+  .faq-a-inner p{font-size:.83rem;margin-top:.7rem}
+  .faq-a-list li{font-size:.82rem}
+  .faq-note{font-size:.79rem;padding:.55rem .72rem}
+
+  /* SOCIAL CARDS → 2 col */
+  .socials-grid{grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:1.75rem}
+  .social-card{padding:1.05rem;gap:.55rem;border-radius:12px}
+  .sc-icon{width:34px;height:34px;font-size:1.05rem}
+  .social-card h3{font-size:.86rem}
+  .social-card p{font-size:.76rem}
+  .sc-btn{min-height:34px;font-size:.73rem;padding:.38rem .8rem}
+
+  /* REVIEWS → 1 col */
+  .reviews-grid{grid-template-columns:1fr;gap:.85rem}
+  .tp-header{flex-direction:row;gap:1rem;margin-bottom:1.6rem;flex-wrap:nowrap}
+  .tp-score-box{padding:.95rem 1.15rem;flex-shrink:0}
+  .tp-score{font-size:2rem}
+  .tp-stars{font-size:.95rem}
+  .tp-logo{font-size:1.1rem}
+  .review-card{padding:1.1rem;gap:.6rem}
+  .rv-name{font-size:.83rem}
+  .rv-body{font-size:.82rem}
+  .tp-cta{width:100%;min-height:50px;font-size:.87rem}
+
+  /* HOW IT WORKS → 1 col */
+  .steps{grid-template-columns:1fr;gap:.85rem;margin-top:1.75rem}
+  .step{padding:1.25rem}
+  .step-n{font-size:1.9rem;margin-bottom:.42rem}
+  .step h3{font-size:.93rem}
+  .step p{font-size:.82rem}
+
+  /* STATS → 2x3 grid */
+  .stats{grid-template-columns:repeat(2,1fr);gap:.7rem;margin-top:1.75rem}
+  .stat{padding:1.05rem .85rem;border-radius:10px}
+  .stat-v{font-size:1.55rem}
+  .stat-m{font-size:.63rem}
+  .stat-s{font-size:.7rem}
+
+  /* WHY → 1 col */
+  .why{grid-template-columns:1fr;gap:.8rem;margin-top:1.75rem}
+  .why-c{padding:1.15rem}
+  .why-c h3{font-size:.9rem}
+  .why-c p{font-size:.82rem}
+
+  /* CTA SECTION */
+  .cta-sec{padding:2.75rem 1rem}
+  .cta-sec h2{font-size:clamp(1.45rem,5.5vw,1.95rem);margin-bottom:.7rem}
+  .cta-sec p{font-size:.88rem;margin-bottom:1.6rem}
+  .cta-btns{flex-direction:column;width:100%;gap:.55rem}
+  .cta-btn{width:100%;min-height:52px;font-size:.92rem;justify-content:center;border-radius:10px}
+
+  /* FOOTER */
+  footer{padding:1.4rem 1rem}
+  .footer-top{flex-direction:column;align-items:flex-start;gap:.8rem}
+  .footer-socials{gap:.38rem}
+  .fsoc{font-size:.67rem;padding:.26rem .58rem}
+  .fi{font-size:.7rem}
+  .footer-bottom{font-size:.68rem;padding-top:.7rem}
+
+  /* STICKY BOTTOM CTA BAR */
+  .sticky-cta-bar{
+    display:flex;
+    position:fixed;bottom:0;left:0;right:0;
+    z-index:300;
+    background:rgba(9,9,11,0.97);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-top:1px solid rgba(59,130,246,0.18);
+    padding:.7rem 1rem;
+    padding-bottom:calc(.7rem + env(safe-area-inset-bottom));
+    gap:.6rem;align-items:center;
   }
+  .sticky-cta-bar a.sticky-primary{
+    flex:1;display:flex;align-items:center;justify-content:center;
+    background:var(--accent);color:#fff;
+    padding:.7rem 1rem;border-radius:9px;
+    font-weight:600;font-size:.88rem;min-height:48px;
+    transition:background .2s;
+  }
+  .sticky-cta-bar a.sticky-primary:active{background:var(--accent-soft)}
+  .sticky-cta-bar a.sticky-wa{
+    display:flex;align-items:center;justify-content:center;
+    background:var(--wa);color:#fff;
+    padding:.7rem;border-radius:9px;
+    font-size:1.15rem;min-height:48px;width:50px;flex-shrink:0;
+  }
+}
+
+/* Tiny phones */
+@media (max-width: 374px) {
+  .hero h1{font-size:1.6rem}
+  .badge{font-size:.63rem}
+  .social-strip{grid-template-columns:repeat(2,1fr)}
+  .socials-grid{grid-template-columns:1fr}
+  nav{padding:.7rem .85rem}
+  .logo{font-size:1.05rem}
 }
 </style>
 </head>
-
 <body>
 
-<header>
-  <div class="container header-inner">
-    <div class="header-left">
-      <a href="#details">Leistungen</a>
-    </div>
-    <div class="header-center">Scale With Fahad</div>
-    <div class="header-right">
-      <span onclick="setLang('de')">DE</span> |
-      <span onclick="setLang('en')">EN</span>
-    </div>
+<!-- NAV -->
+<nav>
+  <div class="logo">ScaleWith<span>Fahad</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#consultation">Beratung</a>
+    <a href="#invest">Investment</a>
+    <a href="#faq">FAQ</a>
+    <a href="#socials">Social</a>
+    <a href="#reviews">Reviews</a>
   </div>
-</header>
+  <a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" class="nav-cta">Beratung buchen</a>
+</nav>
 
-<section class="hero">
-  <div class="container">
-    <h1 data-de="Professionelles E-Commerce Management"
-        data-en="Professional E-Commerce Management">
-      Professionelles E-Commerce Management
-    </h1>
-
-    <p data-de="Strukturierte, transparente und langfristige Betreuung für nachhaltige E-Commerce-Projekte."
-       data-en="Structured, transparent and long-term management for sustainable eCommerce projects.">
-      Strukturierte, transparente und langfristige Betreuung für nachhaltige E-Commerce-Projekte.
-    </p>
-
-    <a href="#details" class="btn primary">Mehr erfahren</a>
-    <a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank" class="btn">Bewertungen</a>
-
-    <div style="margin-top:12px;font-size:14px;color:#555">
-      ✔ Verifiziertes Unternehmen auf Trustpilot
-    </div>
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">eBay · Shopify · Coaching · Digitalisierung · Deutschland</div>
+  <h1>Dein Business — <em>professionell aufgebaut</em> und skaliert</h1>
+  <p>Von eBay Dropshipping über Shopify-Stores bis zur Digitalisierung — alles aus einer Hand, rechtssicher und auf den deutschen Markt spezialisiert.</p>
+  <div class="hero-btns">
+    <a href="#consultation" class="btn">Beratung buchen — €50</a>
+    <a href="#services" class="btn-ghost">Alle 8 Services</a>
   </div>
+  <div class="social-strip">
+    <a href="https://www.instagram.com/scalewith.fahad/" class="soc-btn ig">📸 Instagram</a>
+    <a href="https://www.facebook.com/profile.php?id=61585717853843" class="soc-btn fb-p">👤 Facebook</a>
+    <a href="https://www.tiktok.com/@scalewithfahad" class="soc-btn tt">🎵 TikTok</a>
+    <a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" class="soc-btn wa-s">💬 WhatsApp</a>
+    <a href="https://www.facebook.com/groups/onlinemoneyingermany" class="soc-btn fbc">👥 Gruppe</a>
+    <a href="https://de.trustpilot.com/review/scalewithfahad.de" class="soc-btn tpp">⭐ Trustpilot</a>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" style="background:var(--surface);border-top:1px solid var(--border)">
+<div class="container">
+  <div class="slabel">Was wir anbieten</div>
+  <div class="stitle">8 Services — ein Ansprechpartner</div>
+  <div class="ssub">Für Anfänger, Fortgeschrittene und Unternehmer — wir haben den passenden Service für deine Situation.</div>
+  <div class="svc-grid">
+
+    <div class="svc">
+      <div class="svc-top"><div class="svc-top-row"><span class="svc-icon">🚀</span><span class="svc-pill pill-num">01</span></div><h3>eBay Dropshipping Coaching</h3><p class="svc-what">Komplettes Schritt-für-Schritt-Programm für Einsteiger — vom ersten Tag bis zum laufenden Business in Deutschland.</p></div>
+      <div class="svc-divider"></div>
+      <div class="svc-body"><div><div class="sbl">Was du bekommst</div><ul class="svc-list"><li>A–Z Erklärung des Geschäftsmodells</li><li>eBay Account Setup Anleitung</li><li>Produktrecherche-Strategie</li><li>Listing-Erstellung &amp; Optimierung</li><li>Bestellabwicklung &amp; Fulfillment</li><li>Kundenservice-Handling</li><li>MwSt. &amp; Rechtliches (Deutschland)</li></ul></div><div><div class="sbl">Für wen</div><div class="svc-for"><span class="for-tag">Einsteiger</span><span class="for-tag">Studierende</span><span class="for-tag">MwSt.-Neulinge</span></div></div><div class="svc-outcome"><p>Client versteht, wie man ein legales, profitables eBay-Business führt</p></div></div>
+      <div class="svc-footer"><a href="#consultation" class="svc-cta">Beratung buchen →</a></div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top"><div class="svc-top-row"><span class="svc-icon">⚙️</span><span class="svc-pill pill-num">02</span></div><h3>eBay Account Setup &amp; VAT-System</h3><p class="svc-what">Komplettes, rechtssicheres Setup eines eBay-Geschäfts in Deutschland — technisch und legal.</p></div>
+      <div class="svc-divider"></div>
+      <div class="svc-body"><div><div class="sbl">Was du bekommst</div><ul class="svc-list"><li>eBay-Account (korrekte Struktur)</li><li>Business-Integration</li><li>USt-ID Erklärung &amp; Setup-Support</li><li>Account-Konfiguration für den Verkauf</li><li>Basis-Shop-Optimierung</li></ul></div><div><div class="sbl">Für wen</div><div class="svc-for"><span class="for-tag">Neueinsteiger</span><span class="for-tag">Beim Setup feststeckend</span></div></div><div class="svc-outcome"><p>Client ist vollständig bereit, legal in Deutschland zu verkaufen</p></div></div>
+      <div class="svc-footer"><a href="#consultation" class="svc-cta">Beratung buchen →</a></div>
+    </div>
+
+    <div class="svc hot">
+      <div class="svc-top"><div class="svc-top-row"><span class="svc-icon">💰</span><span class="svc-pill pill-hot">Beliebt</span></div><h3>eBay Account Management (Profit Share)</h3><p class="svc-what">Done-for-you: Wir managen und skalieren deinen eBay-Account vollständig.</p></div>
+      <div class="svc-divider"></div>
+      <div class="svc-body"><div><div class="sbl">Was du bekommst</div><ul class="svc-list"><li>Produktrecherche &amp; Skalierungsstrategie</li><li>Listing-Erstellung &amp; Optimierung</li><li>Bestellabwicklung &amp; Fulfillment</li><li>Kundenservice-Handling</li><li>Retouren &amp; Problemmanagement</li><li>Account-Performance-Monitoring</li><li>Kontinuierliche Skalierung</li></ul></div><div class="pricing-row"><div class="sbl">Preismodell</div><div class="pricing-item">50% <span>des Nettogewinns (nach vereinbarten Kosten)</span></div><div class="pricing-item">+19% <span>MwSt. auf die Management-Fee</span></div></div><div><div class="sbl">Für wen</div><div class="svc-for"><span class="for-tag">Vielbeschäftigte</span><span class="for-tag">Investoren</span><span class="for-tag">Passives Einkommen</span></div></div><div class="svc-outcome"><p>Client verdient, ohne die Operationen selbst zu managen</p></div></div>
+      <div class="svc-footer"><a href="#consultation" class="svc-cta">Beratung buchen →</a></div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top"><div class="svc-top-row"><span class="svc-icon">🔍</span><span class="svc-pill pill-num">04</span></div><h3>Produktrecherche &amp; Listing-Optimierung</h3><p class="svc-what">Gezielte Verbesserung der Verkäufe durch bessere Produkte und optimierte Listings.</p></div>
+      <div class="svc-divider"></div>
+      <div class="svc-body"><div><div class="sbl">Was du bekommst</div><ul class="svc-list"><li>Profitable Produktidentifikation</li><li>Marktbedarfsanalyse &amp; Wettbewerbsrecherche</li><li>SEO-optimierte Titel</li><li>Hochkonvertierende Beschreibungen</li><li>Preisstrategie</li></ul></div><div><div class="sbl">Für wen</div><div class="svc-for"><span class="for-tag">Niedrige Verkaufszahlen</span><span class="for-tag">Accounts ohne Wachstum</span></div></div><div class="svc-outcome"><p>Mehr Sichtbarkeit und höhere Conversion-Rate</p></div></div>
+      <div class="svc-footer"><a href="#consultation" class="svc-cta">Beratung buchen →</a></div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top"><div class="svc-top-row"><span class="svc-icon">📈</span><span class="svc-pill pill-num">05</span></div><h3>Account Health &amp; Performance Optimierung</h3><p class="svc-what">Account-Metriken verbessern, Risiken vermeiden und langfristig sicher skalieren.</p></div>
+      <div class="svc-divider"></div>
+      <div class="svc-body"><div><div class="sbl">Was du bekommst</div><ul class="svc-list"><li>Performance-Review (Defects, Verspätungen etc.)</li><li>Policy-Compliance-Check</li><li>Risikominimierungsstrategien</li><li>Account-Stabilisierung</li><li>Wachstumssichere Skalierungsstrategie</li></ul></div><div><div class="sbl">Für wen</div><div class="svc-for"><span class="for-tag">Account mit Warnungen</span><span class="for-tag">Suspendierungsangst</span></div></div><div class="svc-outcome"><p>Stabiles, sicheres und langfristiges Wachstum</p></div></div>
+      <div class="svc-footer"><a href="#consultation" class="svc-cta">Beratung buchen →</a></div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top"><div class="svc-top-row"><span class="svc-icon">🏪</span><span class="svc-pill pill-num">06</span></div><h3>Shopify Store Setup für Unternehmen</h3><p class="svc-what">Professionellen Onlineshop mit Shopify erstellen — modern, mobil, verkaufsfertig.</p></div>
+      <div class="svc-divider"></div>
+      <div class="svc-body"><div><div class="sbl">Was du bekommst</div><ul class="svc-list"><li>Vollständiges Store-Design (modern &amp; mobil)</li><li>Produkt-Setup &amp; Zahlungsintegration</li><li>Basis-SEO-Setup</li><li>Store-Struktur &amp; Navigation</li><li>Launch-bereite Website</li></ul></div><div><div class="sbl">Für wen</div><div class="svc-for"><span class="for-tag">Lokale Unternehmen</span><span class="for-tag">Neue Marken</span></div></div><div class="svc-outcome"><p>Business ist vollständig online und verkaufsbereit</p></div></div>
+      <div class="svc-footer"><a href="#consultation" class="svc-cta">Beratung buchen →</a></div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top"><div class="svc-top-row"><span class="svc-icon">🌐</span><span class="svc-pill pill-num">07</span></div><h3>Business-Digitalisierung (Offline → Online)</h3><p class="svc-what">Lokale Unternehmen ins Internet bringen — mit Website, Systemen und Strategie.</p></div>
+      <div class="svc-divider"></div>
+      <div class="svc-body"><div><div class="sbl">Was du bekommst</div><ul class="svc-list"><li>Online-Präsenz-Setup</li><li>Website-Erstellung</li><li>Service-Präsentationsseiten</li><li>Lead- &amp; Kontaktsystem</li><li>Digitale Basisstrategie</li></ul></div><div><div class="sbl">Für wen</div><div class="svc-for"><span class="for-tag">Lokale Shops</span><span class="for-tag">Dienstleister</span></div></div><div class="svc-outcome"><p>Business hängt nicht mehr nur von Laufkundschaft ab</p></div></div>
+      <div class="svc-footer"><a href="#consultation" class="svc-cta">Beratung buchen →</a></div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-top"><div class="svc-top-row"><span class="svc-icon">🎓</span><span class="svc-pill pill-num">08</span></div><h3>Student Online Income Guidance (Deutschland)</h3><p class="svc-what">Studierenden helfen, legal und neben dem Studium online Geld zu verdienen.</p></div>
+      <div class="svc-divider"></div>
+      <div class="svc-body"><div><div class="sbl">Was du bekommst</div><ul class="svc-list"><li>Business-Modell-Beratung</li><li>Legal &amp; Steuergrundlagen (Deutschland)</li><li>Plattformauswahl (eBay / Freelance / Online)</li><li>Schritt-für-Schritt-Startplan</li><li>Einkommensskalierungsstrategie</li></ul></div><div><div class="sbl">Für wen</div><div class="svc-for"><span class="for-tag">Studierende in Deutschland</span></div></div><div class="svc-outcome"><p>Legales Nebeneinkommen mit echtem Wachstumspotenzial</p></div></div>
+      <div class="svc-footer"><a href="#consultation" class="svc-cta">Beratung buchen →</a></div>
+    </div>
+
+  </div>
+</div>
 </section>
 
-<section id="details" class="section gray">
-  <div class="container">
-    <h2>Über Scale With Fahad</h2>
-
-    <p>
-      Scale With Fahad ist ein professioneller E-Commerce-Dienstleister mit Sitz in Deutschland,
-      der sich auf den nachhaltigen Betrieb und die langfristige Skalierung von
-      Online-Geschäftsmodellen spezialisiert hat.
-    </p>
-
-    <h3>Unsere Arbeitsmodelle</h3>
-    <p>
-      Wir betreuen Dropshipping-Modelle, Shops mit eigenem Lagerbestand sowie hybride Konzepte.
-    </p>
-
-    <h3>Operative Leistungen</h3>
-    <p>
-      Bestellabwicklung, Kundenkommunikation, Prozessmanagement,
-      Performance-Überwachung, Account-Health-Monitoring und Reporting.
-    </p>
-
-    <h3>Risikomanagement & Eskalationsprozesse</h3>
-    <p>
-      Risiken werden frühzeitig erkannt und strukturiert behandelt,
-      um langfristige Stabilität sicherzustellen.
-    </p>
-
-    <h3>Berichtswesen & Kommunikation</h3>
-    <p>
-      Entscheidungen basieren auf Daten, KPIs und klaren Reports.
-    </p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2>Häufig gestellte Fragen (FAQ)</h2>
-
-    <h3>Was genau macht Scale With Fahad?</h3>
-    <p>
-      Wir übernehmen die operative Betreuung und das Management von
-      E-Commerce-Geschäftsmodellen mit Fokus auf Prozesse und Stabilität.
-    </p>
-
-    <h3>Arbeiten Sie mit Dropshipping?</h3>
-    <p>
-      Ja, Dropshipping, Lagerbestand und hybride Modelle.
-    </p>
-
-    <h3>Für wen ist Scale With Fahad geeignet?</h3>
-    <p>
-      Für Unternehmer, Berufstätige und Investoren.
-    </p>
-  </div>
-</section>
-
-<!-- BLOG SECTION (FULL FEATURES ADDED) -->
-<section class="section gray">
-  <div class="container">
-    <h2>Aktuelle Blogartikel</h2>
-
-    <div class="blog-grid">
-      {% for post in site.posts limit:3 %}
-      <article class="blog-card">
-
-        {% if post.image %}
-        <img src="{{ post.image }}" alt="{{ post.title }}">
-        {% endif %}
-
-        <div class="blog-content">
-          <div class="blog-meta">
-            {{ post.date | date: "%d.%m.%Y" }} ·
-            {% assign words = post.content | number_of_words %}
-            {% assign minutes = words | divided_by:200 | plus:1 %}
-            {{ minutes }} Min. Lesezeit
-          </div>
-
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.excerpt | strip_html | truncate:120 }}</p>
-          <a href="{{ post.url }}">Artikel lesen →</a>
+<!-- CONSULTATION -->
+<section id="consultation" style="background:var(--surface);border-top:1px solid var(--border)">
+<div class="container">
+  <div class="slabel">Beratung &amp; Erstgespräch</div>
+  <div class="stitle">Professional Strategy Session</div>
+  <div class="ssub">Kein Sales-Call — eine echte Arbeitssession für ernsthafte Kunden, die richtig starten wollen.</div>
+  <div class="consult-wrap">
+    <div class="consult-main">
+      <div>
+        <span class="consult-badge">Kostenpflichtige Beratung</span>
+        <h3>1:1 Private Consultation</h3>
+        <div class="consult-meta">
+          <div class="cmeta-item"><div class="cmeta-dot"></div>45–60 Minuten</div>
+          <div class="cmeta-item"><div class="cmeta-dot"></div>Auf deine Situation zugeschnitten</div>
+          <div class="cmeta-item"><div class="cmeta-dot"></div>Klare, umsetzbare Empfehlungen</div>
         </div>
-
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": "{{ post.title }}",
-          "datePublished": "{{ post.date | date_to_xmlschema }}",
-          "author": {
-            "@type": "Person",
-            "name": "Fahad bin Sultan"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Scale With Fahad",
-            "url": "https://scalewithfahad.de"
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "{{ post.url | absolute_url }}"
-          }
-        }
-        </script>
-
-      </article>
-      {% endfor %}
+      </div>
+      <div>
+        <div class="consult-price-box">
+          <div class="consult-price">€50</div>
+          <div class="consult-price-note">zzgl. 19% MwSt.</div>
+        </div>
+        <div style="font-size:.78rem;color:var(--muted);margin-top:.3rem;font-weight:300">Gesamtbetrag: €59,50 inkl. MwSt.</div>
+      </div>
+      <div>
+        <div class="sbl" style="margin-bottom:.5rem">Was die Session beinhaltet</div>
+        <ul class="c-list">
+          <li>Echte Business-Insights — keine Standardantworten</li>
+          <li>MwSt.- &amp; Rechtsberatung (Deutschland-spezifisch)</li>
+          <li>Bewährte Strategien aus der Praxis</li>
+          <li>Persönliche Roadmap für deine Situation</li>
+          <li>Klares Verständnis, wie du korrekt startest</li>
+          <li>Kostspielige Fehler vermeiden (VAT &amp; Legal)</li>
+        </ul>
+      </div>
+      <div class="c-note"><p>Das ist kein Sales-Call — das ist eine Arbeitssession.</p></div>
+      <a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" class="consult-cta">Jetzt Beratung buchen — €50 + MwSt. →</a>
+    </div>
+    <div class="consult-side">
+      <div class="cs-card">
+        <h4><span class="cs-icon">🎯</span> Was du bekommst</h4>
+        <ul class="cs-list">
+          <li>Klares Verständnis für den richtigen Start</li>
+          <li>Vermeidung teurer Fehler (VAT &amp; Legal)</li>
+          <li>Personalisierte Roadmap für deine Situation</li>
+          <li>Direkte Antworten — kein Umweg</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h4><span class="cs-icon">⚠️</span> Warum kostenpflichtig?</h4>
+        <ul class="cs-list">
+          <li>Wir respektieren deine Zeit — und auch unsere</li>
+          <li>Jede Session enthält echten, konkreten Mehrwert</li>
+          <li>Nur für ernsthafte Kunden — keine Zeitverschwendung</li>
+          <li>Garantiert fokussierte, persönliche Beratung</li>
+        </ul>
+      </div>
+      <div class="phil-box">
+        <h4>🤝 Unsere Philosophie</h4>
+        <ul class="c-list">
+          <li>Ernsthafte Kunden</li>
+          <li>Langfristige Ergebnisse</li>
+          <li>Professionelle, transparente Arbeit</li>
+        </ul>
+        <div class="phil-note">
+          Wenn du kostenlose Ratschläge suchst, sind wir vielleicht nicht die richtige Wahl.<br><br>
+          <em>Wenn du etwas Korrektes und Nachhaltiges aufbauen möchtest — wir helfen dir.</em>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 </section>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Was genau macht Scale With Fahad?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Scale With Fahad übernimmt die operative Betreuung und das Management von E-Commerce-Geschäftsmodellen."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Arbeiten Sie mit Dropshipping?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ja, wir betreuen Dropshipping-, Lager- und Hybridmodelle."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Für wen ist Scale With Fahad geeignet?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Unser Service ist ideal für Unternehmer, Berufstätige und Investoren."
-      }
-    }
-  ]
-}
-</script>
+<!-- INVESTMENT -->
+<section id="invest">
+<div class="container">
+  <div class="slabel">Mindestinvestition &amp; Modell</div>
+  <div class="stitle">Was du mitbringen musst</div>
+  <div class="ssub">Kein Lager, kein Vorabkauf, kein Risiko unsold stock — nur ein kleines Startkapital für die Bestellabwicklung.</div>
+  <div class="invest-grid">
+    <div class="invest-card green-c">
+      <div class="ic-head"><span class="ic-icon">💸</span><div class="ic-title">Mindestkapital</div></div>
+      <div><div class="invest-amount">€800 – €1.000</div><div class="invest-sub">Startkapital für die Bestellabwicklung</div></div>
+      <ul class="ic-list">
+        <li>Wird ausschließlich für Auftragsabwicklung verwendet</li>
+        <li>Keine Vorauszahlung für unseren Service</li>
+        <li>Kein Lager oder Wareneinkauf nötig</li>
+        <li>Flexibel und jederzeit skalierbar</li>
+      </ul>
+      <div class="invest-hl"><p>Du zahlst nur, wenn Bestellungen eingehen — kein Risiko von unverkauften Produkten</p></div>
+    </div>
+    <div class="invest-card blue-c">
+      <div class="ic-head"><span class="ic-icon">📦</span><div class="ic-title">Kein Lager. Kein Risiko.</div></div>
+      <ul class="ic-list">
+        <li>Keine Produkte im Voraus kaufen</li>
+        <li>Kein Lager oder Lagerraum nötig</li>
+        <li>Kein Risiko von "Dead Stock"</li>
+        <li>Vollständig flexibles, skalierbares Modell</li>
+        <li>Bestellungen werden erst bei Verkauf aufgegeben</li>
+      </ul>
+      <div class="zero-grid">
+        <div class="zero-box"><div class="zero-val">0€</div><div class="zero-lbl">Lagerkosten</div></div>
+        <div class="zero-box"><div class="zero-val">0€</div><div class="zero-lbl">Vorabservice-Fee</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
+<!-- WARNING & SAFETY -->
+<section style="background:var(--surface);border-top:1px solid var(--border)">
+<div class="container">
+  <div class="slabel">Sicherheit &amp; Transparenz</div>
+  <div class="stitle">Warum günstig oft teuer wird</div>
+  <div class="ssub">Viele Anbieter locken mit niedrigen Preisen — was dahinter steckt, kann dein eBay-Konto dauerhaft gefährden.</div>
+  <div class="warning-wrap">
+    <div class="warning-top">
+      <div class="warn-card amber-c">
+        <div class="wc-head"><span class="wc-icon">⚠️</span><div class="wc-title">Was billige Anbieter versprechen</div></div>
+        <ul class="wc-list am">
+          <li>Sehr niedriger Gewinnanteil (30–35%)</li>
+          <li>"Schnelle Ergebnisse" Versprechen</li>
+          <li>Keine Rechnungen oder legale Struktur</li>
+          <li>Kein MwSt.-konformes Abrechnungsmodell</li>
+        </ul>
+        <div class="warn-note"><p>Was sie oft wirklich tun: Policy-verstößige Methoden, gefälschte Trackingnummern und nicht konforme Prozesse — die deinen Account gefährden.</p></div>
+      </div>
+      <div class="warn-card red-c">
+        <div class="wc-head"><span class="wc-icon">🚫</span><div class="wc-title">Das echte Risiko für dich</div></div>
+        <ul class="wc-list rd">
+          <li>Dauerhafte eBay Account-Sperrung</li>
+          <li>Account-Einschränkungen &amp; Limits</li>
+          <li>Verlust der Verkaufsmöglichkeit langfristig</li>
+          <li>Kein Weg zurück nach permanenter Sperre</li>
+        </ul>
+        <div class="warn-note"><p>eBay setzt strenge Verkäuferrichtlinien durch. Ein einmal dauerhaft eingeschränkter Account ist extrem schwer wiederherzustellen.</p></div>
+      </div>
+    </div>
+    <div class="legal-grid">
+      <div class="legal-card de-c">
+        <div class="lc-head"><span class="lc-icon">🇩🇪</span><div class="lc-title">Business in Deutschland = Rechtliche Verantwortung</div></div>
+        <div>
+          <div class="sublabel blue">Das wird erwartet</div>
+          <ul class="lc-list de">
+            <li>Korrekte MwSt.-Abwicklung (Finanzamt)</li>
+            <li>Saubere Buchführung (SKR04)</li>
+            <li>Rechtskonforme Rechnungsstellung</li>
+            <li>Einhaltung steuerlicher Vorschriften</li>
+          </ul>
+        </div>
+        <div>
+          <div class="sublabel amber">Folgen bei Nichteinhaltung</div>
+          <ul class="lc-list ri">
+            <li>Finanzielle Strafen vom Finanzamt</li>
+            <li>Steuerliche Nachzahlungen</li>
+            <li>Rechtliche Komplikationen</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal-card ok-c">
+        <div class="lc-head"><span class="lc-icon">✅</span><div class="lc-title">Unser Ansatz — sauber &amp; sicher</div></div>
+        <ul class="lc-list ok">
+          <li>Vollständig konforme Prozesse</li>
+          <li>Transparentes Gewinnmodell</li>
+          <li>Korrekte Rechnungsstellung mit 19% MwSt.</li>
+          <li>Langfristige Account-Sicherheit</li>
+          <li>Kompatibel mit Lexware Office / SKR04</li>
+          <li>Keine Policy-verstößigen Methoden</li>
+        </ul>
+        <div class="legal-outcome"><p>Wir setzen auf nachhaltiges Wachstum — keine kurzfristigen Tricks, die dein Business gefährden</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="container">
+  <div class="slabel">Häufige Fragen</div>
+  <div class="stitle">Alles, was du wissen musst</div>
+  <div class="ssub">Ehrliche, direkte Antworten — kein Marketing-Sprech.</div>
+  <div class="faq-grid">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">💰 Wie viel Geld brauche ich zum Start?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><p>Um ein eBay-Dropshipping-Business korrekt zu betreiben, benötigst du:</p><ul class="faq-a-list"><li>€800 – €1.000 Startkapital</li><li>Wird nur für die Auftragsabwicklung verwendet</li><li>Kein Lager oder Warenbestand nötig</li></ul><div class="faq-note">Du kaufst keine Produkte im Voraus — du zahlst erst, wenn du Bestellungen erhältst.</div></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">📦 Muss ich Produkte kaufen oder lagern?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><p>Nein — dieses Modell benötigt kein Inventar.</p><ul class="faq-a-list"><li>Kein Lager oder Masseneinkauf</li><li>Kein Risiko unverkaufter Produkte</li><li>Vollständig flexibles, skalierbares Modell</li></ul><div class="faq-note">Es handelt sich um ein No-Inventory-Geschäftsmodell.</div></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">⚙️ Wie funktioniert euer Account-Management?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><p>Wir übernehmen alles für dich:</p><ul class="faq-a-list"><li>Produktrecherche &amp; Listing-Erstellung</li><li>Bestellabwicklung &amp; Fulfillment</li><li>Kundenservice &amp; Retourenmanagement</li></ul><div class="faq-note">Du besitzt den Account. Wir managen und skalieren ihn.</div></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">💸 Wie werden eure Kosten berechnet?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><ul class="faq-a-list"><li>50% des Nettogewinns (nach vereinbarten Kosten)</li><li>+19% MwSt. auf unsere Service-Fee</li><li>MwSt. kann ggf. via Finanzamt zurückgefordert werden</li></ul><div class="faq-note">Wir verdienen nur, wenn du verdienst.</div></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">⚖️ Ist das in Deutschland legal?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><p>Ja — wenn es korrekt durchgeführt wird. Wir setzen auf:</p><ul class="faq-a-list"><li>Korrekte MwSt.-Abwicklung</li><li>Legale Rechnungsstellung</li><li>Saubere Buchführung</li></ul><div class="faq-note">Viele Verkäufer scheitern, weil sie die rechtliche Seite ignorieren.</div></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">⚠️ Warum keine billigen Anbieter?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><p>Günstige Anbieter nutzen häufig:</p><ul class="faq-a-list"><li>Nicht-konforme Methoden &amp; Policy-Verstöße</li><li>Keine Rechnungen oder legale Struktur</li><li>Gefälschte Tracking-Nummern</li></ul><p style="margin-top:.65rem">Dies kann zu dauerhaften Account-Sperren und rechtlichen Problemen führen.</p><div class="faq-note">Günstig kurzfristig = teuer langfristig.</div></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">🚫 Kann mein eBay-Account gesperrt werden?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><p>Bei korrekten, konformen Methoden → Risiko wird minimiert. Bei Einsatz von:</p><ul class="faq-a-list"><li>Gefälschten Tracking-Nummern</li><li>Policy-Verstößen</li><li>Illegalen Setups</li></ul><div class="faq-note">Dann ja — Accounts können dauerhaft eingeschränkt werden. Unser Ansatz fokussiert sich auf langfristige Sicherheit.</div></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">🎓 Brauche ich Erfahrung zum Starten?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><p>Nein. Unser Coaching deckt ab:</p><ul class="faq-a-list"><li>Anfängerniveau (A–Z)</li><li>Schritt-für-Schritt-Anleitung</li><li>Deutschland-spezifische Regeln</li></ul><div class="faq-note">Entwickelt für Menschen, die bei null anfangen.</div></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">📞 Bietet ihr kostenlose Beratung an?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><p>Nein. Wir bieten eine professionelle, kostenpflichtige Beratung an (€50 + 19% MwSt.). Dies stellt sicher:</p><ul class="faq-a-list"><li>Nur ernsthafte Kunden</li><li>Echter Mehrwert und umsetzbare Ratschläge</li><li>Fokussierte, persönliche Beratung</li></ul><div class="faq-note">Das ist keine Sales-Session — es ist eine echte Arbeitssession.</div></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">⏱️ Wie lange dauert es bis zu Ergebnissen?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><p>Hängt ab von deinem Ausgangspunkt, Einsatz und Marktbedingungen. Typischerweise:</p><ul class="faq-a-list"><li>Setup-Phase: 1–3 Wochen</li><li>Erste Ergebnisse: kurz nach korrektem Setup</li></ul><div class="faq-note">Das ist ein Business — kein schnelles Geld.</div></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">🏪 Könnt ihr meinem Offline-Business helfen?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><p>Ja. Wir bauen professionelle Stores mit Shopify:</p><ul class="faq-a-list"><li>Store-Design &amp; Produkt-Setup</li><li>Zahlungsintegration</li><li>Launch-bereit in kurzer Zeit</li></ul><div class="faq-note">Du kannst schnell online verkaufen.</div></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">🎯 Für wen ist dieser Service gedacht?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><ul class="faq-a-list"><li>Einsteiger in Deutschland</li><li>Vielbeschäftigte Berufstätige</li><li>Studierende</li><li>Unternehmer</li></ul><div class="faq-note">Für jeden, der ein legales Online-Einkommen aufbauen möchte.</div></div></div></div>
+  </div>
+</div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section id="socials" style="background:var(--surface);border-top:1px solid var(--border)">
+<div class="container">
+  <div class="slabel">Folge uns</div>
+  <div class="stitle">Bleib immer auf dem neuesten Stand</div>
+  <div class="socials-grid">
+    <div class="social-card ig-c"><div class="sc-icon">📸</div><h3>Instagram</h3><p>Business-Tipps und tägliche eBay-Inspiration.</p><div class="sc-handle">@scalewith.fahad</div><a href="https://www.instagram.com/scalewith.fahad/" class="sc-btn ig-b">Folgen →</a></div>
+    <div class="social-card tt-c"><div class="sc-icon">🎵</div><h3>TikTok</h3><p>Kurze Videos über Online-Business in Deutschland.</p><div class="sc-handle">@scalewithfahad</div><a href="https://www.tiktok.com/@scalewithfahad" class="sc-btn tt-b">Folgen →</a></div>
+    <div class="social-card fb-c"><div class="sc-icon">👤</div><h3>Facebook Profil</h3><p>Persönliche Updates von Fahad direkt.</p><div class="sc-handle">ScalewithFahad</div><a href="https://www.facebook.com/profile.php?id=61585717853843" class="sc-btn fb-b">Folgen →</a></div>
+    <div class="social-card wa-c"><div class="sc-icon">💬</div><h3>WhatsApp Channel</h3><p>Exklusive Tipps direkt auf dein Handy.</p><div class="sc-handle">ScalewithFahad Channel</div><a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" class="sc-btn wa-b">Beitreten →</a></div>
+    <div class="social-card fbc-c"><div class="sc-icon">👥</div><h3>Facebook Gruppe</h3><p>Community "Online Money in Germany".</p><div class="sc-handle">Online Money in Germany</div><a href="https://www.facebook.com/groups/onlinemoneyingermany" class="sc-btn fbc-b">Beitreten →</a></div>
+    <div class="social-card tp-c"><div class="sc-icon">⭐</div><h3>Trustpilot</h3><p>Verifizierte Kundenbewertungen lesen oder hinterlassen.</p><div class="sc-handle">4.0 · 4 Bewertungen</div><a href="https://de.trustpilot.com/review/scalewithfahad.de" class="sc-btn tp-b">Bewertungen →</a></div>
+  </div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+<div class="container">
+  <div class="slabel">Kundenstimmen</div>
+  <div class="stitle">Was unsere Kunden sagen</div>
+  <div class="tp-header">
+    <div class="tp-score-box"><div class="tp-score">4.0</div><div class="tp-stars">★★★★☆</div><div class="tp-count">4 Bewertungen</div></div>
+    <div><div class="tp-logo">Trust<span>pilot</span></div><div style="color:var(--muted);font-size:.83rem;margin-top:.3rem;font-weight:300">Verifizierte Kundenbewertungen</div><div class="tp-link" style="margin-top:.4rem"><a href="https://de.trustpilot.com/review/scalewithfahad.de">Alle Bewertungen →</a></div></div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="rv-top"><div class="rv-info"><div class="rv-av av1">MR</div><div><div class="rv-name">Mehran Rasheed Goraya</div><div class="rv-meta">Deutschland · 2 Bewertungen</div></div></div><span class="rv-verified">Verifiziert</span></div><div class="rv-stars">★★★★★</div><div class="rv-title">Sehr professionell &amp; reaktionsschnell</div><div class="rv-body">Ich bin sehr zufrieden mit dem Service. Das Team ist äußerst reaktionsschnell und professionell in der Kommunikation. Klare Empfehlung!</div><div class="rv-date">Januar 2026</div></div>
+    <div class="review-card"><div class="rv-top"><div class="rv-info"><div class="rv-av av2">FS</div><div><div class="rv-name">Fahadsultan</div><div class="rv-meta">Deutschland · 2 Bewertungen</div></div></div><span class="rv-verified">Verifiziert</span></div><div class="rv-stars">★★★★★</div><div class="rv-title">Best service 📈</div><div class="rv-body">Wirklich top Service. Alles sauber und professionell abgewickelt. Sehr empfehlenswert für alle, die im Online-Business durchstarten wollen.</div><div class="rv-date">Januar 2026</div></div>
+    <div class="review-card" style="border:1px dashed rgba(0,185,124,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.75rem;padding:1.75rem"><div style="font-size:1.5rem">⭐</div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.92rem">Deine Erfahrung zählt</div><div style="color:var(--muted);font-size:.82rem;font-weight:300;line-height:1.65">Hast du mit uns zusammengearbeitet? Hinterlasse deine Bewertung auf Trustpilot.</div><a href="https://de.trustpilot.com/review/scalewithfahad.de" style="background:var(--tp);color:#fff;padding:.6rem 1.4rem;border-radius:8px;font-size:.84rem;font-weight:600;display:inline-flex;align-items:center;min-height:44px">Jetzt bewerten →</a></div>
+  </div>
+  <div class="tp-cta-row"><a href="https://de.trustpilot.com/review/scalewithfahad.de" class="tp-cta">Alle Bewertungen auf Trustpilot ansehen →</a></div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="background:var(--surface);border-top:1px solid var(--border)">
+<div class="container">
+  <div class="slabel">So funktioniert's</div>
+  <div class="stitle">In 3 Schritten loslegen</div>
+  <div class="steps">
+    <div class="step"><div class="step-n">01</div><h3>Beratung buchen</h3><p>Buche deine 1:1 Strategy Session für €50 + MwSt. Wir analysieren deine Situation und zeigen dir den richtigen Weg.</p></div>
+    <div class="step"><div class="step-n">02</div><h3>Onboarding &amp; Setup</h3><p>Wir richten alles ein, klären rechtliche Fragen und starten direkt mit der Umsetzung deines gewählten Service.</p></div>
+    <div class="step"><div class="step-n">03</div><h3>Ergebnisse &amp; Wachstum</h3><p>Transparente Kommunikation, monatliche Reports und klarer Fokus auf nachhaltigen, langfristigen Erfolg.</p></div>
+  </div>
+  <div style="text-align:center;margin-top:2.5rem">
+    <a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" class="btn">Beratung buchen — €50 + MwSt.</a>
+  </div>
+</div>
+</section>
+
+<!-- STATS -->
+<section style="padding:4rem 1.5rem;border-top:1px solid var(--border)">
+<div class="container">
+  <div class="slabel">Auf einen Blick</div>
+  <div class="stats">
+    <div class="stat"><div class="stat-v">8</div><div class="stat-m">Services</div><div class="stat-s">Alles aus einer Hand</div></div>
+    <div class="stat"><div class="stat-v" style="color:var(--green)">€800</div><div class="stat-m">Min. Kapital</div><div class="stat-s">Kein Lagerrisiko</div></div>
+    <div class="stat"><div class="stat-v" style="color:var(--accent)">€50</div><div class="stat-m">Beratung</div><div class="stat-s">Zzgl. 19% MwSt.</div></div>
+    <div class="stat"><div class="stat-v">4.0</div><div class="stat-m">Trustpilot</div><div class="stat-s">Verifiziert</div></div>
+    <div class="stat"><div class="stat-v">50%</div><div class="stat-m">Profit Share</div><div class="stat-s">Fair &amp; transparent</div></div>
+    <div class="stat"><div class="stat-v" style="color:var(--green)">100%</div><div class="stat-m">Legal &amp; konform</div><div class="stat-s">MwSt. &amp; eBay-Policy</div></div>
+  </div>
+</div>
+</section>
+
+<!-- WHY US -->
+<section style="background:var(--surface);border-top:1px solid var(--border)">
+<div class="container">
+  <div class="slabel">Warum ScalewithFahad?</div>
+  <div class="stitle">Dein Vorteil mit uns</div>
+  <div class="why">
+    <div class="why-c"><div class="wi"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><h3>Spezialisiert auf Deutschland</h3><p>Sprache, Recht, Käuferverhalten — wir kennen den deutschen Markt genau.</p></div>
+    <div class="why-c"><div class="wi"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div><h3>Transparentes Modell</h3><p>Keine Fixkosten, keine versteckten Gebühren. Wir verdienen nur, wenn du verdienst.</p></div>
+    <div class="why-c"><div class="wi"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><h3>MwSt.- &amp; rechtssicher</h3><p>Alle Abrechnungen MwSt.-konform und kompatibel mit SKR04 / Lexware Office.</p></div>
+    <div class="why-c"><div class="wi"><svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg></div><h3>Nachhaltig statt kurzfristig</h3><p>Keine Policy-Verstöße — nur saubere, langfristige Skalierung für dein Business.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- CTA SECTION -->
+<div class="cta-sec">
+<div class="container">
+  <h2>Bereit, den richtigen Schritt zu machen?</h2>
+  <p>Buche deine Strategy Session oder folge uns für tägliche Insights — wir sind für ernsthafte Kunden da.</p>
+  <div class="cta-btns">
+    <a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" class="cta-btn cb-acc">📞 Beratung buchen — €50</a>
+    <a href="https://www.instagram.com/scalewith.fahad/" class="cta-btn cb-ig">📸 Instagram</a>
+    <a href="https://www.tiktok.com/@scalewithfahad" class="cta-btn cb-tt">🎵 TikTok</a>
+    <a href="https://www.facebook.com/groups/onlinemoneyingermany" class="cta-btn cb-fb">👥 Community</a>
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
 <footer>
-  © 2026 Fahad bin Sultan · Germany · VAT ID: DE453914117<br><br>
-
-  <strong>E-Commerce Management Städte:</strong><br>
-  <a href="e-commerce-management-duesseldorf.html">Düsseldorf</a> ·
-  <a href="e-commerce-management-hamburg.html">Hamburg</a> ·
-  <a href="e-commerce-management-berlin.html">Berlin</a><br><br>
-
-  <a href="impressum.html">Impressum</a> ·
-  <a href="datenschutz.html">Datenschutz</a>
+  <div class="footer-top">
+    <div class="fl">ScaleWith<span>Fahad</span></div>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/scalewith.fahad/" class="fsoc fs-ig">📸 Instagram</a>
+      <a href="https://www.tiktok.com/@scalewithfahad" class="fsoc fs-tt">🎵 TikTok</a>
+      <a href="https://www.facebook.com/profile.php?id=61585717853843" class="fsoc fs-fb">👤 Facebook</a>
+      <a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" class="fsoc fs-wa">💬 WhatsApp</a>
+      <a href="https://www.facebook.com/groups/onlinemoneyingermany" class="fsoc fs-fbc">👥 Gruppe</a>
+      <a href="https://de.trustpilot.com/review/scalewithfahad.de" class="fsoc fs-tp">⭐ Trustpilot</a>
+    </div>
+  </div>
+  <div class="fi">Ein Service der Primashop · Inhaber Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · USt-IdNr. DE453914117</div>
+  <div class="footer-bottom">© 2025 ScalewithFahad · Alle Rechte vorbehalten</div>
 </footer>
 
-<a class="whatsapp"
-href="https://whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H"
-target="_blank">WhatsApp</a>
+<!-- STICKY BOTTOM CTA BAR (mobile only) -->
+<div class="sticky-cta-bar">
+  <a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" class="sticky-wa" aria-label="WhatsApp">💬</a>
+  <a href="#consultation" class="sticky-primary">Beratung buchen — €50</a>
+</div>
 
 <script>
-function setLang(lang){
-  document.querySelectorAll("[data-de]").forEach(el=>{
-    el.innerText = el.getAttribute("data-"+lang);
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var answer=item.querySelector('.faq-a');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){
+    i.classList.remove('open');
+    i.querySelector('.faq-a').classList.remove('open');
   });
-  document.documentElement.lang = lang;
+  if(!isOpen){item.classList.add('open');answer.classList.add('open');}
 }
 </script>
-
 </body>
 </html>
