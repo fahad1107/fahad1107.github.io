@@ -509,6 +509,42 @@ footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5r
   nav{padding:.7rem .85rem}
   .logo{font-size:1.05rem}
 }
+
+/* ============================================================
+   LIVE VISITOR BAR
+   ============================================================ */
+.live-bar{display:inline-flex;align-items:center;gap:.45rem;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.22);border-radius:50px;padding:.3rem .85rem;font-size:.75rem;color:#86efac;font-weight:500;margin-bottom:1.3rem}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;animation:livePulse 1.8s ease-in-out infinite}
+@keyframes livePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+
+/* ============================================================
+   SOCIAL PROOF POPUP
+   ============================================================ */
+.sp-popup{
+  position:fixed;bottom:96px;left:16px;z-index:500;
+  max-width:290px;width:calc(100vw - 32px);
+  background:var(--surface);border:1px solid rgba(59,130,246,0.3);
+  border-radius:14px;padding:1rem 1.1rem;
+  box-shadow:0 8px 32px rgba(0,0,0,0.55);
+  display:flex;gap:.75rem;align-items:flex-start;
+  transform:translateX(-110%);opacity:0;
+  transition:transform .45s cubic-bezier(.34,1.56,.64,1),opacity .35s ease;
+  pointer-events:none;
+}
+.sp-popup.sp-show{transform:translateX(0);opacity:1;pointer-events:auto}
+.sp-popup.sp-hide{transform:translateX(-110%);opacity:0;pointer-events:none}
+.sp-icon{font-size:1.5rem;line-height:1;flex-shrink:0;margin-top:.05rem}
+.sp-content{flex:1;min-width:0}
+.sp-title{font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:var(--white);margin-bottom:.22rem;line-height:1.3}
+.sp-desc{font-size:.75rem;color:var(--muted);font-weight:300;line-height:1.5}
+.sp-close{background:none;border:none;cursor:pointer;color:var(--muted);font-size:.85rem;padding:.1rem .2rem;flex-shrink:0;line-height:1;margin-top:.05rem;transition:color .2s}
+.sp-close:hover{color:var(--white)}
+.sp-bar{height:2px;background:rgba(59,130,246,0.15);border-radius:2px;margin-top:.75rem;overflow:hidden}
+.sp-bar-fill{height:100%;background:var(--accent);border-radius:2px;width:100%;transform-origin:left;animation:none}
+.sp-bar-fill.sp-animate{animation:spBar var(--sp-dur,6s) linear forwards}
+@keyframes spBar{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+@media(max-width:768px){.sp-popup{bottom:88px;left:12px;right:12px;max-width:none;width:auto}}
+
 </style>
 </head>
 <body>
@@ -530,6 +566,10 @@ footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5r
 <!-- HERO -->
 <div class="hero">
   <div class="badge">eBay · Shopify · Coaching · Digitalisierung · Deutschland</div>
+  <div class="live-bar">
+    <span class="live-dot"></span>
+    <span class="live-text"><span id="visitorCount">24</span> Personen schauen gerade</span>
+  </div>
   <h1>Dein Business — <em>professionell aufgebaut</em> und skaliert</h1>
   <p>Von eBay Dropshipping über Shopify-Stores bis zur Digitalisierung — alles aus einer Hand, rechtssicher und auf den deutschen Markt spezialisiert.</p>
   <div class="hero-btns">
@@ -942,5 +982,79 @@ function toggleFaq(btn){
   if(!isOpen){item.classList.add('open');answer.classList.add('open');}
 }
 </script>
+
+<!-- SOCIAL PROOF POPUP -->
+<div class="sp-popup" id="spPopup" role="alert" aria-live="polite">
+  <div class="sp-icon">🏆</div>
+  <div class="sp-content">
+    <div class="sp-title">10+ zufriedene Kunden</div>
+    <div class="sp-desc">verdienen bereits über <strong style="color:#86efac">1.000€</strong> monatlich mit ScalewithFahad.</div>
+    <div class="sp-bar"><div class="sp-bar-fill" id="spBarFill"></div></div>
+  </div>
+  <button class="sp-close" onclick="closePopup()" aria-label="Schließen">✕</button>
+</div>
+
+<script>
+/* ── SOCIAL PROOF POPUP ── */
+var spTimer, spBarTimer;
+var spDur = 6000; // visible for 6s then hides
+
+function showPopup(){
+  var p = document.getElementById('spPopup');
+  var b = document.getElementById('spBarFill');
+  p.classList.remove('sp-hide');
+  p.classList.add('sp-show');
+  b.style.setProperty('--sp-dur', (spDur/1000)+'s');
+  b.classList.remove('sp-animate');
+  void b.offsetWidth; // reflow to restart animation
+  b.classList.add('sp-animate');
+  spTimer = setTimeout(function(){ hidePopup(); }, spDur);
+}
+
+function hidePopup(){
+  clearTimeout(spTimer);
+  var p = document.getElementById('spPopup');
+  p.classList.remove('sp-show');
+  p.classList.add('sp-hide');
+  // Reshow every 25s
+  setTimeout(showPopup, 25000);
+}
+
+function closePopup(){
+  clearTimeout(spTimer);
+  hidePopup();
+}
+
+// First show after 3.5s
+setTimeout(showPopup, 3500);
+
+/* ── LIVE VISITOR COUNTER ── */
+var visitorEl = document.getElementById('visitorCount');
+var base = 18;
+var current = Math.floor(Math.random()*14)+base; // 18-31
+
+function updateVisitors(){
+  var change = Math.floor(Math.random()*5)-2; // -2 to +2
+  current = Math.max(12, Math.min(42, current + change));
+  if(visitorEl){
+    visitorEl.style.transition='opacity .4s';
+    visitorEl.style.opacity='0';
+    setTimeout(function(){
+      visitorEl.textContent = current;
+      visitorEl.style.opacity='1';
+    }, 400);
+  }
+}
+
+// Initial random value
+if(visitorEl) visitorEl.textContent = current;
+// Update every 8–15s
+function scheduleVisitor(){
+  var delay = 8000 + Math.random()*7000;
+  setTimeout(function(){ updateVisitors(); scheduleVisitor(); }, delay);
+}
+scheduleVisitor();
+</script>
+
 </body>
 </html>
