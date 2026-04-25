@@ -7,6 +7,13 @@
 <meta name="theme-color" content="#09090b">
 <title>ScalewithFahad | eBay Dropshipping & Online Business Services</title>
 <meta name="description" content="Professionelles eBay Dropshipping Management, Coaching und Online Business Services für den deutschen Markt. MwSt.-konform, rechtssicher, transparent.">
+
+<script>
+/* Prevent ALL uncaught errors showing in Safari console */
+/* onerror removed */
+window.addEventListener('unhandledrejection',function(e){e.preventDefault();});
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -260,7 +267,7 @@ REVIEWS
 .rv-body{font-size:.84rem;color:var(–muted);font-weight:300;line-height:1.65}
 .rv-date{font-size:.73rem;color:rgba(255,255,255,0.18)}
 .rv-verified{font-size:.68rem;font-weight:500;color:var(–tp);background:rgba(0,185,124,0.08);border:1px solid rgba(0,185,124,0.15);padding:.13rem .48rem;border-radius:50px}
-.tp-cta-row{text-align:center;margin-top:1.8rem}.tp-refresh-info{display:flex;align-items:center}
+.tp-cta-row{text-align:center;margin-top:1.8rem}
 .tp-cta{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(0,185,124,0.3);color:var(–tp);padding:.65rem 1.6rem;border-radius:8px;font-size:.85rem;font-weight:500;transition:background .2s;min-height:48px}
 .tp-cta:hover{background:rgba(0,185,124,0.08)}
 
@@ -589,16 +596,16 @@ color:#fff;
 <!-- HERO -->
 
 <div class="hero">
-  <div class="badge">eBay · Shopify · Coaching · Digitalisierung · Deutschland</div>
+  <div class="badge" data-de="eBay · Shopify · Coaching · Digitalisierung · Deutschland" data-en="eBay · Shopify · Coaching · Digitalization · Germany">eBay · Shopify · Coaching · Digitalisierung · Deutschland</div>
   <div class="live-bar">
     <span class="live-dot"></span>
-    <span class="live-text"><span id="visitorCount">24</span> Personen schauen gerade</span>
+    <span class="live-text" data-de="Personen schauen gerade" data-en="people viewing right now"><span id="visitorCount">24</span> Personen schauen gerade</span>
   </div>
-  <h1>Dein Business — <em>professionell aufgebaut</em> und skaliert</h1>
-  <p>Von eBay Dropshipping über Shopify-Stores bis zur Digitalisierung — alles aus einer Hand, rechtssicher und auf den deutschen Markt spezialisiert.</p>
+  <h1 data-de="Dein Business — <em>professionell aufgebaut</em> und skaliert" data-en="Your Business — <em>professionally built</em> and scaled">Dein Business — <em>professionell aufgebaut</em> und skaliert</h1>
+  <p data-de="Von eBay Dropshipping über Shopify-Stores bis zur Digitalisierung — alles aus einer Hand, rechtssicher und auf den deutschen Markt spezialisiert." data-en="From eBay Dropshipping to Shopify stores and digitalization — all-in-one, legally compliant, specialized for the German market.">Von eBay Dropshipping über Shopify-Stores bis zur Digitalisierung — alles aus einer Hand, rechtssicher und auf den deutschen Markt spezialisiert.</p>
   <div class="hero-btns">
-    <a href="https://wa.me/+4917660019583" class="btn">Beratung buchen — €50</a>
-    <a href="#services" class="btn-ghost">Alle 8 Services</a>
+    <a href="https://wa.me/+4917660019583" class="btn" data-de="Beratung buchen — €50" data-en="Book Consultation — €50">Beratung buchen — €50</a>
+    <a href="#services" class="btn-ghost" data-de="Alle 8 Services" data-en="All 8 Services">Alle 8 Services</a>
   </div>
   <div class="social-strip">
     <a href="https://www.instagram.com/scalewith.fahad/" class="soc-btn ig">📸 Instagram</a>
@@ -614,8 +621,8 @@ color:#fff;
 
 <section id="services" style="background:var(--surface);border-top:1px solid var(--border)">
 <div class="container">
-  <div class="slabel">Was wir anbieten</div>
-  <div class="stitle">8 Services — ein Ansprechpartner</div>
+  <div class="slabel" data-de="Was wir anbieten" data-en="What We Offer">Was wir anbieten</div>
+  <div class="stitle" data-de="8 Services — ein Ansprechpartner" data-en="8 Services — One Contact">8 Services — ein Ansprechpartner</div>
   <div class="ssub">Für Anfänger, Fortgeschrittene und Unternehmer — wir haben den passenden Service für deine Situation.</div>
   <div class="svc-grid">
 
@@ -685,8 +692,8 @@ color:#fff;
 
 <section id="consultation" style="background:var(--surface);border-top:1px solid var(--border)">
 <div class="container">
-  <div class="slabel">Beratung &amp; Erstgespräch</div>
-  <div class="stitle">Professional Strategy Session</div>
+  <div class="slabel" data-de="Beratung &amp; Erstgespräch" data-en="Consultation">Beratung &amp; Erstgespräch</div>
+  <div class="stitle" data-de="Professional Strategy Session" data-en="Professional Strategy Session">Professional Strategy Session</div>
   <div class="ssub">Kein Sales-Call — eine echte Arbeitssession für ernsthafte Kunden, die richtig starten wollen.</div>
   <div class="consult-wrap">
     <div class="consult-main">
@@ -718,7 +725,7 @@ color:#fff;
         </ul>
       </div>
       <div class="c-note"><p>Das ist kein Sales-Call — das ist eine Arbeitssession.</p></div>
-      <a href="https://wa.me/+4917660019583" class="consult-cta">Jetzt Beratung buchen — €50 + MwSt. →</a>
+      <a href="https://wa.me/+4917660019583" class="consult-cta" data-de="Jetzt Beratung buchen — €50 + MwSt. →" data-en="Book Now — €50 + VAT →">Jetzt Beratung buchen — €50 + MwSt. →</a>
     </div>
     <div class="consult-side">
       <div class="cs-card">
@@ -760,8 +767,8 @@ color:#fff;
 
 <section id="invest">
 <div class="container">
-  <div class="slabel">Mindestinvestition &amp; Modell</div>
-  <div class="stitle">Was du mitbringen musst</div>
+  <div class="slabel" data-de="Mindestinvestition &amp; Modell" data-en="Minimum Investment">Mindestinvestition &amp; Modell</div>
+  <div class="stitle" data-de="Was du mitbringen musst" data-en="What You Need to Start">Was du mitbringen musst</div>
   <div class="ssub">Kein Lager, kein Vorabkauf, kein Risiko unsold stock — nur ein kleines Startkapital für die Bestellabwicklung.</div>
   <div class="invest-grid">
     <div class="invest-card green-c">
@@ -797,8 +804,8 @@ color:#fff;
 
 <section style="background:var(--surface);border-top:1px solid var(--border)">
 <div class="container">
-  <div class="slabel">Sicherheit &amp; Transparenz</div>
-  <div class="stitle">Warum günstig oft teuer wird</div>
+  <div class="slabel" data-de="Sicherheit &amp; Transparenz" data-en="Safety &amp; Transparency">Sicherheit &amp; Transparenz</div>
+  <div class="stitle" data-de="Warum günstig oft teuer wird" data-en="Why Cheap Often Costs More">Warum günstig oft teuer wird</div>
   <div class="ssub">Viele Anbieter locken mit niedrigen Preisen — was dahinter steckt, kann dein eBay-Konto dauerhaft gefährden.</div>
   <div class="warning-wrap">
     <div class="warning-top">
@@ -865,8 +872,8 @@ color:#fff;
 
 <section id="faq">
 <div class="container">
-  <div class="slabel">Häufige Fragen</div>
-  <div class="stitle">Alles, was du wissen musst</div>
+  <div class="slabel" data-de="Häufige Fragen" data-en="FAQ">Häufige Fragen</div>
+  <div class="stitle" data-de="Alles, was du wissen musst" data-en="Everything You Need to Know">Alles, was du wissen musst</div>
   <div class="ssub">Ehrliche, direkte Antworten — kein Marketing-Sprech.</div>
   <div class="faq-grid">
     <div class="faq-item"><button class="faq-q"><span class="faq-q-text">💰 Wie viel Geld brauche ich zum Start?</span><span class="faq-chevron">▼</span></button><div class="faq-a"><div class="faq-a-inner"><p>Um ein eBay-Dropshipping-Business korrekt zu betreiben, benötigst du:</p><ul class="faq-a-list"><li>€800 – €1.000 Startkapital</li><li>Wird nur für die Auftragsabwicklung verwendet</li><li>Kein Lager oder Warenbestand nötig</li></ul><div class="faq-note">Du kaufst keine Produkte im Voraus — du zahlst erst, wenn du Bestellungen erhältst.</div></div></div></div>
@@ -889,8 +896,8 @@ color:#fff;
 
 <section id="socials" style="background:var(--surface);border-top:1px solid var(--border)">
 <div class="container">
-  <div class="slabel">Folge uns</div>
-  <div class="stitle">Bleib immer auf dem neuesten Stand</div>
+  <div class="slabel" data-de="Folge uns" data-en="Follow Us">Folge uns</div>
+  <div class="stitle" data-de="Bleib immer auf dem neuesten Stand" data-en="Stay Up to Date">Bleib immer auf dem neuesten Stand</div>
   <div class="socials-grid">
     <div class="social-card ig-c"><div class="sc-icon">📸</div><h3>Instagram</h3><p>Business-Tipps und tägliche eBay-Inspiration.</p><div class="sc-handle">@scalewith.fahad</div><a href="https://www.instagram.com/scalewith.fahad/" class="sc-btn ig-b">Folgen →</a></div>
     <div class="social-card tt-c"><div class="sc-icon">🎵</div><h3>TikTok</h3><p>Kurze Videos über Online-Business in Deutschland.</p><div class="sc-handle">@scalewithfahad</div><a href="https://www.tiktok.com/@scalewithfahad" class="sc-btn tt-b">Folgen →</a></div>
@@ -906,8 +913,8 @@ color:#fff;
 
 <section id="reviews">
 <div class="container">
-  <div class="slabel" data-i18n="Kundenstimmen">Kundenstimmen</div>
-  <div class="stitle" data-i18n="Was unsere Kunden sagen">Was unsere Kunden sagen</div>
+  <div class="slabel" data-de="Kundenstimmen" data-en="Customer Reviews">Kundenstimmen</div>
+  <div class="stitle" data-de="Was unsere Kunden sagen" data-en="What Our Clients Say">Was unsere Kunden sagen</div>
 
   <!-- Trustpilot header bar -->
 
@@ -921,10 +928,10 @@ color:#fff;
       <div class="tp-logo">Trust<span>pilot</span></div>
       <div style="color:var(--muted);font-size:.83rem;margin-top:.3rem;font-weight:300">Verifizierte Kundenbewertungen</div>
       <div class="tp-link" style="margin-top:.4rem">
-        <a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank" rel="noopener">Alle Bewertungen →</a>
+        <a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank" rel="noopener" data-de="Alle Bewertungen →" data-en="All Reviews →">Alle Bewertungen →</a>
       </div>
     </div>
-    <div class="tp-refresh-info" id="tpRefreshInfo"></div>
+
   </div>
 
   <!-- Review cards grid — filled by JS, fallback shown until JS runs -->
@@ -937,7 +944,7 @@ color:#fff;
   </div>
 
   <div class="tp-cta-row">
-    <a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank" rel="noopener" class="tp-cta">Alle Bewertungen auf Trustpilot ansehen →</a>
+    <a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank" rel="noopener" class="tp-cta" data-de="Alle Bewertungen auf Trustpilot ansehen →" data-en="See all reviews on Trustpilot →">Alle Bewertungen auf Trustpilot ansehen →</a>
   </div>
 </div>
 </section>
@@ -946,15 +953,15 @@ color:#fff;
 
 <section style="background:var(--surface);border-top:1px solid var(--border)">
 <div class="container">
-  <div class="slabel">So funktioniert's</div>
-  <div class="stitle">In 3 Schritten loslegen</div>
+  <div class="slabel" data-de="So funktioniert's" data-en="How It Works">So funktioniert's</div>
+  <div class="stitle" data-de="In 3 Schritten loslegen" data-en="Get Started in 3 Steps">In 3 Schritten loslegen</div>
   <div class="steps">
     <div class="step"><div class="step-n">01</div><h3>Beratung buchen</h3><p>Buche deine 1:1 Strategy Session für €50 + MwSt. Wir analysieren deine Situation und zeigen dir den richtigen Weg.</p></div>
     <div class="step"><div class="step-n">02</div><h3>Onboarding &amp; Setup</h3><p>Wir richten alles ein, klären rechtliche Fragen und starten direkt mit der Umsetzung deines gewählten Service.</p></div>
     <div class="step"><div class="step-n">03</div><h3>Ergebnisse &amp; Wachstum</h3><p>Transparente Kommunikation, monatliche Reports und klarer Fokus auf nachhaltigen, langfristigen Erfolg.</p></div>
   </div>
   <div style="text-align:center;margin-top:2.5rem">
-    <a href="https://wa.me/+4917660019583" class="btn">Beratung buchen — €50 + MwSt.</a>
+    <a href="https://wa.me/+4917660019583" class="btn" data-de="Beratung buchen — €50 + MwSt." data-en="Book Consultation — €50 + VAT">Beratung buchen — €50 + MwSt.</a>
   </div>
 </div>
 </section>
@@ -963,7 +970,7 @@ color:#fff;
 
 <section style="padding:4rem 1.5rem;border-top:1px solid var(--border)">
 <div class="container">
-  <div class="slabel">Auf einen Blick</div>
+  <div class="slabel" data-de="Auf einen Blick" data-en="At a Glance">Auf einen Blick</div>
   <div class="stats">
     <div class="stat"><div class="stat-v">8</div><div class="stat-m">Services</div><div class="stat-s">Alles aus einer Hand</div></div>
     <div class="stat"><div class="stat-v" style="color:var(--green)">€800</div><div class="stat-m">Min. Kapital</div><div class="stat-s">Kein Lagerrisiko</div></div>
@@ -979,8 +986,8 @@ color:#fff;
 
 <section style="background:var(--surface);border-top:1px solid var(--border)">
 <div class="container">
-  <div class="slabel">Warum ScalewithFahad?</div>
-  <div class="stitle">Dein Vorteil mit uns</div>
+  <div class="slabel" data-de="Warum ScalewithFahad?" data-en="Why ScalewithFahad?">Warum ScalewithFahad?</div>
+  <div class="stitle" data-de="Dein Vorteil mit uns" data-en="Your Advantage With Us">Dein Vorteil mit uns</div>
   <div class="why">
     <div class="why-c"><div class="wi"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><h3>Spezialisiert auf Deutschland</h3><p>Sprache, Recht, Käuferverhalten — wir kennen den deutschen Markt genau.</p></div>
     <div class="why-c"><div class="wi"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div><h3>Transparentes Modell</h3><p>Keine Fixkosten, keine versteckten Gebühren. Wir verdienen nur, wenn du verdienst.</p></div>
@@ -1004,7 +1011,7 @@ color:#fff;
       <a href="https://de.trustpilot.com/review/scalewithfahad.de" class="fsoc fs-tp">⭐ Trustpilot</a>
     </div>
   </div>
-  <div class="fi">Ein Service der Primashop · Inhaber Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · USt-IdNr. DE453914117</div>
+  <div class="fi" data-de="Ein Service der Primashop · Inhaber Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · USt-IdNr. DE453914117" data-en="A service of Primashop · Owner Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · VAT ID DE453914117">Ein Service der Primashop · Inhaber Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · USt-IdNr. DE453914117</div>
   <div class="footer-bottom">© 2025 ScalewithFahad · Alle Rechte vorbehalten · <a href="impressum.html" style="color:rgba(255,255,255,0.3);text-decoration:underline">Impressum</a></div>
 </footer>
 
@@ -1012,7 +1019,7 @@ color:#fff;
 
 <div class="sticky-cta-bar">
   <a href="https://www.whatsapp.com/channel/0029Vb7NdVRISTkEInsl4o0H" class="sticky-wa" aria-label="WhatsApp">💬</a>
-  <a href="https://wa.me/+4917660019583" class="sticky-primary">Beratung buchen — €50</a>
+  <a href="https://wa.me/+4917660019583" class="sticky-primary" data-de="Beratung buchen — €50" data-en="Book Now — WhatsApp">Beratung buchen — €50</a>
 </div>
 
 <script>
@@ -1048,23 +1055,7 @@ color:#fff;
 })();
 </script>
 
-  <div class="sp-content">
-    <div class="sp-title">10+ zufriedene Kunden</div>
-    <div class="sp-desc">verdienen bereits über <strong style="color:#86efac">1.000€</strong> monatlich mit ScalewithFahad.</div>
-    <div class="sp-bar"><div class="sp-bar-fill" id="spBarFill"></div></div>
-  </div>
-  <button class="sp-close" onclick="closePopup()" aria-label="Schließen">✕</button>
-</div>
-
 <script>
-
-}
-
-
-
-// First show after 3.5s
-setTimeout(showPopup, 3500);
-
 /* ── LIVE VISITOR COUNTER ── */
 var visitorEl = document.getElementById('visitorCount');
 var base = 18;
@@ -1091,713 +1082,6 @@ function scheduleVisitor(){
   setTimeout(function(){ updateVisitors(); scheduleVisitor(); }, delay);
 }
 scheduleVisitor();
-</script>
-
-<script>
-/* ============================================================
-   AUTO LANGUAGE DETECTION + TRANSLATION
-   Supports: DE (default) | EN (fallback for all other languages)
-   ============================================================ */
-
-var CURRENT_LANG = 'de';
-
-/* ── Translation map: German → English ── */
-var T = {
-
-  /* NAV */
-  'Beratung': 'Consult',
-  'Investment': 'Investment',
-  
-  /* HERO */
-  'eBay · Shopify · Coaching · Digitalisierung · Deutschland':
-    'eBay · Shopify · Coaching · Digitalization · Germany',
-  'und skaliert': 'and scaled',
-  'Von eBay Dropshipping über Shopify-Stores bis zur Digitalisierung — alles aus einer Hand, rechtssicher und auf den deutschen Markt spezialisiert.':
-    'From eBay Dropshipping to Shopify stores and digitalization — all-in-one, legally compliant and specialized for the German market.',
-  'Beratung buchen — €50': 'Book Consultation — €50',
-  'Alle 8 Services': 'All 8 Services',
-  'Personen schauen gerade': 'people viewing right now',
-
-  /* SOCIAL STRIP */
-  'Gruppe': 'Group',
-
-  /* SECTION LABELS */
-  'Was wir anbieten': 'What We Offer',
-  'Beratung & Erstgespräch': 'Consultation',
-  'Mindestinvestition & Modell': 'Minimum Investment & Model',
-  'Sicherheit & Transparenz': 'Safety & Transparency',
-  'Häufige Fragen': 'Frequently Asked Questions',
-  'Folge uns': 'Follow Us',
-  'Kundenstimmen': 'Customer Reviews',
-  'So funktioniert\'s': 'How It Works',
-  'Auf einen Blick': 'At a Glance',
-  'Warum ScalewithFahad?': 'Why ScalewithFahad?',
-
-  /* SECTION TITLES */
-  '8 Services — ein Ansprechpartner': '8 Services — One Contact',
-  'Professional Strategy Session': 'Professional Strategy Session',
-  'Was du mitbringen musst': 'What You Need to Start',
-  'Warum günstig oft teuer wird': 'Why Cheap Often Costs More',
-  'Alles, was du wissen musst': 'Everything You Need to Know',
-  'Bleib immer auf dem neuesten Stand': 'Stay Always Up to Date',
-  'Was unsere Kunden sagen': 'What Our Customers Say',
-  'In 3 Schritten loslegen': 'Get Started in 3 Steps',
-  'Dein Vorteil mit uns': 'Your Advantage With Us',
-
-  /* SECTION SUBTITLES */
-  'Für Anfänger, Fortgeschrittene und Unternehmer — wir haben den passenden Service für deine Situation.':
-    'For beginners, advanced users and entrepreneurs — we have the right service for your situation.',
-  'Kein Sales-Call — eine echte Arbeitssession für ernsthafte Kunden, die richtig starten wollen.':
-    'No sales call — a real working session for serious clients who want to start correctly.',
-  'Kein Lager, kein Vorabkauf, kein Risiko unsold stock — nur ein kleines Startkapital für die Bestellabwicklung.':
-    'No warehouse, no upfront purchase, no unsold stock risk — just a small starting capital for order processing.',
-  'Viele Anbieter locken mit niedrigen Preisen — was dahinter steckt, kann dein eBay-Konto dauerhaft gefährden.':
-    'Many providers attract with low prices — what lies behind it can permanently damage your eBay account.',
-  'Ehrliche, direkte Antworten — kein Marketing-Sprech.':
-    'Honest, direct answers — no marketing talk.',
-  'Folge uns für tägliche Tipps zu eBay, Online-Business und mehr.':
-    'Follow us for daily tips on eBay, online business and more.',
-  'Verifizierte Kundenbewertungen': 'Verified Customer Reviews',
-
-  /* SERVICE TITLES */
-  'eBay Dropshipping Coaching': 'eBay Dropshipping Coaching',
-  'eBay Account Setup & VAT-System': 'eBay Account Setup & VAT System',
-  'eBay Account Management (Profit Share)': 'eBay Account Management (Profit Share)',
-  'Produktrecherche & Listing-Optimierung': 'Product Research & Listing Optimization',
-  'Account Health & Performance Optimierung': 'Account Health & Performance Optimization',
-  'Shopify Store Setup für Unternehmen': 'Shopify Store Setup for Businesses',
-  'Business-Digitalisierung (Offline → Online)': 'Business Digitalization (Offline → Online)',
-  'Student Online Income Guidance (Deutschland)': 'Student Online Income Guidance (Germany)',
-
-  /* SERVICE DESCRIPTIONS */
-  'Komplettes Schritt-für-Schritt-Programm für Einsteiger — vom ersten Tag bis zum laufenden Business in Deutschland.':
-    'Complete step-by-step program for beginners — from day one to a running business in Germany.',
-  'Komplettes, rechtssicheres Setup eines eBay-Geschäfts in Deutschland — technisch und legal.':
-    'Complete, legally compliant setup of an eBay business in Germany — technical and legal.',
-  'Done-for-you: Wir managen und skalieren deinen eBay-Account vollständig.':
-    'Done-for-you: We fully manage and scale your eBay account.',
-  'Gezielte Verbesserung der Verkäufe durch bessere Produkte und optimierte Listings.':
-    'Targeted improvement of sales through better products and optimized listings.',
-  'Account-Metriken verbessern, Risiken vermeiden und langfristig sicher skalieren.':
-    'Improve account metrics, avoid risks and scale safely long-term.',
-  'Professionellen Onlineshop mit Shopify erstellen — modern, mobil, verkaufsfertig.':
-    'Create a professional online store with Shopify — modern, mobile, sales-ready.',
-  'Lokale Unternehmen ins Internet bringen — mit Website, Systemen und Strategie.':
-    'Bringing local businesses online — with website, systems and strategy.',
-  'Studierenden helfen, legal und neben dem Studium online Geld zu verdienen.':
-    'Helping students earn money online legally alongside their studies.',
-
-  /* SERVICE CARD LABELS */
-  'Was du bekommst': 'What You Get',
-  'Für wen': 'Who It\'s For',
-  'Preismodell': 'Pricing Model',
-  'Beratung buchen →': 'Book Consultation →',
-  'Einmalige Coaching-Fee': 'One-time Coaching Fee',
-  'Einmalige Setup-Fee': 'One-time Setup Fee',
-  'Einmalige Service-Fee': 'One-time Service Fee',
-  'Einmalige Projektpauschale': 'One-time Project Fee',
-
-  /* SERVICE OUTCOMES */
-  'Client versteht, wie man ein legales, profitables eBay-Business führt':
-    'Client understands how to run a legal, profitable eBay business',
-  'Client ist vollständig bereit, legal in Deutschland zu verkaufen':
-    'Client is fully ready to sell legally in Germany',
-  'Client verdient, ohne die Operationen selbst zu managen':
-    'Client earns without managing the operations themselves',
-  'Mehr Sichtbarkeit und höhere Conversion-Rate':
-    'More visibility and higher conversion rate',
-  'Stabiles, sicheres und langfristiges Wachstum':
-    'Stable, safe and long-term growth',
-  'Business ist vollständig online und verkaufsbereit':
-    'Business is fully online and sales-ready',
-  'Business hängt nicht mehr nur von Laufkundschaft ab':
-    'Business no longer depends only on walk-in customers',
-  'Legales Nebeneinkommen mit echtem Wachstumspotenzial':
-    'Legal side income with real growth potential',
-
-  /* SERVICE LIST ITEMS */
-  'A–Z Erklärung des Geschäftsmodells': 'A–Z explanation of the business model',
-  'eBay Account Setup Anleitung': 'eBay account setup guide',
-  'Produktrecherche-Strategie': 'Product research strategy',
-  'Listing-Erstellung & Optimierung': 'Listing creation & optimization',
-  'Bestellabwicklung & Fulfillment': 'Order processing & fulfillment',
-  'Kundenservice-Handling': 'Customer service handling',
-  'MwSt. & Rechtliches (Deutschland)': 'VAT & Legal (Germany)',
-  'eBay-Account (korrekte Struktur)': 'eBay account (correct structure)',
-  'Business-Integration': 'Business integration',
-  'USt-ID Erklärung & Setup-Support': 'VAT ID explanation & setup support',
-  'Account-Konfiguration für den Verkauf': 'Account configuration for selling',
-  'Basis-Shop-Optimierung': 'Basic shop optimization',
-  'Produktrecherche & Skalierungsstrategie': 'Product research & scaling strategy',
-  'Retouren & Problemmanagement': 'Returns & problem management',
-  'Account-Performance-Monitoring': 'Account performance monitoring',
-  'Kontinuierliche Skalierung': 'Continuous scaling',
-  '50% des Nettogewinns (nach vereinbarten Kosten)': '50% of net profit (after agreed costs)',
-  '+19% MwSt. auf die Management-Fee': '+19% VAT on the management fee',
-  'Profitable Produktidentifikation': 'Profitable product identification',
-  'Marktbedarfsanalyse & Wettbewerbsrecherche': 'Market demand analysis & competitor research',
-  'SEO-optimierte Titel': 'SEO-optimized titles',
-  'Hochkonvertierende Beschreibungen': 'High-converting descriptions',
-  'Preisstrategie': 'Pricing strategy',
-  'Performance-Review (Defects, Verspätungen etc.)': 'Performance review (defects, delays etc.)',
-  'Policy-Compliance-Check': 'Policy compliance check',
-  'Risikominimierungsstrategien': 'Risk minimization strategies',
-  'Account-Stabilisierung': 'Account stabilization',
-  'Wachstumssichere Skalierungsstrategie': 'Growth-safe scaling strategy',
-  'Vollständiges Store-Design (modern & mobil)': 'Complete store design (modern & mobile)',
-  'Produkt-Setup & Zahlungsintegration': 'Product setup & payment integration',
-  'Basis-SEO-Setup': 'Basic SEO setup',
-  'Store-Struktur & Navigation': 'Store structure & navigation',
-  'Launch-bereite Website': 'Launch-ready website',
-  'Online-Präsenz-Setup': 'Online presence setup',
-  'Website-Erstellung': 'Website creation',
-  'Service-Präsentationsseiten': 'Service presentation pages',
-  'Lead- & Kontaktsystem': 'Lead & contact system',
-  'Digitale Basisstrategie': 'Digital base strategy',
-  'Business-Modell-Beratung': 'Business model consultation',
-  'Legal & Steuergrundlagen (Deutschland)': 'Legal & tax fundamentals (Germany)',
-  'Plattformauswahl (eBay / Freelance / Online)': 'Platform selection (eBay / Freelance / Online)',
-  'Schritt-für-Schritt-Startplan': 'Step-by-step start plan',
-  'Einkommensskalierungsstrategie': 'Income scaling strategy',
-
-  /* FOR WHO TAGS */
-  'Einsteiger': 'Beginners',
-  'Studierende': 'Students',
-  'MwSt.-Neulinge': 'VAT newcomers',
-  'Neueinsteiger': 'New starters',
-  'Beim Setup feststeckend': 'Stuck with setup',
-  'Vielbeschäftigte': 'Busy professionals',
-  'Investoren': 'Investors',
-  'Passives Einkommen': 'Passive income',
-  'Niedrige Verkaufszahlen': 'Low sales numbers',
-  'Accounts ohne Wachstum': 'Accounts without growth',
-  'Account mit Warnungen': 'Account with warnings',
-  'Suspendierungsangst': 'Suspension concerns',
-  'Lokale Unternehmen': 'Local businesses',
-  'Neue Marken': 'New brands',
-  'Lokale Shops': 'Local shops',
-  'Dienstleister': 'Service providers',
-  'Studierende in Deutschland': 'Students in Germany',
-
-  /* CONSULTATION */
-  'Kostenpflichtige Beratung': 'Paid Consultation',
-  '1:1 Private Consultation': '1:1 Private Consultation',
-  '45–60 Minuten': '45–60 minutes',
-  'Auf deine Situation zugeschnitten': 'Tailored to your situation',
-  'Klare, umsetzbare Empfehlungen': 'Clear, actionable recommendations',
-  'zzgl. 19% MwSt.': 'plus 19% VAT',
-  'Gesamtbetrag: €59,50 inkl. MwSt.': 'Total: €59.50 incl. VAT',
-  'Was die Session beinhaltet': 'What the session includes',
-  'Echte Business-Insights — keine Standardantworten': 'Real business insights — no standard answers',
-  'MwSt.- & Rechtsberatung (Deutschland-spezifisch)': 'VAT & legal advice (Germany-specific)',
-  'Bewährte Strategien aus der Praxis': 'Proven strategies from practice',
-  'Persönliche Roadmap für deine Situation': 'Personal roadmap for your situation',
-  'Klares Verständnis, wie du korrekt startest': 'Clear understanding of how to start correctly',
-  'Kostspielige Fehler vermeiden (VAT & Legal)': 'Avoiding costly mistakes (VAT & Legal)',
-  'Das ist kein Sales-Call — das ist eine Arbeitssession.': 'This is not a sales call — this is a working session.',
-  'Jetzt Beratung buchen — €50 + MwSt. →': 'Book Consultation Now — €50 + VAT →',
-  'Was du bekommst': 'What You Get',
-  'Klares Verständnis für den richtigen Start': 'Clear understanding for the right start',
-  'Vermeidung teurer Fehler (VAT & Legal)': 'Avoiding expensive mistakes (VAT & Legal)',
-  'Personalisierte Roadmap für deine Situation': 'Personalized roadmap for your situation',
-  'Direkte Antworten — kein Umweg': 'Direct answers — no detours',
-  'Warum kostenpflichtig?': 'Why paid?',
-  'Wir respektieren deine Zeit — und auch unsere': 'We respect your time — and ours',
-  'Jede Session enthält echten, konkreten Mehrwert': 'Every session contains real, concrete value',
-  'Nur für ernsthafte Kunden — keine Zeitverschwendung': 'Only for serious clients — no time wasting',
-  'Garantiert fokussierte, persönliche Beratung': 'Guaranteed focused, personal consultation',
-  'Unsere Philosophie': 'Our Philosophy',
-  'Ernsthafte Kunden': 'Serious clients',
-  'Langfristige Ergebnisse': 'Long-term results',
-  'Professionelle, transparente Arbeit': 'Professional, transparent work',
-  'Wenn du kostenlose Ratschläge suchst, sind wir vielleicht nicht die richtige Wahl.':
-    'If you are looking for free advice, we may not be the right choice.',
-  'Wenn du etwas Korrektes und Nachhaltiges aufbauen möchtest — wir helfen dir.':
-    'If you want to build something correct and sustainable — we will help you.',
-
-  /* INVESTMENT */
-  'Mindestkapital': 'Minimum Capital',
-  'Startkapital für die Bestellabwicklung': 'Starting capital for order processing',
-  'Wird ausschließlich für Auftragsabwicklung verwendet': 'Used exclusively for order processing',
-  'Keine Vorauszahlung für unseren Service': 'No upfront payment for our service',
-  'Kein Lager oder Wareneinkauf nötig': 'No warehouse or goods purchase needed',
-  'Flexibel und jederzeit skalierbar': 'Flexible and scalable at any time',
-  'Du zahlst nur, wenn Bestellungen eingehen — kein Risiko von unverkauften Produkten':
-    'You only pay when orders come in — no risk of unsold products',
-  'Kein Lager. Kein Risiko.': 'No Warehouse. No Risk.',
-  'Keine Produkte im Voraus kaufen': 'No products to buy in advance',
-  'Kein Lager oder Lagerraum nötig': 'No warehouse or storage space needed',
-  'Kein Risiko von "Dead Stock"': 'No risk of "dead stock"',
-  'Vollständig flexibles, skalierbares Modell': 'Fully flexible, scalable model',
-  'Bestellungen werden erst bei Verkauf aufgegeben': 'Orders are only placed when sold',
-  'Lagerkosten': 'Storage costs',
-  'Vorabservice-Fee': 'Upfront service fee',
-
-  /* WARNING */
-  'Was billige Anbieter versprechen': 'What cheap providers promise',
-  'Das echte Risiko für dich': 'The real risk for you',
-  'Sehr niedriger Gewinnanteil (30–35%)': 'Very low profit share (30–35%)',
-  '"Schnelle Ergebnisse" Versprechen': '"Quick results" promises',
-  'Keine Rechnungen oder legale Struktur': 'No invoices or legal structure',
-  'Kein MwSt.-konformes Abrechnungsmodell': 'No VAT-compliant billing model',
-  'Was sie oft wirklich tun: Policy-verstößige Methoden, gefälschte Trackingnummern und nicht konforme Prozesse — die deinen Account gefährden.':
-    'What they often really do: policy-violating methods, fake tracking numbers and non-compliant processes — that endanger your account.',
-  'Dauerhafte eBay Account-Sperrung': 'Permanent eBay account suspension',
-  'Account-Einschränkungen & Limits': 'Account restrictions & limits',
-  'Verlust der Verkaufsmöglichkeit langfristig': 'Loss of selling ability long-term',
-  'Kein Weg zurück nach permanenter Sperre': 'No way back after permanent ban',
-  'eBay setzt strenge Verkäuferrichtlinien durch. Ein einmal dauerhaft eingeschränkter Account ist extrem schwer wiederherzustellen.':
-    'eBay enforces strict seller policies. An account once permanently restricted is extremely difficult to restore.',
-  'Business in Deutschland = Rechtliche Verantwortung': 'Business in Germany = Legal Responsibility',
-  'Das wird erwartet': 'What is expected',
-  'Korrekte MwSt.-Abwicklung (Finanzamt)': 'Correct VAT processing (tax office)',
-  'Saubere Buchführung (SKR04)': 'Clean bookkeeping (SKR04)',
-  'Rechtskonforme Rechnungsstellung': 'Legally compliant invoicing',
-  'Einhaltung steuerlicher Vorschriften': 'Compliance with tax regulations',
-  'Folgen bei Nichteinhaltung': 'Consequences of non-compliance',
-  'Finanzielle Strafen vom Finanzamt': 'Financial penalties from tax office',
-  'Steuerliche Nachzahlungen': 'Tax back payments',
-  'Rechtliche Komplikationen': 'Legal complications',
-  'Unser Ansatz — sauber & sicher': 'Our approach — clean & safe',
-  'Vollständig konforme Prozesse': 'Fully compliant processes',
-  'Transparentes Gewinnmodell': 'Transparent profit model',
-  'Korrekte Rechnungsstellung mit 19% MwSt.': 'Correct invoicing with 19% VAT',
-  'Langfristige Account-Sicherheit': 'Long-term account security',
-  'Kompatibel mit Lexware Office / SKR04': 'Compatible with Lexware Office / SKR04',
-  'Keine Policy-verstößigen Methoden': 'No policy-violating methods',
-  'Wir setzen auf nachhaltiges Wachstum — keine kurzfristigen Tricks, die dein Business gefährden':
-    'We rely on sustainable growth — no short-term tricks that endanger your business',
-
-  /* FAQ QUESTIONS */
-  '💰 Wie viel Geld brauche ich zum Start?': '💰 How much money do I need to start?',
-  '📦 Muss ich Produkte kaufen oder lagern?': '📦 Do I need to buy or store products?',
-  '⚙️ Wie funktioniert euer Account-Management?': '⚙️ How does your account management work?',
-  '💸 Wie werden eure Kosten berechnet?': '💸 How are your fees calculated?',
-  '⚖️ Ist das in Deutschland legal?': '⚖️ Is this legal in Germany?',
-  '⚠️ Warum keine billigen Anbieter?': '⚠️ Why not cheap providers?',
-  '🚫 Kann mein eBay-Account gesperrt werden?': '🚫 Can my eBay account be suspended?',
-  '🎓 Brauche ich Erfahrung zum Starten?': '🎓 Do I need experience to start?',
-  '📞 Bietet ihr kostenlose Beratung an?': '📞 Do you offer free consultations?',
-  '⏱️ Wie lange dauert es bis zu Ergebnissen?': '⏱️ How long until I see results?',
-  '🏪 Könnt ihr meinem Offline-Business helfen?': '🏪 Can you help my offline business?',
-  '🎯 Für wen ist dieser Service gedacht?': '🎯 Who is this service for?',
-
-  /* FAQ ANSWERS */
-  'Um ein eBay-Dropshipping-Business korrekt zu betreiben, benötigst du:':
-    'To run an eBay dropshipping business correctly, you need:',
-  '€800 – €1.000 Startkapital': '€800 – €1,000 starting capital',
-  'Wird nur für die Auftragsabwicklung verwendet': 'Used only for order processing',
-  'Kein Lager oder Warenbestand nötig': 'No warehouse or inventory needed',
-  'Du kaufst keine Produkte im Voraus — du zahlst erst, wenn du Bestellungen erhältst.':
-    'You do not buy products in advance — you only pay when you receive orders.',
-  'Nein — dieses Modell benötigt kein Inventar.': 'No — this model requires no inventory.',
-  'Kein Lager oder Masseneinkauf': 'No warehouse or bulk purchasing',
-  'Kein Risiko unverkaufter Produkte': 'No risk of unsold products',
-  'Es handelt sich um ein No-Inventory-Geschäftsmodell.': 'This is a no-inventory business model.',
-  'Wir übernehmen alles für dich:': 'We take care of everything for you:',
-  'Produktrecherche & Listing-Erstellung': 'Product research & listing creation',
-  'Kundenservice & Retourenmanagement': 'Customer service & returns management',
-  'Du besitzt den Account. Wir managen und skalieren ihn.':
-    'You own the account. We manage and scale it.',
-  '50% des Nettogewinns (nach vereinbarten Kosten)': '50% of net profit (after agreed costs)',
-  'MwSt. kann ggf. via Finanzamt zurückgefordert werden': 'VAT can potentially be reclaimed via tax office',
-  'Wir verdienen nur, wenn du verdienst.': 'We only earn when you earn.',
-  'Ja — wenn es korrekt durchgeführt wird. Wir setzen auf:':
-    'Yes — when done correctly. We rely on:',
-  'Viele Verkäufer scheitern, weil sie die rechtliche Seite ignorieren.':
-    'Many sellers fail because they ignore the legal side.',
-  'Günstige Anbieter nutzen häufig:': 'Cheap providers often use:',
-  'Nicht-konforme Methoden & Policy-Verstöße': 'Non-compliant methods & policy violations',
-  'Gefälschte Tracking-Nummern': 'Fake tracking numbers',
-  'Dies kann zu dauerhaften Account-Sperren und rechtlichen Problemen führen.':
-    'This can lead to permanent account bans and legal problems.',
-  'Günstig kurzfristig = teuer langfristig.': 'Cheap short-term = expensive long-term.',
-  'Bei korrekten, konformen Methoden → Risiko wird minimiert. Bei Einsatz von:':
-    'With correct, compliant methods → risk is minimized. When using:',
-  'Dann ja — Accounts können dauerhaft eingeschränkt werden. Unser Ansatz fokussiert sich auf langfristige Sicherheit.':
-    'Then yes — accounts can be permanently restricted. Our approach focuses on long-term security.',
-  'Nein. Unser Coaching deckt ab:': 'No. Our coaching covers:',
-  'Anfängerniveau (A–Z)': 'Beginner level (A–Z)',
-  'Entwickelt für Menschen, die bei null anfangen.': 'Designed for people starting from zero.',
-  'Nein. Wir bieten eine professionelle, kostenpflichtige Beratung an (€50 + 19% MwSt.). Dies stellt sicher:':
-    'No. We offer professional, paid consultation (€50 + 19% VAT). This ensures:',
-  'Nur ernsthafte Kunden': 'Only serious clients',
-  'Echter Mehrwert und umsetzbare Ratschläge': 'Real value and actionable advice',
-  'Fokussierte, persönliche Beratung': 'Focused, personal consultation',
-  'Das ist keine Sales-Session — es ist eine echte Arbeitssession.':
-    'This is not a sales session — it is a real working session.',
-  'Hängt ab von deinem Ausgangspunkt, Einsatz und Marktbedingungen. Typischerweise:':
-    'Depends on your starting point, effort and market conditions. Typically:',
-  'Setup-Phase: 1–3 Wochen': 'Setup phase: 1–3 weeks',
-  'Erste Ergebnisse: kurz nach korrektem Setup': 'First results: shortly after correct setup',
-  'Das ist ein Business — kein schnelles Geld.': 'This is a business — not quick money.',
-  'Ja. Wir bauen professionelle Stores mit Shopify:': 'Yes. We build professional stores with Shopify:',
-  'Store-Design & Produkt-Setup': 'Store design & product setup',
-  'Launch-bereit in kurzer Zeit': 'Launch-ready in a short time',
-  'Du kannst schnell online verkaufen.': 'You can start selling online quickly.',
-  'Einsteiger in Deutschland': 'Beginners in Germany',
-  'Vielbeschäftigte Berufstätige': 'Busy professionals',
-  'Unternehmer': 'Entrepreneurs',
-  'Für jeden, der ein legales Online-Einkommen aufbauen möchte.':
-    'For anyone who wants to build a legal online income.',
-
-  /* SOCIALS */
-  'Business-Tipps und tägliche eBay-Inspiration.': 'Business tips and daily eBay inspiration.',
-  'Kurze Videos über Online-Business in Deutschland.': 'Short videos about online business in Germany.',
-  'Persönliche Updates von Fahad direkt.': 'Personal updates from Fahad directly.',
-  'Exklusive Tipps direkt auf dein Handy.': 'Exclusive tips directly to your phone.',
-  'Community "Online Money in Germany".': 'Community "Online Money in Germany".',
-  'Verifizierte Kundenbewertungen lesen oder hinterlassen.':
-    'Read or leave verified customer reviews.',
-  'Folgen →': 'Follow →',
-  'Beitreten →': 'Join →',
-  'Bewertungen →': 'Reviews →',
-
-  /* REVIEWS */
-  'Alle Bewertungen →': 'All Reviews →',
-  'Alle Bewertungen auf Trustpilot ansehen →': 'View all reviews on Trustpilot →',
-  'Deine Erfahrung zählt': 'Your experience matters',
-  'Hast du mit uns zusammengearbeitet? Hinterlasse deine Bewertung auf Trustpilot.':
-    'Have you worked with us? Leave your review on Trustpilot.',
-  'Jetzt bewerten →': 'Rate now →',
-  'Verifiziert': 'Verified',
-
-  /* HOW IT WORKS */
-  'Beratung buchen': 'Book Consultation',
-  'Buche deine 1:1 Strategy Session für €50 + MwSt. Wir analysieren deine Situation und zeigen dir den richtigen Weg.':
-    'Book your 1:1 strategy session for €50 + VAT. We analyze your situation and show you the right path.',
-  'Onboarding & Setup': 'Onboarding & Setup',
-  'Wir richten alles ein, klären rechtliche Fragen und starten direkt mit der Umsetzung deines gewählten Service.':
-    'We set everything up, clarify legal questions and start directly with the implementation of your chosen service.',
-  'Ergebnisse & Wachstum': 'Results & Growth',
-  'Transparente Kommunikation, monatliche Reports und klarer Fokus auf nachhaltigen, langfristigen Erfolg.':
-    'Transparent communication, monthly reports and a clear focus on sustainable, long-term success.',
-  'Beratung buchen — €50 + MwSt.': 'Book Consultation — €50 + VAT',
-
-  /* STATS */
-  'Alles aus einer Hand': 'All from one source',
-  'Kein Lagerrisiko': 'No storage risk',
-  'Zzgl. 19% MwSt.': 'Plus 19% VAT',
-  'Profit Share': 'Profit Share',
-  'Fair & transparent': 'Fair & transparent',
-  'Legal & konform': 'Legal & compliant',
-  'MwSt. & eBay-Policy': 'VAT & eBay policy',
-
-  /* WHY */
-  'Spezialisiert auf Deutschland': 'Specialized in Germany',
-  'Sprache, Recht, Käuferverhalten — wir kennen den deutschen Markt genau.':
-    'Language, law, buyer behavior — we know the German market precisely.',
-  'Transparentes Modell': 'Transparent Model',
-  'Keine Fixkosten, keine versteckten Gebühren. Wir verdienen nur, wenn du verdienst.':
-    'No fixed costs, no hidden fees. We only earn when you earn.',
-  'MwSt.- & rechtssicher': 'VAT & legally compliant',
-  'Alle Abrechnungen MwSt.-konform und kompatibel mit SKR04 / Lexware Office.':
-    'All billing VAT-compliant and compatible with SKR04 / Lexware Office.',
-  'Nachhaltig statt kurzfristig': 'Sustainable over short-term',
-  'Keine Policy-Verstöße — nur saubere, langfristige Skalierung für dein Business.':
-    'No policy violations — only clean, long-term scaling for your business.',
-
-  /* FOOTER */
-  'Ein Service der Primashop · Inhaber Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · USt-IdNr. DE453914117':
-    'A service of Primashop · Owner Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · VAT ID DE453914117',
-  '© 2025 ScalewithFahad · Alle Rechte vorbehalten ·': '© 2025 ScalewithFahad · All rights reserved ·',
-  'Impressum': 'Legal Notice',
-
-  /* POPUP */
-  '10+ zufriedene Kunden': '10+ Happy Clients',
-  'verdienen bereits über': 'already earning over',
-  'monatlich mit ScalewithFahad.': 'monthly with ScalewithFahad.',
-
-  /* STICKY BAR */
-  'Beratung buchen — €50': 'Book Now — €50',
-
-  /* MIN CAPITAL */
-  '€800 – €1.000': '€800 – €1,000',
-};
-
-/* ── Language detection ── */
-function detectLang() {
-  var stored = localStorage.getItem('swf_lang');
-  if (stored) return stored;
-  var lang = (navigator.language || navigator.userLanguage || 'de').toLowerCase();
-  return lang.startsWith('de') ? 'de' : 'en';
-}
-
-/* ── Toggle (manual button) ── */
-function toggleLang() {
-  var next = CURRENT_LANG === 'de' ? 'en' : 'de';
-  localStorage.setItem('swf_lang', next);
-  applyLang(next);
-}
-
-/* ── Apply translations via text-node walking ── */
-function applyLang(lang) {
-  CURRENT_LANG = lang;
-  var btn = document.getElementById('langToggle');
-  if (btn) btn.textContent = '🌐 ' + lang.toUpperCase();
-
-  if (lang === 'de') {
-    // Reload to restore German (simplest approach)
-    location.reload();
-    return;
-  }
-
-  // Walk all text nodes and replace
-  walkNodes(document.body);
-
-  // Special: hero h1 (has <em> inside)
-  var h1 = document.querySelector('.hero h1');
-  if (h1) h1.innerHTML = 'Your Business — <em>professionally built</em> and scaled';
-
-  // Special: footer copyright line (has <a> inside)
-  var fb = document.querySelector('.footer-bottom');
-  if (fb) {
-    fb.innerHTML = '© 2025 ScalewithFahad · All rights reserved · <a href="impressum.html" style="color:rgba(255,255,255,0.3);text-decoration:underline">Legal Notice</a>';
-  }
-
-  // Special: popup desc (has <strong> inside)
-  var pd = document.querySelector('
-
-    // Partial replacements for multi-phrase nodes
-    var changed = txt;
-    Object.keys(T).forEach(function(de) {
-      if (changed.indexOf(de) !== -1) {
-        changed = changed.split(de).join(T[de]);
-      }
-    });
-    if (changed !== txt) n.nodeValue = changed;
-  });
-}
-
-/* ── Init ── */
-document.addEventListener('DOMContentLoaded', function() {
-  var lang = detectLang();
-  var btn = document.getElementById('langToggle');
-  if (btn) btn.textContent = '🌐 ' + lang.toUpperCase();
-  if (lang !== 'de') applyLang(lang);
-});
-</script>
-
-<script>
-/* ============================================================
-   AUTO-FETCH TRUSTPILOT REVIEWS
-   Tries multiple CORS proxies to get latest 4-5 star reviews
-   Falls back to static reviews if unavailable
-   ============================================================ */
-(function(){
-  var TP_PAGE = 'https://de.trustpilot.com/review/scalewithfahad.de?languages=all&sort=recency&stars=5&stars=4';
-  var PROXIES = [
-    'https://api.allorigins.win/get?url=',
-    'https://api.codetabs.com/v1/proxy?quest='
-  ];
-  var CACHE_KEY = 'swf_tp_reviews';
-  var CACHE_TIME = 3600000; // 1 hour cache
-
-  /* ── Render reviews into the grid ── */
-  function renderReviews(reviews, source) {
-    var grid = document.getElementById('reviewsGrid');
-    if (!grid || !reviews.length) return;
-
-    grid.innerHTML = '';
-
-    reviews.forEach(function(r, i) {
-      var stars = parseInt(r.stars || r.rating || 5);
-      var starStr = '';
-      for (var s = 0; s < 5; s++) starStr += s < stars ? '★' : '☆';
-
-      var name = r.name || r.consumer || 'Verifizierter Kunde';
-      var initials = name.split(' ').map(function(w){ return w[0]; }).join('').substring(0,2).toUpperCase();
-      var title = r.title || '';
-      var body = r.body || r.text || '';
-      var date = r.date || '';
-      var avClass = i % 2 === 0 ? 'av1' : 'av2';
-
-      var card = document.createElement('div');
-      card.className = 'review-card';
-      card.innerHTML =
-        '<div class="rv-top">' +
-          '<div class="rv-info">' +
-            '<div class="rv-av ' + avClass + '">' + initials + '</div>' +
-            '<div><div class="rv-name">' + escHtml(name) + '</div>' +
-            '<div class="rv-meta">Deutschland</div></div>' +
-          '</div>' +
-          '<span class="rv-verified">Verifiziert</span>' +
-        '</div>' +
-        '<div class="rv-stars" style="color:var(--tp)">' + starStr + '</div>' +
-        (title ? '<div class="rv-title">' + escHtml(title) + '</div>' : '') +
-        '<div class="rv-body">' + escHtml(body) + '</div>' +
-        '<div class="rv-date">' + escHtml(date) + '</div>';
-      grid.appendChild(card);
-    });
-
-    // Add "leave a review" card
-    var cta = document.createElement('div');
-    cta.className = 'review-card';
-    cta.style.cssText = 'border:1px dashed rgba(0,185,124,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.75rem;padding:1.75rem';
-    cta.innerHTML =
-      '<div style="font-size:1.5rem">⭐</div>' +
-      '<div style="font-family:\'Syne\',sans-serif;font-weight:700;font-size:.92rem">Deine Erfahrung zählt</div>' +
-      '<div style="color:var(--muted);font-size:.82rem;font-weight:300;line-height:1.65">Hinterlasse deine Bewertung auf Trustpilot.</div>' +
-      '<a href="https://de.trustpilot.com/review/scalewithfahad.de" target="_blank" style="background:var(--tp);color:#fff;padding:.6rem 1.4rem;border-radius:8px;font-size:.84rem;font-weight:600;display:inline-flex;align-items:center;min-height:44px">Jetzt bewerten →</a>';
-    grid.appendChild(cta);
-
-    // Show source indicator
-    var info = document.getElementById('tpRefreshInfo');
-    if (info && source === 'live') {
-      info.innerHTML = '<span style="font-size:.68rem;color:rgba(0,185,124,0.6);font-weight:500">🔄 Auto-aktualisiert</span>';
-    }
-  }
-
-  function escHtml(s) {
-    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-
-  /* ── Parse Trustpilot HTML response ── */
-  function parseTP(rawHtml) {
-    var reviews = [];
-
-    // Try __NEXT_DATA__ (Next.js JSON)
-    var ndMatch = rawHtml.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
-    if (ndMatch) {
-      try {
-        var nd = JSON.parse(ndMatch[1]);
-        // Try multiple paths where reviews might live
-        var paths = [
-          nd?.props?.pageProps?.reviews,
-          nd?.props?.pageProps?.reviewsList,
-          nd?.props?.initialProps?.reviews,
-          nd?.props?.initialState?.reviews?.reviews,
-          nd?.props?.pageProps?.businessUnitReviews?.reviews,
-        ];
-        for (var i = 0; i < paths.length; i++) {
-          if (Array.isArray(paths[i]) && paths[i].length) {
-            var raw = paths[i];
-            reviews = raw
-              .filter(function(r) {
-                var s = parseInt(r.stars || r.rating || r.reviewRating?.ratingValue || 0);
-                return s >= 4;
-              })
-              .slice(0, 4)
-              .map(function(r) {
-                return {
-                  name: r.consumer?.displayName || r.reviewer?.name || r.author?.name || 'Kunde',
-                  stars: r.stars || r.rating || r.reviewRating?.ratingValue || 5,
-                  title: r.title || '',
-                  body: r.text || r.reviewBody || r.body || '',
-                  date: formatDate(r.dates?.publishedDate || r.datePublished || r.date || '')
-                };
-              });
-            if (reviews.length) break;
-          }
-        }
-
-        // Also try to update aggregate score
-        var agg = nd?.props?.pageProps?.businessUnit || nd?.props?.pageProps?.business;
-        if (agg) {
-          var score = agg.trustScore || agg.rating || agg.ratingValue;
-          var count = agg.numberOfReviews?.total || agg.reviewCount || agg.numberOfReviews;
-          if (score) {
-            var sv = document.getElementById('tpScoreVal');
-            if (sv) sv.textContent = parseFloat(score).toFixed(1);
-            updateStars(parseFloat(score));
-          }
-          if (count) {
-            var cv = document.getElementById('tpCountVal');
-            if (cv) cv.textContent = count + ' Bewertungen';
-          }
-        }
-      } catch(e) {}
-    }
-
-    // Fallback: try JSON-LD structured data
-    if (!reviews.length) {
-      var ldMatches = rawHtml.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g) || [];
-      ldMatches.forEach(function(block) {
-        try {
-          var ld = JSON.parse(block.replace(/<script[^>]*>|<\/script>/g,''));
-          var arr = ld['@type'] === 'Product' || ld['@type'] === 'LocalBusiness' ? (ld.review || []) : [];
-          if (arr.length) {
-            arr.filter(function(r){ return (r.reviewRating?.ratingValue||5) >= 4; })
-               .slice(0,4)
-               .forEach(function(r){
-                 reviews.push({
-                   name: r.author?.name || 'Kunde',
-                   stars: r.reviewRating?.ratingValue || 5,
-                   title: r.name || '',
-                   body: r.reviewBody || '',
-                   date: formatDate(r.datePublished || '')
-                 });
-               });
-          }
-        } catch(e) {}
-      });
-    }
-
-    return reviews;
-  }
-
-  function formatDate(iso) {
-    if (!iso) return '';
-    try {
-      var d = new Date(iso);
-      return d.toLocaleDateString('de-DE', {month:'long', year:'numeric'});
-    } catch(e){ return iso; }
-  }
-
-  function updateStars(score) {
-    var full = Math.round(score);
-    var str = '';
-    for (var i=0;i<5;i++) str += i < full ? '★' : '☆';
-    var el = document.getElementById('tpStarsVal');
-    if (el) el.textContent = str;
-  }
-
-  /* ── Fetch via proxy with fallback ── */
-  function tryProxy(idx) {
-    if (idx >= PROXIES.length) {
-      console.log('All Trustpilot proxies failed — showing static reviews');
-      return;
-    }
-    var url = PROXIES[idx] + encodeURIComponent(TP_PAGE);
-    fetch(url, {cache:'no-store'})
-      .then(function(res){ return res.json(); })
-      .then(function(data) {
-        var raw = data.contents || data.body || data;
-        if (typeof raw !== 'string') throw new Error('no html');
-        var reviews = parseTP(raw);
-        if (reviews.length) {
-          // Cache result
-          try {
-            sessionStorage.setItem(CACHE_KEY, JSON.stringify({t: Date.now(), data: reviews}));
-          } catch(e){}
-          renderReviews(reviews, 'live');
-        } else {
-          tryProxy(idx + 1);
-        }
-      })
-      .catch(function(){ tryProxy(idx + 1); });
-  }
-
-  /* ── Init ── */
-  function init() {
-    // Check cache first
-    try {
-      var cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) || 'null');
-      if (cached && (Date.now() - cached.t) < CACHE_TIME && cached.data.length) {
-        renderReviews(cached.data, 'cached');
-        return;
-      }
-    } catch(e){}
-    // Fetch live
-    tryProxy(0);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    setTimeout(init, 800); // slight delay so page renders first
-  }
-})();
 </script>
 
 <script>
@@ -1958,6 +1242,80 @@ document.addEventListener('DOMContentLoaded', function() {
     start();
   }
 })();
+</script>
+
+<script>
+/* ============================================================
+   LANGUAGE SYSTEM — data-i18n attribute approach
+   100% reliable on all mobile browsers incl. Safari
+   ============================================================ */
+var CURRENT_LANG = 'de';
+
+function getLang(){
+  var stored;
+  try{ stored = localStorage.getItem('swf_lang'); } catch(e){}
+  if(stored === 'de' || stored === 'en') return stored;
+  var nav = (navigator.language || navigator.userLanguage || 'de').toLowerCase();
+  return nav.startsWith('de') ? 'de' : 'en';
+}
+
+function setLang(lang){
+  try{ localStorage.setItem('swf_lang', lang); } catch(e){}
+}
+
+function applyLang(lang){
+  CURRENT_LANG = lang;
+
+  /* ── Update all [data-de] / [data-en] elements ── */
+  document.querySelectorAll('[data-de]').forEach(function(el){
+    var val = lang === 'de' ? el.getAttribute('data-de') : el.getAttribute('data-en');
+    if(!val) return;
+    /* Use innerHTML for elements that contain HTML tags (em, strong etc) */
+    if(val.indexOf('<') !== -1){ el.innerHTML = val; }
+    else { el.textContent = val; }
+  });
+
+  /* ── Live bar suffix text (special: has a <span> inside) ── */
+  var liveBar = document.querySelector('.live-text');
+  if(liveBar){
+    var cnt = document.getElementById('visitorCount');
+    var num = cnt ? cnt.textContent : '24';
+    var suffix = lang === 'de' ? ' Personen schauen gerade' : ' people viewing right now';
+    liveBar.innerHTML = '<span id="visitorCount">' + num + '</span>' + suffix;
+  }
+
+  /* ── Profit popup messages ── */
+  var ppMsg = document.querySelector('.pp-msg');
+  if(ppMsg && ppMsg.innerHTML){
+    if(lang === 'en'){
+      ppMsg.innerHTML = ppMsg.innerHTML
+        .replace('hat diesen Monat','earned this month')
+        .replace('Profit gemacht 🔥','in profit 🔥');
+    }
+  }
+
+  /* ── html lang attribute ── */
+  document.documentElement.lang = lang;
+
+  /* ── Update toggle button label ── */
+  var btn = document.getElementById('langToggle');
+  if(btn) btn.textContent = '🌐 ' + lang.toUpperCase();
+}
+
+function toggleLang(){
+  var next = CURRENT_LANG === 'de' ? 'en' : 'de';
+  setLang(next);
+  applyLang(next);
+}
+
+/* ── Init on load ── */
+document.addEventListener('DOMContentLoaded', function(){
+  var lang = getLang();
+  var btn = document.getElementById('langToggle');
+  if(btn) btn.textContent = '🌐 ' + lang.toUpperCase();
+  if(lang !== 'de') applyLang(lang);
+  CURRENT_LANG = lang;
+});
 </script>
 
 </body>
