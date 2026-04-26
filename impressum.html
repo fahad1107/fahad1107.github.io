@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5FN7EQVC5"></script>
+<!-- GDPR Consent Mode v2 — default denied -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{
+    'ad_storage':'denied','ad_user_data':'denied',
+    'ad_personalization':'denied','analytics_storage':'denied',
+    'functionality_storage':'denied','personalization_storage':'denied',
+    'security_storage':'granted','wait_for_update':500
+  });
+  gtag('set','ads_data_redaction',true);
+  gtag('set','url_passthrough',true);
+</script>
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+  data-cbid="YOUR-COOKIEBOT-ID" data-blockingmode="auto" type="text/javascript" async></script>
+<script>
+window.addEventListener('CookiebotOnAccept',function(){
+  gtag('consent','update',{'analytics_storage':Cookiebot.consent.statistics?'granted':'denied','ad_storage':Cookiebot.consent.marketing?'granted':'denied','ad_user_data':Cookiebot.consent.marketing?'granted':'denied','ad_personalization':Cookiebot.consent.marketing?'granted':'denied'});
+});
+window.addEventListener('CookiebotOnDecline',function(){
+  gtag('consent','update',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});
+});
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5FN7EQVC5" data-cookieconsent="statistics"></script>
+<script data-cookieconsent="statistics">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-G5FN7EQVC5');
+  gtag('config', 'G-G5FN7EQVC5',{'anonymize_ip':true});
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -91,8 +114,8 @@ footer p{font-size:.73rem;color:rgba(255,255,255,0.15)}
 <body>
 
 <nav>
-  <a href="scalewithfahad.html" class="logo">ScaleWith<span>Fahad</span></a>
-  <a href="scalewithfahad.html" class="nav-back" onclick="gtag('event','navigation_click',{event_category:'navigation',event_label:'impressum_back_nav'})">← Zurück zur Website</a>
+  <a href="https://scalewithfahad.de" class="logo">ScaleWith<span>Fahad</span></a>
+  <a href="https://scalewithfahad.de" class="nav-back" onclick="gtag('event','navigation_click',{event_category:'navigation',event_label:'impressum_back_nav'})">← Zurück zur Website</a>
 </nav>
 
 <div class="page">
@@ -162,12 +185,13 @@ footer p{font-size:.73rem;color:rgba(255,255,255,0.15)}
     <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
   </div>
 
-  <a href="scalewithfahad.html" class="back-btn" onclick="gtag('event','navigation_click',{event_category:'navigation',event_label:'impressum_back_btn'})">← Zurück zur Startseite</a>
+  <a href="https://scalewithfahad.de" class="back-btn" onclick="gtag('event','navigation_click',{event_category:'navigation',event_label:'impressum_back_btn'})">← Zurück zur Startseite</a>
 
 </div>
 
 <footer>
   <p>© 2025 ScalewithFahad · Ein Service der Primashop · Inhaber Fahad bin Sultan · Erkrath · USt-IdNr. DE453914117</p>
+<div style="text-align:center;margin-top:.5rem"><a href="#" onclick="Cookiebot&&Cookiebot.renew();return false;" style="font-size:.7rem;color:rgba(255,255,255,0.25);text-decoration:underline">Cookie-Einstellungen</a></div>
 </footer>
 
 </body>
