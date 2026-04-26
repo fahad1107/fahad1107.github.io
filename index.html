@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5FN7EQVC5"></script>
+<!-- ============================================================
+     GDPR CONSENT MODE v2 — Must be FIRST in <head>
+     ============================================================ -->
+
+<!-- STEP 1: Default consent denied BEFORE any tracking -->
 <script>
+  /* Google Consent Mode v2 — default all denied */
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{
+    'ad_storage':              'denied',
+    'ad_user_data':            'denied',
+    'ad_personalization':      'denied',
+    'analytics_storage':       'denied',
+    'functionality_storage':   'denied',
+    'personalization_storage': 'denied',
+    'security_storage':        'granted',
+    'wait_for_update':         500
+  });
+  gtag('set','ads_data_redaction', true);
+  gtag('set','url_passthrough', true);
+</script>
+
+<!-- STEP 2: Cookiebot CMP — loads banner & manages consent -->
+<!-- ⚠️  Replace YOUR-COOKIEBOT-ID with your real Domain Group ID from cookiebot.com -->
+<script
+  id="Cookiebot"
+  src="https://consent.cookiebot.com/uc.js"
+  data-cbid="YOUR-COOKIEBOT-ID"
+  data-blockingmode="auto"
+  data-georegions="{'GB':true,'DE':true}"
+  type="text/javascript"
+  async>
+</script>
+
+<!-- STEP 3: Update consent when Cookiebot fires its callback -->
+<script>
+window.addEventListener('CookiebotOnAccept', function(){
+  gtag('consent','update',{
+    'analytics_storage':       Cookiebot.consent.statistics ? 'granted' : 'denied',
+    'ad_storage':              Cookiebot.consent.marketing  ? 'granted' : 'denied',
+    'ad_user_data':            Cookiebot.consent.marketing  ? 'granted' : 'denied',
+    'ad_personalization':      Cookiebot.consent.marketing  ? 'granted' : 'denied',
+    'functionality_storage':   Cookiebot.consent.preferences? 'granted' : 'denied',
+    'personalization_storage': Cookiebot.consent.preferences? 'granted' : 'denied',
+  });
+});
+window.addEventListener('CookiebotOnDecline', function(){
+  gtag('consent','update',{
+    'analytics_storage':       'denied',
+    'ad_storage':              'denied',
+    'ad_user_data':            'denied',
+    'ad_personalization':      'denied',
+    'functionality_storage':   'denied',
+    'personalization_storage': 'denied',
+  });
+});
+</script>
+
+<!-- STEP 4: GA4 — loads AFTER consent block above -->
+<!-- data-cookieconsent="statistics" ensures Cookiebot controls this script -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-G5FN7EQVC5"
+  data-cookieconsent="statistics">
+</script>
+<script data-cookieconsent="statistics">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-G5FN7EQVC5');
+  gtag('config', 'G-G5FN7EQVC5', {
+    'anonymize_ip': true,
+    'send_page_view': true
+  });
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -625,6 +692,81 @@ footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5r
 @media(max-width:768px){
   .profit-popup{bottom:90px;left:10px;right:10px;width:auto;max-width:none}
 }
+
+/* ============================================================
+   VPS RECOMMENDATION SECTION
+   ============================================================ */
+.vps-section{padding:4.5rem 1.5rem;background:var(--surface);border-top:1px solid var(--border)}
+.vps-inner{max-width:780px;margin:0 auto}
+.vps-card-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;align-items:start}
+
+/* Card */
+.vps-card{
+  background:linear-gradient(160deg,rgba(59,130,246,0.07) 0%,var(--black) 70%);
+  border:1px solid rgba(59,130,246,0.35);
+  border-radius:18px;padding:2rem;
+  position:relative;overflow:hidden;
+  box-shadow:0 8px 40px rgba(59,130,246,0.12);
+}
+.vps-ribbon{
+  position:absolute;top:16px;right:-28px;
+  background:var(--accent);color:#fff;
+  font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:.28rem 2.8rem;
+  transform:rotate(35deg);
+  box-shadow:0 2px 8px rgba(59,130,246,0.4);
+}
+.vps-badge{
+  display:inline-block;background:rgba(59,130,246,0.15);
+  border:1px solid rgba(59,130,246,0.3);color:var(--accent-soft);
+  font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:.22rem .75rem;border-radius:50px;margin-bottom:1rem;
+}
+.vps-plan{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800;margin-bottom:.9rem;letter-spacing:-0.01em}
+.vps-price-row{display:flex;align-items:baseline;gap:.6rem;margin-bottom:.25rem}
+.vps-price{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:var(--white);line-height:1}
+.vps-period{font-size:.82rem;color:var(--muted);font-weight:300}
+.vps-old-price{font-size:.82rem;color:var(--muted);text-decoration:line-through;font-weight:300}
+.vps-divider{height:1px;background:var(--border);margin:1.2rem 0}
+.vps-features{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.5rem}
+.vps-features li{display:flex;align-items:center;gap:.65rem;font-size:.86rem;color:var(--muted);font-weight:300;line-height:1.4}
+.vps-features li::before{content:'✓';color:var(--green);font-weight:700;font-size:.82rem;flex-shrink:0}
+.vps-cta{
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  width:100%;padding:.95rem 1.5rem;border-radius:10px;
+  background:linear-gradient(135deg,#1d4ed8,#3b82f6);
+  color:#fff;font-weight:700;font-size:.95rem;
+  transition:opacity .2s,transform .15s;min-height:52px;
+  box-shadow:0 4px 20px rgba(59,130,246,0.35);
+  border:none;cursor:pointer;
+}
+.vps-cta:hover{opacity:.9;transform:translateY(-1px)}
+.vps-cta-arrow{font-size:1rem}
+
+/* Why I recommend */
+.vps-why{display:flex;flex-direction:column;gap:.85rem;padding-top:.5rem}
+.vps-why-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:.2rem}
+.vps-why-list{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.vps-why-list li{display:flex;gap:.75rem;align-items:flex-start;font-size:.86rem;color:var(--muted);font-weight:300;line-height:1.55}
+.vps-why-icon{font-size:1rem;flex-shrink:0;margin-top:.05rem}
+.vps-disclaimer{
+  margin-top:1.5rem;padding:.75rem 1rem;
+  background:rgba(255,255,255,0.03);border:1px solid var(--border);
+  border-radius:8px;font-size:.72rem;color:rgba(255,255,255,0.25);
+  font-weight:300;line-height:1.6;text-align:center;
+}
+
+@media(max-width:768px){
+  .vps-section{padding:2.5rem 1rem}
+  .vps-card-wrap{grid-template-columns:1fr;gap:1.1rem;margin-top:2rem}
+  .vps-card{padding:1.5rem}
+  .vps-price{font-size:2rem}
+  .vps-cta{min-height:52px;font-size:.93rem}
+  .vps-why{padding-top:0}
+}
+
+/* Cookie settings link hover */
+.footer-bottom a:hover{color:rgba(255,255,255,0.55) !important}
 </style>
 
 <script type="application/ld+json">
@@ -1018,6 +1160,67 @@ footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5r
 </div>
 </section>
 
+
+<!-- VPS RECOMMENDATION -->
+<section class="vps-section" id="vps">
+<div class="container vps-inner">
+
+  <div class="slabel" data-de="Empfehlung" data-en="Recommendation">Empfehlung</div>
+  <div class="stitle" data-de="Empfohlener VPS für Automation (Deutschland)" data-en="Recommended VPS for Automation (Germany)">Empfohlener VPS für Automation (Deutschland)</div>
+  <div class="ssub" data-de="Diesen VPS empfehle ich persönlich für den 24/7-Betrieb von eBay-Automation — stabile Performance mit deutscher IP." data-en="This is the VPS I personally recommend for running eBay automation 24/7 with stable performance and German IP.">Diesen VPS empfehle ich persönlich für den 24/7-Betrieb von eBay-Automation — stabile Performance mit deutscher IP.</div>
+
+  <div class="vps-card-wrap">
+
+    <!-- PRICING CARD -->
+    <div class="vps-card">
+      <div class="vps-ribbon">Most Popular</div>
+      <div class="vps-badge">Featured</div>
+      <div class="vps-plan">AMD EPYC VPS.P3</div>
+      <div class="vps-price-row">
+        <div class="vps-price">€12.80</div>
+        <div class="vps-period">/ Monat</div>
+        <div class="vps-old-price">€15.79</div>
+      </div>
+      <div class="vps-divider"></div>
+      <ul class="vps-features">
+        <li>4 vCPU AMD EPYC</li>
+        <li>8 GB RAM</li>
+        <li>100 GB NVMe Storage</li>
+        <li>Unmetered Bandwidth</li>
+        <li>IPv4 &amp; IPv6 included</li>
+        <li>1 Gbps Netzwerk</li>
+        <li>Automatic Backup included</li>
+        <li>Firewall Management</li>
+        <li>Free Server Monitoring</li>
+      </ul>
+      <a href="https://lumadock.com/aff.php?aff=165"
+         target="_blank" rel="noopener sponsored"
+         class="vps-cta"
+         onclick="gtag('event','cta_click',{event_category:'affiliate',event_label:'vps_lumadock'})">
+        🖥️ Get VPS (Germany Server) <span class="vps-cta-arrow">→</span>
+      </a>
+    </div>
+
+    <!-- WHY I RECOMMEND -->
+    <div class="vps-why">
+      <div class="vps-why-title" data-de="Warum ich diesen VPS empfehle" data-en="Why I recommend this VPS">Warum ich diesen VPS empfehle</div>
+      <ul class="vps-why-list">
+        <li><span class="vps-why-icon">⚡</span>Stabil für den 24/7-Betrieb von Automation-Tools</li>
+        <li><span class="vps-why-icon">🇩🇪</span>Deutschland (Frankfurt) Server — niedrige Latenz für eBay.de</li>
+        <li><span class="vps-why-icon">🔄</span>Ideal für Multi-Account-Setups geeignet</li>
+        <li><span class="vps-why-icon">💰</span>Sehr gutes Preis-Leistungs-Verhältnis</li>
+        <li><span class="vps-why-icon">🛡️</span>Zuverlässige Uptime — kein Ausfall beim Automation-Lauf</li>
+        <li><span class="vps-why-icon">🚀</span>AMD EPYC CPU — schnellere Verarbeitung als Standard-VPS</li>
+      </ul>
+      <div class="vps-disclaimer">
+        🔗 Dies ist ein Affiliate-Link. Ich erhalte möglicherweise eine Provision — für dich entstehen keine zusätzlichen Kosten.
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
 <!-- HOW IT WORKS -->
 <section style="background:var(--surface);border-top:1px solid var(--border)">
 <div class="container">
@@ -1079,7 +1282,7 @@ footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5r
     </div>
   </div>
   <div class="fi" data-de="Ein Service der Primashop · Inhaber Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · USt-IdNr. DE453914117" data-en="A service of Primashop · Owner Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · VAT ID DE453914117">Ein Service der Primashop · Inhaber Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · USt-IdNr. DE453914117</div>
-  <div class="footer-bottom">© 2025 ScalewithFahad · Alle Rechte vorbehalten · <a href="impressum.html" style="color:rgba(255,255,255,0.3);text-decoration:underline">Impressum</a></div>
+  <div class="footer-bottom">© 2025 ScalewithFahad · Alle Rechte vorbehalten · <a href="impressum.html" style="color:rgba(255,255,255,0.3);text-decoration:underline">Impressum</a> · <a href="#" onclick="Cookiebot && Cookiebot.renew();return false;" style="color:rgba(255,255,255,0.3);text-decoration:underline">Cookie-Einstellungen</a></div>
 </footer>
 
 <!-- STICKY BOTTOM CTA BAR (mobile only) -->
