@@ -966,66 +966,62 @@ footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5r
 <div class="container">
 
   <div class="slabel" data-de="Automation Voraussetzung" data-en="Automation Requirement">Automation Voraussetzung</div>
-  <div class="stitle" data-de="VPS ist notwendig für stabile eBay Automation (Deutschland Server)" data-en="VPS is required for stable eBay Automation (Germany Server)">VPS ist notwendig für stabile eBay Automation (Deutschland Server)</div>
-  <div class="ssub" data-de="Für den stabilen 24/7 Betrieb von eBay Automation brauchst du einen VPS. Ohne VPS laufen Tools instabil oder brechen ab. Das ist die empfohlene Setup-Lösung mit deutscher IP." data-en="For stable 24/7 operation of eBay automation you need a VPS. Without a VPS, tools run unstably or crash. This is the recommended setup solution with a German IP.">Für den stabilen 24/7 Betrieb von eBay Automation brauchst du einen VPS. Ohne VPS laufen Tools instabil oder brechen ab. Das ist die empfohlene Setup-Lösung mit deutscher IP.</div>
+  <div class="stitle" data-de="VPS ist notwendig für stabile eBay Automation" data-en="VPS required for stable eBay Automation">VPS ist notwendig für stabile eBay Automation</div>
+  <div class="ssub" data-de="Für den stabilen 24/7 Betrieb brauchst du einen VPS mit deutscher IP. Ohne VPS laufen Tools instabil oder brechen ab." data-en="For stable 24/7 operation you need a VPS with a German IP. Without a VPS, tools run unstably or crash.">Für den stabilen 24/7 Betrieb brauchst du einen VPS mit deutscher IP. Ohne VPS laufen Tools instabil oder brechen ab.</div>
 
-  <div class="vps-card-wrap" style="margin-top:2.5rem">
+  <div class="vps-card-wrap">
 
-    <!-- PRICING CARD -->
+    <!-- CARD -->
     <div class="vps-card">
       <div class="vps-ribbon">Most Popular</div>
-      <div class="vps-badge">Featured</div>
-      <div class="vps-plan">AMD EPYC VPS.P3</div>
+      <div class="vps-badge" data-de="Empfohlen" data-en="Recommended">Empfohlen</div>
+      <div class="vps-plan" data-de="Performance AMD EPYC VPS.P3 — Windows Server 2022" data-en="Performance AMD EPYC VPS.P3 — Windows Server 2022">Performance AMD EPYC VPS.P3 — Windows Server 2022</div>
       <div class="vps-price-row">
-        <div class="vps-price">€12.80</div>
+        <div class="vps-price">€15.79</div>
         <div class="vps-period">/ Monat</div>
-        <div class="vps-old-price">€15.79</div>
       </div>
       <div class="vps-divider"></div>
       <ul class="vps-features">
+        <li>Windows Server 2022 (Evaluation)</li>
         <li>4 vCPU AMD EPYC</li>
         <li>8 GB RAM</li>
         <li>100 GB NVMe Storage</li>
-        <li>Unmetered Bandwidth</li>
-        <li>IPv4 &amp; IPv6 included</li>
         <li>1 Gbps Netzwerk</li>
-        <li>Automatic Backup included</li>
-        <li>Firewall Management</li>
-        <li>Free Server Monitoring</li>
+        <li>Serverstandort: Frankfurt, Germany</li>
+        <li>1 Backup-Slot inklusive</li>
+        <li>IPv4 inklusive</li>
       </ul>
 
-      <!-- URGENCY TEXT -->
-      <div class="vps-urgency">
-        ⚠️ Ohne VPS riskierst du Instabilität, Abbrüche und Probleme bei Automation — sichere dir eine stabile Lösung.
+      <div class="vps-urgency" data-de="Ohne VPS riskierst du Instabilität und Abbrüche bei Automation." data-en="Without a VPS you risk instability and crashes during automation.">
+        ⚠️ Ohne VPS riskierst du Instabilität und Abbrüche bei Automation.
       </div>
 
-      <!-- CTA BUTTON → /vps redirect page -->
       <a href="/vps/"
          class="vps-cta"
-         onclick="gtag('event','cta_click',{event_category:'affiliate',event_label:'vps_lumadock'})">
-        🚀 VPS jetzt starten (Deutschland) <span class="vps-cta-arrow">→</span>
+         onclick="gtag('event','cta_click',{event_category:'affiliate',event_label:'vps_lumadock'})"
+         data-de="🚀 VPS jetzt starten (Deutschland)" data-en="🚀 Start VPS now (Germany)">
+        🚀 VPS jetzt starten (Deutschland)
       </a>
+
+      <div style="margin-top:.6rem;font-size:.72rem;color:rgba(255,255,255,0.25);font-weight:300;text-align:center">
+        *Partner-Link – keine Mehrkosten für dich.
+      </div>
     </div>
 
-    <!-- WHY I RECOMMEND -->
+    <!-- WHY -->
     <div class="vps-why">
-      <div class="vps-why-title" data-de="Warum ich diesen VPS empfehle" data-en="Why I recommend this VPS">Warum ich diesen VPS empfehle</div>
+      <div class="vps-why-title" data-de="Warum dieser VPS?" data-en="Why this VPS?">Warum dieser VPS?</div>
       <ul class="vps-why-list">
-        <li><span class="vps-why-icon">⚡</span>Stabil für den 24/7-Betrieb von Automation-Tools</li>
-        <li><span class="vps-why-icon">🇩🇪</span>Deutschland (Frankfurt) Server — niedrige Latenz für eBay.de</li>
-        <li><span class="vps-why-icon">🔄</span>Ideal für Multi-Account-Setups geeignet</li>
-        <li><span class="vps-why-icon">💰</span>Sehr gutes Preis-Leistungs-Verhältnis</li>
-        <li><span class="vps-why-icon">🛡️</span>Zuverlässige Uptime — kein Ausfall beim Automation-Lauf</li>
-        <li><span class="vps-why-icon">🚀</span>AMD EPYC CPU — schnellere Verarbeitung als Standard-VPS</li>
+        <li><span class="vps-why-icon">⚡</span><span data-de="Stabiler 24/7 Betrieb für Automation" data-en="Stable 24/7 operation for automation">Stabiler 24/7 Betrieb für Automation</span></li>
+        <li><span class="vps-why-icon">🇩🇪</span><span data-de="Deutsche IP für eBay.de" data-en="German IP for eBay.de">Deutsche IP für eBay.de</span></li>
+        <li><span class="vps-why-icon">🔄</span><span data-de="Geeignet für mehrere Accounts" data-en="Suitable for multiple accounts">Geeignet für mehrere Accounts</span></li>
+        <li><span class="vps-why-icon">💰</span><span data-de="Sehr gutes Preis-Leistungs-Verhältnis" data-en="Excellent price-performance ratio">Sehr gutes Preis-Leistungs-Verhältnis</span></li>
       </ul>
-      <div class="vps-disclaimer">
-        🔗 Dies ist ein Affiliate-Link. Ich erhalte möglicherweise eine Provision — für dich entstehen keine zusätzlichen Kosten.
-      </div>
     </div>
 
   </div>
 
-  <!-- SERVICE CONNECTION BLOCK -->
+  <!-- SERVICE BLOCK -->
   <div class="vps-service-block">
     <div class="vsb-inner">
       <div class="vsb-icon">🛠️</div>
@@ -1041,19 +1037,21 @@ footer{background:#0d0d0f;border-top:1px solid var(--border);padding:1.8rem 2.5r
     </div>
   </div>
 
-  <!-- FINAL DECISION SECTION -->
+  <!-- DECISION -->
   <div class="vps-decision">
     <div class="vd-title" data-de="Bereit zu starten?" data-en="Ready to start?">Bereit zu starten?</div>
     <div class="vd-sub" data-de="Wähle deinen nächsten Schritt." data-en="Choose your next step.">Wähle deinen nächsten Schritt.</div>
     <div class="vd-btns">
       <a href="/vps/"
          class="vd-btn vd-primary"
-         onclick="gtag('event','cta_click',{event_category:'affiliate',event_label:'vps_decision_buy'})">
+         onclick="gtag('event','cta_click',{event_category:'affiliate',event_label:'vps_decision_buy'})"
+         data-de="🖥️ VPS kaufen" data-en="🖥️ Buy VPS">
         🖥️ VPS kaufen
       </a>
       <a href="https://wa.me/+4917660019583?text=Hallo%20Fahad%2C%20ich%20m%C3%B6chte%20eine%20Beratung%20buchen."
          class="vd-btn vd-secondary"
-         onclick="gtag('event','whatsapp_click',{event_category:'engagement',event_label:'vps_decision_consult'})">
+         onclick="gtag('event','whatsapp_click',{event_category:'engagement',event_label:'vps_decision_consult'})"
+         data-de="📞 Beratung buchen" data-en="📞 Book Consultation">
         📞 Beratung buchen
       </a>
     </div>
