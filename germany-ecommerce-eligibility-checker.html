@@ -1,375 +1,363 @@
-
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#08080f">
+<meta name="msvalidate.01" content="9E27CCDA013E8FD0B21A314A3CE1A9F5">
 <title>Germany eCommerce Eligibility Checker | ScalewithFahad</title>
-<meta name="description" content="Check your eligibility to start an online business in Germany based on your residence permit. Free educational tool by ScalewithFahad.">
+<meta name="description" content="Check your eligibility to start an online business in Germany based on your visa or residence permit. Free educational tool by ScalewithFahad — Erkrath, NRW.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="author" content="Fahad bin Sultan – ScalewithFahad">
+<link rel="canonical" href="https://scalewithfahad.de/germany-ecommerce-eligibility-checker.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scalewithfahad.de/germany-ecommerce-eligibility-checker.html">
+<meta property="og:title" content="Germany eCommerce Eligibility Checker | ScalewithFahad">
+<meta property="og:description" content="Check your eligibility to start an online business in Germany based on your visa or residence permit. Free educational tool.">
+<meta property="og:image" content="https://scalewithfahad.de/og-image.jpg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,800;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,800;0,900;1,700;1,800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Germany eCommerce Eligibility Checker","url":"https://scalewithfahad.de/germany-ecommerce-eligibility-checker.html","description":"Free educational tool to check eligibility for starting an online business in Germany based on visa or residence permit type.","isPartOf":{"@type":"WebSite","url":"https://scalewithfahad.de","name":"ScalewithFahad"},"author":{"@type":"Person","name":"Fahad bin Sultan","url":"https://scalewithfahad.de"}}</script>
 
 <style>
 /* ═══════════════════════════════════════════
-   DESIGN TOKENS
+   TOKENS & RESET
    ═══════════════════════════════════════════ */
-:root {
-  --bg:       #08080f;
-  --bg2:      #0d0d1a;
-  --surface:  #111120;
-  --surface2: #181830;
-  --border:   rgba(255,255,255,.07);
-  --border2:  rgba(255,255,255,.13);
-  --accent:   #e85d04;
-  --acc2:     #fb8500;
-  --white:    #f0f4ff;
-  --muted:    #8892a4;
-  --text:     #c8d0e0;
-  --green:    #22c55e;
-  --amber:    #f59e0b;
-  --red:      #ef4444;
-  --wa:       #25d366;
-  --wa2:      #1ebe5d;
-  --glow:     rgba(232,93,4,.22);
+:root{
+  --bg:#08080f; --s1:#0d0d1a; --s2:#111120; --s3:#161628;
+  --acc:#e85d04; --acc2:#fb8500;
+  --wa:#25d366; --wa2:#1ebe5d;
+  --white:#f0f4ff; --muted:#8892a4; --text:#c8d0e0;
+  --border:rgba(255,255,255,.07); --border2:rgba(255,255,255,.12);
+  --green:#22c55e; --amber:#f59e0b; --red:#ef4444;
+  --sh:0 4px 24px rgba(0,0,0,.4); --sh2:0 12px 48px rgba(0,0,0,.6);
 }
-
-*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
-html { scroll-behavior:smooth; overflow-x:hidden; }
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-h1,h2,h3,h4 { font-family: 'Fraunces', serif; color: var(--white); line-height: 1.12; }
-a { color: inherit; text-decoration: none; }
-button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; }
-input, select, textarea { font-family: 'DM Sans', sans-serif; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;overflow-x:hidden;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+h1,h2,h3,h4{font-family:'Fraunces',serif;color:var(--white);line-height:1.1}
+a{color:inherit;text-decoration:none}
+button{font-family:'DM Sans',sans-serif;cursor:pointer;border:none}
+input,select,textarea{font-family:'DM Sans',sans-serif}
 
 /* ═══ ANIMATIONS ═══ */
-@keyframes fadeUp    { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:none; } }
-@keyframes fadeIn    { from { opacity:0; } to { opacity:1; } }
-@keyframes scaleIn   { from { opacity:0; transform:scale(.94); } to { opacity:1; transform:scale(1); } }
-@keyframes pulse     { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.8)} }
-@keyframes waPulse   { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(1.9);opacity:0} }
-@keyframes shimmer   { 0%{background-position:-200% center} 100%{background-position:200% center} }
-@keyframes resultReveal { from{opacity:0;transform:translateY(16px) scale(.98)} to{opacity:1;transform:none} }
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+@keyframes shimmer{0%{background-position:-220% center}100%{background-position:220% center}}
+@keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(22px,-18px) scale(1.06)}66%{transform:translate(-16px,12px) scale(.95)}}
+@keyframes drift2{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(-28px,20px) scale(1.08)}75%{transform:translate(18px,-12px) scale(.93)}}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.25;transform:scale(.7)}}
+@keyframes scanLine{0%{top:-2px;opacity:0}8%{opacity:.7}92%{opacity:.7}100%{top:100%;opacity:0}}
+@keyframes borderGlow{0%,100%{border-color:rgba(232,93,4,.2)}50%{border-color:rgba(232,93,4,.6)}}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.2);opacity:0}}
+@keyframes resultReveal{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes barFill{from{width:0}to{width:var(--w,100%)}}
+@keyframes gridFade{from{opacity:0}to{opacity:1}}
+@keyframes countUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
-.anim-up  { animation: fadeUp .5s cubic-bezier(.22,1,.36,1) both; }
-.anim-scale { animation: scaleIn .45s cubic-bezier(.22,1,.36,1) both; }
-.d1 { animation-delay:.08s } .d2 { animation-delay:.17s }
-.d3 { animation-delay:.27s } .d4 { animation-delay:.38s }
+.au{animation:fadeUp .6s cubic-bezier(.22,1,.36,1) both}
+.ai{animation:fadeIn .55s ease both}
+.as{animation:scaleIn .5s cubic-bezier(.22,1,.36,1) both}
+.d1{animation-delay:.07s}.d2{animation-delay:.16s}.d3{animation-delay:.26s}
+.d4{animation-delay:.38s}.d5{animation-delay:.52s}.d6{animation-delay:.68s}
 
-.shimmer-text {
-  background: linear-gradient(90deg,#e85d04 0%,#fb8500 30%,#fff8f0 50%,#fb8500 70%,#e85d04 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 3.5s linear infinite;
-}
-
-/* ═══ SECTION ═══ */
-.checker-section {
-  position: relative;
-  padding: 6rem 5% 5rem;
-  overflow: hidden;
-}
-.checker-section::before {
-  content: '';
-  position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 70% 50% at 50% -5%, rgba(232,93,4,.12) 0%, transparent 65%),
-    radial-gradient(ellipse 40% 40% at 90% 80%, rgba(251,133,0,.07) 0%, transparent 60%);
-}
-.checker-section::after {
-  content: '';
-  position: absolute; inset: 0; pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 90% 80% at 50% 0%, black 30%, transparent 100%);
+.shimmer{
+  background:linear-gradient(90deg,#e85d04 0%,#fb8500 28%,#ffe8cc 50%,#fb8500 72%,#e85d04 100%);
+  background-size:220% auto;-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;animation:shimmer 3.8s linear infinite;
 }
 
-.section-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+/* ═══ NAV ═══ */
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;height:66px;position:sticky;top:0;z-index:200;
+  background:rgba(8,8,15,.96);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.2rem;color:var(--white);letter-spacing:-.02em}
+.nav-logo em{color:var(--acc);font-style:normal}
+.nav-back{display:flex;align-items:center;gap:.45rem;font-size:.84rem;color:var(--muted);transition:color .2s;cursor:pointer}
+.nav-back:hover{color:var(--white)}
+.nav-wa{background:var(--wa);color:#fff;padding:.5rem 1.1rem;border-radius:8px;font-weight:700;font-size:.83rem;display:flex;align-items:center;gap:5px;transition:background .2s,transform .15s;min-height:40px}
+.nav-wa:hover{background:var(--wa2);transform:translateY(-1px)}
 
-/* ═══ HEADER ═══ */
-.sec-badge {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: rgba(232,93,4,.1); border: 1px solid rgba(232,93,4,.25);
-  color: var(--acc2); font-size: .72rem; font-weight: 700;
-  letter-spacing: .1em; text-transform: uppercase;
-  padding: .32rem .95rem; border-radius: 50px; margin-bottom: 1.4rem;
+/* ═══ PAGE HERO ═══ */
+.page-hero{
+  position:relative;overflow:hidden;
+  padding:5.5rem 5% 4rem;text-align:center;
 }
-.live-dot { width:7px;height:7px;border-radius:50%;background:#22c55e;animation:pulse 1.8s ease-in-out infinite; }
+.blob{position:absolute;border-radius:50%;pointer-events:none}
+.blob-1{width:600px;height:600px;top:-160px;right:-120px;background:radial-gradient(circle,rgba(232,93,4,.12) 0%,transparent 65%);animation:drift1 16s ease-in-out infinite}
+.blob-2{width:460px;height:460px;bottom:-80px;left:-100px;background:radial-gradient(circle,rgba(251,133,0,.08) 0%,transparent 65%);animation:drift2 21s ease-in-out infinite}
+.blob-3{width:280px;height:280px;top:40%;left:42%;background:radial-gradient(circle,rgba(232,93,4,.05) 0%,transparent 65%);animation:drift1 28s ease-in-out infinite reverse}
+.grid-bg{position:absolute;inset:0;opacity:0;animation:gridFade 1s .4s ease forwards;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 85% 70% at 50% 0%,black 30%,transparent 100%);pointer-events:none}
+.hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:50px;padding:.3rem .95rem;font-size:.73rem;color:#4ade80;font-weight:600;margin-bottom:1.5rem;letter-spacing:.04em}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;animation:pulseDot 1.8s ease-in-out infinite}
+.hero-sub{font-size:1.02rem;color:var(--muted);max-width:580px;margin:0 auto 1.5rem;line-height:1.78}
+.disclaimer{display:inline-flex;align-items:flex-start;gap:.6rem;background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:.75rem 1.1rem;font-size:.8rem;color:#fbbf24;line-height:1.6;max-width:580px;text-align:left;margin:0 auto}
 
-.sec-title {
-  font-size: clamp(1.9rem, 4.5vw, 3rem);
-  font-weight: 900; letter-spacing: -.035em;
-  margin-bottom: .9rem; line-height: 1.07;
-}
-.sec-sub { color: var(--muted); font-size: 1rem; line-height: 1.78; max-width: 640px; margin: 0 auto 2.5rem; }
+/* ═══ MAIN LAYOUT ═══ */
+.main-wrap{max-width:860px;margin:0 auto;padding:2.5rem 5% 5rem;position:relative;z-index:1}
 
-/* ═══ DISCLAIMER ═══ */
-.disclaimer {
-  background: rgba(245,158,11,.07); border: 1px solid rgba(245,158,11,.2);
-  border-radius: 10px; padding: .9rem 1.1rem; margin-bottom: 2rem;
-  display: flex; align-items: flex-start; gap: .7rem;
-  font-size: .82rem; color: #fbbf24; line-height: 1.6;
-}
+/* ═══ PROGRESS BAR ═══ */
+.progress-wrap{margin-bottom:2rem}
+.prog-steps{display:flex;justify-content:space-between;position:relative;margin-bottom:.7rem}
+.prog-steps::before{content:'';position:absolute;top:50%;left:5%;right:5%;height:1px;background:var(--border2);transform:translateY(-50%)}
+.prog-line{position:absolute;top:50%;left:5%;height:2px;background:linear-gradient(90deg,var(--acc),var(--acc2));transform:translateY(-50%);transition:width .55s cubic-bezier(.4,0,.2,1);z-index:1}
+.p-step{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.77rem;font-weight:700;position:relative;z-index:2;transition:all .3s;font-family:'Fraunces',serif;flex-shrink:0}
+.p-step.done{background:var(--acc);color:#fff;box-shadow:0 0 0 4px rgba(232,93,4,.18)}
+.p-step.active{background:var(--s3);border:2px solid var(--acc);color:var(--acc2);box-shadow:0 0 18px rgba(232,93,4,.28)}
+.p-step.idle{background:var(--s2);border:1px solid var(--border2);color:var(--muted)}
+.p-labels{display:flex;justify-content:space-between}
+.p-label{font-size:.66rem;color:var(--muted);text-align:center;width:34px;letter-spacing:.03em}
+.p-label.active{color:var(--acc2);font-weight:600}
 
-/* ═══ PROGRESS ═══ */
-.progress-wrap { margin-bottom: 2rem; }
-.progress-steps {
-  display: flex; justify-content: space-between;
-  position: relative; margin-bottom: .75rem;
+/* ═══ CHECKER CARD ═══ */
+.checker-card{
+  background:rgba(17,17,32,.95);border:1px solid var(--border);
+  border-radius:20px;padding:2.4rem 2.2rem;
+  box-shadow:var(--sh2);position:relative;overflow:hidden;
 }
-.progress-steps::before {
-  content: ''; position: absolute;
-  top: 50%; left: 5%; right: 5%; height: 1px;
-  background: var(--border2); transform: translateY(-50%);
-}
-.progress-line {
-  position: absolute; top: 50%; left: 5%;
-  height: 2px; background: linear-gradient(90deg,var(--accent),var(--acc2));
-  transform: translateY(-50%); transition: width .5s cubic-bezier(.4,0,.2,1);
-  z-index: 1;
-}
-.p-step {
-  width: 36px; height: 36px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: .78rem; font-weight: 700; position: relative; z-index: 2;
-  transition: all .3s; font-family: 'Fraunces', serif;
-}
-.p-step.done   { background: var(--accent); color: #fff; box-shadow: 0 0 0 4px rgba(232,93,4,.18); }
-.p-step.active { background: var(--surface2); border: 2px solid var(--accent); color: var(--acc2); box-shadow: 0 0 16px rgba(232,93,4,.3); }
-.p-step.idle   { background: var(--surface); border: 1px solid var(--border2); color: var(--muted); }
-.p-labels { display: flex; justify-content: space-between; }
-.p-label { font-size: .67rem; color: var(--muted); text-align: center; width: 36px; letter-spacing: .03em; }
-.p-label.active { color: var(--acc2); font-weight: 600; }
+.checker-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),var(--acc2),transparent)}
+.scan-line{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(232,93,4,.38),transparent);animation:scanLine 4s 1.2s ease-in-out infinite;pointer-events:none}
 
-/* ═══ CARD ═══ */
-.checker-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 20px; padding: 2.2rem 2rem;
-  box-shadow: 0 4px 60px rgba(0,0,0,.5);
-  position: relative; overflow: hidden;
-}
-.checker-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: linear-gradient(90deg, var(--accent), var(--acc2), transparent);
-}
+/* ═══ STEP PANELS ═══ */
+.step-panel{display:none}
+.step-panel.active{display:block;animation:fadeUp .45s cubic-bezier(.22,1,.36,1) both}
+.step-tag{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin-bottom:.45rem;display:flex;align-items:center;gap:.4rem}
+.step-tag::before{content:'//';opacity:.4}
+.step-title{font-size:1.3rem;font-weight:800;letter-spacing:-.025em;margin-bottom:.3rem}
+.step-desc{font-size:.87rem;color:var(--muted);line-height:1.65;margin-bottom:1.8rem}
 
-/* ═══ STEP HEAD ═══ */
-.step-num { font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;display:flex;align-items:center;gap:.45rem; }
-.step-num::before { content:'//'; opacity:.4; }
-.step-title { font-size:1.35rem;font-weight:800;letter-spacing:-.025em;margin-bottom:.35rem; }
-.step-desc  { font-size:.87rem;color:var(--muted);line-height:1.65;margin-bottom:1.8rem; }
-
-/* ═══ FORM ═══ */
-.form-group { margin-bottom:1.4rem; }
-.form-label { display:block;font-size:.8rem;font-weight:600;color:var(--white);margin-bottom:.55rem; }
-.form-label span { color:var(--accent); }
-.form-input, .form-select {
-  width:100%; padding:.85rem 1rem;
-  background:var(--surface2); border:1px solid var(--border2);
-  border-radius:10px; color:var(--white); font-size:.92rem;
-  outline:none; transition:border-color .2s, box-shadow .2s;
-  appearance:none; -webkit-appearance:none;
+/* ═══ FORM ELEMENTS ═══ */
+.form-group{margin-bottom:1.35rem}
+.form-label{display:block;font-size:.8rem;font-weight:600;color:var(--white);margin-bottom:.5rem}
+.form-label em{color:var(--acc);font-style:normal;font-weight:700}
+.form-label small{color:var(--muted);font-weight:400;font-size:.74rem}
+.form-input,.form-select{
+  width:100%;padding:.85rem 1rem;
+  background:rgba(22,22,40,.95);border:1px solid var(--border2);
+  border-radius:10px;color:var(--white);font-size:.92rem;
+  outline:none;transition:border-color .2s,box-shadow .2s;
+  appearance:none;-webkit-appearance:none;
 }
-.form-input::placeholder { color:var(--muted); }
-.form-input:focus, .form-select:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(232,93,4,.15); }
-.form-input.error { border-color:var(--red); }
-.form-error { font-size:.76rem;color:var(--red);margin-top:.4rem;display:none; }
-.form-error.show { display:block;animation:fadeIn .3s ease; }
-.select-wrap { position:relative; }
-.select-wrap::after { content:'▾';position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:var(--accent);pointer-events:none; }
-option { background:#1a1a2e;color:var(--white); }
+.form-input::placeholder{color:var(--muted)}
+.form-input:focus,.form-select:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(232,93,4,.14)}
+.form-input.err,.form-select.err{border-color:var(--red);box-shadow:0 0 0 3px rgba(239,68,68,.1)}
+.form-err{font-size:.76rem;color:var(--red);margin-top:.38rem;display:none}
+.form-err.show{display:block;animation:fadeIn .3s ease}
+.select-wrap{position:relative}
+.select-wrap::after{content:'▾';position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:var(--acc);pointer-events:none;font-size:.9rem}
+option{background:#111120;color:var(--white)}
 
-.inv-pills { display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.65rem; }
-.inv-pill {
-  padding:.4rem .9rem;border-radius:50px;border:1px solid var(--border2);
-  background:var(--surface2);color:var(--muted);font-size:.79rem;font-weight:500;
-  cursor:pointer;transition:all .2s;
+/* ═══ BUDGET PILLS ═══ */
+.budget-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.7rem}
+.b-pill{
+  padding:.38rem .9rem;border-radius:50px;
+  border:1px solid var(--border2);background:rgba(22,22,40,.9);
+  color:var(--muted);font-size:.79rem;font-weight:500;cursor:pointer;
+  transition:all .2s;user-select:none;
 }
-.inv-pill:hover { border-color:rgba(232,93,4,.4);color:var(--acc2); }
-.inv-pill.selected { background:rgba(232,93,4,.12);border-color:var(--accent);color:var(--acc2);font-weight:700; }
+.b-pill:hover{border-color:rgba(232,93,4,.4);color:var(--acc2)}
+.b-pill.sel{background:rgba(232,93,4,.12);border-color:var(--acc);color:var(--acc2);font-weight:700}
 
-.warn-box {
+/* ═══ INFO / WARN BOXES ═══ */
+.info-box{
+  background:rgba(232,93,4,.06);border:1px solid rgba(232,93,4,.2);
+  border-left:3px solid var(--acc);border-radius:0 10px 10px 0;
+  padding:1rem 1.2rem;margin-top:1.1rem;
+  font-size:.85rem;color:var(--text);line-height:1.75;
+  display:none;
+}
+.info-box.show{display:block;animation:fadeIn .4s ease}
+.info-box strong{color:var(--acc2)}
+.info-box ul{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-top:.5rem}
+.info-box ul li{display:flex;gap:.5rem;align-items:flex-start}
+.info-box ul li::before{content:'›';color:var(--acc);font-weight:700;flex-shrink:0}
+.warn-box{
   background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.2);
-  border-radius:10px;padding:.9rem 1.1rem;font-size:.84rem;color:#fbbf24;line-height:1.6;
-  margin-top:.8rem;display:none;
+  border-radius:10px;padding:.85rem 1.1rem;font-size:.84rem;
+  color:#fbbf24;line-height:1.6;margin-top:.8rem;display:none;
 }
-.warn-box.show { display:block;animation:fadeIn .35s ease; }
-
-.info-box {
-  background:rgba(232,93,4,.06);border:1px solid rgba(232,93,4,.18);
-  border-left:3px solid var(--accent);border-radius:0 10px 10px 0;
-  padding:1rem 1.2rem;margin-top:1.2rem;
-  font-size:.85rem;color:var(--text);line-height:1.75;display:none;
+.warn-box.show{display:block;animation:fadeIn .35s ease}
+.potential-box{
+  background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.15);
+  border-radius:10px;padding:1rem 1.2rem;margin-top:.9rem;display:none;
 }
-.info-box.show { display:block;animation:fadeIn .4s ease; }
-.info-box strong { color:var(--acc2); }
-.info-box ul { list-style:none;margin-top:.5rem;display:flex;flex-direction:column;gap:.32rem; }
-.info-box ul li { display:flex;gap:.5rem;align-items:flex-start; }
-.info-box ul li::before { content:'›';color:var(--accent);font-weight:700;flex-shrink:0; }
+.potential-box.show{display:block;animation:fadeIn .4s ease}
+.potential-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin-top:.7rem}
+.pot-card{background:rgba(22,22,40,.9);border:1px solid var(--border);border-radius:10px;padding:.85rem .7rem;text-align:center;transition:.2s}
+.pot-card:hover{border-color:rgba(232,93,4,.28);transform:translateY(-2px)}
+.pot-phase{font-size:.62rem;color:var(--muted);letter-spacing:.04em;margin-bottom:.3rem}
+.pot-profit{font-family:'Fraunces',serif;font-weight:900;font-size:.95rem;background:linear-gradient(135deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.pot-sub{font-size:.64rem;color:var(--muted);margin-top:.18rem}
 
 /* ═══ BUTTONS ═══ */
-.btn-row { display:flex;gap:.85rem;margin-top:1.8rem;align-items:center;flex-wrap:wrap; }
-.btn-primary {
+.btn-row{display:flex;gap:.8rem;margin-top:1.8rem;align-items:center;flex-wrap:wrap}
+.btn-primary{
   display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
-  padding:.875rem 1.8rem;border-radius:10px;font-weight:700;font-size:.94rem;
-  background:linear-gradient(135deg,var(--accent),var(--acc2));color:#fff;
+  padding:.875rem 1.8rem;border-radius:10px;font-weight:700;font-size:.93rem;
+  background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;
   min-height:50px;transition:all .2s;box-shadow:0 4px 20px rgba(232,93,4,.3);
-  cursor:pointer;position:relative;overflow:hidden;
+  cursor:pointer;position:relative;overflow:hidden;border:none;font-family:'DM Sans',sans-serif;
 }
-.btn-primary::after { content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--acc2),var(--accent));opacity:0;transition:opacity .25s; }
-.btn-primary:hover { transform:translateY(-2px);box-shadow:0 8px 28px rgba(232,93,4,.45); }
-.btn-primary:hover::after { opacity:1; }
-.btn-primary span { position:relative;z-index:1; }
-.btn-primary:disabled { opacity:.5;cursor:not-allowed;transform:none; }
-
-.btn-secondary {
+.btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--acc2),var(--acc));opacity:0;transition:opacity .3s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(232,93,4,.45)}
+.btn-primary:hover::after{opacity:1}
+.btn-primary span,.btn-primary .btn-icon{position:relative;z-index:1}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn-secondary{
   display:inline-flex;align-items:center;gap:.45rem;
   padding:.875rem 1.4rem;border-radius:10px;font-weight:500;font-size:.9rem;
   background:none;border:1px solid var(--border2);color:var(--muted);
-  min-height:50px;transition:all .2s;cursor:pointer;
+  min-height:50px;transition:all .2s;cursor:pointer;font-family:'DM Sans',sans-serif;
 }
-.btn-secondary:hover { border-color:var(--accent);color:var(--white); }
-
-.btn-wa-big {
-  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
-  padding:.95rem 2rem;border-radius:10px;font-weight:700;font-size:.97rem;
-  background:var(--wa);color:#fff;min-height:52px;
-  transition:all .2s;box-shadow:0 4px 18px rgba(37,211,102,.3);
-  cursor:pointer;text-decoration:none;border:none;
+.btn-secondary:hover{border-color:var(--acc);color:var(--white)}
+.btn-wa-full{
+  display:flex;align-items:center;justify-content:center;gap:.6rem;
+  padding:1rem 2rem;border-radius:12px;font-weight:700;font-size:1rem;
+  background:var(--wa);color:#fff;min-height:56px;
+  border:none;font-family:'DM Sans',sans-serif;cursor:pointer;
+  box-shadow:0 4px 20px rgba(37,211,102,.3);
+  transition:background .2s,transform .15s,box-shadow .2s;
+  text-decoration:none;width:100%;
 }
-.btn-wa-big:hover { background:var(--wa2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.42); }
+.btn-wa-full:hover{background:var(--wa2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,211,102,.42)}
 
 /* ═══ RESULTS ═══ */
-.result-header { text-align:center;padding:1.5rem 1rem 1.2rem;border-bottom:1px solid var(--border);margin-bottom:1.5rem; }
-.result-icon { width:72px;height:72px;border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-size:2rem; }
-.result-icon.green { background:rgba(34,197,94,.12);border:2px solid rgba(34,197,94,.3); }
-.result-icon.amber { background:rgba(245,158,11,.12);border:2px solid rgba(245,158,11,.3); }
-.result-score { font-family:'Fraunces',serif;font-weight:900;font-size:1.1rem;margin-bottom:.3rem; }
-.result-score.green { color:#22c55e; }
-.result-score.amber { color:var(--amber); }
+.result-wrap{animation:resultReveal .55s cubic-bezier(.22,1,.36,1) both}
+.result-header{text-align:center;padding:1.4rem 1rem 1.2rem;border-bottom:1px solid var(--border);margin-bottom:1.5rem}
+.result-icon-wrap{width:70px;height:70px;border-radius:50%;margin:0 auto .9rem;display:flex;align-items:center;justify-content:center;font-size:1.85rem}
+.ric-green{background:rgba(34,197,94,.12);border:2px solid rgba(34,197,94,.3)}
+.ric-amber{background:rgba(245,158,11,.12);border:2px solid rgba(245,158,11,.3)}
+.result-score{font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem;margin-bottom:.25rem}
+.rs-green{color:var(--green)}.rs-amber{color:var(--amber)}
+.result-sub{font-size:.82rem;color:var(--muted)}
 
-.result-grid { display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.4rem; }
-.result-box { background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:1.1rem;transition:.2s; }
-.result-box:hover { border-color:rgba(232,93,4,.25); }
-.result-box-label { font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem; }
-.result-box-val   { font-family:'Fraunces',serif;font-size:1.05rem;font-weight:800;color:var(--white);line-height:1.2; }
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-bottom:1.3rem}
+.result-box{background:rgba(22,22,40,.9);border:1px solid var(--border);border-radius:12px;padding:1rem;transition:.2s}
+.result-box:hover{border-color:rgba(232,93,4,.22)}
+.rb-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+.rb-val{font-family:'Fraunces',serif;font-size:1rem;font-weight:800;color:var(--white);line-height:1.2}
 
-.potential-section { margin-bottom:1.5rem; }
-.potential-label { font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.9rem; }
-.potential-cards { display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem; }
-.pot-card { background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:1rem .85rem;text-align:center;transition:.2s; }
-.pot-card:hover { border-color:rgba(232,93,4,.25);transform:translateY(-2px); }
-.pot-phase  { font-size:.65rem;color:var(--muted);letter-spacing:.04em;margin-bottom:.4rem; }
-.pot-profit { font-family:'Fraunces',serif;font-weight:900;font-size:1rem;background:linear-gradient(135deg,#e85d04,#fb8500);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent; }
-.pot-time   { font-size:.68rem;color:var(--muted);margin-top:.2rem; }
+.guidance-card{background:rgba(232,93,4,.06);border:1px solid rgba(232,93,4,.18);border-radius:12px;padding:1.2rem;margin-bottom:1rem}
+.gc-title{font-size:.83rem;font-weight:700;color:var(--acc2);margin-bottom:.5rem;display:flex;align-items:center;gap:.4rem}
+.gc-body{font-size:.84rem;color:var(--text);line-height:1.7}
+.gc-list{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-top:.5rem}
+.gc-list li{display:flex;gap:.5rem;font-size:.83rem;color:var(--muted)}
+.gc-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;font-size:.76rem;margin-top:.1rem}
 
-.result-info-card { background:rgba(232,93,4,.06);border:1px solid rgba(232,93,4,.18);border-radius:12px;padding:1.2rem;margin-bottom:1rem; }
-.ric-title { font-size:.85rem;font-weight:700;color:var(--acc2);margin-bottom:.55rem;display:flex;align-items:center;gap:.45rem; }
-.ric-body  { font-size:.84rem;color:var(--text);line-height:1.7; }
-.ric-list  { list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-top:.5rem; }
-.ric-list li { display:flex;gap:.5rem;font-size:.83rem;color:var(--muted); }
-.ric-list li::before { content:'✓';color:var(--green);font-weight:700;flex-shrink:0;font-size:.78rem;margin-top:.1rem; }
+.result-potential{margin-bottom:1.3rem}
+.rp-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:.8rem}
 
-.cta-box { background:var(--surface2);border:1px solid rgba(232,93,4,.2);border-radius:14px;padding:1.6rem;text-align:center;margin-top:1.4rem;position:relative;overflow:hidden; }
-.cta-box::before { content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:280px;height:180px;background:radial-gradient(ellipse,rgba(232,93,4,.12) 0%,transparent 70%); }
-.cta-box-title { font-family:'Fraunces',serif;font-size:1.1rem;font-weight:800;margin-bottom:.5rem;position:relative; }
-.cta-box-sub   { font-size:.84rem;color:var(--muted);margin-bottom:1.3rem;line-height:1.65;position:relative; }
-.cta-buttons   { display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;position:relative; }
+.cta-card{background:rgba(22,22,40,.9);border:1px solid rgba(232,93,4,.22);border-radius:14px;padding:1.6rem;text-align:center;position:relative;overflow:hidden;margin-top:1.2rem;animation:borderGlow 3.5s ease-in-out infinite}
+.cta-card::before{content:'';position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:260px;height:160px;background:radial-gradient(ellipse,rgba(232,93,4,.12) 0%,transparent 70%)}
+.cta-card-title{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:800;margin-bottom:.45rem;position:relative}
+.cta-card-sub{font-size:.84rem;color:var(--muted);margin-bottom:1.3rem;line-height:1.6;position:relative}
+.restart-btn{display:inline-flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--muted);cursor:pointer;margin-top:.9rem;transition:color .2s;background:none;border:none;font-family:'DM Sans',sans-serif}
+.restart-btn:hover{color:var(--acc)}
 
-.restart-link { display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--muted);cursor:pointer;margin-top:1rem;transition:color .2s;background:none;border:none; }
-.restart-link:hover { color:var(--accent); }
+/* ═══ TRUST STRIP ═══ */
+.trust-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.79rem;color:var(--muted)}
+.trust-item strong{color:var(--white)}
 
-.step-panel { display:none; }
-.step-panel.active { display:block;animation:fadeUp .45s cubic-bezier(.22,1,.36,1) both; }
-
-.results-wrap { animation:resultReveal .55s cubic-bezier(.22,1,.36,1) both; }
-
-/* Floating WA */
-.float-wa { position:fixed;bottom:20px;right:20px;z-index:999;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.55rem;box-shadow:0 6px 24px rgba(37,211,102,.5);text-decoration:none;transition:transform .2s; }
-.float-wa:hover { transform:scale(1.1); }
-.float-wa-ring { position:absolute;inset:0;border-radius:50%;background:var(--wa);animation:waPulse 2.2s ease-out infinite; }
+/* ═══ FLOAT WA ═══ */
+.float-wa{position:fixed;bottom:20px;right:16px;z-index:999;width:54px;height:54px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.38rem;box-shadow:0 6px 24px rgba(37,211,102,.55);text-decoration:none;transition:transform .2s}
+.float-wa:hover{transform:scale(1.1)}
+.wa-ring{position:absolute;inset:0;border-radius:50%;background:var(--wa);animation:waPulse 2.2s ease-out infinite}
 
 /* ═══ MOBILE ═══ */
 @media(max-width:768px){
-  .checker-section { padding:3.5rem 1rem 3rem; }
-  .checker-card { padding:1.5rem 1.1rem;border-radius:14px; }
-  .result-grid { grid-template-columns:1fr; }
-  .potential-cards { grid-template-columns:1fr 1fr; }
-  .cta-buttons,.btn-row { flex-direction:column; }
-  .cta-buttons .btn-wa-big,.cta-buttons .btn-primary,.btn-row .btn-primary,.btn-row .btn-secondary { width:100%;min-height:52px; }
-  .sec-title { font-size:1.75rem; }
-  .p-step { width:30px;height:30px;font-size:.7rem; }
-  .p-label { font-size:.6rem;width:30px; }
+  .page-hero{padding:3.5rem 1rem 3rem}
+  .main-wrap{padding:2rem 1rem 4rem}
+  .checker-card{padding:1.6rem 1.2rem;border-radius:14px}
+  .result-grid{grid-template-columns:1fr}
+  .potential-grid{grid-template-columns:1fr 1fr}
+  .btn-row{flex-direction:column}
+  .btn-row .btn-primary,.btn-row .btn-secondary{width:100%}
+  .nav-back span{display:none}
+  .trust-strip{gap:1rem}
+  .blob-1,.blob-2{width:280px;height:280px}
 }
-@media(max-width:374px){ .potential-cards{grid-template-columns:1fr} .sec-title{font-size:1.5rem} }
+@media(max-width:374px){.potential-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
 
-<section class="checker-section" id="eligibility-checker" aria-label="Germany eCommerce Eligibility Checker">
-<div class="section-inner">
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-back">← <span>Back to Home</span></a>
+  <div class="nav-logo">ScaleWith<em>Fahad</em></div>
+  <a href="https://wa.me/+4915510532359" class="nav-wa" rel="noopener">💬 WhatsApp</a>
+</nav>
 
-  <div style="text-align:center;margin-bottom:2.5rem">
-    <div class="sec-badge anim-up">
-      <span class="live-dot"></span>
-      🇩🇪 Kostenlos · Educational Tool · 2025
-    </div>
-    <h2 class="sec-title anim-up d1" style="text-align:center">
-      Germany eCommerce<br><em class="shimmer-text">Eligibility Checker</em>
-    </h2>
-    <p class="sec-sub anim-up d2">
-      Understand whether your visa or residence permit may allow you to explore online business in Germany.
-      General educational guidance only — not legal advice.
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="blob blob-3" aria-hidden="true"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-badge au d1"><span class="dot"></span>🇩🇪 Free · Educational Tool · 2025</div>
+    <h1 class="au d2" style="font-size:clamp(2rem,5vw,3.2rem);font-weight:900;letter-spacing:-.04em;margin-bottom:.9rem">
+      Germany eCommerce<br><em class="shimmer">Eligibility Checker</em>
+    </h1>
+    <p class="hero-sub au d3">
+      Understand whether your visa or residence permit may allow you to explore online business in Germany. Get personalised educational guidance in 3 steps — completely free.
     </p>
-  </div>
-
-  <div class="disclaimer anim-up d3">
-    <span style="font-size:1rem;flex-shrink:0;margin-top:.05rem">⚠️</span>
-    <span><strong style="color:#fbbf24">Educational tool only.</strong> This checker provides general informational guidance based on common permit types. It does not constitute legal or financial advice. Always consult a certified advisor or the relevant German authority (Ausländerbehörde) for your specific situation.</span>
-  </div>
-
-  <div class="checker-card anim-scale d3">
-
-    <!-- PROGRESS BAR -->
-    <div class="progress-wrap">
-      <div class="progress-steps" id="progressSteps">
-        <div class="progress-line" id="progressLine" style="width:0%"></div>
-        <div class="p-step active" data-step="1">1</div>
-        <div class="p-step idle"   data-step="2">2</div>
-        <div class="p-step idle"   data-step="3">3</div>
-        <div class="p-step idle"   data-step="4">✓</div>
-      </div>
-      <div class="p-labels">
-        <div class="p-label active">Permit</div>
-        <div class="p-label">Budget</div>
-        <div class="p-label">Contact</div>
-        <div class="p-label">Results</div>
-      </div>
+    <div class="disclaimer au d4">
+      <span style="font-size:1rem;flex-shrink:0;margin-top:.05rem">⚠️</span>
+      <span><strong style="color:#fbbf24">Educational only.</strong> This tool provides general informational guidance. It is not legal or financial advice. Always consult a certified immigration or tax advisor for your specific situation.</span>
     </div>
+  </div>
+</div>
 
-    <!-- STEP 1: VISA -->
-    <div class="step-panel active" id="step1">
-      <div class="step-num">Step 01</div>
-      <h3 class="step-title">What is your current residence status in Germany?</h3>
-      <p class="step-desc">Select the permit type that best describes your current situation. Each type has different general considerations for business activity.</p>
+<!-- MAIN CONTENT -->
+<div class="main-wrap">
+
+  <!-- PROGRESS -->
+  <div class="progress-wrap as">
+    <div class="prog-steps" id="progSteps">
+      <div class="prog-line" id="progLine" style="width:0%"></div>
+      <div class="p-step active" data-s="1">1</div>
+      <div class="p-step idle"   data-s="2">2</div>
+      <div class="p-step idle"   data-s="3">3</div>
+      <div class="p-step idle"   data-s="4">✓</div>
+    </div>
+    <div class="p-labels">
+      <div class="p-label active" id="pl1">Permit</div>
+      <div class="p-label" id="pl2">Budget</div>
+      <div class="p-label" id="pl3">Contact</div>
+      <div class="p-label" id="pl4">Results</div>
+    </div>
+  </div>
+
+  <!-- CHECKER CARD -->
+  <div class="checker-card as d2">
+    <div class="scan-line"></div>
+
+    <!-- ── STEP 1: VISA ── -->
+    <div class="step-panel active" id="sp1">
+      <div class="step-tag">Step 01</div>
+      <h2 class="step-title">What is your current residence status in Germany?</h2>
+      <p class="step-desc">Select the permit type that best describes your situation. Each type carries different general considerations for business activity.</p>
 
       <div class="form-group">
-        <label class="form-label" for="visaType">Residence / Visa Type <span>*</span></label>
+        <label class="form-label" for="visaType">Residence / Visa Type <em>*</em></label>
         <div class="select-wrap">
-          <select class="form-select" id="visaType" onchange="handleVisaChange()">
+          <select class="form-select" id="visaType" onchange="onVisaChange()">
             <option value="">— Select your permit type —</option>
             <option value="niederlassung">🟢 Permanent Residence (Niederlassungserlaubnis)</option>
             <option value="bluecardeu">🟢 EU Blue Card (Blaue Karte EU)</option>
-            <option value="aufenthaltserlaubnis_arbeit">🟡 Work Permit (Aufenthaltserlaubnis – Arbeit)</option>
+            <option value="work_permit">🟡 Work Permit (Aufenthaltserlaubnis – Arbeit)</option>
             <option value="selbststaendig">🟢 Self-Employment Visa (§21 AufenthG)</option>
             <option value="freiberufler">🟢 Freelancer Permit (Freiberufler)</option>
             <option value="student">🟡 Student Visa (Studentenaufenthaltserlaubnis)</option>
@@ -380,361 +368,443 @@ option { background:#1a1a2e;color:var(--white); }
             <option value="other">❓ Other / Not Sure</option>
           </select>
         </div>
+        <div class="form-err show" id="visaErr" style="display:none">Please select your residence / visa type.</div>
       </div>
 
-      <div class="info-box" id="visaInfoBox"></div>
+      <div class="info-box" id="visaInfo"></div>
 
       <div class="btn-row">
-        <button class="btn-primary" onclick="goToStep(2)"><span>Continue to Budget →</span></button>
+        <button class="btn-primary" onclick="toStep(2)"><span>Continue to Budget</span> <span class="btn-icon">→</span></button>
       </div>
     </div>
 
-    <!-- STEP 2: BUDGET -->
-    <div class="step-panel" id="step2">
-      <div class="step-num">Step 02</div>
-      <h3 class="step-title">What is your planned starting budget?</h3>
-      <p class="step-desc">Your initial investment determines the scale and speed of your business setup. Select a range or enter a specific amount.</p>
+    <!-- ── STEP 2: BUDGET ── -->
+    <div class="step-panel" id="sp2">
+      <div class="step-tag">Step 02</div>
+      <h2 class="step-title">What is your planned starting budget?</h2>
+      <p class="step-desc">Your investment range determines the scale of business setup and the profit potential examples we show you.</p>
 
       <div class="form-group">
-        <label class="form-label">Quick Select Budget Range</label>
-        <div class="inv-pills">
-          <div class="inv-pill" onclick="selectPill(this,'250')">Under €250</div>
-          <div class="inv-pill" onclick="selectPill(this,'500')">€250 – €500</div>
-          <div class="inv-pill" onclick="selectPill(this,'800')">€500 – €800</div>
-          <div class="inv-pill" onclick="selectPill(this,'1000')">€800 – €1,000</div>
-          <div class="inv-pill" onclick="selectPill(this,'2000')">€1,000 – €2,000</div>
-          <div class="inv-pill" onclick="selectPill(this,'5000')">€2,000+</div>
+        <label class="form-label">Quick-select a budget range</label>
+        <div class="budget-pills">
+          <div class="b-pill" onclick="pickPill(this,'200')">Under €200</div>
+          <div class="b-pill" onclick="pickPill(this,'350')">€200 – €350</div>
+          <div class="b-pill" onclick="pickPill(this,'500')">€350 – €500</div>
+          <div class="b-pill" onclick="pickPill(this,'800')">€500 – €800</div>
+          <div class="b-pill" onclick="pickPill(this,'1000')">€800 – €1,000</div>
+          <div class="b-pill" onclick="pickPill(this,'2000')">€1,000 – €2,000</div>
+          <div class="b-pill" onclick="pickPill(this,'5000')">€2,000+</div>
         </div>
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="investAmount">Or enter a specific amount (€)</label>
-        <input type="number" class="form-input" id="investAmount" placeholder="e.g. 800" min="0" oninput="handleInvestChange()" />
-        <div class="form-error" id="investError">Please enter a valid investment amount.</div>
+        <label class="form-label" for="budgetInput">Or type a specific amount (€) <small>— optional</small></label>
+        <input type="number" class="form-input" id="budgetInput" placeholder="e.g. 800" min="0" max="99999" oninput="onBudgetInput()">
+        <div class="form-err" id="budgetErr">Please select or enter an investment amount.</div>
       </div>
 
       <div class="warn-box" id="lowBudgetWarn">
-        ⚠️ <strong>Heads up:</strong> A starting budget below €500 may limit your setup options. We recommend at least <strong>€500–€800</strong> to cover operational costs, eBay fees, and working capital without pre-purchasing inventory.
+        ⚠️ <strong>Recommended minimum:</strong> Starting with less than €500 may limit your options significantly. We recommend at least <strong>€500–€800</strong> to cover operational costs, eBay fees, and working capital — without needing to purchase any inventory upfront.
+      </div>
+
+      <div class="potential-box" id="potentialBox">
+        <div style="font-size:.78rem;font-weight:700;color:#4ade80;margin-bottom:.3rem">📊 Illustrative business potential for your budget range</div>
+        <div class="potential-grid" id="potentialGrid"></div>
+        <p style="font-size:.71rem;color:var(--muted);margin-top:.65rem">*Illustrative only. Results vary. Not a guarantee of income.</p>
       </div>
 
       <div class="btn-row">
-        <button class="btn-primary" onclick="goToStep(3)"><span>Continue to Contact →</span></button>
-        <button class="btn-secondary" onclick="goToStep(1)">← Back</button>
+        <button class="btn-primary" onclick="toStep(3)"><span>Continue to Contact</span> <span class="btn-icon">→</span></button>
+        <button class="btn-secondary" onclick="toStep(1)">← Back</button>
       </div>
     </div>
 
-    <!-- STEP 3: CONTACT -->
-    <div class="step-panel" id="step3">
-      <div class="step-num">Step 03</div>
-      <h3 class="step-title">Where should we send your summary?</h3>
-      <p class="step-desc">Enter your WhatsApp and email to receive your personalised guidance and connect with Fahad directly.</p>
+    <!-- ── STEP 3: CONTACT ── -->
+    <div class="step-panel" id="sp3">
+      <div class="step-tag">Step 03</div>
+      <h2 class="step-title">Where should we send your results?</h2>
+      <p class="step-desc">Enter your contact details to receive your personalised eligibility summary and connect with Fahad directly on WhatsApp.</p>
 
       <div class="form-group">
-        <label class="form-label" for="waNumber">WhatsApp Number <span>*</span></label>
-        <input type="tel" class="form-input" id="waNumber" placeholder="+49 155 xxxxxxxx or +44 7xxx xxxxxx" />
-        <div class="form-error" id="waError">Please enter a valid WhatsApp number including country code.</div>
+        <label class="form-label" for="waInput">WhatsApp Number <em>*</em></label>
+        <input type="tel" class="form-input" id="waInput" placeholder="+49 155 xxxxxxxx  or  +44 7xxx xxxxxx">
+        <div class="form-err" id="waErr">Please enter a valid WhatsApp number including country code (e.g. +49…)</div>
       </div>
+
       <div class="form-group">
-        <label class="form-label" for="emailAddr">Email Address <span>*</span></label>
-        <input type="email" class="form-input" id="emailAddr" placeholder="you@example.com" />
-        <div class="form-error" id="emailError">Please enter a valid email address.</div>
+        <label class="form-label" for="emailInput">Email Address <em>*</em></label>
+        <input type="email" class="form-input" id="emailInput" placeholder="you@example.com">
+        <div class="form-err" id="emailErr">Please enter a valid email address.</div>
       </div>
+
       <div class="form-group">
-        <label class="form-label" for="userName">First Name <span style="color:var(--muted);font-size:.75rem;font-weight:400">(optional)</span></label>
-        <input type="text" class="form-input" id="userName" placeholder="e.g. Ahmed" />
+        <label class="form-label" for="nameInput">First Name <small>(optional — personalises your results)</small></label>
+        <input type="text" class="form-input" id="nameInput" placeholder="e.g. Ahmed">
       </div>
-      <p style="font-size:.77rem;color:var(--muted);line-height:1.65;margin-bottom:.5rem">🔒 Your data is used only to send your eligibility summary and guidance. We do not share your information with third parties.</p>
+
+      <p style="font-size:.76rem;color:var(--muted);line-height:1.6;margin-top:-.3rem">
+        🔒 Your details are used only to personalise your eligibility summary and connect with Fahad. We never share your data with third parties.
+      </p>
 
       <div class="btn-row">
-        <button class="btn-primary" onclick="submitChecker()" id="submitBtn"><span>Show My Results →</span></button>
-        <button class="btn-secondary" onclick="goToStep(2)">← Back</button>
+        <button class="btn-primary" onclick="submitForm()" id="submitBtn"><span>Show My Results</span> <span class="btn-icon">→</span></button>
+        <button class="btn-secondary" onclick="toStep(2)">← Back</button>
       </div>
     </div>
 
-    <!-- STEP 4: RESULTS -->
-    <div class="step-panel" id="step4">
-      <div class="results-wrap" id="resultsWrap">
+    <!-- ── STEP 4: RESULTS ── -->
+    <div class="step-panel" id="sp4">
+      <div class="result-wrap">
 
+        <!-- Header -->
         <div class="result-header">
-          <div class="result-icon green" id="resultIcon">🎯</div>
-          <div class="result-score green" id="resultScore">Eligibility Assessment</div>
-          <p style="font-size:.84rem;color:var(--muted);margin-top:.3rem" id="resultSubline">For educational guidance only. Consult a qualified advisor for your specific situation.</p>
+          <div class="result-icon-wrap ric-green" id="resIcon">🎯</div>
+          <div class="result-score rs-green" id="resScore">Eligibility Assessment</div>
+          <div class="result-sub" id="resSub">For educational guidance only — not legal advice.</div>
         </div>
 
-        <div class="result-grid" id="resultGrid">
-          <div class="result-box">
-            <div class="result-box-label">Permit Type</div>
-            <div class="result-box-val" id="r-visa">—</div>
-          </div>
-          <div class="result-box">
-            <div class="result-box-label">Starting Budget</div>
-            <div class="result-box-val" id="r-budget">—</div>
-          </div>
-          <div class="result-box">
-            <div class="result-box-label">Business Model</div>
-            <div class="result-box-val">eBay Dropshipping 🇩🇪</div>
-          </div>
-          <div class="result-box">
-            <div class="result-box-label">Inventory Required</div>
-            <div class="result-box-val" style="color:#22c55e">None — No warehouse</div>
-          </div>
+        <!-- Summary grid -->
+        <div class="result-grid">
+          <div class="result-box"><div class="rb-label">Permit Type</div><div class="rb-val" id="r-permit">—</div></div>
+          <div class="result-box"><div class="rb-label">Starting Budget</div><div class="rb-val" id="r-budget">—</div></div>
+          <div class="result-box"><div class="rb-label">Business Model</div><div class="rb-val">eBay Dropshipping 🇩🇪</div></div>
+          <div class="result-box"><div class="rb-label">Inventory Needed</div><div class="rb-val" style="color:var(--green)">None — no warehouse</div></div>
         </div>
 
-        <div class="potential-section">
-          <div class="potential-label">// Estimated monthly profit potential — illustrative examples only</div>
-          <div class="potential-cards" id="potentialCards"></div>
-          <p style="font-size:.73rem;color:var(--muted);margin-top:.65rem;line-height:1.6">*Illustrative figures only. Actual results vary. Not a guarantee of income.</p>
+        <!-- Potential -->
+        <div class="result-potential">
+          <div class="rp-label">// Estimated monthly profit potential (illustrative)</div>
+          <div class="potential-grid" id="resPotential"></div>
+          <p style="font-size:.71rem;color:var(--muted);margin-top:.6rem">*Illustrative only. Not a guarantee of income.</p>
         </div>
 
-        <div class="result-info-card" id="resultGuidance">
-          <div class="ric-title">📋 General Guidance for Your Permit Type</div>
-          <div class="ric-body" id="resultGuidanceBody">—</div>
+        <!-- Visa guidance -->
+        <div class="guidance-card">
+          <div class="gc-title">📋 General Guidance for Your Permit Type</div>
+          <div class="gc-body" id="resGuidance">—</div>
         </div>
 
-        <div class="result-info-card" style="background:rgba(34,197,94,.05);border-color:rgba(34,197,94,.2)">
-          <div class="ric-title" style="color:#4ade80">🚀 How ScalewithFahad Helps</div>
-          <div class="ric-body">
-            Done-for-you eBay dropshipping management in Germany — <strong style="color:var(--white)">fully MwSt.-compliant, no warehouse, 50% profit share</strong>. We handle everything:
-            <ul class="ric-list">
-              <li>Product research & SEO-optimized German listings</li>
+        <!-- ScalewithFahad info -->
+        <div class="guidance-card" style="background:rgba(34,197,94,.05);border-color:rgba(34,197,94,.18)">
+          <div class="gc-title" style="color:#4ade80">🚀 How ScalewithFahad Can Help</div>
+          <div class="gc-body">
+            Done-for-you eBay dropshipping management in Germany — <strong style="color:var(--white)">fully MwSt.-compliant, no warehouse, 50% profit share model</strong>. We handle everything end-to-end:
+            <ul class="gc-list">
+              <li>Product research & SEO-optimised German eBay listings</li>
               <li>Order fulfillment, customer service & returns management</li>
               <li>Monthly transparent profit reporting</li>
-              <li>Guidance on Gewerbe registration, USt-ID setup</li>
+              <li>General guidance on Gewerbe registration & USt-ID setup</li>
             </ul>
           </div>
         </div>
 
-        <div class="cta-box">
-          <div class="cta-box-title">Book a Private Consultation — Personalised Business Guidance</div>
-          <div class="cta-box-sub">Get a 45–60 min 1:1 session with Fahad. Real strategy, real roadmap — not a sales call. €50 + 19% VAT.</div>
-          <div class="cta-buttons">
-            <a href="#" class="btn-wa-big" id="ctaWhatsApp" target="_blank" rel="noopener">💬 Continue on WhatsApp</a>
-            <a href="mailto:fahad786sultan@gmail.com" class="btn-primary" style="text-decoration:none" id="ctaEmail">
-              <span>📧 Send via Email</span>
-            </a>
+        <!-- WhatsApp CTA -->
+        <div class="cta-card">
+          <div class="cta-card-title">Want to Start? Book a Private Consultation</div>
+          <div class="cta-card-sub">Get a personalised 45–60 min 1:1 strategy session with Fahad. Real roadmap, not a sales call. €50 + 19% VAT.</div>
+          <a href="#" id="ctaWhatsApp" class="btn-wa-full" target="_blank" rel="noopener" onclick="gtag&&gtag('event','whatsapp_click',{event_category:'checker_result',event_label:'result_wa'})">
+            💬 Continue on WhatsApp
+          </a>
+          <div style="margin-top:.8rem">
+            <a href="mailto:fahad786sultan@gmail.com" id="ctaEmail" style="font-size:.83rem;color:var(--muted);text-decoration:underline;transition:color .2s" onmouseover="this.style.color='var(--acc)'" onmouseout="this.style.color='var(--muted)'">📧 Prefer email? Send your summary</a>
           </div>
-        </div>
-
-        <div style="text-align:center;margin-top:1.2rem">
-          <button class="restart-link" onclick="restartChecker()">↺ Start over with different details</button>
+          <button class="restart-btn" onclick="restartForm()">↺ Start over with different details</button>
         </div>
 
       </div>
     </div>
-
-  </div><!-- /.checker-card -->
-
-  <!-- Trust strip -->
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)">
-    <div style="display:flex;align-items:center;gap:.45rem;font-size:.8rem;color:var(--muted)"><span style="color:#22c55e">✓</span><strong style="color:var(--white)">MwSt.-registered</strong> · DE453914117</div>
-    <div style="display:flex;align-items:center;gap:.45rem;font-size:.8rem;color:var(--muted)"><span style="color:#22c55e">✓</span><strong style="color:var(--white)">Based in Germany</strong> · Erkrath, NRW</div>
-    <div style="display:flex;align-items:center;gap:.45rem;font-size:.8rem;color:var(--muted)"><span>⭐</span><strong style="color:var(--white)">4.0 Trustpilot</strong> · Verified</div>
-    <div style="display:flex;align-items:center;gap:.45rem;font-size:.8rem;color:var(--muted)"><span>💬</span><strong style="color:var(--white)">DE · EN · Urdu</strong></div>
   </div>
 
-</div>
-</section>
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-item"><span style="color:var(--green)">✓</span><strong>MwSt.-registered</strong><span>DE453914117</span></div>
+    <div class="trust-item"><span style="color:var(--green)">✓</span><strong>Based in Germany</strong><span>Erkrath, NRW</span></div>
+    <div class="trust-item"><span>⭐</span><strong>4.0 Trustpilot</strong><span>Verified</span></div>
+    <div class="trust-item"><span>💬</span><strong>DE · EN · Urdu</strong></div>
+  </div>
 
+</div><!-- /.main-wrap -->
+
+<!-- Float WA -->
 <a href="https://wa.me/+4915510532359" class="float-wa" rel="noopener" aria-label="WhatsApp">
-  <div class="float-wa-ring"></div>💬
+  <div class="wa-ring" aria-hidden="true"></div>💬
 </a>
 
+<!-- ═══════════════════════════════════
+     JAVASCRIPT — All logic
+     ═══════════════════════════════════ -->
 <script>
-/* ─── VISA DATA ─── */
-const VISA_DATA = {
+'use strict';
+
+/* ── DATA ── */
+var VISA = {
   niederlassung: {
-    label:"Permanent Residence",icon:"🟢",score:"Generally Favourable",scoreClass:"green",resultIcon:"🎯",
-    guidance:`<strong>Permanent Residence (Niederlassungserlaubnis)</strong> generally allows broad rights to work and conduct business in Germany.<ul class="ric-list"><li>Self-employment and business activity generally permitted</li><li>Gewerbeanmeldung typically accessible</li><li>USt-ID registration generally available</li><li>Consult local Ausländerbehörde to confirm your specific conditions</li></ul>`,
-    infoBox:`<strong>Good starting position:</strong> Permanent residents generally have broad rights to conduct business. An eBay dropshipping Gewerbe is typically accessible.<ul><li>Gewerbe registration: ~€20–€60 at local Gewerbeamt</li><li>USt-ID: free via Bundeszentralamt für Steuern</li><li>No inventory required for dropshipping</li></ul>`
+    label: 'Permanent Residence',
+    score: 'Generally Favourable', cls: 'green', icon: '🎯',
+    info: '<strong>Good starting position.</strong> Permanent residents generally have broad rights to conduct business in Germany.<ul><li>Gewerbeanmeldung (business registration) is typically accessible</li><li>eBay dropshipping Gewerbe usually available</li><li>USt-ID registration available via Bundeszentralamt für Steuern</li><li>Always confirm your specific conditions with the Ausländerbehörde</li></ul>',
+    guidance: '<strong>Permanent Residence (Niederlassungserlaubnis)</strong> generally allows broad rights to work and conduct business in Germany, including self-employment and commercial activity. An eBay dropshipping Gewerbe registration is typically accessible. Consult your local Ausländerbehörde to confirm any conditions on your specific permit.<ul class="gc-list"><li>Self-employment & commercial business generally permitted</li><li>Gewerbeanmeldung: ~€20–€60 at your local Gewerbeamt</li><li>USt-ID: free via Bundeszentralamt für Steuern</li><li>No inventory required for eBay dropshipping</li></ul>'
   },
   bluecardeu: {
-    label:"EU Blue Card",icon:"🟢",score:"Generally Favourable",scoreClass:"green",resultIcon:"🎯",
-    guidance:`<strong>EU Blue Card (Blaue Karte EU)</strong> is for highly qualified employment. Side business may need review.<ul class="ric-list"><li>Primary employment must remain unchanged</li><li>Supplementary business activity may require employer/authority review</li><li>ScalewithFahad's done-for-you model minimises your personal operational involvement</li></ul>`,
-    infoBox:`EU Blue Card holders have strong rights in Germany. Additional commercial activities should be discussed with the Ausländerbehörde. ScalewithFahad's model means you are primarily a business owner, not an active day-to-day operator.`
+    label: 'EU Blue Card',
+    score: 'Generally Favourable', cls: 'green', icon: '🎯',
+    info: '<strong>Strong position.</strong> EU Blue Card holders have significant rights in Germany. Side business activity may require review.<ul><li>Primary employment contract must remain unchanged</li><li>Additional commercial activity may need employer or authority review</li><li>ScalewithFahad\'s done-for-you model minimises your active involvement</li></ul>',
+    guidance: '<strong>EU Blue Card (Blaue Karte EU)</strong> is designed for highly qualified employment and grants strong rights in Germany. Starting a supplementary commercial business activity should be discussed with your Ausländerbehörde and potentially your employer. ScalewithFahad manages operations, meaning your involvement as a business owner is minimised day-to-day.<ul class="gc-list"><li>Primary employment must remain unchanged</li><li>Consult Ausländerbehörde about additional commercial activity</li><li>ScalewithFahad handles day-to-day operations on your behalf</li></ul>'
   },
-  aufenthaltserlaubnis_arbeit: {
-    label:"Work Permit",icon:"🟡",score:"Check Your Permit Conditions",scoreClass:"amber",resultIcon:"📋",
-    guidance:`<strong>Work Permit (Aufenthaltserlaubnis – Arbeit)</strong> conditions vary significantly. Self-employment is not automatically permitted.<ul class="ric-list"><li>Your permit may restrict additional commercial activity</li><li>Review conditions stated on your permit document</li><li>Ausländerbehörde approval may be required before starting</li><li>We recommend clarifying your conditions first</li></ul>`,
-    infoBox:`Work permits often have specific clauses about additional employment or business. Review your permit document and if unclear, consult the Ausländerbehörde or an immigration specialist before taking any steps.`
+  work_permit: {
+    label: 'Work Permit',
+    score: 'Check Your Conditions', cls: 'amber', icon: '📋',
+    info: '<strong>Conditions vary significantly.</strong> Work permit terms differ case by case. Commercial self-employment is not automatically included.<ul><li>Review the exact conditions stated on your permit document</li><li>Ausländerbehörde approval may be required before starting</li><li>Speak to an immigration specialist for your specific situation</li></ul>',
+    guidance: '<strong>Work Permit (Aufenthaltserlaubnis – Arbeit)</strong> conditions vary greatly by individual case. Self-employment and additional commercial activity is not automatically permitted and may require specific approval. Review your permit document carefully and contact your Ausländerbehörde before taking any business steps.<ul class="gc-list"><li>Check your permit document for commercial activity clauses</li><li>Ausländerbehörde approval may be required</li><li>Consider consulting an immigration lawyer before proceeding</li><li>Book a consultation with Fahad to understand your options</li></ul>'
   },
   selbststaendig: {
-    label:"Self-Employment Visa §21",icon:"🟢",score:"Well Positioned",scoreClass:"green",resultIcon:"🚀",
-    guidance:`<strong>Self-Employment / Entrepreneur Visa (§21 AufenthG)</strong> is designed for running a business in Germany — a strong fit for e-commerce.<ul class="ric-list"><li>Commercial business activity is the core purpose of this permit</li><li>eBay dropshipping as a registered Gewerbe aligns naturally</li><li>Maintain clear records — regular reporting requirements may apply</li><li>ScalewithFahad provides monthly transparent profit reports</li></ul>`,
-    infoBox:`<strong>Excellent fit for eBay business.</strong> The §21 self-employment visa is purpose-built for running a German business. ScalewithFahad handles operations while you maintain ownership and compliance.`
+    label: 'Self-Employment Visa §21',
+    score: 'Well Positioned', cls: 'green', icon: '🚀',
+    info: '<strong>Excellent fit for eBay business.</strong> The §21 AufenthG self-employment visa is purpose-built for running a business in Germany.<ul><li>Commercial business activity is the core purpose of this permit</li><li>eBay dropshipping Gewerbe aligns naturally with this status</li><li>ScalewithFahad provides monthly profit reports for compliance</li></ul>',
+    guidance: '<strong>Self-Employment / Entrepreneur Visa (§21 AufenthG)</strong> is specifically designed for running a commercial business in Germany — making it an excellent fit for eBay dropshipping. ScalewithFahad handles day-to-day operations while you maintain ownership and compliance.<ul class="gc-list"><li>Commercial business activity is the core purpose of this permit</li><li>eBay dropshipping Gewerbe registration highly compatible</li><li>ScalewithFahad provides monthly transparent reporting</li><li>Maintain clear accounting records — reporting requirements may apply</li></ul>'
   },
   freiberufler: {
-    label:"Freelancer Permit",icon:"🟢",score:"Good Starting Point",scoreClass:"green",resultIcon:"✅",
-    guidance:`<strong>Freelancer Permit (Freiberufler)</strong> covers liberal professions. Commercial trading is a separate category.<ul class="ric-list"><li>Freelancer status covers recognised liberal professions</li><li>E-commerce is generally classified as commercial (Gewerbe), not freelance</li><li>Adding a Gewerbe alongside freelancer status is common practice</li><li>A Steuerberater can advise on the most efficient structure</li></ul>`,
-    infoBox:`Freelancers in Germany often add a separate Gewerbe registration for commercial activities. A tax advisor can help structure this efficiently.`
+    label: 'Freelancer Permit',
+    score: 'Good Starting Point', cls: 'green', icon: '✅',
+    info: '<strong>Common structure.</strong> Freelancer status covers recognised liberal professions. E-commerce is typically classified separately as commercial (Gewerbe).<ul><li>Adding a Gewerbe alongside Freiberufler status is common practice</li><li>A Steuerberater (tax advisor) can advise on the best structure</li><li>ScalewithFahad can provide general context on this arrangement</li></ul>',
+    guidance: '<strong>Freelancer Permit (Freiberufler)</strong> covers recognised liberal professions. E-commerce trading is generally classified as commercial (Gewerbe) rather than freelance. Adding a separate Gewerbe registration alongside freelance status is a common and well-established practice in Germany. A Steuerberater can advise on the most efficient structure for your situation.<ul class="gc-list"><li>Freelancer status and Gewerbe can coexist</li><li>E-commerce = Gewerbe, not Freiberufler classification</li><li>Consult a Steuerberater for optimal setup</li><li>Ausländerbehörde confirmation advisable</li></ul>'
   },
   student: {
-    label:"Student Visa",icon:"🟡",score:"Limited — Check Conditions",scoreClass:"amber",resultIcon:"📚",
-    guidance:`<strong>Student Visa</strong> typically restricts work hours and may limit commercial business activity.<ul class="ric-list"><li>Commercial business activity is generally not automatically permitted</li><li>120 full-day / 240 half-day work rule may apply</li><li>Confirm with Ausländerbehörde before registering a Gewerbe</li><li>ScalewithFahad offers a student-specific coaching programme at €100 + VAT</li></ul>`,
-    infoBox:`Students should be cautious about commercial activity. Consult the Ausländerbehörde before registering a Gewerbe. ScalewithFahad offers a Student Online Income Guidance coaching programme (€100 + VAT).`
+    label: 'Student Visa',
+    score: 'Limited — Check Conditions', cls: 'amber', icon: '📚',
+    info: '<strong>Restrictions apply.</strong> Student visas typically include work-hour limitations. Commercial business registration requires careful review.<ul><li>120 full-day / 240 half-day annual work rule may apply</li><li>Commercial Gewerbe may not be automatically permitted</li><li>Confirm with Ausländerbehörde before any steps</li><li>ScalewithFahad offers a Student coaching programme at €100 + VAT</li></ul>',
+    guidance: '<strong>Student Visa (Studentenaufenthaltserlaubnis)</strong> typically comes with significant restrictions on work and commercial activity. Registering a Gewerbe is not automatically permitted and should be confirmed with your Ausländerbehörde before taking any steps. ScalewithFahad offers a dedicated Student Online Income Guidance programme (€100 + VAT) covering legal options available to students in Germany.<ul class="gc-list"><li>Confirm commercial activity with Ausländerbehörde first</li><li>120 full-day/240 half-day work rule may apply</li><li>Student coaching available: €100 + VAT</li><li>Planning for post-study business setup is a common approach</li></ul>'
   },
   jobseeker: {
-    label:"Job Seeker Visa",icon:"🟡",score:"Limited Period",scoreClass:"amber",resultIcon:"⏳",
-    guidance:`<strong>Job Seeker Visa</strong> is a temporary permit for job searching — commercial activity is generally not permitted.<ul class="ric-list"><li>Intended for job searching, not business operation</li><li>Transitioning to an appropriate permit is recommended before starting</li><li>ScalewithFahad can help you plan ahead</li></ul>`,
-    infoBox:`Job seeker visas have significant restrictions. We recommend consulting an immigration lawyer and planning your business setup for when your permit situation changes.`
+    label: 'Job Seeker Visa',
+    score: 'Limited Period', cls: 'amber', icon: '⏳',
+    info: '<strong>Temporary status.</strong> Job seeker visas are intended for employment searching. Commercial business activity is generally not permitted during this period.<ul><li>Intended for job searching, not business operation</li><li>Consider transitioning to an appropriate permit first</li><li>ScalewithFahad can help you plan ahead for a future business</li></ul>',
+    guidance: '<strong>Job Seeker Visa (Jobsuchervisum)</strong> is a temporary permit for job searching in Germany. Commercial business activity is generally not permitted. We recommend consulting an immigration lawyer about transitioning to a more suitable permit type before starting a business, and beginning planning now for when your situation changes.<ul class="gc-list"><li>Not designed for commercial activity</li><li>Consult immigration lawyer about permit transition</li><li>Start planning your business now for future launch</li><li>Book a consultation to prepare your roadmap</li></ul>'
   },
   duldung: {
-    label:"Tolerated Stay (Duldung)",icon:"🟠",score:"Significant Restrictions",scoreClass:"amber",resultIcon:"⚠️",
-    guidance:`<strong>Tolerated Stay (Duldung)</strong> carries significant restrictions on work and business activity.<ul class="ric-list"><li>Work and commercial activity is often restricted or prohibited</li><li>Conditions vary greatly by individual case</li><li>A formal legal consultation is strongly recommended</li><li>ScalewithFahad can support planning for improved residency</li></ul>`,
-    infoBox:`Duldung status comes with significant legal restrictions. We strongly recommend consulting with an immigration lawyer or Beratungsstelle before taking any business steps.`
+    label: 'Tolerated Stay (Duldung)',
+    score: 'Significant Restrictions', cls: 'amber', icon: '⚠️',
+    info: '<strong>Significant restrictions.</strong> Duldung status carries significant legal limitations on work and business activity that vary by individual case.<ul><li>Work and commercial activity is often restricted or prohibited</li><li>Conditions vary greatly by individual situation</li><li>A formal legal consultation is strongly recommended before any steps</li></ul>',
+    guidance: '<strong>Tolerated Stay (Duldung)</strong> comes with significant restrictions on work and commercial activity. These conditions vary greatly by individual case. We strongly recommend consulting with an immigration lawyer or a local refugee advisory centre (Beratungsstelle) before taking any business steps. ScalewithFahad can provide general context but cannot assess your specific legal situation.<ul class="gc-list"><li>Consult an immigration lawyer before any steps</li><li>Conditions vary significantly by individual case</li><li>Local Beratungsstellen (advisory centres) can provide free support</li><li>ScalewithFahad can help once your legal position is clearer</li></ul>'
   },
   asyl: {
-    label:"Asylum / Refugee Status",icon:"🟠",score:"Depends on Recognition Stage",scoreClass:"amber",resultIcon:"📋",
-    guidance:`<strong>Asylum / Refugee Status</strong> — rights vary significantly based on the recognition stage.<ul class="ric-list"><li>Recognised refugees may have broader rights similar to residents</li><li>Pending applicants typically face restrictions</li><li>Contact your local Ausländerbehörde or refugee support org</li><li>ScalewithFahad can help you understand options and plan ahead</li></ul>`,
-    infoBox:`If you have received refugee recognition, your rights may be broader. If pending, commercial activity is typically restricted. Please consult a local refugee advice centre (Beratungsstelle) for your specific situation.`
+    label: 'Asylum / Refugee Status',
+    score: 'Depends on Recognition Stage', cls: 'amber', icon: '📋',
+    info: '<strong>Rights depend on recognition stage.</strong> Recognised refugees may have broader rights. Pending applicants face significant restrictions.<ul><li>Recognised refugees: broader rights, similar to residents in some areas</li><li>Pending applicants: commercial activity typically restricted</li><li>Contact your local Ausländerbehörde or Beratungsstelle</li></ul>',
+    guidance: '<strong>Asylum / Refugee Status</strong> — your rights depend significantly on your stage of recognition. Fully recognised refugees (Anerkennung) typically have broader rights, while pending applicants face significant restrictions. Always confirm your specific rights with the Ausländerbehörde or a refugee support organisation before taking any business steps.<ul class="gc-list"><li>Recognised refugees: consult Ausländerbehörde for commercial rights</li><li>Pending applicants: commercial activity typically restricted</li><li>Free support from local Beratungsstellen available</li><li>Book a Fahad consultation once your legal position is clear</li></ul>'
   },
   eu_citizen: {
-    label:"EU Citizen / EU Settlement",icon:"🟢",score:"Well Positioned",scoreClass:"green",resultIcon:"🇪🇺",
-    guidance:`<strong>EU Citizens</strong> enjoy freedom of movement and the right to conduct business across Germany.<ul class="ric-list"><li>Full right to register a Gewerbe and conduct commercial activity</li><li>No additional permit requirements for business activity</li><li>eBay dropshipping is fully viable under this status</li><li>Standard German registration applies (Gewerbe, USt-ID)</li></ul>`,
-    infoBox:`<strong>EU citizens have one of the strongest positions</strong> for starting an online business in Germany. Full commercial rights apply.`
+    label: 'EU Citizen / EU Settlement',
+    score: 'Well Positioned', cls: 'green', icon: '🇪🇺',
+    info: '<strong>Full commercial rights.</strong> EU citizens enjoy freedom of movement and the unrestricted right to conduct business in Germany.<ul><li>Full right to register a Gewerbe and conduct commercial activity</li><li>No permit restrictions on business activity</li><li>Standard German registration process applies</li></ul>',
+    guidance: '<strong>EU Citizens / EU Settlement</strong> enjoy freedom of movement and the full right to conduct business across Germany. This is one of the strongest positions for starting an online business. All standard German processes apply (Gewerbe registration, USt-ID) without any immigration restrictions.<ul class="gc-list"><li>Full unrestricted right to register a Gewerbe</li><li>eBay dropshipping fully viable under this status</li><li>Standard: Gewerbeamt registration + USt-ID from Bundeszentralamt</li><li>ScalewithFahad handles all operations end-to-end</li></ul>'
   },
   other: {
-    label:"Other / Not Sure",icon:"❓",score:"Consultation Recommended",scoreClass:"amber",resultIcon:"💬",
-    guidance:`If you are unsure about your permit type, a personalised consultation is the best next step.<ul class="ric-list"><li>Book a 1:1 session with Fahad for tailored guidance</li><li>Bring your permit document (Aufenthaltstitel)</li><li>ScalewithFahad works with clients from many backgrounds</li></ul>`,
-    infoBox:`If unsure about your status, it's always best to consult directly. Fahad has worked with clients from many different backgrounds and provides general guidance in private 1:1 sessions.`
+    label: 'Other / Not Sure',
+    score: 'Consultation Recommended', cls: 'amber', icon: '💬',
+    info: '<strong>Personal consultation recommended.</strong> If you\'re unsure of your permit type, a 1:1 session with Fahad is the best next step.<ul><li>Book a consultation session for tailored guidance</li><li>Have your Aufenthaltstitel (permit document) available</li><li>Fahad has worked with clients from many different backgrounds</li></ul>',
+    guidance: '<strong>Uncertain permit type</strong> — the best step when unsure is a direct 1:1 consultation. Fahad has worked with clients from many backgrounds across Germany and can provide general educational context for your situation in a private session.<ul class="gc-list"><li>Book a 1:1 WhatsApp consultation for personalised guidance</li><li>Bring your Aufenthaltstitel (permit document)</li><li>Fahad speaks DE, EN and Urdu</li><li>Consultation: €50 + 19% VAT = €59.50 total</li></ul>'
   }
 };
 
-const POTENTIAL = {
-  low:  [{phase:"🌱 Month 1–2",profit:"€0–€150",time:"Setup"},{phase:"📈 Month 3–5",profit:"€150–€400",time:"Growth"},{phase:"🚀 Month 6+",profit:"€400+",time:"Scaling"}],
-  mid:  [{phase:"🌱 Month 1–2",profit:"€0–€250",time:"Setup"},{phase:"📈 Month 3–5",profit:"€250–€700",time:"Growth"},{phase:"🚀 Month 6+",profit:"€700–€1.5k",time:"Scaling"}],
-  high: [{phase:"🌱 Month 1–3",profit:"€0–€500",time:"Setup"},{phase:"📈 Month 3–6",profit:"€500–€1.5k",time:"Growth"},{phase:"🚀 Month 6+",profit:"€1.5k–€3k+",time:"Scaling"}],
+var POTENTIAL = {
+  verylow: [{p:'🌱 Month 1–3',r:'€0–€50',t:'Setup only'},{p:'📈 Month 3–6',r:'€50–€150',t:'Limited growth'},{p:'🚀 Month 6+',r:'€150+',t:'Slow scaling'}],
+  low:     [{p:'🌱 Month 1–2',r:'€0–€120',t:'Setup'},{p:'📈 Month 3–5',r:'€120–€350',t:'Growth'},{p:'🚀 Month 6+',r:'€350–€600',t:'Scaling'}],
+  mid:     [{p:'🌱 Month 1–2',r:'€0–€250',t:'Setup'},{p:'📈 Month 3–5',r:'€250–€700',t:'Growth'},{p:'🚀 Month 6+',r:'€700–€1.5k',t:'Scaling'}],
+  high:    [{p:'🌱 Month 1–2',r:'€0–€500',t:'Setup'},{p:'📈 Month 3–5',r:'€500–€1.5k',t:'Growth'},{p:'🚀 Month 6+',r:'€1.5k–€3k+',t:'Scaling'}]
 };
 
-/* ─── STATE ─── */
-let currentStep=1, selectedVisa='', selectedInvest=0;
+/* ── STATE ── */
+var state = { visa:'', budget:0, wa:'', email:'', name:'', step:1 };
 
-/* ─── STEP NAV ─── */
-function goToStep(n){
-  if(n===2&&!validateStep1())return;
-  if(n===3&&!validateStep2())return;
-  document.querySelectorAll('.step-panel').forEach(p=>p.classList.remove('active'));
-  document.getElementById('step'+n).classList.add('active');
-  currentStep=n; updateProgress(n);
-  document.getElementById('eligibility-checker').scrollIntoView({behavior:'smooth',block:'start'});
+/* ── STEP NAVIGATION ── */
+function toStep(n) {
+  if (n > state.step) {
+    if (!validateStep(state.step)) return;
+  }
+  document.querySelectorAll('.step-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.getElementById('sp'+n).classList.add('active');
+  state.step = n;
+  updateProgress(n);
+  document.querySelector('.checker-card').scrollIntoView({ behavior:'smooth', block:'start' });
 }
 
-function updateProgress(step){
-  const steps=document.querySelectorAll('.p-step');
-  const labels=document.querySelectorAll('.p-label');
-  document.getElementById('progressLine').style.width=['0%','33%','66%','100%'][step-1];
-  steps.forEach((el,i)=>{
+function updateProgress(s) {
+  var steps  = document.querySelectorAll('.p-step');
+  var labels = document.querySelectorAll('.p-label');
+  var widths = ['0%','33%','66%','100%'];
+  document.getElementById('progLine').style.width = widths[s-1];
+  steps.forEach(function(el, i) {
     el.classList.remove('done','active','idle');
-    if(i+1<step){el.classList.add('done');el.textContent='✓';}
-    else if(i+1===step){el.classList.add('active');el.textContent=i+1;}
-    else{el.classList.add('idle');el.textContent=i+1;}
+    if (i+1 < s)      { el.classList.add('done');   el.textContent = '✓'; }
+    else if (i+1 === s){ el.classList.add('active'); el.textContent = i+1; }
+    else               { el.classList.add('idle');   el.textContent = i+1; }
   });
-  labels.forEach((el,i)=>el.classList.toggle('active',i+1===step));
+  labels.forEach(function(el, i){ el.classList.toggle('active', i+1 === s); });
 }
 
-/* ─── VISA CHANGE ─── */
-function handleVisaChange(){
-  const val=document.getElementById('visaType').value;
-  selectedVisa=val;
-  const box=document.getElementById('visaInfoBox');
-  if(val&&VISA_DATA[val]){box.innerHTML=VISA_DATA[val].infoBox;box.classList.add('show');}
-  else box.classList.remove('show');
-}
-
-/* ─── PILLS ─── */
-function selectPill(el,value){
-  document.querySelectorAll('.inv-pill').forEach(p=>p.classList.remove('selected'));
-  el.classList.add('selected');
-  document.getElementById('investAmount').value=value;
-  selectedInvest=parseInt(value);
-  handleInvestChange();
-}
-
-function handleInvestChange(){
-  const val=parseInt(document.getElementById('investAmount').value)||0;
-  selectedInvest=val;
-  document.getElementById('lowBudgetWarn').classList.toggle('show',val>0&&val<500);
-}
-
-/* ─── VALIDATION ─── */
-function validateStep1(){
-  if(!selectedVisa){
-    document.getElementById('visaType').classList.add('error');
-    setTimeout(()=>document.getElementById('visaType').classList.remove('error'),2000);
-    return false;
+/* ── VALIDATION ── */
+function validateStep(s) {
+  if (s === 1) {
+    if (!state.visa) {
+      var el = document.getElementById('visaType');
+      el.classList.add('err');
+      document.getElementById('visaErr').style.display = 'block';
+      setTimeout(function(){ el.classList.remove('err'); document.getElementById('visaErr').style.display = 'none'; }, 2500);
+      return false;
+    }
   }
+  if (s === 2) {
+    if (state.budget <= 0) {
+      document.getElementById('budgetInput').classList.add('err');
+      document.getElementById('budgetErr').classList.add('show');
+      setTimeout(function(){ document.getElementById('budgetInput').classList.remove('err'); document.getElementById('budgetErr').classList.remove('show'); }, 2500);
+      return false;
+    }
+  }
+  if (s === 3) { return validateStep3(); }
   return true;
 }
 
-function validateStep2(){
-  if(selectedInvest<=0){
-    const el=document.getElementById('investAmount');
-    el.classList.add('error');
-    document.getElementById('investError').classList.add('show');
-    setTimeout(()=>{el.classList.remove('error');document.getElementById('investError').classList.remove('show');},2500);
-    return false;
+function validateStep3() {
+  var wa    = document.getElementById('waInput').value.trim();
+  var email = document.getElementById('emailInput').value.trim();
+  var ok = true;
+  if (wa.length < 7 || !/[\d\s\+\-\(\)]{7,}/.test(wa)) {
+    document.getElementById('waInput').classList.add('err');
+    document.getElementById('waErr').classList.add('show');
+    ok = false;
+  } else {
+    document.getElementById('waInput').classList.remove('err');
+    document.getElementById('waErr').classList.remove('show');
   }
-  return true;
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    document.getElementById('emailInput').classList.add('err');
+    document.getElementById('emailErr').classList.add('show');
+    ok = false;
+  } else {
+    document.getElementById('emailInput').classList.remove('err');
+    document.getElementById('emailErr').classList.remove('show');
+  }
+  return ok;
 }
 
-function validateStep3(){
-  const wa=document.getElementById('waNumber').value.trim();
-  const em=document.getElementById('emailAddr').value.trim();
-  let valid=true;
-  if(wa.length<7||!/\+?[\d\s\-]{7,}/.test(wa)){
-    document.getElementById('waNumber').classList.add('error');
-    document.getElementById('waError').classList.add('show');
-    valid=false;
-  }else{document.getElementById('waNumber').classList.remove('error');document.getElementById('waError').classList.remove('show');}
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){
-    document.getElementById('emailAddr').classList.add('error');
-    document.getElementById('emailError').classList.add('show');
-    valid=false;
-  }else{document.getElementById('emailAddr').classList.remove('error');document.getElementById('emailError').classList.remove('show');}
-  return valid;
+/* ── VISA CHANGE ── */
+function onVisaChange() {
+  var v = document.getElementById('visaType').value;
+  state.visa = v;
+  var box = document.getElementById('visaInfo');
+  if (v && VISA[v]) {
+    box.innerHTML = VISA[v].info;
+    box.classList.add('show');
+  } else {
+    box.classList.remove('show');
+  }
 }
 
-/* ─── SUBMIT ─── */
-function submitChecker(){
-  if(!validateStep3())return;
-  const btn=document.getElementById('submitBtn');
-  btn.disabled=true; btn.querySelector('span').textContent='⏳ Generating your report…';
-  setTimeout(()=>{buildResults();goToStep(4);btn.disabled=false;btn.querySelector('span').textContent='Show My Results →';},1200);
+/* ── BUDGET PILLS ── */
+function pickPill(el, val) {
+  document.querySelectorAll('.b-pill').forEach(function(p){ p.classList.remove('sel'); });
+  el.classList.add('sel');
+  document.getElementById('budgetInput').value = val;
+  state.budget = parseInt(val);
+  onBudgetChange();
 }
 
-/* ─── BUILD RESULTS ─── */
-function buildResults(){
-  const visa=VISA_DATA[selectedVisa]||VISA_DATA['other'];
-  const invest=selectedInvest||0;
-  const wa=document.getElementById('waNumber').value.trim();
-  const name=document.getElementById('userName').value.trim()||'there';
-
-  document.getElementById('resultIcon').textContent=visa.resultIcon;
-  document.getElementById('resultIcon').className='result-icon '+visa.scoreClass;
-  document.getElementById('resultScore').textContent=visa.score;
-  document.getElementById('resultScore').className='result-score '+visa.scoreClass;
-  document.getElementById('resultSubline').textContent=`Hi ${name} — educational guidance only. Consult a qualified advisor for your specific situation.`;
-  document.getElementById('r-visa').textContent=visa.label;
-  document.getElementById('r-budget').textContent=invest>0?'€'+invest.toLocaleString('de-DE'):'Not specified';
-
-  const tier=invest>=1000?'high':invest>=500?'mid':'low';
-  document.getElementById('potentialCards').innerHTML=POTENTIAL[tier].map(c=>
-    `<div class="pot-card"><div class="pot-phase">${c.phase}</div><div class="pot-profit">${c.profit}</div><div class="pot-time">${c.time}</div></div>`
-  ).join('');
-
-  document.getElementById('resultGuidanceBody').innerHTML=visa.guidance;
-
-  const msg=encodeURIComponent(`Hi Fahad, I just completed the Germany eCommerce Eligibility Checker.\n\nMy details:\n- Permit: ${visa.label}\n- Budget: €${invest}\n- Name: ${name}\n\nI'd like to book a consultation to discuss my options.`);
-  document.getElementById('ctaWhatsApp').href=`https://wa.me/+4915510532359?text=${msg}`;
-  document.getElementById('ctaEmail').href=`mailto:fahad786sultan@gmail.com?subject=eCommerce%20Eligibility%20Enquiry%20-%20${encodeURIComponent(visa.label)}&body=${msg}`;
+function onBudgetInput() {
+  state.budget = parseInt(document.getElementById('budgetInput').value) || 0;
+  document.querySelectorAll('.b-pill').forEach(function(p){ p.classList.remove('sel'); });
+  onBudgetChange();
 }
 
-/* ─── RESTART ─── */
-function restartChecker(){
-  selectedVisa='';selectedInvest=0;
-  ['visaType','investAmount','waNumber','emailAddr','userName'].forEach(id=>document.getElementById(id).value='');
-  document.querySelectorAll('.inv-pill').forEach(p=>p.classList.remove('selected'));
-  ['visaInfoBox','lowBudgetWarn'].forEach(id=>document.getElementById(id).classList.remove('show'));
-  goToStep(1);
+function onBudgetChange() {
+  var b = state.budget;
+  document.getElementById('lowBudgetWarn').classList.toggle('show', b > 0 && b < 500);
+  if (b > 0) {
+    var tier = b >= 1000 ? 'high' : b >= 500 ? 'mid' : b >= 200 ? 'low' : 'verylow';
+    renderPotential('potentialGrid', tier);
+    document.getElementById('potentialBox').classList.add('show');
+  } else {
+    document.getElementById('potentialBox').classList.remove('show');
+  }
+}
+
+function renderPotential(gridId, tier) {
+  var data = POTENTIAL[tier];
+  document.getElementById(gridId).innerHTML = data.map(function(c) {
+    return '<div class="pot-card"><div class="pot-phase">'+c.p+'</div><div class="pot-profit">'+c.r+'</div><div class="pot-sub">'+c.t+'</div></div>';
+  }).join('');
+}
+
+/* ── SUBMIT ── */
+function submitForm() {
+  if (!validateStep3()) return;
+  state.wa    = document.getElementById('waInput').value.trim();
+  state.email = document.getElementById('emailInput').value.trim();
+  state.name  = document.getElementById('nameInput').value.trim() || 'there';
+  var btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.querySelector('span').textContent = '⏳ Generating your report…';
+  setTimeout(function() {
+    buildResults();
+    toStep(4);
+    btn.disabled = false;
+    btn.querySelector('span').textContent = 'Show My Results';
+  }, 1100);
+}
+
+/* ── BUILD RESULTS ── */
+function buildResults() {
+  var v = VISA[state.visa] || VISA['other'];
+  var b = state.budget;
+
+  /* Header */
+  var iconEl = document.getElementById('resIcon');
+  iconEl.textContent = v.icon;
+  iconEl.className = 'result-icon-wrap ' + (v.cls === 'green' ? 'ric-green' : 'ric-amber');
+  var scoreEl = document.getElementById('resScore');
+  scoreEl.textContent = v.score;
+  scoreEl.className = 'result-score rs-' + v.cls;
+  document.getElementById('resSub').textContent = 'Hi ' + state.name + ' — educational guidance only. Consult a qualified advisor for your specific situation.';
+
+  /* Grid */
+  document.getElementById('r-permit').textContent = v.label;
+  document.getElementById('r-budget').textContent = b > 0 ? '€' + b.toLocaleString('de-DE') : 'Not specified';
+
+  /* Potential */
+  var tier = b >= 1000 ? 'high' : b >= 500 ? 'mid' : b >= 200 ? 'low' : 'verylow';
+  renderPotential('resPotential', tier);
+
+  /* Guidance */
+  document.getElementById('resGuidance').innerHTML = v.guidance;
+
+  /* WA prefilled message */
+  var msg = [
+    'Hi Fahad, I just completed the Germany eCommerce Eligibility Checker.',
+    '',
+    'My details:',
+    '• Permit type: ' + v.label,
+    '• Starting budget: €' + (b || 'not specified'),
+    '• Email: ' + state.email,
+    '• WhatsApp: ' + state.wa,
+    '• Name: ' + state.name,
+    '',
+    'I am interested in starting an eBay dropshipping business in Germany and would like to book a consultation to discuss my options.'
+  ].join('\n');
+  document.getElementById('ctaWhatsApp').href = 'https://wa.me/+4915510532359?text=' + encodeURIComponent(msg);
+  document.getElementById('ctaEmail').href = 'mailto:fahad786sultan@gmail.com?subject=' + encodeURIComponent('Germany eCommerce Enquiry — ' + v.label) + '&body=' + encodeURIComponent(msg);
+}
+
+/* ── RESTART ── */
+function restartForm() {
+  state = { visa:'', budget:0, wa:'', email:'', name:'', step:1 };
+  ['visaType','budgetInput','waInput','emailInput','nameInput'].forEach(function(id){
+    var el = document.getElementById(id); if(el) el.value = '';
+  });
+  document.querySelectorAll('.b-pill').forEach(function(p){ p.classList.remove('sel'); });
+  document.getElementById('visaInfo').classList.remove('show');
+  document.getElementById('lowBudgetWarn').classList.remove('show');
+  document.getElementById('potentialBox').classList.remove('show');
+  toStep(1);
 }
 </script>
 
