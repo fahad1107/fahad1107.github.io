@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#08080f">
+<meta name="msvalidate.01" content="9E27CCDA013E8FD0B21A314A3CE1A9F5">
+<title>Blog — eBay Dropshipping, Online Business Germany & More | ScalewithFahad</title>
+<meta name="description" content="Practical guides on eBay dropshipping in Germany, online business setup, VPS tools, SEO, and freelancing. Written by Fahad bin Sultan — Erkrath, NRW.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="author" content="Fahad bin Sultan – ScalewithFahad">
+<link rel="canonical" href="https://scalewithfahad.de/blog.html">
+<link rel="alternate" hreflang="en" href="https://scalewithfahad.de/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scalewithfahad.de/blog.html">
+<meta property="og:site_name" content="ScalewithFahad">
+<meta property="og:title" content="Blog — eBay Dropshipping Germany & Online Business Guides">
+<meta property="og:description" content="Practical guides on eBay dropshipping, VAT setup, VPS tools, Shopify SEO and online business in Germany.">
+<meta property="og:image" content="https://scalewithfahad.de/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ScalewithFahad Blog — eBay & Online Business Germany">
+<meta name="twitter:creator" content="@scalewithfahad">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,800;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"ScalewithFahad Blog","url":"https://scalewithfahad.de/blog.html","description":"Practical guides on eBay dropshipping in Germany, online business setup, VPS tools, SEO and freelancing.","author":{"@type":"Person","name":"Fahad bin Sultan","url":"https://scalewithfahad.de"},"publisher":{"@type":"Organization","name":"ScalewithFahad","url":"https://scalewithfahad.de"}}</script>
+<style>
+/* ═════════════════════════════════════
+   TOKENS & RESET
+   ═════════════════════════════════════ */
+:root{
+  --bg:#08080f; --s1:#0f0f1a; --s2:#111120; --s3:#161628;
+  --acc:#e85d04; --acc2:#fb8500;
+  --wa:#25d366; --wa2:#1ebe5d;
+  --white:#f0f4ff; --muted:#8892a4; --text:#c8d0e0;
+  --border:rgba(255,255,255,.07); --border2:rgba(255,255,255,.11);
+  --green:#22c55e;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;overflow-x:hidden;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+h1,h2,h3,h4{font-family:'Fraunces',serif;color:var(--white);line-height:1.1}
+a{color:var(--acc2);text-decoration:none;transition:color .2s}
+a:hover{color:var(--white)}
+
+/* ═══ KEYFRAMES ═══ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(2);opacity:0}}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.25;transform:scale(.7)}}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(18px,-12px) scale(1.05)}66%{transform:translate(-14px,9px) scale(.96)}}
+@keyframes gridFade{from{opacity:0}to{opacity:1}}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.au{animation:fadeUp .55s cubic-bezier(.22,1,.36,1) both}
+.d1{animation-delay:.06s}.d2{animation-delay:.14s}.d3{animation-delay:.24s}
+
+/* ═══ NAV ═══ */
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;height:66px;position:sticky;top:0;z-index:500;
+  background:rgba(8,8,15,.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.2rem;color:var(--white);letter-spacing:-.02em}
+.nav-logo em{color:var(--acc);font-style:normal}
+.nav-back{font-size:.83rem;color:var(--muted);transition:color .2s;display:flex;align-items:center;gap:.35rem}
+.nav-back:hover{color:var(--white)}
+.nav-cta{background:var(--wa);color:#fff;padding:.5rem 1.1rem;border-radius:8px;font-weight:700;font-size:.82rem;display:flex;align-items:center;gap:5px;transition:background .2s,transform .15s;min-height:40px}
+.nav-cta:hover{background:var(--wa2);transform:translateY(-1px)}
+
+/* ═══ HERO ═══ */
+.blog-hero{
+  position:relative;overflow:hidden;
+  padding:5rem 5% 4rem;text-align:center;
+  border-bottom:1px solid var(--border);
+}
+.blob{position:absolute;border-radius:50%;pointer-events:none}
+.blob1{width:550px;height:550px;top:-160px;right:-100px;background:radial-gradient(circle,rgba(232,93,4,.11) 0%,transparent 65%);animation:drift 16s ease-in-out infinite}
+.blob2{width:420px;height:420px;bottom:-80px;left:-90px;background:radial-gradient(circle,rgba(251,133,0,.07) 0%,transparent 65%);animation:drift 22s ease-in-out infinite reverse}
+.grid-bg{position:absolute;inset:0;opacity:0;animation:gridFade 1s .3s ease forwards;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 85% 70% at 50% 0%,black 25%,transparent 100%);pointer-events:none}
+.hero-inner{max-width:680px;margin:0 auto;position:relative;z-index:1}
+.pill-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(232,93,4,.1);border:1px solid rgba(232,93,4,.25);color:var(--acc2);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .85rem;border-radius:50px}
+.shimmer-text{background:linear-gradient(90deg,#e85d04 0%,#fb8500 28%,#ffe8cc 50%,#fb8500 72%,#e85d04 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 4s linear infinite}
+.breadcrumb{font-size:.75rem;color:var(--muted);margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center;gap:.4rem;flex-wrap:wrap}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--acc2)}
+.bc-sep{color:rgba(255,255,255,.2)}
+.hero-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;padding-top:1.8rem;border-top:1px solid var(--border);margin-top:1.8rem}
+.h-stat-num{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;background:linear-gradient(135deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.h-stat-lbl{font-size:.72rem;color:var(--muted);margin-top:.1rem}
+
+/* ═══ SEARCH & FILTER BAR ═══ */
+.controls-wrap{
+  max-width:1140px;margin:0 auto;
+  padding:2.5rem 5% 0;
+  display:flex;flex-direction:column;gap:1.4rem;
+}
+.search-bar{
+  position:relative;max-width:540px;
+}
+.search-icon{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.95rem;pointer-events:none}
+.search-input{
+  width:100%;padding:.8rem 1rem .8rem 2.8rem;
+  background:rgba(22,22,40,.9);border:1px solid var(--border2);
+  border-radius:10px;color:var(--white);font-size:.9rem;font-family:'DM Sans',sans-serif;
+  outline:none;transition:border-color .2s,box-shadow .2s;
+}
+.search-input::placeholder{color:var(--muted)}
+.search-input:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(232,93,4,.12)}
+.search-clear{position:absolute;right:.8rem;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);cursor:pointer;font-size:.95rem;display:none;padding:.2rem;transition:color .2s}
+.search-clear:hover{color:var(--white)}
+.search-clear.visible{display:block}
+
+/* Filter pills */
+.filter-row{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center}
+.filter-label{font-size:.74rem;font-weight:700;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-right:.2rem;flex-shrink:0}
+.filter-pill{
+  padding:.36rem .9rem;border-radius:50px;
+  border:1px solid var(--border2);background:rgba(22,22,40,.8);
+  color:var(--muted);font-size:.79rem;font-weight:500;cursor:pointer;
+  transition:all .2s;user-select:none;font-family:'DM Sans',sans-serif;
+}
+.filter-pill:hover{border-color:rgba(232,93,4,.4);color:var(--acc2)}
+.filter-pill.active{background:rgba(232,93,4,.12);border-color:var(--acc);color:var(--acc2);font-weight:700}
+
+/* Sort row */
+.sort-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.results-count{font-size:.83rem;color:var(--muted)}
+.results-count strong{color:var(--white)}
+.sort-wrap{display:flex;align-items:center;gap:.6rem;font-size:.82rem;color:var(--muted)}
+.sort-select{background:rgba(22,22,40,.9);border:1px solid var(--border2);border-radius:8px;color:var(--white);padding:.38rem .75rem;font-size:.82rem;font-family:'DM Sans',sans-serif;outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;padding-right:1.8rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='%23e85d04'%3E%3Cpath d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .6rem center}
+option{background:#111120;color:var(--white)}
+
+/* ═══ ARTICLES GRID ═══ */
+.articles-wrap{max-width:1140px;margin:0 auto;padding:2rem 5% 5rem}
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3rem}
+
+/* ═══ BLOG CARD ═══ */
+.blog-card{
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);
+  border-radius:16px;overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .32s cubic-bezier(.22,1,.36,1),border-color .25s,box-shadow .3s;
+  animation:fadeUp .5s cubic-bezier(.22,1,.36,1) both;
+}
+.blog-card:hover{transform:translateY(-6px);border-color:rgba(232,93,4,.3);box-shadow:0 16px 48px rgba(0,0,0,.45)}
+.blog-card:hover .bc-img-inner{transform:scale(1.05)}
+.blog-card:hover .bc-read{color:var(--acc2)}
+.blog-card:hover .bc-arrow{transform:translateX(4px)}
+
+/* Card image */
+.bc-img{width:100%;aspect-ratio:16/9;overflow:hidden;position:relative;flex-shrink:0}
+.bc-img-inner{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .42s cubic-bezier(.22,1,.36,1);
+  background:linear-gradient(135deg,rgba(232,93,4,.13) 0%,rgba(17,17,32,.9) 100%);
+}
+.bc-img-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.bc-ph-icon{font-size:2.2rem}
+.bc-cat{
+  position:absolute;top:.7rem;left:.7rem;
+  font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  background:linear-gradient(135deg,var(--acc),var(--acc2));
+  color:#fff;padding:.18rem .7rem;border-radius:50px;
+}
+.bc-featured-badge{
+  position:absolute;top:.7rem;right:.7rem;
+  font-size:.6rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);
+  color:#4ade80;padding:.16rem .6rem;border-radius:50px;
+}
+
+/* Card body */
+.bc-body{padding:1.35rem;display:flex;flex-direction:column;flex:1;gap:.55rem}
+.bc-meta{display:flex;align-items:center;gap:.55rem;font-size:.72rem;color:var(--muted)}
+.bc-meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.2);flex-shrink:0}
+.bc-title{font-family:'Fraunces',serif;font-weight:700;font-size:.98rem;color:var(--white);line-height:1.28;letter-spacing:-.015em}
+.bc-excerpt{font-size:.83rem;color:var(--muted);line-height:1.7;flex:1}
+.bc-footer{display:flex;align-items:center;justify-content:space-between;margin-top:.4rem}
+.bc-read{display:inline-flex;align-items:center;gap:.4rem;font-size:.81rem;font-weight:600;color:var(--muted);transition:color .2s}
+.bc-arrow{transition:transform .2s;font-size:.85rem}
+.bc-read-time{font-size:.72rem;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid var(--border);padding:.15rem .55rem;border-radius:50px}
+
+/* ═══ NO RESULTS ═══ */
+.no-results{
+  grid-column:1/-1;text-align:center;
+  padding:4rem 1rem;display:none;
+}
+.no-results.show{display:block;animation:fadeUp .4s ease both}
+.no-results-icon{font-size:3rem;margin-bottom:1rem}
+.no-results h3{font-size:1.1rem;margin-bottom:.4rem}
+.no-results p{font-size:.88rem;color:var(--muted)}
+
+/* ═══ PAGINATION / LOAD MORE ═══ */
+.pagination-wrap{display:flex;flex-direction:column;align-items:center;gap:1.2rem}
+.load-more-btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:rgba(255,255,255,.04);border:1px solid var(--border2);
+  color:var(--white);padding:.875rem 2.2rem;border-radius:10px;
+  font-weight:600;font-size:.93rem;cursor:pointer;font-family:'DM Sans',sans-serif;
+  transition:background .2s,border-color .2s,transform .15s;
+  min-height:50px;
+}
+.load-more-btn:hover{background:rgba(232,93,4,.08);border-color:rgba(232,93,4,.35);color:var(--acc2);transform:translateY(-2px)}
+.load-more-btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.load-more-btn .lm-spin{display:none;animation:spin .7s linear infinite}
+.load-more-btn.loading .lm-spin{display:inline-block}
+.load-more-btn.loading .lm-text{display:none}
+.pages-info{font-size:.78rem;color:var(--muted)}
+
+/* ═══ NEWSLETTER / CTA ═══ */
+.blog-cta{
+  border-top:1px solid var(--border);
+  background:rgba(232,93,4,.04);
+  padding:4rem 5%;text-align:center;position:relative;overflow:hidden;
+}
+.blog-cta::before{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:400px;height:240px;background:radial-gradient(ellipse,rgba(232,93,4,.1) 0%,transparent 70%);pointer-events:none}
+.cta-inner{max-width:580px;margin:0 auto;position:relative;z-index:1}
+.cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:1.5rem}
+.btn-wa{background:var(--wa);color:#fff;padding:.875rem 2rem;border-radius:10px;font-weight:700;font-size:.95rem;min-height:50px;display:inline-flex;align-items:center;gap:.5rem;box-shadow:0 4px 18px rgba(37,211,102,.3);transition:background .2s,transform .15s}
+.btn-wa:hover{background:var(--wa2);transform:translateY(-2px);color:#fff}
+.btn-acc{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;padding:.875rem 1.8rem;border-radius:10px;font-weight:700;font-size:.93rem;min-height:50px;display:inline-flex;align-items:center;gap:.5rem;box-shadow:0 4px 18px rgba(232,93,4,.3);transition:box-shadow .2s,transform .15s}
+.btn-acc:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(232,93,4,.45);color:#fff}
+
+/* ═══ FLOAT WA ═══ */
+.float-wa{position:fixed;bottom:20px;right:16px;z-index:999}
+.wa-ring{position:absolute;inset:0;border-radius:50%;background:var(--wa);animation:waPulse 2.2s ease-out infinite}
+.float-wa a{position:relative;z-index:1;width:54px;height:54px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.4rem;text-decoration:none;box-shadow:0 6px 22px rgba(37,211,102,.5);transition:transform .2s}
+.float-wa a:hover{transform:scale(1.1)}
+
+/* ═══ FOOTER ═══ */
+footer{border-top:1px solid var(--border);padding:1.8rem 5%;text-align:center}
+.footer-logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem;color:var(--white)}
+.footer-logo em{color:var(--acc);font-style:normal}
+.footer-copy{font-size:.72rem;color:rgba(255,255,255,.22);margin-top:.3rem}
+
+/* ═══ SIDEBAR FEATURED ═══ */
+.page-layout{display:grid;grid-template-columns:1fr 270px;gap:2.5rem;max-width:1140px;margin:0 auto;padding:2rem 5% 5rem;align-items:start}
+.sidebar-card{background:rgba(255,255,255,.03);border:1px solid var(--border2);border-radius:14px;padding:1.3rem;margin-bottom:1.2rem}
+.sc-title{font-family:'Fraunces',serif;font-weight:700;font-size:.93rem;color:var(--white);margin-bottom:.85rem;display:flex;align-items:center;gap:.4rem}
+.sc-list{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.sc-list a{font-size:.82rem;color:var(--muted);display:flex;gap:.4rem;align-items:baseline;line-height:1.45}
+.sc-list a:hover{color:var(--acc2)}
+.sc-list a::before{content:'›';color:var(--acc);font-weight:700;flex-shrink:0}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:1024px){
+  .page-layout{grid-template-columns:1fr}
+  .sidebar-section{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+}
+@media(max-width:900px){
+  .articles-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .articles-grid{grid-template-columns:1fr}
+  .filter-row{gap:.4rem}
+  .cta-btns{flex-direction:column;align-items:center}
+  .btn-wa,.btn-acc{width:100%;max-width:300px;justify-content:center}
+  .sort-row{flex-direction:column;align-items:flex-start}
+  .sidebar-section{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+<nav class="nav" role="navigation" aria-label="Site navigation">
+  <a href="/" class="nav-back" aria-label="Go back to homepage">← <span>Home</span></a>
+  <a href="/" class="nav-logo" aria-label="ScalewithFahad">ScaleWith<em>Fahad</em></a>
+  <a href="https://wa.me/+4915510532359?text=Hi%20Fahad%2C%20I%20found%20your%20blog." class="nav-cta" rel="noopener" aria-label="Contact on WhatsApp">💬 WhatsApp</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="blob blob1" aria-hidden="true"></div>
+  <div class="blob blob2" aria-hidden="true"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="bc-sep">›</span><span>Blog</span>
+    </nav>
+    <div class="pill-badge au d1" style="margin-bottom:1.1rem">📚 Guides & Insights</div>
+    <h1 class="au d2" style="font-size:clamp(1.9rem,5vw,3rem);font-weight:900;letter-spacing:-.04em;margin-bottom:.8rem">
+      eBay Dropshipping, <em class="shimmer-text">Online Business</em><br>& More — Germany Guides
+    </h1>
+    <p class="au d3" style="font-size:1rem;color:var(--muted);line-height:1.78;max-width:560px;margin:0 auto">
+      Practical, no-fluff guides on building a legal, profitable online business in Germany. Written by Fahad bin Sultan — based in Erkrath, NRW.
+    </p>
+    <div class="hero-stats au" style="animation-delay:.38s">
+      <div style="text-align:center"><div class="h-stat-num" id="totalCount">12</div><div class="h-stat-lbl">Articles</div></div>
+      <div style="text-align:center"><div class="h-stat-num">5</div><div class="h-stat-lbl">Categories</div></div>
+      <div style="text-align:center"><div class="h-stat-num">🇩🇪</div><div class="h-stat-lbl">Germany Focus</div></div>
+      <div style="text-align:center"><div class="h-stat-num">Free</div><div class="h-stat-lbl">Always</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH & FILTER -->
+<div class="controls-wrap">
+  <div class="search-bar">
+    <span class="search-icon" aria-hidden="true">🔍</span>
+    <input type="search" class="search-input" id="searchInput" placeholder="Search articles, topics, keywords…" aria-label="Search articles" autocomplete="off">
+    <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+  </div>
+
+  <div class="filter-row" role="group" aria-label="Filter by category">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-pill active" data-cat="all">All Articles</button>
+    <button class="filter-pill" data-cat="ebay">📦 eBay Dropshipping</button>
+    <button class="filter-pill" data-cat="vps">🖥️ VPS &amp; Tools</button>
+    <button class="filter-pill" data-cat="seo">🔍 SEO</button>
+    <button class="filter-pill" data-cat="business">🇩🇪 Online Business</button>
+    <button class="filter-pill" data-cat="freelancing">💼 Freelancing</button>
+  </div>
+
+  <div class="sort-row">
+    <div class="results-count"><strong id="showingCount">12</strong> articles</div>
+    <div class="sort-wrap">
+      Sort by:
+      <select class="sort-select" id="sortSelect" aria-label="Sort articles">
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+        <option value="read">Reading Time</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLES + SIDEBAR LAYOUT -->
+<div class="page-layout" id="mainLayout">
+
+  <!-- ARTICLES GRID -->
+  <div>
+    <div class="articles-grid" id="articlesGrid" role="list">
+
+      <!-- NO RESULTS -->
+      <div class="no-results" id="noResults">
+        <div class="no-results-icon">🔍</div>
+        <h3>No articles found</h3>
+        <p>Try a different keyword or clear your search filter.</p>
+      </div>
+
+    </div>
+
+    <div class="pagination-wrap" id="paginationWrap">
+      <button class="load-more-btn" id="loadMoreBtn" aria-label="Load more articles">
+        <span class="lm-text">Load More Articles ↓</span>
+        <span class="lm-spin">⟳</span>
+      </button>
+      <div class="pages-info" id="pagesInfo"></div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="sidebar-section">
+
+      <div class="sidebar-card" style="border-color:rgba(232,93,4,.25)">
+        <div class="sc-title">⭐ Featured Guides</div>
+        <ul class="sc-list">
+          <li><a href="/blog/ebay-dropshipping-legal-germany.html">Is eBay Dropshipping Legal in Germany?</a></li>
+          <li><a href="/blog/best-vps-for-ebay.html">Best VPS for eBay Automation 2025</a></li>
+          <li><a href="/blog/ebay-business-starten.html">Start an eBay Business in Germany</a></li>
+          <li><a href="/germany-ecommerce-eligibility-checker.html">Eligibility Checker Tool 🇩🇪</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card" style="background:rgba(124,58,237,.05);border-color:rgba(124,58,237,.25)">
+        <div class="sc-title" style="color:#a78bfa">🖥️ Recommended VPS</div>
+        <p style="font-size:.8rem;color:var(--muted);margin-bottom:.7rem;line-height:1.6">AMD EPYC · 4 vCPU · 8 GB RAM · Frankfurt 🇩🇪</p>
+        <div style="font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;background:linear-gradient(135deg,#7c3aed,#a855f7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.8rem">€15.80/mo</div>
+        <a href="/vps/" style="display:flex;align-items:center;justify-content:center;gap:.4rem;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;padding:.65rem;border-radius:9px;font-weight:700;font-size:.82rem;transition:box-shadow .2s" onmouseover="this.style.boxShadow='0 6px 20px rgba(124,58,237,.4)'" onmouseout="this.style.boxShadow='none'">Get This VPS →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sc-title">📂 Categories</div>
+        <ul class="sc-list">
+          <li><a href="#" onclick="applyFilter('ebay');return false">📦 eBay Dropshipping</a></li>
+          <li><a href="#" onclick="applyFilter('vps');return false">🖥️ VPS &amp; Tools</a></li>
+          <li><a href="#" onclick="applyFilter('seo');return false">🔍 SEO</a></li>
+          <li><a href="#" onclick="applyFilter('business');return false">🇩🇪 Online Business</a></li>
+          <li><a href="#" onclick="applyFilter('freelancing');return false">💼 Freelancing</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sc-title">🔗 Official Resources</div>
+        <ul class="sc-list">
+          <li><a href="https://www.bzst.de" rel="noopener" target="_blank">Bundeszentralamt für Steuern</a></li>
+          <li><a href="https://www.gewerbeamt.de" rel="noopener" target="_blank">Gewerbeamt Registration</a></li>
+          <li><a href="https://www.ebay.de/help/selling/listings/creating-managing-listings/dropshipping?id=4176" rel="noopener" target="_blank">eBay Dropshipping Policy</a></li>
+          <li><a href="https://de.trustpilot.com/review/scalewithfahad.de" rel="noopener" target="_blank">ScalewithFahad Reviews ⭐</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+</div>
+
+<!-- NEWSLETTER / CTA -->
+<div class="blog-cta">
+  <div class="cta-inner">
+    <div class="pill-badge" style="margin-bottom:1rem">📬 Free Consultation</div>
+    <h2 style="font-weight:900;font-size:clamp(1.5rem,3.5vw,2.1rem);letter-spacing:-.03em;margin-bottom:.65rem">Want Personalised eBay Guidance?</h2>
+    <p style="color:var(--muted);font-size:.93rem;line-height:1.75">Book a 1:1 strategy session with Fahad — €50 + VAT. Real roadmap, not a sales call. Or explore the done-for-you account management on a 50% profit share basis.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/+4915510532359?text=Hi%20Fahad%2C%20I%20found%20your%20blog%20and%20want%20to%20discuss%20getting%20started." class="btn-wa" rel="noopener">💬 WhatsApp Fahad</a>
+      <a href="/" class="btn-acc">Visit ScalewithFahad.de →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">ScaleWith<em>Fahad</em></div>
+  <p class="footer-copy">scalewithfahad.de · Primashop · Fahad bin Sultan · Erkrath, Germany · DE453914117 · © 2025</p>
+</footer>
+
+<!-- FLOAT WA -->
+<div class="float-wa" aria-label="WhatsApp">
+  <div class="wa-ring" aria-hidden="true"></div>
+  <a href="https://wa.me/+4915510532359" rel="noopener" aria-label="Contact on WhatsApp">💬</a>
+</div>
+
+<!-- ═══════════════════════════════════
+     ARTICLE DATA + RENDER ENGINE
+     ═══════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ── ARTICLE DATABASE ──
+   Add new articles here — they auto-appear on the page.
+   Fields: id, title, excerpt, cat (matches filter-pill data-cat),
+           catLabel (display text), url, date (YYYY-MM-DD),
+           readTime (number, minutes), icon (emoji placeholder),
+           featured (bool), imgSrc (optional real image path)
+─────────────────────────────────────────────────────────── */
+var ARTICLES = [
+  {
+    id: 1,
+    title: "Is eBay Dropshipping Legal in Germany? Complete 2025 Guide",
+    excerpt: "VAT rules, Gewerbe registration, eBay policies, beginner mistakes and a clear compliance roadmap — everything you need to start legally.",
+    cat: "ebay", catLabel: "eBay Dropshipping",
+    url: "/blog/ebay-dropshipping-legal-germany.html",
+    date: "2025-05-20", readTime: 9, icon: "⚖️", featured: true
+  },
+  {
+    id: 2,
+    title: "Best VPS for eBay Automation Germany — 2025 Comparison",
+    excerpt: "Why a German-IP Windows VPS matters for eBay.de, which specs you actually need, and the best value option at €15.80/month.",
+    cat: "vps", catLabel: "VPS & Tools",
+    url: "/blog/best-vps-for-ebay.html",
+    date: "2025-05-15", readTime: 7, icon: "🖥️", featured: true
+  },
+  {
+    id: 3,
+    title: "How to Start an eBay Business in Germany — Beginner's Roadmap",
+    excerpt: "From zero to first sale: the complete step-by-step roadmap for launching a compliant, profitable eBay business in Germany.",
+    cat: "ebay", catLabel: "eBay Dropshipping",
+    url: "/blog/ebay-business-starten.html",
+    date: "2025-05-10", readTime: 11, icon: "🚀", featured: true
+  },
+  {
+    id: 4,
+    title: "Germany eCommerce Eligibility Checker — Does Your Visa Allow It?",
+    excerpt: "Find out which German residence permits allow you to start an online business — interactive free tool covering 11 permit types.",
+    cat: "business", catLabel: "Online Business",
+    url: "/germany-ecommerce-eligibility-checker.html",
+    date: "2025-05-08", readTime: 5, icon: "🇩🇪", featured: false
+  },
+  {
+    id: 5,
+    title: "eBay Dropshipping Costs in Germany — What You Really Need",
+    excerpt: "A realistic breakdown of all starting costs for eBay dropshipping in Germany — Gewerbe fees, software, capital and more.",
+    cat: "ebay", catLabel: "eBay Dropshipping",
+    url: "/ebay-dropshipping-deutschland-kosten.html",
+    date: "2025-05-05", readTime: 6, icon: "💸", featured: false
+  },
+  {
+    id: 6,
+    title: "Shopify Store Setup for Germany — Complete SEO Guide",
+    excerpt: "How to create a Shopify store optimised for German buyers — SEO structure, payment options, Impressum and MwSt. setup.",
+    cat: "seo", catLabel: "SEO",
+    url: "/blog/seo-for-shopify.html",
+    date: "2025-04-28", readTime: 8, icon: "🛍️", featured: false
+  },
+  {
+    id: 7,
+    title: "Freelancing in Germany — How to Start Legally as a Foreigner",
+    excerpt: "Freiberufler vs Gewerbe — understanding the difference and which structure works for freelancers in Germany.",
+    cat: "freelancing", catLabel: "Freelancing",
+    url: "/blog/freelancing-germany-legal.html",
+    date: "2025-04-20", readTime: 7, icon: "💼", featured: false
+  },
+  {
+    id: 8,
+    title: "eBay Dropshipping Without Inventory — How the Model Actually Works",
+    excerpt: "A clear, no-jargon explanation of how eBay dropshipping works in practice — order flow, suppliers, tracking and margins.",
+    cat: "ebay", catLabel: "eBay Dropshipping",
+    url: "/dropshipping-deutschland.html",
+    date: "2025-04-15", readTime: 6, icon: "📦", featured: false
+  },
+  {
+    id: 9,
+    title: "How to Find the Best Dropshipping Products for eBay Germany",
+    excerpt: "Product research strategies that work specifically for eBay.de — demand analysis, competition checks, and seasonal trends.",
+    cat: "ebay", catLabel: "eBay Dropshipping",
+    url: "/dropshipping-produkte-deutschland.html",
+    date: "2025-04-10", readTime: 8, icon: "🔍", featured: false
+  },
+  {
+    id: 10,
+    title: "German VAT for Online Sellers — USt-ID, Finanzamt & Invoicing",
+    excerpt: "A practical VAT guide for eBay and Shopify sellers in Germany — Kleinunternehmer vs Regelbesteuerung, USt-ID and invoicing rules.",
+    cat: "business", catLabel: "Online Business",
+    url: "/blog/german-vat-online-sellers.html",
+    date: "2025-04-05", readTime: 9, icon: "🧾", featured: false
+  },
+  {
+    id: 11,
+    title: "VPS Setup Guide for eBay Automation — Windows Server Frankfurt",
+    excerpt: "Step-by-step setup guide for configuring a Windows VPS in Frankfurt for eBay automation tools — from order to first login.",
+    cat: "vps", catLabel: "VPS & Tools",
+    url: "/vps/",
+    date: "2025-03-28", readTime: 10, icon: "⚡", featured: false
+  },
+  {
+    id: 12,
+    title: "Nebeneinkommen für Studenten in Deutschland — Online Geld verdienen",
+    excerpt: "Legal ways students in Germany can earn money online alongside their studies — eBay, freelancing, platforms, and tax basics.",
+    cat: "business", catLabel: "Online Business",
+    url: "/blog/student-nebeneinkommen-deutschland.html",
+    date: "2025-03-20", readTime: 6, icon: "🎓", featured: false
+  }
+];
+
+/* ── STATE ── */
+var state = {
+  query: '',
+  cat: 'all',
+  sort: 'newest',
+  page: 1,
+  perPage: 9
+};
+
+/* ── UTILS ── */
+function formatDate(dateStr) {
+  var d = new Date(dateStr);
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function filterAndSort(articles, query, cat, sort) {
+  var q = query.toLowerCase().trim();
+  var filtered = articles.filter(function(a) {
+    var matchCat  = cat === 'all' || a.cat === cat;
+    var matchQ    = !q || a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q) || a.catLabel.toLowerCase().includes(q);
+    return matchCat && matchQ;
+  });
+  filtered.sort(function(a, b) {
+    if (sort === 'newest') return new Date(b.date) - new Date(a.date);
+    if (sort === 'oldest') return new Date(a.date) - new Date(b.date);
+    if (sort === 'read')   return a.readTime - b.readTime;
+    return 0;
+  });
+  return filtered;
+}
+
+function buildCard(a, idx) {
+  var delay = (idx % state.perPage) * 0.05;
+  return '<article class="blog-card" role="listitem" style="animation-delay:' + delay + 's" data-id="' + a.id + '" data-cat="' + a.cat + '">'
+    + '<a href="' + a.url + '" class="bc-img" aria-label="Read: ' + a.title + '">'
+    +   '<div class="bc-img-inner">'
+    +     (a.imgSrc ? '<img src="' + a.imgSrc + '" alt="' + a.title + '" loading="lazy">' : '<div class="bc-ph-icon">' + a.icon + '</div>')
+    +   '</div>'
+    +   '<span class="bc-cat">' + a.catLabel + '</span>'
+    +   (a.featured ? '<span class="bc-featured-badge">Featured</span>' : '')
+    + '</a>'
+    + '<div class="bc-body">'
+    +   '<div class="bc-meta"><time datetime="' + a.date + '">' + formatDate(a.date) + '</time><span class="bc-meta-sep"></span><span>' + a.readTime + ' min read</span></div>'
+    +   '<h2 class="bc-title">' + a.title + '</h2>'
+    +   '<p class="bc-excerpt">' + a.excerpt + '</p>'
+    +   '<div class="bc-footer"><a href="' + a.url + '" class="bc-read">Read article <span class="bc-arrow">→</span></a><span class="bc-read-time">⏱ ' + a.readTime + ' min</span></div>'
+    + '</div>'
+    + '</article>';
+}
+
+/* ── RENDER ── */
+function render() {
+  var filtered = filterAndSort(ARTICLES, state.query, state.cat, state.sort);
+  var total    = filtered.length;
+  var shown    = Math.min(state.page * state.perPage, total);
+  var visible  = filtered.slice(0, shown);
+
+  var grid     = document.getElementById('articlesGrid');
+  var noRes    = document.getElementById('noResults');
+  var countEl  = document.getElementById('showingCount');
+  var lmBtn    = document.getElementById('loadMoreBtn');
+  var pagesInfo= document.getElementById('pagesInfo');
+
+  if (total === 0) {
+    grid.innerHTML = '';
+    noRes.classList.add('show');
+    lmBtn.style.display = 'none';
+    pagesInfo.textContent = '';
+    if (countEl) countEl.textContent = '0';
+    return;
+  }
+
+  noRes.classList.remove('show');
+  if (countEl) countEl.textContent = total;
+
+  var html = visible.map(function(a, i) { return buildCard(a, i); }).join('');
+  grid.innerHTML = html;
+
+  if (shown < total) {
+    lmBtn.style.display = 'flex';
+    lmBtn.disabled = false;
+    lmBtn.classList.remove('loading');
+    pagesInfo.textContent = 'Showing ' + shown + ' of ' + total + ' articles';
+  } else {
+    lmBtn.style.display = 'none';
+    pagesInfo.textContent = total > state.perPage ? 'All ' + total + ' articles shown' : '';
+  }
+}
+
+/* ── EVENT HANDLERS ── */
+document.getElementById('searchInput').addEventListener('input', function() {
+  state.query = this.value;
+  state.page  = 1;
+  document.getElementById('searchClear').classList.toggle('visible', this.value.length > 0);
+  render();
+});
+
+document.getElementById('searchClear').addEventListener('click', function() {
+  document.getElementById('searchInput').value = '';
+  state.query = '';
+  state.page  = 1;
+  this.classList.remove('visible');
+  render();
+});
+
+document.querySelectorAll('.filter-pill').forEach(function(pill) {
+  pill.addEventListener('click', function() {
+    document.querySelectorAll('.filter-pill').forEach(function(p) { p.classList.remove('active'); });
+    this.classList.add('active');
+    state.cat  = this.dataset.cat;
+    state.page = 1;
+    render();
+  });
+});
+
+document.getElementById('sortSelect').addEventListener('change', function() {
+  state.sort = this.value;
+  state.page = 1;
+  render();
+});
+
+document.getElementById('loadMoreBtn').addEventListener('click', function() {
+  var btn = this;
+  btn.classList.add('loading');
+  btn.disabled = true;
+  setTimeout(function() {
+    state.page++;
+    render();
+  }, 500);
+});
+
+/* Public helper for sidebar category links */
+function applyFilter(cat) {
+  state.cat  = cat;
+  state.page = 1;
+  document.querySelectorAll('.filter-pill').forEach(function(p) {
+    p.classList.toggle('active', p.dataset.cat === cat);
+  });
+  document.getElementById('controls-wrap') && document.getElementById('controls-wrap').scrollIntoView({ behavior:'smooth' });
+  render();
+}
+
+/* Update total articles counter in hero */
+document.getElementById('totalCount').textContent = ARTICLES.length;
+
+/* ── INIT ── */
+render();
+
+/* ── SCROLL REVEAL ── */
+(function() {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.style.opacity  = '1';
+        e.target.style.transform = 'none';
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  ['.sidebar-card'].forEach(function(sel) {
+    document.querySelectorAll(sel).forEach(function(el, i) {
+      el.style.opacity   = '0';
+      el.style.transform = 'translateY(16px)';
+      el.style.transition = 'opacity .5s ' + (i * 0.08) + 's ease, transform .5s ' + (i * 0.08) + 's ease';
+      obs.observe(el);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
