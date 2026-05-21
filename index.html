@@ -269,15 +269,15 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
 .sticky-bar .sb-tel{display:flex;align-items:center;justify-content:center;width:50px;flex-shrink:0;min-height:50px;background:rgba(255,255,255,.06);color:#f0f4ff;border-radius:10px;font-size:1.2rem;border:1px solid rgba(255,255,255,.13);text-decoration:none}
 
 /* ═══ PROFIT POPUP ═══ */
-.profit-popup{position:fixed;bottom:88px;left:16px;z-index:490;width:300px;max-width:calc(100vw - 32px);background:#0f0f1a;border:1px solid rgba(34,197,94,.25);border-radius:14px;padding:.9rem 1rem;box-shadow:0 8px 40px rgba(0,0,0,.4);display:flex;gap:.75rem;align-items:center;transform:translateX(-120%);opacity:0;transition:transform .5s cubic-bezier(.34,1.4,.64,1),opacity .4s ease;pointer-events:none}
-.profit-popup.pp-show{transform:translateX(0);opacity:1;pointer-events:auto}
-.profit-popup.pp-hide{transform:translateX(-120%);opacity:0}
-.pp-dot{position:absolute;top:10px;right:12px;width:7px;height:7px;border-radius:50%;background:#22c55e;animation:dotBlink 1.8s ease-in-out infinite}
-.pp-av{width:38px;height:38px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:800;font-size:.82rem;color:#fff}
-.pp-name{font-family:'Fraunces',serif;font-size:.84rem;font-weight:700;color:#f0f4ff;line-height:1.2}
-.pp-msg{font-size:.76rem;color:#8892a4;line-height:1.4;margin-top:.18rem}
-.pp-amount{font-family:'Fraunces',serif;font-weight:900;color:#22c55e;font-size:.9rem}
-.pp-time{font-size:.66rem;color:#8892a4;margin-top:.22rem}
+
+
+
+
+
+
+
+
+
 
 /* ═══ MOBILE ═══ */
 @media(max-width:1024px){.nav-links{display:none}}
@@ -297,7 +297,7 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
   .hero-stats{gap:1.5rem}
   .sticky-bar{display:flex}
   .float-wa{bottom:90px;right:14px}
-  .profit-popup{bottom:86px;left:8px;right:8px;width:auto}
+  
   .checker-section{padding:3.5rem 1rem 3rem}
   .checker-card{padding:1.5rem 1.1rem;border-radius:14px}
 }
@@ -626,6 +626,23 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
   .blog-section-head { flex-direction:column; align-items:flex-start; }
 }
 
+
+/* ═══ LANGUAGE TOGGLE ═══ */
+.lang-toggle{
+  display:flex;align-items:center;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);border-radius:8px;overflow:hidden;
+  height:36px;flex-shrink:0;
+}
+.lang-btn{
+  padding:0 .75rem;height:100%;border:none;background:none;
+  font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;
+  cursor:pointer;color:var(--muted);transition:color .2s,background .2s;
+  letter-spacing:.04em;
+}
+.lang-btn.active{background:var(--acc);color:#fff;}
+.lang-btn:not(.active):hover{color:var(--white);background:rgba(255,255,255,.08);}
+@media(max-width:480px){.lang-toggle{height:32px;}.lang-btn{padding:0 .55rem;font-size:.73rem;}}
+
 </style>
 </head>
 <body>
@@ -642,7 +659,11 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#reviews">Reviews</a></li>
   </ul>
-  <a href="https://wa.me/+4915510532359" class="nav-cta wa-btn" onclick="gtag('event','whatsapp_click',{event_category:'nav',event_label:'nav_wa'})" rel="noopener">💬 WhatsApp</a>
+  <div class="lang-toggle" role="group" aria-label="Language selection">
+        <button class="lang-btn active" data-lang="de" onclick="toggleLang('de')" aria-label="Deutsch">DE</button>
+        <button class="lang-btn" data-lang="en" onclick="toggleLang('en')" aria-label="English">EN</button>
+      </div>
+      <a href="https://wa.me/+4915510532359" class="nav-cta wa-btn" onclick="gtag('event','whatsapp_click',{event_category:'nav',event_label:'nav_wa'})" rel="noopener">💬 WhatsApp</a>
 </nav>
 </header>
 
@@ -663,14 +684,14 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
     </div>
 
     <!-- H1 -->
-    <h1 class="anim-up d2" itemprop="name" style="font-weight:900;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.06;letter-spacing:-.04em;color:#f0f4ff;margin-bottom:1.3rem">
+    <h1 id="heroH1" class="anim-up d2" itemprop="name" style="font-weight:900;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.06;letter-spacing:-.04em;color:#f0f4ff;margin-bottom:1.3rem">
       eBay Dropshipping Deutschland —
       <em class="shimmer-text" style="font-style:italic"> professionell gestartet</em>
       und skaliert
     </h1>
 
     <!-- Sub -->
-    <p class="anim-up d3" style="font-size:1.08rem;color:#8892a4;max-width:620px;margin:0 auto 1rem;line-height:1.78">
+    <p id="heroSub" class="anim-up d3" style="font-size:1.08rem;color:#8892a4;max-width:620px;margin:0 auto 1rem;line-height:1.78">
       Von eBay Dropshipping über Shopify-Stores bis zur Business-Digitalisierung — alles aus einer Hand, MwSt.-konform und rechtssicher für den deutschen Markt.
     </p>
 
@@ -683,10 +704,10 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
 
     <!-- Buttons -->
     <div class="anim-up d4" style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:2.8rem">
-      <a href="https://wa.me/+4915510532359" class="wa-btn" onclick="gtag('event','whatsapp_click',{event_category:'hero',event_label:'hero_wa'})" rel="noopener" style="padding:.9rem 2rem;border-radius:10px;font-size:.97rem;text-decoration:none;display:flex;align-items:center;gap:7px;min-height:52px">
+      <a href="https://wa.me/+4915510532359" id="heroBtn1" class="wa-btn" onclick="gtag('event','whatsapp_click',{event_category:'hero',event_label:'hero_wa'})" rel="noopener" style="padding:.9rem 2rem;border-radius:10px;font-size:.97rem;text-decoration:none;display:flex;align-items:center;gap:7px;min-height:52px">
         💬 Jetzt WhatsApp Beratung — €50
       </a>
-      <a href="#services" style="display:flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.1);color:#c8d0e0;padding:.875rem 1.8rem;border-radius:10px;font-size:.92rem;text-decoration:none;transition:border-color .2s,color .2s;min-height:52px" onmouseover="this.style.borderColor='rgba(232,93,4,.4)';this.style.color='#e85d04'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='#c8d0e0'">
+      <a id="heroBtn2" href="#services" style="display:flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.1);color:#c8d0e0;padding:.875rem 1.8rem;border-radius:10px;font-size:.92rem;text-decoration:none;transition:border-color .2s,color .2s;min-height:52px" onmouseover="this.style.borderColor='rgba(232,93,4,.4)';this.style.color='#e85d04'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='#c8d0e0'">
         Alle 8 Services →
       </a>
     </div>
@@ -1074,11 +1095,11 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
         </a>
         <div class="blog-card-body">
           <div class="blog-card-meta">
-            <span>May 20, 2025</span>
+            <span>May 20, 2026</span>
             <span class="blog-card-meta-dot"></span>
             <span>9 min read</span>
           </div>
-          <h3 class="blog-card-title">Is eBay Dropshipping Legal in Germany? Complete 2025 Guide</h3>
+          <h3 class="blog-card-title">Is eBay Dropshipping Legal in Germany? Complete 2026 Guide</h3>
           <p class="blog-card-excerpt">VAT rules, Gewerbe registration, eBay policies, and the exact compliance steps you need — written for beginners starting in Germany.</p>
           <a href="/blog/ebay-dropshipping-legal-germany.html" class="blog-card-read">Read article <span class="blog-card-read-arrow">→</span></a>
         </div>
@@ -1094,11 +1115,11 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
         </a>
         <div class="blog-card-body">
           <div class="blog-card-meta">
-            <span>May 15, 2025</span>
+            <span>May 15, 2026</span>
             <span class="blog-card-meta-dot"></span>
             <span>7 min read</span>
           </div>
-          <h3 class="blog-card-title">Best VPS for eBay Automation Germany — 2025 Comparison</h3>
+          <h3 class="blog-card-title">Best VPS for eBay Automation Germany — 2026 Comparison</h3>
           <p class="blog-card-excerpt">Why a German-IP Windows VPS matters for eBay.de automation, which specs you actually need, and the best value option right now.</p>
           <a href="/blog/best-vps-for-ebay.html" class="blog-card-read">Read article <span class="blog-card-read-arrow">→</span></a>
         </div>
@@ -1114,12 +1135,12 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
         </a>
         <div class="blog-card-body">
           <div class="blog-card-meta">
-            <span>May 10, 2025</span>
+            <span>May 10, 2026</span>
             <span class="blog-card-meta-dot"></span>
             <span>11 min read</span>
           </div>
           <h3 class="blog-card-title">How to Start an eBay Business in Germany — Beginner's Roadmap</h3>
-          <p class="blog-card-excerpt">From zero to first sale: the complete step-by-step roadmap for launching a compliant, profitable eBay business in Germany in 2025.</p>
+          <p class="blog-card-excerpt">From zero to first sale: the complete step-by-step roadmap for launching a compliant, profitable eBay business in Germany in 2026.</p>
           <a href="/blog/ebay-business-starten.html" class="blog-card-read">Read article <span class="blog-card-read-arrow">→</span></a>
         </div>
       </article>
@@ -1168,7 +1189,7 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
     </div>
     <p style="font-size:.75rem;color:rgba(255,255,255,.3);line-height:1.7;margin-bottom:.6rem">
       <strong style="color:rgba(255,255,255,.5)">ScalewithFahad</strong> — eBay Dropshipping Deutschland · eBay Account Management · Dropshipping Coaching · Shopify Store Setup · Online Business Deutschland<br>
-      Ein Service der <strong style="color:rgba(255,255,255,.4)">Primashop</strong> · Inhaber Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · USt-IdNr. DE453914117
+      <span class="footer-legal">Ein Service der <strong style="color:rgba(255,255,255,.4)">Primashop</strong> · Inhaber Fahad bin Sultan · Neuenhausplatz 55, 40699 Erkrath · USt-IdNr. DE453914117
     </p>
     <div class="footer-links">
       <span><a href="/ebay-dropshipping-deutschland" class="footer-link">eBay Dropshipping Deutschland</a><span style="margin:0 .3rem;opacity:.4">·</span></span>
@@ -1179,7 +1200,7 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
       <span><a href="/ist-ebay-dropshipping-legal-deutschland.html" class="footer-link">Ist Dropshipping legal?</a><span style="margin:0 .3rem;opacity:.4">·</span></span>
       <span><a href="/ebay-business-starten-deutschland.html" class="footer-link">eBay Business starten</a></span>
     </div>
-    <div class="footer-bottom">© 2025 ScalewithFahad · <a href="/impressum" style="color:rgba(255,255,255,.3);text-decoration:underline">Impressum</a> · <a href="#" onclick="Cookiebot&&Cookiebot.renew();return false;" style="color:rgba(255,255,255,.3);text-decoration:underline">Cookie-Einstellungen</a></div>
+    <div class="footer-bottom">© 2026 ScalewithFahad · <a href="/impressum" style="color:rgba(255,255,255,.3);text-decoration:underline">Impressum</a> · <a href="#" onclick="Cookiebot&&Cookiebot.renew();return false;" style="color:rgba(255,255,255,.3);text-decoration:underline">Cookie-Einstellungen</a></div>
   </div>
 </footer>
 
@@ -1306,7 +1327,7 @@ function toggleFaq(i,btn){
 }
 
 
-/* ─── PROFIT POPUP ─── */
+
 (function(){
   var NAMES=[{n:'Ahmed K.',f:'🇵🇰',c:'#e85d04'},{n:'Muhammad A.',f:'🇵🇰',c:'#d97706'},{n:'Thomas M.',f:'🇩🇪',c:'#16a34a'},{n:'Markus B.',f:'🇩🇪',c:'#15803d'},{n:'Anna L.',f:'🇩🇪',c:'#16a34a'},{n:'Julia K.',f:'🇩🇪',c:'#15803d'},{n:'Stefan W.',f:'🇩🇪',c:'#16a34a'},{n:'Rahul S.',f:'🇮🇳',c:'#e85d04'},{n:'Bilal R.',f:'🇵🇰',c:'#16a34a'},{n:'Hassan M.',f:'🇵🇰',c:'#e85d04'}];
   var AMTS=[500,600,700,800,900,1000,1200,1400,1600,1800,2000];
@@ -1320,14 +1341,14 @@ function toggleFaq(i,btn){
     el.querySelector('.pp-av').textContent=c.n[0]+(c.n.split(' ')[1]||'')[0]||'';
     el.querySelector('.pp-av').style.background=c.c;
     el.querySelector('.pp-name').textContent=c.f+'  '+c.n;
-    el.querySelector('.pp-msg').innerHTML='hat diesen Monat <span class="pp-amount">€'+amt.toLocaleString('de-DE')+'</span> Profit gemacht 🔥';
+    
     el.querySelector('.pp-time').textContent=t;
     el.classList.remove('pp-hide');void el.offsetWidth;el.classList.add('pp-show');
     clearTimeout(tmr);tmr=setTimeout(function(){el.classList.remove('pp-show');el.classList.add('pp-hide');},5000);
   }
   function build(){
-    el=document.createElement('div');el.className='profit-popup';el.setAttribute('aria-live','polite');
-    el.innerHTML='<div class="pp-dot"></div><div class="pp-av"></div><div><div class="pp-name"></div><div class="pp-msg"></div><div class="pp-time"></div></div>';
+    el=document.createElement('div');el.className='';el.setAttribute('aria-live','polite');
+    
     document.body.appendChild(el);
     setTimeout(function(){show();setInterval(show,12000+Math.random()*6000);},7000);
   }
@@ -1336,6 +1357,69 @@ function toggleFaq(i,btn){
 
 /* ─── GA4 PAGEVIEW ─── */
 if(typeof gtag==='function'){gtag('event','page_view',{page_title:'ScalewithFahad Home',page_location:window.location.href});}
+
+
+
+
+
+
+
+
+
+
+/* ─── LANGUAGE TOGGLE ─── */
+(function(){
+  var COPY = {
+    de:{
+      heroH1: 'eBay Dropshipping Deutschland &mdash;\n      <em class="shimmer-text" style="font-style:italic"> professionell gestartet</em>\n      und skaliert',
+      heroSub: 'Von eBay Dropshipping &uuml;ber Shopify-Stores bis zur Business-Digitalisierung &mdash; alles aus einer Hand, MwSt.-konform und rechtssicher f&uuml;r den deutschen Markt.',
+      heroBtn1: '&#x1F4AC; Jetzt WhatsApp Beratung &mdash; &euro;50',
+      heroBtn2: 'Alle 8 Services &rarr;',
+      blogTitle: 'Neueste Einblicke &amp; Guides',
+      blogSub: 'Praktische Guides zu eBay Dropshipping, Online-Business in Deutschland, Tools &amp; mehr.'
+    },
+    en:{
+      heroH1: 'eBay Dropshipping Germany &mdash;\n      <em class="shimmer-text" style="font-style:italic"> launched professionally</em>\n      and scaled',
+      heroSub: 'From eBay Dropshipping to Shopify stores and business digitalisation &mdash; all in one place, VAT-compliant and legally secure for the German market.',
+      heroBtn1: '&#x1F4AC; WhatsApp Consultation &mdash; &euro;50',
+      heroBtn2: 'View all 8 Services &rarr;',
+      blogTitle: 'Latest Insights &amp; Guides',
+      blogSub: 'Practical guides on eBay dropshipping, online business in Germany, tools &amp; more.'
+    }
+  };
+
+  function applyLang(lang){
+    var t = COPY[lang] || COPY.de;
+    localStorage.setItem('swf_lang', lang);
+
+    // Update content by ID
+    var ids = ['heroH1','heroSub','heroBtn1','heroBtn2'];
+    ids.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && t[id] !== undefined) el.innerHTML = t[id];
+    });
+
+    // Blog section
+    var blogH = document.querySelector('.blog-section h2');
+    var blogP = document.querySelector('.blog-section-head p');
+    if(blogH) blogH.innerHTML = t.blogTitle;
+    if(blogP) blogP.innerHTML = t.blogSub;
+
+    // Toggle button states
+    document.querySelectorAll('.lang-btn').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+
+    document.documentElement.lang = lang === 'en' ? 'en' : 'de';
+  }
+
+  window.toggleLang = function(lang){ applyLang(lang); };
+
+  // Restore saved preference
+  document.addEventListener('DOMContentLoaded', function(){
+    applyLang(localStorage.getItem('swf_lang') || 'de');
+  });
+})();
 </script>
 
 <!--
