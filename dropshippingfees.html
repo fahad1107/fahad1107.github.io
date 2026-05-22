@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBay Dropshipping Profit Calculator 2026 | ScaleWithFahad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FAQ Schema for Google SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How are eBay dropshipping fees calculated in 2026?",
+          "acceptedAnswer": { "@type": "Answer", "text": "eBay fees in 2026 consist of a category-based variable fee and a fixed per-order fee. Our calculator factors these in real-time based on your selected region." }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-950 text-white font-sans p-4 md:p-10">
+
+<div class="max-w-2xl mx-auto bg-slate-900 p-8 rounded-3xl shadow-2xl border border-slate-800">
+    <h1 class="text-3xl font-bold mb-2">Dropshipping Profit Calculator</h1>
+    <p class="text-slate-400 mb-8">2026 Updated Fee Engine</p>
+
+    <div class="grid grid-cols-1 gap-6">
+        <select id="country" class="bg-slate-800 p-4 rounded-xl border border-slate-700 w-full">
+            <option value="US">USA (Standard 13.25%)</option>
+            <option value="UK">UK (12.9%)</option>
+            <option value="DE">Germany (12%)</option>
+        </select>
+        
+        <div class="grid grid-cols-2 gap-4">
+            <input type="number" id="price" placeholder="Sale Price ($)" class="bg-slate-800 p-4 rounded-xl border border-slate-700 w-full">
+            <input type="number" id="cost" placeholder="Product Cost ($)" class="bg-slate-800 p-4 rounded-xl border border-slate-700 w-full">
+        </div>
+        
+        <input type="number" id="shipping" placeholder="Shipping Cost ($)" class="bg-slate-800 p-4 rounded-xl border border-slate-700 w-full">
+    </div>
+
+    <div class="mt-8 p-6 bg-slate-800 rounded-2xl border border-slate-700 text-center">
+        <h2 class="text-slate-400 text-sm uppercase tracking-widest">Net Profit</h2>
+        <div id="result" class="text-6xl font-black text-emerald-400 my-2">$0.00</div>
+        <p class="text-sm text-slate-500">eBay Fees: <span id="feeDisplay">$0.00</span></p>
+    </div>
+</div>
+
+<!-- SEO Content -->
+<section class="max-w-2xl mx-auto mt-12 text-slate-300">
+    <h2 class="text-2xl font-bold text-white mb-4">How do I calculate eBay dropshipping fees in 2026?</h2>
+    <p>To calculate eBay dropshipping fees in 2026, you must account for the platform's final value fee and the fixed per-order fee. Our calculator automates this by applying current 2026 fee structures.</p>
+</section>
+
+<script>
+    const rates = { US: 0.1325, UK: 0.129, DE: 0.12 };
+    const fixedFees = { US: 0.40, UK: 0.30, DE: 0.30 }; // Adjusted for 2026
+
+    function calculate() {
+        const p = parseFloat(document.getElementById('price').value) || 0;
+        const c = parseFloat(document.getElementById('cost').value) || 0;
+        const s = parseFloat(document.getElementById('shipping').value) || 0;
+        const country = document.getElementById('country').value;
+        
+        const total = p + s;
+        const fee = (total * rates[country]) + fixedFees[country];
+        const profit = p - c - fee;
+
+        document.getElementById('result').innerText = `$${profit.toFixed(2)}`;
+        document.getElementById('feeDisplay').innerText = `$${fee.toFixed(2)}`;
+    }
+
+    ['price', 'cost', 'shipping', 'country'].forEach(id => {
+        document.getElementById(id).addEventListener('input', calculate);
+    });
+</script>
+</body>
+</html>
