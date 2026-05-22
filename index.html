@@ -643,6 +643,48 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
 .lang-btn:not(.active):hover{color:var(--white);background:rgba(255,255,255,.08);}
 @media(max-width:480px){.lang-toggle{height:32px;}.lang-btn{padding:0 .55rem;font-size:.73rem;}}
 
+
+/* ═══ CALCULATOR TOOL SECTION ═══ */
+.calc-tool-section{padding:5.5rem 5%;border-top:1px solid rgba(255,255,255,.05);position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(232,93,4,.025) 0%,transparent 100%)}
+.calc-tool-section::before{content:"";position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(232,93,4,.07) 0%,transparent 65%);pointer-events:none}
+.calc-tool-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.calc-tool-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(232,93,4,.1);border:1px solid rgba(232,93,4,.25);color:var(--acc2);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .85rem;border-radius:50px;margin-bottom:1.2rem}
+.calc-tool-h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.7rem,3.5vw,2.5rem);letter-spacing:-.04em;color:var(--white);line-height:1.07;margin-bottom:.9rem}
+.calc-tool-desc{color:var(--muted);font-size:.93rem;line-height:1.78;margin-bottom:1.6rem}
+.calc-features{display:flex;flex-direction:column;gap:.55rem;margin-bottom:2rem}
+.calc-feature{display:flex;align-items:flex-start;gap:.7rem;font-size:.86rem;color:var(--text)}
+.calc-feature-icon{width:22px;height:22px;border-radius:6px;background:rgba(232,93,4,.12);border:1px solid rgba(232,93,4,.22);display:flex;align-items:center;justify-content:center;font-size:.72rem;flex-shrink:0;margin-top:.1rem}
+.calc-btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.calc-btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;padding:.8rem 1.6rem;border-radius:10px;font-weight:700;font-size:.9rem;text-decoration:none;transition:box-shadow .2s,transform .15s;box-shadow:0 4px 18px rgba(232,93,4,.35)}
+.calc-btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(232,93,4,.5);color:#fff}
+.calc-btn-secondary{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:var(--text);padding:.8rem 1.4rem;border-radius:10px;font-weight:600;font-size:.87rem;text-decoration:none;transition:border-color .2s,background .2s,color .2s}
+.calc-btn-secondary:hover{border-color:rgba(232,93,4,.4);background:rgba(232,93,4,.06);color:var(--white)}
+.calc-preview{background:rgba(8,8,15,.8);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.4rem;box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 40px rgba(232,93,4,.08);position:relative;overflow:hidden}
+.calc-preview::before{content:"";position:absolute;top:-1px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(232,93,4,.5),transparent)}
+.calc-preview-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.1rem;padding-bottom:.8rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.calc-preview-title{font-family:'Fraunces',serif;font-weight:800;font-size:.85rem;color:var(--white);display:flex;align-items:center;gap:.45rem}
+.calc-live-badge{display:inline-flex;align-items:center;gap:.35rem;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);border-radius:50px;padding:.15rem .6rem;font-size:.67rem;font-weight:700;color:#4ade80}
+.calc-live-dot{width:5px;height:5px;border-radius:50%;background:#22c55e;animation:clpulse 1.8s ease-in-out infinite}
+@keyframes clpulse{0%,100%{opacity:1}50%{opacity:.3}}
+.calc-country-mini{display:flex;gap:.4rem;margin-bottom:1rem;flex-wrap:wrap}
+.ccm{padding:.3rem .65rem;border-radius:6px;font-size:.72rem;font-weight:700;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);color:var(--muted)}
+.ccm.active{background:linear-gradient(135deg,var(--acc),var(--acc2));border-color:var(--acc);color:#fff}
+.calc-input-row{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin-bottom:.9rem}
+.calc-inp-mini{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:8px;padding:.55rem .75rem}
+.cim-label{color:var(--muted);font-size:.65rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.2rem}
+.cim-val{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--white);font-size:.88rem}
+.calc-result-row{background:linear-gradient(135deg,rgba(34,197,94,.08),rgba(34,197,94,.03));border:1px solid rgba(34,197,94,.2);border-radius:10px;padding:.8rem 1rem;display:flex;justify-content:space-between;align-items:center}
+.crr-label{font-size:.75rem;color:var(--muted);font-weight:600}
+.crr-val{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.2rem;color:#4ade80}
+.calc-fee-mini{margin-top:.7rem;display:flex;flex-direction:column;gap:.32rem}
+.cfm-row{display:flex;justify-content:space-between;font-size:.76rem}
+.cfm-label{color:var(--muted)}
+.cfm-val{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--text)}
+.cfm-val.red{color:#f87171}
+.cfm-val.amber{color:var(--amber)}
+@media(max-width:900px){.calc-tool-inner{grid-template-columns:1fr}}
+@media(max-width:600px){.calc-input-row{grid-template-columns:1fr}.calc-btns{flex-direction:column}}
+
 </style>
 </head>
 <body>
@@ -658,6 +700,8 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
     <li><a href="/germany-ecommerce-eligibility-checker.html">Eligibility Check</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#reviews">Reviews</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/ebay-calculator.html" style="color:var(--acc2);font-weight:700">🧮 Calculator</a></li>
   </ul>
   <div class="lang-toggle" role="group" aria-label="Language selection">
         <button class="lang-btn active" data-lang="de" onclick="toggleLang('de')" aria-label="Deutsch">DE</button>
@@ -1069,6 +1113,57 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
   </div>
 </section>
 
+<!-- ═══ CALCULATOR TOOL ═══ -->
+<section class="calc-tool-section reveal" id="calculator" aria-label="eBay Profit Calculator">
+  <div class="calc-tool-inner">
+    <div class="calc-tool-text">
+      <div class="calc-tool-badge">🧮 Free Tool — 2026</div>
+      <h2 class="calc-tool-h2">eBay Profit &amp; Fee Calculator<br><em style="font-style:italic;color:var(--acc)">Germany, UK, USA, Italy, Australia</em></h2>
+      <p class="calc-tool-desc">Calculate your exact eBay profit, fees, ROI and break-even price instantly. 100% accurate 2026 fee rates — same results as eBay's own calculator. Used by dropshippers across 5 countries.</p>
+      <div class="calc-features">
+        <div class="calc-feature"><div class="calc-feature-icon">🎯</div><span><strong style="color:var(--white)">Exact tiered fee calculation</strong> — same algorithm eBay uses, by category &amp; country</span></div>
+        <div class="calc-feature"><div class="calc-feature-icon">📊</div><span><strong style="color:var(--white)">Visual donut chart</strong> — profit vs fees vs costs at a glance</span></div>
+        <div class="calc-feature"><div class="calc-feature-icon">🔄</div><span><strong style="color:var(--white)">Break-even, target margin &amp; what-if</strong> — know your numbers before you list</span></div>
+        <div class="calc-feature"><div class="calc-feature-icon">📅</div><span><strong style="color:var(--white)">Monthly bulk projection</strong> — scale your numbers across 50, 100, 500 sales</span></div>
+        <div class="calc-feature"><div class="calc-feature-icon">🌍</div><span><strong style="color:var(--white)">VAT, international fees, promoted listings</strong> — every cost accounted for</span></div>
+      </div>
+      <div class="calc-btns">
+        <a href="/ebay-calculator.html" class="calc-btn-primary" onclick="gtag('event','calculator_click',{event_category:'homepage',event_label:'calc_cta'})">🧮 Open Free Calculator →</a>
+        <a href="/blog/best-products-ebay-germany.html" class="calc-btn-secondary">Find Profitable Products</a>
+      </div>
+    </div>
+    <div class="calc-preview" role="presentation">
+      <div class="calc-preview-header">
+        <div class="calc-preview-title">🧮 eBay Profit Calculator</div>
+        <div class="calc-live-badge"><span class="calc-live-dot"></span>2026 Rates</div>
+      </div>
+      <div class="calc-country-mini">
+        <div class="ccm active">🇩🇪 DE</div>
+        <div class="ccm">🇬🇧 UK</div>
+        <div class="ccm">🇺🇸 US</div>
+        <div class="ccm">🇮🇹 IT</div>
+        <div class="ccm">🇦🇺 AU</div>
+      </div>
+      <div class="calc-input-row">
+        <div class="calc-inp-mini"><div class="cim-label">Sale Price</div><div class="cim-val">€ 49.99</div></div>
+        <div class="calc-inp-mini"><div class="cim-label">Item Cost</div><div class="cim-val">€ 18.00</div></div>
+        <div class="calc-inp-mini"><div class="cim-label">Shipping</div><div class="cim-val">€ 4.50</div></div>
+        <div class="calc-inp-mini"><div class="cim-label">Category</div><div class="cim-val" style="font-size:.75rem;overflow:hidden;white-space:nowrap">Garden &amp; Tools</div></div>
+      </div>
+      <div class="calc-result-row">
+        <div class="crr-label">💰 Net Profit</div>
+        <div class="crr-val">€ 20.55</div>
+      </div>
+      <div class="calc-fee-mini">
+        <div class="cfm-row"><div class="cfm-label">eBay Final Value Fee (12%)</div><div class="cfm-val red">−€ 6.00</div></div>
+        <div class="cfm-row"><div class="cfm-label">19% MwSt on eBay fee</div><div class="cfm-val red">−€ 1.14</div></div>
+        <div class="cfm-row"><div class="cfm-label">Profit Margin</div><div class="cfm-val amber">41.1%</div></div>
+        <div class="cfm-row"><div class="cfm-label">Break-even price</div><div class="cfm-val" style="color:var(--white)">€ 28.32</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ BLOG PREVIEW ═══ -->
 <section class="blog-section reveal" aria-label="Latest blog articles" id="blog">
   <div style="max-width:1200px;margin:0 auto">
@@ -1084,64 +1179,87 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,.06);padding:2.5
 
     <div class="blog-grid">
 
-      <!-- Article 1 -->
+      <!-- Card 1 -->
       <article class="blog-card reveal">
-        <a href="/blog/ebay-dropshipping-legal-germany.html" class="blog-card-img" aria-label="Read article: Is eBay Dropshipping Legal in Germany?">
-          <div class="blog-card-img-inner">
-            <!-- Replace src with real image: /blog/images/ebay-dropshipping-legal-germany.jpg -->
-            <div class="blog-card-ph-icon">⚖️</div>
-          </div>
-          <span class="blog-card-cat">eBay Dropshipping</span>
+        <a href="/blog/ebay-dropshipping-legal-germany.html" class="blog-card-img" aria-label="Is eBay Dropshipping Legal in Germany?">
+          <div class="blog-card-img-inner"><div class="blog-card-ph-icon">⚖️</div></div>
+          <span class="blog-card-cat">Legal &amp; Compliance</span>
         </a>
         <div class="blog-card-body">
-          <div class="blog-card-meta">
-            <span>May 20, 2026</span>
-            <span class="blog-card-meta-dot"></span>
-            <span>9 min read</span>
-          </div>
-          <h3 class="blog-card-title">Is eBay Dropshipping Legal in Germany? Complete 2026 Guide</h3>
-          <p class="blog-card-excerpt">VAT rules, Gewerbe registration, eBay policies, and the exact compliance steps you need — written for beginners starting in Germany.</p>
+          <div class="blog-card-meta"><time datetime="2026-01-15">Jan 2026</time><span class="blog-card-meta-dot"></span><span>12 min read</span></div>
+          <h3 class="blog-card-title">Is eBay Dropshipping Legal in Germany?</h3>
+          <p class="blog-card-excerpt">Complete 2026 compliance guide — Gewerbe requirements, VAT rules, supplier agreements and how to run a fully legal eBay dropshipping business in Germany.</p>
           <a href="/blog/ebay-dropshipping-legal-germany.html" class="blog-card-read">Read article <span class="blog-card-read-arrow">→</span></a>
         </div>
       </article>
 
-      <!-- Article 2 -->
+      <!-- Card 2 -->
       <article class="blog-card reveal">
-        <a href="/blog/best-vps-for-ebay.html" class="blog-card-img" aria-label="Read article: Best VPS for eBay Automation Germany">
-          <div class="blog-card-img-inner">
-            <div class="blog-card-ph-icon">🖥️</div>
-          </div>
-          <span class="blog-card-cat">VPS &amp; Tools</span>
+        <a href="/blog/vat-ebay-germany.html" class="blog-card-img" aria-label="VAT for eBay Sellers Germany">
+          <div class="blog-card-img-inner"><div class="blog-card-ph-icon">🧾</div></div>
+          <span class="blog-card-cat">Tax &amp; Legal</span>
         </a>
         <div class="blog-card-body">
-          <div class="blog-card-meta">
-            <span>May 15, 2026</span>
-            <span class="blog-card-meta-dot"></span>
-            <span>7 min read</span>
-          </div>
-          <h3 class="blog-card-title">Best VPS for eBay Automation Germany — 2026 Comparison</h3>
-          <p class="blog-card-excerpt">Why a German-IP Windows VPS matters for eBay.de automation, which specs you actually need, and the best value option right now.</p>
-          <a href="/blog/best-vps-for-ebay.html" class="blog-card-read">Read article <span class="blog-card-read-arrow">→</span></a>
+          <div class="blog-card-meta"><time datetime="2026-02-10">Feb 2026</time><span class="blog-card-meta-dot"></span><span>8 min read</span></div>
+          <h3 class="blog-card-title">VAT for eBay Sellers in Germany 2026</h3>
+          <p class="blog-card-excerpt">Kleinunternehmerregelung, OSS, ELSTER filing and Lexware setup explained. The complete German VAT guide for eBay sellers.</p>
+          <a href="/blog/vat-ebay-germany.html" class="blog-card-read">Read article <span class="blog-card-read-arrow">→</span></a>
         </div>
       </article>
 
-      <!-- Article 3 -->
+      <!-- Card 3 -->
       <article class="blog-card reveal">
-        <a href="/blog/ebay-business-starten.html" class="blog-card-img" aria-label="Read article: How to Start an eBay Business in Germany">
-          <div class="blog-card-img-inner">
-            <div class="blog-card-ph-icon">🚀</div>
-          </div>
-          <span class="blog-card-cat">Online Business</span>
+        <a href="/blog/ebay-account-suspension-germany.html" class="blog-card-img" aria-label="Why eBay Accounts Get Suspended">
+          <div class="blog-card-img-inner"><div class="blog-card-ph-icon">🚨</div></div>
+          <span class="blog-card-cat">Account Health</span>
         </a>
         <div class="blog-card-body">
-          <div class="blog-card-meta">
-            <span>May 10, 2026</span>
-            <span class="blog-card-meta-dot"></span>
-            <span>11 min read</span>
-          </div>
-          <h3 class="blog-card-title">How to Start an eBay Business in Germany — Beginner's Roadmap</h3>
-          <p class="blog-card-excerpt">From zero to first sale: the complete step-by-step roadmap for launching a compliant, profitable eBay business in Germany in 2026.</p>
-          <a href="/blog/ebay-business-starten.html" class="blog-card-read">Read article <span class="blog-card-read-arrow">→</span></a>
+          <div class="blog-card-meta"><time datetime="2026-02-20">Feb 2026</time><span class="blog-card-meta-dot"></span><span>9 min read</span></div>
+          <h3 class="blog-card-title">Why German eBay Accounts Get Suspended</h3>
+          <p class="blog-card-excerpt">IP mismatches, retail arbitrage, fake tracking, defect rates — the 2026 risk factors that get accounts banned and how to prevent every one of them.</p>
+          <a href="/blog/ebay-account-suspension-germany.html" class="blog-card-read">Read article <span class="blog-card-read-arrow">→</span></a>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="blog-card reveal">
+        <a href="/blog/gewerbe-ebay-germany.html" class="blog-card-img" aria-label="Do You Need a Gewerbe for eBay?">
+          <div class="blog-card-img-inner"><div class="blog-card-ph-icon">🏢</div></div>
+          <span class="blog-card-cat">Legal &amp; Registration</span>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta"><time datetime="2026-03-01">Mar 2026</time><span class="blog-card-meta-dot"></span><span>7 min read</span></div>
+          <h3 class="blog-card-title">Do You Need a Gewerbe for eBay in Germany?</h3>
+          <p class="blog-card-excerpt">DAC7 reporting rules, Nebengewerbe vs Hauptgewerbe, step-by-step registration guide. Everything you need to operate legally.</p>
+          <a href="/blog/gewerbe-ebay-germany.html" class="blog-card-read">Read article <span class="blog-card-read-arrow">→</span></a>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="blog-card reveal">
+        <a href="/blog/best-products-ebay-germany.html" class="blog-card-img" aria-label="Best Products for eBay Germany 2026">
+          <div class="blog-card-img-inner"><div class="blog-card-ph-icon">🔍</div></div>
+          <span class="blog-card-cat">Product Research</span>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta"><time datetime="2026-03-20">Mar 2026</time><span class="blog-card-meta-dot"></span><span>8 min read</span></div>
+          <h3 class="blog-card-title">Best Products for eBay Dropshipping Germany 2026</h3>
+          <p class="blog-card-excerpt">Top 6 product categories with high margins and low return rates. Terapeak validation method, pricing strategy, and what to avoid.</p>
+          <a href="/blog/best-products-ebay-germany.html" class="blog-card-read">Read article <span class="blog-card-read-arrow">→</span></a>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="blog-card reveal">
+        <a href="/blog/best-ai-tools-ecommerce-2026.html" class="blog-card-img" aria-label="Top AI Tools for eCommerce 2026">
+          <div class="blog-card-img-inner"><div class="blog-card-ph-icon">🤖</div></div>
+          <span class="blog-card-cat">AI &amp; Tools</span>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta"><time datetime="2026-04-25">Apr 2026</time><span class="blog-card-meta-dot"></span><span>8 min read</span></div>
+          <h3 class="blog-card-title">Top AI Tools for eBay &amp; eCommerce 2026</h3>
+          <p class="blog-card-excerpt">Claude, ChatGPT, Gemini, Perplexity &amp; Make — the full 2026 AI stack for eBay dropshippers. Complete cost breakdown and workflow guide.</p>
+          <a href="/blog/best-ai-tools-ecommerce-2026.html" class="blog-card-read">Read article <span class="blog-card-read-arrow">→</span></a>
         </div>
       </article>
 
@@ -1328,32 +1446,7 @@ function toggleFaq(i,btn){
 
 
 
-(function(){
-  var NAMES=[{n:'Ahmed K.',f:'🇵🇰',c:'#e85d04'},{n:'Muhammad A.',f:'🇵🇰',c:'#d97706'},{n:'Thomas M.',f:'🇩🇪',c:'#16a34a'},{n:'Markus B.',f:'🇩🇪',c:'#15803d'},{n:'Anna L.',f:'🇩🇪',c:'#16a34a'},{n:'Julia K.',f:'🇩🇪',c:'#15803d'},{n:'Stefan W.',f:'🇩🇪',c:'#16a34a'},{n:'Rahul S.',f:'🇮🇳',c:'#e85d04'},{n:'Bilal R.',f:'🇵🇰',c:'#16a34a'},{n:'Hassan M.',f:'🇵🇰',c:'#e85d04'}];
-  var AMTS=[500,600,700,800,900,1000,1200,1400,1600,1800,2000];
-  var TIMES=['vor 2 Min.','vor 8 Min.','vor 15 Min.','vor 30 Min.','vor 1 Std.','heute'];
-  var used=[],el=null,tmr=null;
-  function rand(a){return a[Math.floor(Math.random()*a.length)];}
-  function pick(){var p=NAMES.filter(function(x){return used.indexOf(x.n)<0;});if(!p.length){used=[];p=NAMES;}var c=rand(p);used.push(c.n);if(used.length>4)used.shift();return c;}
-  function show(){
-    if(!el)return;
-    var c=pick();var amt=rand(AMTS);var t=rand(TIMES);
-    el.querySelector('.pp-av').textContent=c.n[0]+(c.n.split(' ')[1]||'')[0]||'';
-    el.querySelector('.pp-av').style.background=c.c;
-    el.querySelector('.pp-name').textContent=c.f+'  '+c.n;
-    
-    el.querySelector('.pp-time').textContent=t;
-    el.classList.remove('pp-hide');void el.offsetWidth;el.classList.add('pp-show');
-    clearTimeout(tmr);tmr=setTimeout(function(){el.classList.remove('pp-show');el.classList.add('pp-hide');},5000);
-  }
-  function build(){
-    el=document.createElement('div');el.className='';el.setAttribute('aria-live','polite');
-    
-    document.body.appendChild(el);
-    setTimeout(function(){show();setInterval(show,12000+Math.random()*6000);},7000);
-  }
-  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',build);}else{build();}
-})();
+
 
 /* ─── GA4 PAGEVIEW ─── */
 if(typeof gtag==='function'){gtag('event','page_view',{page_title:'ScalewithFahad Home',page_location:window.location.href});}
