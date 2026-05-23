@@ -270,7 +270,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem 5%;text-align:center}
 <!-- NAV -->
 <header>
 <nav class="nav" role="navigation" aria-label="Site navigation">
-  <a href="/ebay-calculator.html" style="color:var(--acc2);font-weight:700;font-size:.8rem;display:flex;align-items:center;gap:4px">🧮 Calculator</a>
+  <a href="/blog/ebay-calculator.html" style="color:var(--acc2);font-weight:700;font-size:.8rem;display:flex;align-items:center;gap:4px">🧮 Calculator</a>
     <a href="/" class="nav-back" aria-label="Go back to homepage">← <span>Home</span></a>
   <a href="/" class="nav-logo" aria-label="ScalewithFahad">ScaleWith<em>Fahad</em></a>
   <a href="https://wa.me/+4915510532359?text=Hi%20Fahad%2C%20I%20found%20your%20blog." class="nav-cta" rel="noopener" aria-label="Contact on WhatsApp">💬 WhatsApp</a>
@@ -371,7 +371,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem 5%;text-align:center}
       <li><a href="/blog/best-products-ebay-germany.html">Best Products for eBay Germany</a></li>
       <li><a href="/blog/best-vps-for-ebay.html">Best VPS for eBay Automation 2026</a></li>
       <li><a href="/blog/ebay-business-starten.html">Start an eBay Business in Germany</a></li>
-      <li><a href="/ebay-calculator.html">🧮 Free eBay Profit Calculator</a></li>
+      <li><a href="/blog/ebay-calculator.html">🧮 Free eBay Profit Calculator</a></li>
     </ul>
       </div>
 
@@ -439,195 +439,269 @@ footer{border-top:1px solid var(--border);padding:1.8rem 5%;text-align:center}
 <script>
 'use strict';
 
-/* ── ARTICLE DATABASE ──
-   Add new articles here — they auto-appear on the page.
-   Fields: id, title, excerpt, cat (matches filter-pill data-cat),
-           catLabel (display text), url, date (YYYY-MM-DD),
-           readTime (number, minutes), icon (emoji placeholder),
-           featured (bool), imgSrc (optional real image path)
-─────────────────────────────────────────────────────────── */
+/* ── ARTICLE DATABASE ──────────────────────────────────────────────
+   Full list of articles with /blog/ paths. Dates MUST be ISO YYYY-MM-DD.
+   ─────────────────────────────────────────────────────────────────── */
 var ARTICLES = [
-  {id:1, title:'Is eBay Dropshipping Legal in Germany? Complete 2026 Guide', excerpt:'The definitive legal guide for eBay dropshipping in Germany — Gewerbe registration, VAT compliance, supplier rules, and what the 2026 eBay Dropshipping Policy actually says.', cat:'legal', catLabel:'Legal & Compliance', url:'/blog/ebay-dropshipping-legal-germany.html', date:'Jan 2026', readTime:12, icon:'⚖️', featured:true},
-  {id:2, title:'VAT for eBay Sellers in Germany: 2026 Tax Compliance Guide', excerpt:'Confused by German VAT? We explain the Kleinunternehmerregelung, OSS, ELSTER filing, and Lexware setup for eBay sellers.', cat:'legal', catLabel:'Tax & Legal', url:'/blog/vat-ebay-germany.html', date:'Feb 2026', readTime:8, icon:'🧾', featured:true},
-  {id:3, title:'Why German eBay Accounts Get Suspended: 2026 Risk Factors', excerpt:'Avoid permanent account bans. IP mismatches, retail arbitrage, fake tracking numbers — the top suspension triggers and how to prevent every one.', cat:'account', catLabel:'Account Health', url:'/blog/ebay-account-suspension-germany.html', date:'Feb 2026', readTime:9, icon:'🚨', featured:false},
-  {id:4, title:'Do You Need a Gewerbe for eBay in Germany? 2026 Legal Guide', excerpt:'DAC7 reporting rules, Nebengewerbe vs Hauptgewerbe, step-by-step registration guide and costs. Everything to operate legally from day one.', cat:'legal', catLabel:'Legal & Registration', url:'/blog/gewerbe-ebay-germany.html', date:'Mar 2026', readTime:7, icon:'🏢', featured:false},
-  {id:5, title:'Why Amazon-to-eBay Dropshipping Is Failing in 2026', excerpt:'Amazon to eBay dropshipping is a dead strategy. Discover why this leads to suspensions and how to pivot to professional wholesale sourcing.', cat:'account', catLabel:'Account Safety', url:'/blog/amazon-to-ebay-risks-germany.html', date:'Mar 2026', readTime:7, icon:'🚫', featured:false},
-  {id:6, title:'Best Products for eBay Dropshipping in Germany 2026', excerpt:'Top 6 product categories with high margins and low return rates. Terapeak validation method, pricing strategy, and what to avoid completely.', cat:'products', catLabel:'Product Research', url:'/blog/best-products-ebay-germany.html', date:'Mar 2026', readTime:8, icon:'🔍', featured:true},
-  {id:7, title:'US LLC for German Sellers: Is It Right for You? 2026', excerpt:'The US LLC tax myth debunked. If you live in Germany, the Finanzamt taxes your worldwide income regardless of where your LLC is registered.', cat:'legal', catLabel:'Tax Strategy', url:'/blog/us-llc-germany-ecommerce.html', date:'Apr 2026', readTime:7, icon:'🇺🇸', featured:false},
-  {id:8, title:'How Google Gemini AI Is Changing Online Business in 2026', excerpt:'How Gemini Flash and Pro are revolutionising eBay customer service, product research, and listing creation for German sellers.', cat:'tools', catLabel:'AI & Automation', url:'/blog/google-gemini-ai-business-2026.html', date:'Apr 2026', readTime:7, icon:'🤖', featured:false},
-  {id:9, title:'Top AI Tools for eCommerce Businesses in 2026', excerpt:'Claude, ChatGPT, Gemini, Perplexity and Make — the complete 2026 AI stack for eBay dropshippers with cost breakdown and workflow guide.', cat:'tools', catLabel:'AI & Tools', url:'/blog/best-ai-tools-ecommerce-2026.html', date:'Apr 2026', readTime:8, icon:'🛠️', featured:true},
-  {id:10, title:'Best VPS for eBay Dropshipping Germany 2026 — Tested', excerpt:'Why you need a German VPS for eBay account safety. AMD EPYC Frankfurt server setup, IP consistency, and automation workflow guide.', cat:'tools', catLabel:'Tools & VPS', url:'/blog/best-vps-for-ebay.html', date:'Jan 2026', readTime:8, icon:'🖥️', featured:false},
-  {id:11, title:'How to Start an eBay Business in Germany — Beginner Guide 2026', excerpt:'Step-by-step guide to starting a legal, profitable eBay business in Germany from scratch — Gewerbe, VAT, suppliers, and first sales.', cat:'guide', catLabel:'Getting Started', url:'/blog/ebay-business-starten.html', date:'Jan 2026', readTime:10, icon:'🚀', featured:true},
-  {id:12, title:'Free eBay Profit Calculator 2026 — Germany, UK, USA, Italy, Australia', excerpt:'Calculate your exact eBay fees and net profit instantly. 100% accurate 2026 fee rates for 5 countries. Tiered FVF, VAT, break-even, ROI.', cat:'tools', catLabel:'Free Tool', url:'/ebay-calculator.html', date:'May 2026', readTime:2, icon:'🧮', featured:true}
+  {id:1,  cat:'legal',    catLabel:'Legal & Compliance',    featured:true,  readTime:12, date:'2026-01-15', icon:'⚖️',  title:'Is eBay Dropshipping Legal in Germany? Complete 2026 Guide',       excerpt:'The definitive legal guide — Gewerbe registration, VAT compliance, supplier rules, and what the 2026 eBay Dropshipping Policy actually says.',                url:'/blog/ebay-dropshipping-legal-germany.html'},
+  {id:2,  cat:'legal',    catLabel:'Tax & Legal',            featured:true,  readTime:8,  date:'2026-02-10', icon:'🧾', title:'VAT for eBay Sellers in Germany: 2026 Tax Compliance Guide',         excerpt:'Confused by German VAT? We explain the Kleinunternehmerregelung, OSS, ELSTER filing, and Lexware setup for eBay sellers.',                                   url:'/blog/vat-ebay-germany.html'},
+  {id:3,  cat:'account',  catLabel:'Account Health',         featured:false, readTime:9,  date:'2026-02-20', icon:'🚨', title:'Why German eBay Accounts Get Suspended: 2026 Risk Factors',          excerpt:'Avoid permanent account bans. IP mismatches, retail arbitrage, fake tracking — the top suspension triggers and how to prevent every one.',                   url:'/blog/ebay-account-suspension-germany.html'},
+  {id:4,  cat:'legal',    catLabel:'Legal & Registration',   featured:false, readTime:7,  date:'2026-03-01', icon:'🏢', title:'Do You Need a Gewerbe for eBay in Germany? 2026 Legal Guide',        excerpt:'DAC7 reporting rules, Nebengewerbe vs Hauptgewerbe, step-by-step registration guide and costs. Everything to operate legally from day one.',               url:'/blog/gewerbe-ebay-germany.html'},
+  {id:5,  cat:'account',  catLabel:'Account Safety',         featured:false, readTime:7,  date:'2026-03-10', icon:'🚫', title:'Why Amazon-to-eBay Dropshipping Is Failing in 2026',                  excerpt:'Amazon to eBay dropshipping is a dead strategy. Discover why this leads to suspensions and how to pivot to professional wholesale sourcing.',               url:'/blog/amazon-to-ebay-risks-germany.html'},
+  {id:6,  cat:'products', catLabel:'Product Research',       featured:true,  readTime:8,  date:'2026-03-20', icon:'🔍', title:'Best Products for eBay Dropshipping in Germany 2026',                 excerpt:'Top 6 product categories with high margins and low return rates. Terapeak validation method, pricing strategy, and what to avoid completely.',              url:'/blog/best-products-ebay-germany.html'},
+  {id:7,  cat:'legal',    catLabel:'Tax Strategy',           featured:false, readTime:7,  date:'2026-04-01', icon:'🇺🇸',title:'US LLC for German Sellers: Is It Right for You? 2026',               excerpt:'The US LLC tax myth debunked. If you live in Germany, the Finanzamt taxes your worldwide income regardless of where your LLC is registered.',              url:'/blog/us-llc-germany-ecommerce.html'},
+  {id:8,  cat:'tools',    catLabel:'AI & Automation',        featured:false, readTime:7,  date:'2026-04-15', icon:'🤖', title:'How Google Gemini AI Is Changing Online Business in 2026',            excerpt:'How Gemini Flash and Pro are revolutionising eBay customer service, product research, and listing creation for German sellers.',                           url:'/blog/google-gemini-ai-business-2026.html'},
+  {id:9,  cat:'tools',    catLabel:'AI & Tools',             featured:true,  readTime:8,  date:'2026-04-25', icon:'🛠',  title:'Top AI Tools for eCommerce Businesses in 2026',                      excerpt:'Claude, ChatGPT, Gemini, Perplexity and Make — the complete 2026 AI stack for eBay dropshippers with cost breakdown and workflow guide.',                 url:'/blog/best-ai-tools-ecommerce-2026.html'},
+  {id:10, cat:'tools',    catLabel:'Tools & VPS',            featured:false, readTime:8,  date:'2026-01-20', icon:'🖥',  title:'Best VPS for eBay Dropshipping Germany 2026',                         excerpt:'Why you need a German VPS for eBay account safety. AMD EPYC Frankfurt server setup, IP consistency, and automation workflow guide.',                      url:'/blog/best-vps-for-ebay.html'},
+  {id:11, cat:'guide',    catLabel:'Getting Started',        featured:true,  readTime:10, date:'2026-01-25', icon:'🚀', title:'How to Start an eBay Business in Germany — Beginner Guide 2026',      excerpt:'Step-by-step guide to starting a legal, profitable eBay business in Germany — Gewerbe, VAT, suppliers, and first sales.',                                url:'/blog/ebay-business-starten.html'},
+  {id:12, cat:'tools',    catLabel:'Free Tool',              featured:true,  readTime:2,  date:'2026-05-01', icon:'🧮', title:'Free eBay Profit Calculator 2026 — Germany, UK, USA, Italy, AU',      excerpt:'Calculate your exact eBay fees and net profit instantly. 100% accurate 2026 fee rates for 5 countries. Tiered FVF, VAT, break-even, ROI.',               url:'/blog/ebay-calculator.html'}
 ];
 
-/* ── STATE ── */
+/* ── STATE ─────────────────────────────────────────────────────── */
 var state = {
-  query: '',
-  cat: 'all',
-  sort: 'newest',
-  page: 1,
+  query:   '',
+  cat:     'all',
+  sort:    'newest',
+  page:    1,
   perPage: 9
 };
 
-/* ── UTILS ── */
-function formatDate(dateStr) {
-  var d = new Date(dateStr);
-  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+/* ── SAFE HELPERS ──────────────────────────────────────────────── */
+function el(id) {
+  return document.getElementById(id);
 }
 
+/* Safe date parse — handles ISO '2026-01-15' and 'Jan 2026' */
+function parseDate(d) {
+  if (!d) return 0;
+  var ts = Date.parse(d);
+  if (!isNaN(ts)) return ts;
+  var months = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  var parts = d.split(' ');
+  if (parts.length === 2 && months[parts[0]] !== undefined) {
+    return new Date(parseInt(parts[1], 10), months[parts[0]], 1).getTime();
+  }
+  return 0;
+}
+
+/* Display date: ISO -> 'Feb 2026' */
+function formatDate(d) {
+  if (!d) return '';
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var dt = new Date(d);
+  if (isNaN(dt.getTime())) return d;
+  return months[dt.getMonth()] + ' ' + dt.getFullYear();
+}
+
+/* ── FILTER + SORT ─────────────────────────────────────────────── */
 function filterAndSort(articles, query, cat, sort) {
-  var q = query.toLowerCase().trim();
-  var filtered = articles.filter(function(a) {
-    var matchCat  = cat === 'all' || a.cat === cat;
-    var matchQ    = !q || a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q) || a.catLabel.toLowerCase().includes(q);
-    return matchCat && matchQ;
-  });
+  var q = (query || '').toLowerCase();
+  var filtered = [];
+  for (var i = 0; i < articles.length; i++) {
+    var a = articles[i];
+    var matchCat = (cat === 'all' || a.cat === cat);
+    var matchQ   = (!q ||
+      (a.title   && a.title.toLowerCase().indexOf(q)    !== -1) ||
+      (a.excerpt && a.excerpt.toLowerCase().indexOf(q)  !== -1) ||
+      (a.catLabel && a.catLabel.toLowerCase().indexOf(q) !== -1));
+    if (matchCat && matchQ) filtered.push(a);
+  }
   filtered.sort(function(a, b) {
-    if (sort === 'newest') return new Date(b.date) - new Date(a.date);
-    if (sort === 'oldest') return new Date(a.date) - new Date(b.date);
-    if (sort === 'read')   return a.readTime - b.readTime;
+    if (sort === 'newest') return parseDate(b.date) - parseDate(a.date);
+    if (sort === 'oldest') return parseDate(a.date) - parseDate(b.date);
+    if (sort === 'read')   return (a.readTime || 0) - (b.readTime || 0);
     return 0;
   });
   return filtered;
 }
 
+/* ── BUILD CARD ────────────────────────────────────────────────── */
 function buildCard(a, idx) {
   var delay = (idx % state.perPage) * 0.05;
-  return '<article class="blog-card" role="listitem" style="animation-delay:' + delay + 's" data-id="' + a.id + '" data-cat="' + a.cat + '">'
-    + '<a href="' + a.url + '" class="bc-img" aria-label="Read: ' + a.title + '">'
-    +   '<div class="bc-img-inner">'
-    +     (a.imgSrc ? '<img src="' + a.imgSrc + '" alt="' + a.title + '" loading="lazy">' : '<div class="bc-ph-icon">' + a.icon + '</div>')
-    +   '</div>'
-    +   '<span class="bc-cat">' + a.catLabel + '</span>'
-    +   (a.featured ? '<span class="bc-featured-badge">Featured</span>' : '')
-    + '</a>'
-    + '<div class="bc-body">'
-    +   '<div class="bc-meta"><time datetime="' + a.date + '">' + formatDate(a.date) + '</time><span class="bc-meta-sep"></span><span>' + a.readTime + ' min read</span></div>'
-    +   '<h2 class="bc-title">' + a.title + '</h2>'
-    +   '<p class="bc-excerpt">' + a.excerpt + '</p>'
-    +   '<div class="bc-footer"><a href="' + a.url + '" class="bc-read">Read article <span class="bc-arrow">→</span></a><span class="bc-read-time">⏱ ' + a.readTime + ' min</span></div>'
-    + '</div>'
-    + '</article>';
+  var featuredBadge = a.featured ? '<span class="bc-featured-badge">Featured</span>' : '';
+  var img = '<div class="bc-ph-icon">' + (a.icon || '📄') + '</div>';
+  return (
+    '<article class="blog-card" role="listitem" style="animation-delay:' + delay + 's" data-id="' + a.id + '" data-cat="' + a.cat + '">' +
+      '<a href="' + a.url + '" class="bc-img" aria-label="Read: ' + a.title + '">' +
+        '<div class="bc-img-inner">' + img + '</div>' +
+        '<span class="bc-cat">' + a.catLabel + '</span>' +
+        featuredBadge +
+      '</a>' +
+      '<div class="bc-body">' +
+        '<div class="bc-meta">' +
+          '<time datetime="' + a.date + '">' + formatDate(a.date) + '</time>' +
+          '<span class="bc-meta-sep"></span>' +
+          '<span>' + a.readTime + ' min read</span>' +
+        '</div>' +
+        '<h2 class="bc-title">' + a.title + '</h2>' +
+        '<p class="bc-excerpt">' + a.excerpt + '</p>' +
+        '<div class="bc-footer">' +
+          '<a href="' + a.url + '" class="bc-read">Read article <span class="bc-arrow">&#8594;</span></a>' +
+          '<span class="bc-read-time">&#x23F1; ' + a.readTime + ' min</span>' +
+        '</div>' +
+      '</div>' +
+    '</article>'
+  );
 }
 
-/* ── RENDER ── */
+/* ── RENDER ────────────────────────────────────────────────────── */
 function render() {
   var filtered = filterAndSort(ARTICLES, state.query, state.cat, state.sort);
   var total    = filtered.length;
-  var shown    = Math.min(state.page * state.perPage, total);
+  var shown    = total < state.page * state.perPage ? total : state.page * state.perPage;
   var visible  = filtered.slice(0, shown);
 
-  var grid     = document.getElementById('articlesGrid');
-  var noRes    = document.getElementById('noResults');
-  var countEl  = document.getElementById('showingCount');
-  var lmBtn    = document.getElementById('loadMoreBtn');
-  var pagesInfo= document.getElementById('pagesInfo');
+  var grid     = el('articlesGrid');
+  var noRes    = el('noResults');
+  var countEl  = el('showingCount');
+  var lmBtn    = el('loadMoreBtn');
+  var pagesInfo = el('pagesInfo');
+
+  /* Guard: if any critical element is missing, bail safely */
+  if (!grid || !lmBtn) return;
 
   if (total === 0) {
     grid.innerHTML = '';
-    noRes.classList.add('show');
+    if (noRes)     noRes.className = noRes.className.replace(' show','') + ' show';
     lmBtn.style.display = 'none';
-    pagesInfo.textContent = '';
-    if (countEl) countEl.textContent = '0';
+    if (pagesInfo) pagesInfo.textContent = '';
+    if (countEl)   countEl.textContent = '0';
     return;
   }
 
-  noRes.classList.remove('show');
+  if (noRes) noRes.className = noRes.className.replace(' show','');
   if (countEl) countEl.textContent = total;
 
-  var html = visible.map(function(a, i) { return buildCard(a, i); }).join('');
+  var html = '';
+  for (var i = 0; i < visible.length; i++) {
+    html += buildCard(visible[i], i);
+  }
   grid.innerHTML = html;
 
   if (shown < total) {
     lmBtn.style.display = 'flex';
     lmBtn.disabled = false;
-    lmBtn.classList.remove('loading');
-    pagesInfo.textContent = 'Showing ' + shown + ' of ' + total + ' articles';
+    lmBtn.className = lmBtn.className.replace(' loading','');
+    if (pagesInfo) pagesInfo.textContent = 'Showing ' + shown + ' of ' + total + ' articles';
   } else {
     lmBtn.style.display = 'none';
-    pagesInfo.textContent = total > state.perPage ? 'All ' + total + ' articles shown' : '';
+    if (pagesInfo) pagesInfo.textContent = total > state.perPage ? 'All ' + total + ' articles shown' : '';
   }
 }
 
-/* ── EVENT HANDLERS ── */
-document.getElementById('searchInput').addEventListener('input', function() {
-  state.query = this.value;
-  state.page  = 1;
-  document.getElementById('searchClear').classList.toggle('visible', this.value.length > 0);
-  render();
-});
-
-document.getElementById('searchClear').addEventListener('click', function() {
-  document.getElementById('searchInput').value = '';
-  state.query = '';
-  state.page  = 1;
-  this.classList.remove('visible');
-  render();
-});
-
-document.querySelectorAll('.filter-pill').forEach(function(pill) {
-  pill.addEventListener('click', function() {
-    document.querySelectorAll('.filter-pill').forEach(function(p) { p.classList.remove('active'); });
-    this.classList.add('active');
-    state.cat  = this.dataset.cat;
-    state.page = 1;
-    render();
-  });
-});
-
-document.getElementById('sortSelect').addEventListener('change', function() {
-  state.sort = this.value;
-  state.page = 1;
-  render();
-});
-
-document.getElementById('loadMoreBtn').addEventListener('click', function() {
-  var btn = this;
-  btn.classList.add('loading');
-  btn.disabled = true;
-  setTimeout(function() {
-    state.page++;
-    render();
-  }, 500);
-});
-
-/* Public helper for sidebar category links */
+/* ── FILTER HELPER (called by sidebar pills) ────────────────────── */
 function applyFilter(cat) {
   state.cat  = cat;
   state.page = 1;
-  document.querySelectorAll('.filter-pill').forEach(function(p) {
-    p.classList.toggle('active', p.dataset.cat === cat);
-  });
-  document.getElementById('controls-wrap') && document.getElementById('controls-wrap').scrollIntoView({ behavior:'smooth' });
+  /* Safe classList toggle without boolean arg (iOS compat) */
+  var pills = document.querySelectorAll('.filter-pill');
+  for (var i = 0; i < pills.length; i++) {
+    if (pills[i].getAttribute('data-cat') === cat) {
+      pills[i].className = pills[i].className + (pills[i].className.indexOf('active') === -1 ? ' active' : '');
+    } else {
+      pills[i].className = pills[i].className.replace(' active','').replace('active','');
+    }
+  }
   render();
 }
 
-/* Update total articles counter in hero */
-document.getElementById('totalCount').textContent = ARTICLES.length;
+/* ── EVENT: Search input ────────────────────────────────────────── */
+var searchInput = el('searchInput');
+if (searchInput) {
+  searchInput.addEventListener('input', function() {
+    state.query = this.value;
+    state.page  = 1;
+    var clearBtn = el('searchClear');
+    if (clearBtn) {
+      /* iOS-safe classList toggle without boolean second arg */
+      if (this.value.length > 0) {
+        if (clearBtn.className.indexOf('visible') === -1) clearBtn.className += ' visible';
+      } else {
+        clearBtn.className = clearBtn.className.replace(' visible','').replace('visible','');
+      }
+    }
+    render();
+  });
+}
 
-/* ── INIT ── */
+/* ── EVENT: Search clear ────────────────────────────────────────── */
+var searchClear = el('searchClear');
+if (searchClear) {
+  searchClear.addEventListener('click', function() {
+    var inp = el('searchInput');
+    if (inp) inp.value = '';
+    state.query = '';
+    state.page  = 1;
+    this.className = this.className.replace(' visible','').replace('visible','');
+    render();
+  });
+}
+
+/* ── EVENT: Filter pills ────────────────────────────────────────── */
+var pills = document.querySelectorAll('.filter-pill');
+for (var pi = 0; pi < pills.length; pi++) {
+  pills[pi].addEventListener('click', function() {
+    var allPills = document.querySelectorAll('.filter-pill');
+    for (var i = 0; i < allPills.length; i++) {
+      allPills[i].className = allPills[i].className.replace(' active','').replace('active ','').replace('active','');
+    }
+    this.className += ' active';
+    state.cat  = this.getAttribute('data-cat') || 'all';
+    state.page = 1;
+    render();
+  });
+}
+
+/* ── EVENT: Sort select ─────────────────────────────────────────── */
+var sortSelect = el('sortSelect');
+if (sortSelect) {
+  sortSelect.addEventListener('change', function() {
+    state.sort = this.value;
+    state.page = 1;
+    render();
+  });
+}
+
+/* ── EVENT: Load More ───────────────────────────────────────────── */
+var loadMoreBtn = el('loadMoreBtn');
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener('click', function() {
+    var btn = this;
+    if (btn.className.indexOf('loading') === -1) btn.className += ' loading';
+    btn.disabled = true;
+    setTimeout(function() {
+      state.page++;
+      render();
+    }, 400);
+  });
+}
+
+/* ── UPDATE HERO COUNTER ────────────────────────────────────────── */
+var totalCount = el('totalCount');
+if (totalCount) totalCount.textContent = ARTICLES.length;
+
+/* ── INITIAL RENDER ─────────────────────────────────────────────── */
 render();
 
-/* ── SCROLL REVEAL ── */
+/* ── SCROLL REVEAL (safe — IntersectionObserver with typeof guard) ─ */
 (function() {
+  if (typeof IntersectionObserver === 'undefined') return;
   var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        e.target.style.opacity  = '1';
-        e.target.style.transform = 'none';
-        obs.unobserve(e.target);
+    for (var i = 0; i < entries.length; i++) {
+      if (entries[i].isIntersecting) {
+        entries[i].target.style.opacity   = '1';
+        entries[i].target.style.transform = 'none';
+        obs.unobserve(entries[i].target);
       }
-    });
+    }
   }, { threshold: 0.1 });
-  ['.sidebar-card'].forEach(function(sel) {
-    document.querySelectorAll(sel).forEach(function(el, i) {
-      el.style.opacity   = '0';
-      el.style.transform = 'translateY(16px)';
-      el.style.transition = 'opacity .5s ' + (i * 0.08) + 's ease, transform .5s ' + (i * 0.08) + 's ease';
-      obs.observe(el);
-    });
-  });
+  var sideCards = document.querySelectorAll('.sidebar-card');
+  for (var i = 0; i < sideCards.length; i++) {
+    sideCards[i].style.opacity   = '0';
+    sideCards[i].style.transform = 'translateY(16px)';
+    sideCards[i].style.transition = 'opacity .5s ' + (i * 0.08) + 's ease, transform .5s ' + (i * 0.08) + 's ease';
+    obs.observe(sideCards[i]);
+  }
 })();
 </script>
 
