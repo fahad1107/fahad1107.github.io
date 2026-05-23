@@ -1,36 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- ═══ MAIN PAGES ═══ -->
   <url>
     <loc>https://scalewithfahad.de/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- City Pages -->
+  <!-- ═══ TOOLS ═══ -->
   <url>
-    <loc>https://scalewithfahad.de/e-commerce-management-berlin.html</loc>
+    <loc>https://scalewithfahad.de/ebay-calculator.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/germany-ecommerce-eligibility-checker.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- ═══ BLOG LISTING ═══ -->
   <url>
-    <loc>https://scalewithfahad.de/e-commerce-management-hamburg.html</loc>
-    <priority>0.8</priority>
+    <loc>https://scalewithfahad.de/blog.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
+  <!-- ═══ BLOG ARTICLES ═══ -->
   <url>
-    <loc>https://scalewithfahad.de/e-commerce-management-duesseldorf.html</loc>
-    <priority>0.8</priority>
+    <loc>https://scalewithfahad.de/blog/ebay-dropshipping-legal-germany.html</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/blog/vat-ebay-germany.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/blog/ebay-account-suspension-germany.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/blog/gewerbe-ebay-germany.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/blog/amazon-to-ebay-risks-germany.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/blog/best-products-ebay-germany.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/blog/us-llc-germany-ecommerce.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/blog/google-gemini-ai-business-2026.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/blog/best-ai-tools-ecommerce-2026.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/blog/best-vps-for-ebay.html</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/blog/ebay-business-starten.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 
-  <!-- Legal Pages -->
+  <!-- ═══ VPS AFFILIATE ═══ -->
   <url>
-    <loc>https://scalewithfahad.de/impressum.html</loc>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://scalewithfahad.de/datenschutz.html</loc>
-    <priority>0.3</priority>
+    <loc>https://scalewithfahad.de/vps/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
