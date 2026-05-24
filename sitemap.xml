@@ -1,35 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- ═══ MAIN PAGES ═══ -->
+  <!-- ═══ HOMEPAGE ═══ -->
   <url>
     <loc>https://scalewithfahad.de/</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://scalewithfahad.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://scalewithfahad.de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scalewithfahad.de/"/>
   </url>
 
-  <!-- ═══ TOOLS ═══ -->
+  <!-- ═══ MAIN LANDING PAGES — TOPICAL CLUSTER ═══ -->
+  <url>
+    <loc>https://scalewithfahad.de/ebay-dropshipping-germany</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://scalewithfahad.de/ebay-dropshipping-germany"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://scalewithfahad.de/ebay-dropshipping-deutschland"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scalewithfahad.de/ebay-dropshipping-germany"/>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/ebay-dropshipping-erlaubt</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://scalewithfahad.de/ebay-dropshipping-erlaubt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://scalewithfahad.de/ebay-dropshipping-germany"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scalewithfahad.de/ebay-dropshipping-erlaubt"/>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/dropshipping-legal-deutschland</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://scalewithfahad.de/dropshipping-legal-deutschland"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://scalewithfahad.de/ebay-dropshipping-germany"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scalewithfahad.de/dropshipping-legal-deutschland"/>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/ebay-automation-germany</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://scalewithfahad.de/ebay-automation-germany"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scalewithfahad.de/ebay-automation-germany"/>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/ebay-vat-guide-germany</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://scalewithfahad.de/ebay-vat-guide-germany"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scalewithfahad.de/ebay-vat-guide-germany"/>
+  </url>
+
+  <!-- ═══ GERMAN LANGUAGE PAGES ═══ -->
+  <url>
+    <loc>https://scalewithfahad.de/ebay-dropshipping-deutschland</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://scalewithfahad.de/ebay-dropshipping-deutschland"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scalewithfahad.de/ebay-dropshipping-deutschland"/>
+  </url>
+
+  <!-- ═══ FREE TOOLS ═══ -->
   <url>
     <loc>https://scalewithfahad.de/blog/ebay-calculator.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://scalewithfahad.de/blog/ebay-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scalewithfahad.de/blog/ebay-calculator.html"/>
   </url>
   <url>
     <loc>https://scalewithfahad.de/germany-ecommerce-eligibility-checker.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
 
   <!-- ═══ BLOG LISTING ═══ -->
   <url>
     <loc>https://scalewithfahad.de/blog.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
 
   <!-- ═══ BLOG ARTICLES ═══ -->
@@ -61,13 +122,13 @@
     <loc>https://scalewithfahad.de/blog/amazon-to-ebay-risks-germany.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.78</priority>
   </url>
   <url>
     <loc>https://scalewithfahad.de/blog/best-products-ebay-germany.html</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.82</priority>
   </url>
   <url>
     <loc>https://scalewithfahad.de/blog/us-llc-germany-ecommerce.html</loc>
@@ -79,7 +140,7 @@
     <loc>https://scalewithfahad.de/blog/google-gemini-ai-business-2026.html</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.72</priority>
   </url>
   <url>
     <loc>https://scalewithfahad.de/blog/best-ai-tools-ecommerce-2026.html</loc>
@@ -97,15 +158,28 @@
     <loc>https://scalewithfahad.de/blog/ebay-business-starten.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.82</priority>
   </url>
 
   <!-- ═══ VPS AFFILIATE ═══ -->
   <url>
     <loc>https://scalewithfahad.de/vps/</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.50</priority>
   </url>
 
-</urlset> 
+  <url>
+    <loc>https://scalewithfahad.de/blog/best-dropshipping-suppliers-germany.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://scalewithfahad.de/blog/common-ebay-dropshipping-mistakes-germany.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.83</priority>
+  </url>
+
+</urlset>
