@@ -207,7 +207,7 @@
   color: var(--text-dim);
   transition: all 0.2s var(--ease);
 }
-.footer-social:hover { color: var(--gold); border-color: rgba(212,178,122,0.3); }
+.footer-social:hover { color: var(--gold); border-color: rgba(59,130,246,0.3); }
 
 .footer-seo {
   padding: 32px 0;

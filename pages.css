@@ -95,7 +95,7 @@
   border-radius: 50%;
   background: linear-gradient(135deg, var(--gold-3), #1a1408);
   display: grid; place-items: center;
-  border: 1px solid rgba(212,178,122,0.25);
+  border: 1px solid rgba(59,130,246,0.25);
   overflow: hidden;
 }
 .founder-photo-inner {
@@ -167,8 +167,8 @@
 }
 .contact-topic:hover { color: var(--text); border-color: var(--border-2); }
 .contact-topic.active {
-  background: rgba(212,178,122,0.08);
-  border-color: rgba(212,178,122,0.35);
+  background: rgba(59,130,246,0.08);
+  border-color: rgba(59,130,246,0.35);
   color: var(--gold-2);
 }
 .contact-submit { align-self: flex-start; margin-top: 8px; }
@@ -280,8 +280,8 @@
   align-items: start;
   gap: 12px;
   padding: 20px 24px;
-  border: 1px solid rgba(212,178,122,0.25);
-  background: rgba(212,178,122,0.04);
+  border: 1px solid rgba(59,130,246,0.25);
+  background: rgba(59,130,246,0.04);
   border-radius: var(--r-md);
   color: var(--text-dim);
   font-size: 14px;
@@ -330,12 +330,12 @@
 .onb-stepper-item.active { color: var(--text); }
 .onb-stepper-item.active .onb-stepper-dot {
   background: var(--gold);
-  color: #1a1308;
+  color: #fff;
   border-color: var(--gold);
   box-shadow: 0 0 0 4px var(--gold-glow);
 }
 .onb-stepper-item.done { color: var(--gold); }
-.onb-stepper-item.done .onb-stepper-dot { background: rgba(212,178,122,0.15); color: var(--gold); border-color: rgba(212,178,122,0.4); }
+.onb-stepper-item.done .onb-stepper-dot { background: rgba(59,130,246,0.15); color: var(--gold); border-color: rgba(59,130,246,0.4); }
 .onb-stepper-line {
   height: 1px;
   background: var(--border);
@@ -358,7 +358,86 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
+}
+
+/* clean onboarding step card */
+.onb-clean {
+  position: relative;
+  padding: 36px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  background: linear-gradient(180deg, var(--surface), transparent);
+  transition: all 0.3s var(--ease);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+.onb-clean:hover {
+  border-color: rgba(59,130,246,0.3);
+  background: linear-gradient(180deg, var(--surface-2), transparent);
+}
+.onb-clean::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 40% 80% at 0% 50%, var(--gold-glow), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  pointer-events: none;
+}
+.onb-clean:hover::before { opacity: 0.5; }
+.onb-clean-num {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+}
+.onb-clean-title {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 400;
+  margin: 4px 0;
+  letter-spacing: -0.015em;
+  position: relative;
+  z-index: 1;
+}
+.onb-clean-desc {
+  margin: 0 0 12px;
+  color: var(--text-dim);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 56ch;
+  position: relative;
+  z-index: 1;
+}
+.onb-clean .btn { align-self: flex-start; position: relative; z-index: 1; }
+.onb-clean-ctas { display: flex; gap: 12px; flex-wrap: wrap; position: relative; z-index: 1; }
+
+.onb-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 32px 24px;
+  margin-top: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+}
+.onb-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.onb-trust-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 8px var(--gold-glow);
 }
 .onb-step { display: flex; flex-direction: column; gap: 32px; }
 .onb-step-head { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
@@ -405,7 +484,7 @@
 .onb-day-mon { font-size: 11px; color: var(--text-mute); }
 .onb-day:hover { border-color: var(--border-2); }
 .onb-day.active {
-  background: rgba(212,178,122,0.1);
+  background: rgba(59,130,246,0.1);
   border-color: var(--gold);
   color: var(--gold-2);
   box-shadow: 0 0 0 3px var(--gold-glow);
@@ -424,7 +503,7 @@
 .onb-time:hover:not(:disabled) { border-color: var(--border-2); }
 .onb-time.active {
   background: var(--gold);
-  color: #1a1308;
+  color: #fff;
   border-color: var(--gold);
 }
 .onb-time:disabled { opacity: 0.4; cursor: not-allowed; }
@@ -526,7 +605,7 @@
 
 .contract-sign-pad {
   position: relative;
-  border: 2px dashed rgba(140,111,68,0.4);
+  border: 2px dashed rgba(29,78,216,0.4);
   border-radius: 8px;
   background: #fdfbf4;
   height: 140px;

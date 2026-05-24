@@ -16,10 +16,10 @@
   --text-dim:     #b8b4ac;
   --text-mute:    #7a766f;
 
-  --gold:         #d4b27a;       /* champagne */
-  --gold-2:       #e9cf9d;       /* lighter */
-  --gold-3:       #8c6f44;       /* deep */
-  --gold-glow:    rgba(212,178,122,0.35);
+  --gold:         #3b82f6;       /* electric blue (primary accent) */
+  --gold-2:       #60a5fa;       /* lighter */
+  --gold-3:       #1d4ed8;       /* deep */
+  --gold-glow:    rgba(59,130,246,0.32);
 
   --r-xs: 6px;
   --r-sm: 10px;
@@ -50,10 +50,10 @@
   --text-dim:     #4f4b43;
   --text-mute:    #8a857a;
 
-  --gold:         #8c6f44;
-  --gold-2:       #a8895a;
-  --gold-3:       #5e4a2a;
-  --gold-glow:    rgba(140,111,68,0.25);
+  --gold:         #1d4ed8;
+  --gold-2:       #2563eb;
+  --gold-3:       #1e3a8a;
+  --gold-glow:    rgba(29,78,216,0.22);
 }
 
 * { box-sizing: border-box; }
@@ -150,13 +150,13 @@ img { max-width: 100%; display: block; }
 }
 .btn-gold {
   background: linear-gradient(180deg, var(--gold-2), var(--gold));
-  color: #1a1308;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.04) inset, 0 8px 30px -10px var(--gold-glow);
+  color: #fff;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 30px -10px var(--gold-glow);
 }
 .btn-gold:hover {
-  background: linear-gradient(180deg, #f3dca8, var(--gold-2));
+  background: linear-gradient(180deg, #7eb6ff, var(--gold-2));
   transform: translateY(-1px);
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset, 0 12px 40px -8px var(--gold-glow);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.10) inset, 0 12px 40px -8px var(--gold-glow);
 }
 .btn-ghost {
   background: var(--surface);
@@ -234,7 +234,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   width: 80%; height: 80%;
   top: -20%; left: -10%;
-  background: radial-gradient(closest-side, rgba(212,178,122,0.18), transparent 70%);
+  background: radial-gradient(closest-side, rgba(59,130,246,0.20), transparent 70%);
   filter: blur(40px);
   animation: drift1 22s ease-in-out infinite alternate;
 }
@@ -243,7 +243,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   width: 70%; height: 70%;
   bottom: -10%; right: -20%;
-  background: radial-gradient(closest-side, rgba(140,111,68,0.22), transparent 70%);
+  background: radial-gradient(closest-side, rgba(29,78,216,0.22), transparent 70%);
   filter: blur(60px);
   animation: drift2 28s ease-in-out infinite alternate;
 }
@@ -399,7 +399,7 @@ textarea.input { resize: vertical; min-height: 120px; }
 }
 .chip.up    { color: #6ee7b7; background: rgba(110,231,183,0.07); border-color: rgba(110,231,183,0.2); }
 .chip.down  { color: #fda4af; background: rgba(253,164,175,0.07); border-color: rgba(253,164,175,0.2); }
-.chip.gold  { color: var(--gold-2); background: rgba(212,178,122,0.07); border-color: rgba(212,178,122,0.25); }
+.chip.gold  { color: var(--gold-2); background: rgba(59,130,246,0.08); border-color: rgba(59,130,246,0.3); }
 
 /* sticky CTA */
 .sticky-cta {

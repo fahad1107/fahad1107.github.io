@@ -7,20 +7,9 @@ function Logo({ size = 22 }) {
     <a
       href="#/"
       onClick={(e) => { e.preventDefault(); window.navigate("/"); }}
-      className="brand-logo"
-      aria-label="scale"
+      className="brand-logo brand-text-only"
+      aria-label="ScaleWithFahad"
     >
-      <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="logoG" x1="0" x2="1" y1="0" y2="1">
-            <stop offset="0%" stopColor="var(--gold-2)" />
-            <stop offset="100%" stopColor="var(--gold-3)" />
-          </linearGradient>
-        </defs>
-        <path d="M4 16c0-6.6 5.4-12 12-12s12 5.4 12 12-5.4 12-12 12" stroke="url(#logoG)" strokeWidth="2.2" fill="none" strokeLinecap="round" />
-        <path d="M16 4v24M4 16h12" stroke="url(#logoG)" strokeWidth="2.2" strokeLinecap="round" />
-        <circle cx="16" cy="16" r="2" fill="url(#logoG)" />
-      </svg>
       <span className="brand-wordmark">ScaleWith<i>Fahad</i></span>
     </a>
   );

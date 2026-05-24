@@ -43,7 +43,7 @@ function Dashboard({ floating = true }) {
         <aside className="dash-side">
           <div className="dash-side-brand">
             <span className="dash-side-mark">S</span>
-            <span className="dash-side-name">ScaleWith<i style={{ color: "var(--gold-2)" }}>Fahad</i></span>
+            <span className="dash-side-name">SwF</span>
           </div>
           <nav className="dash-nav">
             {[

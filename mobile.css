@@ -343,4 +343,4 @@ input, textarea, select, button { font-size: 16px !important; }
 }
 
 /* tap highlight subtle */
-a, button { -webkit-tap-highlight-color: rgba(212,178,122,0.2); }
+a, button { -webkit-tap-highlight-color: rgba(59,130,246,0.2); }

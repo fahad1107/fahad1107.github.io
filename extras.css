@@ -112,10 +112,10 @@
 .vps-card {
   position: relative;
   padding: 36px;
-  border: 1px solid rgba(212,178,122,0.28);
+  border: 1px solid rgba(59,130,246,0.28);
   border-radius: var(--r-xl);
   background:
-    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(212,178,122,0.08), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(59,130,246,0.08), transparent 70%),
     linear-gradient(180deg, var(--surface), transparent);
   overflow: hidden;
 }
@@ -124,7 +124,7 @@
   position: absolute;
   inset: -1px;
   border-radius: var(--r-xl);
-  background: linear-gradient(135deg, transparent 30%, rgba(212,178,122,0.15) 50%, transparent 70%);
+  background: linear-gradient(135deg, transparent 30%, rgba(59,130,246,0.15) 50%, transparent 70%);
   pointer-events: none;
 }
 .vps-card-head { display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px; position: relative; z-index: 1; }
@@ -156,8 +156,8 @@
 .vps-spec {
   padding: 12px 14px;
   border-radius: var(--r-sm);
-  background: rgba(212,178,122,0.04);
-  border: 1px solid rgba(212,178,122,0.15);
+  background: rgba(59,130,246,0.04);
+  border: 1px solid rgba(59,130,246,0.15);
 }
 .vps-spec-t { font-weight: 500; font-size: 14px; }
 .vps-spec-d { color: var(--text-mute); font-size: 12px; margin-top: 2px; }
@@ -198,8 +198,8 @@
   gap: 14px;
   padding: 24px;
   border-radius: var(--r-md);
-  background: rgba(212,178,122,0.08);
-  border: 1px solid rgba(212,178,122,0.28);
+  background: rgba(59,130,246,0.08);
+  border: 1px solid rgba(59,130,246,0.28);
 }
 .vps-setup-icon { font-size: 32px; line-height: 1; }
 .vps-setup-title { font-family: var(--font-display); font-size: 20px; font-weight: 400; margin: 0 0 6px; }
@@ -265,7 +265,7 @@
   color: var(--text-dim);
   transition: all 0.2s var(--ease);
 }
-.calc-country.active { background: rgba(212,178,122,0.1); border-color: rgba(212,178,122,0.4); color: var(--gold-2); }
+.calc-country.active { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.4); color: var(--gold-2); }
 .calc-inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -308,8 +308,8 @@
 .calc-result {
   padding: 24px;
   border-radius: var(--r-md);
-  background: linear-gradient(180deg, rgba(212,178,122,0.08), rgba(212,178,122,0.02));
-  border: 1px solid rgba(212,178,122,0.3);
+  background: linear-gradient(180deg, rgba(59,130,246,0.08), rgba(59,130,246,0.02));
+  border: 1px solid rgba(59,130,246,0.3);
 }
 .calc-result-main { margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
 .calc-profit {
@@ -401,8 +401,8 @@
 .elig-step-n {
   width: 36px; height: 36px;
   border-radius: 50%;
-  background: rgba(212,178,122,0.12);
-  border: 1px solid rgba(212,178,122,0.35);
+  background: rgba(59,130,246,0.12);
+  border: 1px solid rgba(59,130,246,0.35);
   color: var(--gold-2);
   display: grid; place-items: center;
   font-family: var(--font-display);
@@ -463,8 +463,8 @@
   align-items: center;
   padding: 4px 10px;
   border-radius: 999px;
-  background: rgba(212,178,122,0.08);
-  border: 1px solid rgba(212,178,122,0.25);
+  background: rgba(59,130,246,0.08);
+  border: 1px solid rgba(59,130,246,0.25);
   color: var(--gold-2);
   font-size: 11px;
   font-weight: 500;
