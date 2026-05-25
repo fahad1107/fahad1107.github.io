@@ -1,5 +1,8 @@
 name: Daily SEO Generator
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 8 * * *'
@@ -24,7 +27,7 @@ jobs:
           node generate.js "ebay invoice requirements germany"
           node generate.js "amazon invoice compliance germany"
 
-      - name: Commit Changes
+      - name: Commit and Push Changes
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
