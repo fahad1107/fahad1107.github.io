@@ -1,0 +1,36 @@
+name: Daily SEO Generator
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate Blogs
+        run: |
+          node generate.js "paypal holds ebay sellers germany"
+          node generate.js "ebay invoice requirements germany"
+          node generate.js "amazon invoice compliance germany"
+
+      - name: Commit Changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git add .
+
+          git commit -m "daily automated seo blogs" || echo "No changes"
+
+          git push
