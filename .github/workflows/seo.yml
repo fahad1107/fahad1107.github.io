@@ -36,6 +36,9 @@ jobs:
 
           git add .
 
-          git commit -m "daily automated seo blogs" || echo "No changes to commit"
-
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "daily automated seo blogs"
+            git push
+          fi
