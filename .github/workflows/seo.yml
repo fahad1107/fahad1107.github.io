@@ -21,13 +21,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Generate Blogs
         run: |
-          node generate.js "paypal holds ebay sellers germany"
-          node generate.js "ebay invoice requirements germany"
-          node generate.js "amazon invoice compliance germany"
+          while IFS= read -r keyword
+          do
+            node generate.js "$keyword"
+          done < keywords.txt
 
       - name: Commit and Push Changes
         run: |
