@@ -12,6 +12,10 @@ const slug = keyword
   .replace(/[^\w\s-]/g, "")
   .replace(/\s+/g, "-");
 
+const filePath = `blog/${slug}.html`;
+
+const pageUrl = `https://scalewithfahad.de/blog/${slug}.html`;
+
 const html = `
 <!DOCTYPE html>
 <html lang="en">
@@ -66,6 +70,28 @@ eBay Dropshipping Deutschland
 </html>
 `;
 
-fs.writeFileSync(`blog/${slug}.html`, html);
+fs.writeFileSync(filePath, html);
 
-console.log(`✅ blog/${slug}.html created successfully`);
+console.log(`✅ ${filePath} created successfully`);
+
+
+// UPDATE SITEMAP
+
+const sitemapPath = "sitemap.xml";
+
+let sitemap = fs.readFileSync(sitemapPath, "utf8");
+
+const newUrl = `
+<url>
+  <loc>${pageUrl}</loc>
+</url>
+`;
+
+if (!sitemap.includes(pageUrl)) {
+  sitemap = sitemap.replace("</urlset>", `${newUrl}\n</urlset>`);
+  fs.writeFileSync(sitemapPath, sitemap);
+
+  console.log("✅ sitemap.xml updated");
+} else {
+  console.log("⚠️ URL already exists in sitemap");
+}
